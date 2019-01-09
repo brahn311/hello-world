@@ -5,9 +5,14 @@ la idea es mediante una estructura realizada en un codigo sql generar la cadena 
 # Objetivo
 Permitiendo a traves de un codigo universal, especificar que tipo de salida se desea y sea interpretada en SQL y exporta a PostgreSQL, MySQL, etc.
 
-Actividades
+# Plataforma
+PHP
+
+Modulos
 -
-Leer su estructura y el contenido y generar el codigo del mismo a modo de texto
-Especificar un servidor y conectarse, para crear una base de datos y cargar su contenido.
+Crear
+Respaldar
+Maestro
+
 
 
