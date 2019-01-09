@@ -1,16 +1,14 @@
 # hello-world
-A place where you store ideas, resources, or even share and discuss things with others.
-Un lugar donde almacena ideas, recursos o incluso comparte y discute cosas con otros. [ES]
+Un lugar donde almacena ideas, recursos o incluso comparte y discute cosas con otros
 
-Sitio
------
-Portafolio de proyectos de Abrahan Omaña
+# Tipo del proyecto
+Portal Web - Portafolio de proyectos de Abrahan Omaña
 
-Paginas:
+# Paginas:
+Pagina dinamica donde el contenido mostrado es configurado desde base de datos por el administrador
 
-Principal/resumen/inicial
--------------------------
-Pagina dinamica configurada por base de datos para mostrar distintos bloques de contenidos seleccionados por el administador del sitio
+# Principal/resumen/inicial
+Distintos bloques de contenidos seleccionados por el administador del sitio
 
 Blog/Post-it 
 ------------
