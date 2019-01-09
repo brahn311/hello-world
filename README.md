@@ -1,5 +1,5 @@
 # hello-world
-A place where you store ideas, resources, or even share and discuss things with others
+A place where you store ideas, resources, or even share and discuss things with others.
 Un lugar donde almacena ideas, recursos o incluso comparte y discute cosas con otros. [ES]
 
 Sitio
