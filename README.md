@@ -13,7 +13,7 @@ Distintos bloques de contenidos seleccionados por el administador del sitio
 
 Blog/Post-it 
 -
-Coleccion de notas del autor por fecha y categoria subidos por el administrador del sitio
+Coleccion de notas (publicas o privadas) del autor por fecha y categoria subidos por el administrador
 
 Redes
 -
@@ -22,3 +22,8 @@ Area para enlaces a redes y de contacto del dueño del sitio
 Identificate
 -
 Area de inicio de sesion para activar caracteristicas extras para usuario/administador
+
+# Lenguajes
+BD: MySQL
+Server: PHP
+Frontend: HTML, CSS, Bootstrap.
