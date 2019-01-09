@@ -5,7 +5,7 @@ Un lugar donde almacena ideas, recursos o incluso comparte y discute cosas con o
 Portal Web - Portafolio de proyectos de Abrahan Omaña
 
 # Paginas:
-Pagina dinamica donde el contenido mostrado es configurado desde base de datos por el administrador
+Pagina dinamica donde el contenido mostrado es configurado desde base de datos por el administrador. inicialmente se definen las siguientes paginas:
 
 Principal/resumen/inicial
 -
@@ -27,3 +27,6 @@ Area de inicio de sesion para activar caracteristicas extras para usuario/admini
 BD: MySQL
 Server: PHP
 Frontend: HTML, CSS, Bootstrap.
+
+# Cajon/multiusos
+Directorio de archivos y notas de txt personales
