@@ -1,0 +1,18 @@
+# Guia de post instalacion de debian 9
+
+https://maslinux.es/que-hacer-despues-de-instalar-debian-9-stretch/
+
+1. Editar Sources.list: 
+-
+Consola:
+$ su
+# gedit /etc/apt/sources.list
+
+- Comentar:
+# deb cdrom
+
+- Añadir:
+deb  http://deb.debian.org/debian stretch main
+deb  http://deb.debian.org/debian stretch-updates main
+deb  http://security.debian.org/ stretch/updates main
+
