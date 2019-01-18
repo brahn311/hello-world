@@ -1,17 +1,13 @@
-# Guia de post instalacion de debian 9
+Actualizar sources.list (Post instalación)
 
-
-
-1. Editar Sources.list
-----------------------
 - Desde consola editar el archivo de fuentes
 $ su
 # gedit /etc/apt/sources.list
 
-- Comentar:
-# deb cdrom
+- Comentar o elimiar el contenido anterior, Principalmente el cdrom añadiendo al inicio #
+# deb cdrom:[Debian GNU/Linux 9.6.0 _Stretch_ - Official amd64 DVD Binary-1 20181110-11:34]/ stretch contrib main
 
-- Añadir:
+- Añadir al archivo:
 deb  http://deb.debian.org/debian stretch main
 deb  http://deb.debian.org/debian stretch-updates main
 deb  http://security.debian.org/ stretch/updates main
@@ -35,9 +31,9 @@ deb-src http://ftp.us.debian.org/debian/ stretch-updates main contrib non-free
 # debian-multimedia
 deb http://www.deb-multimedia.org stretch main non-free
 
-- Guardar los cambios en gedit.
+- Guardar los cambios y cerrar gedit.
 
-- Actualizamos desde consola*:
+- Actualizamos desde consola(*):
 # apt-get update
 
 *Nota: Aparecera un error, para corregir debe colocar en la terminal los siguientes comandos:
