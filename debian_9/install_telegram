@@ -1,0 +1,23 @@
+- Descargar archivo tar.xz desde la pagina https://telegram.org
+
+- Extraer con el comando de consola: (metodo tarball)
+$/# tar xvf tsetup*.tar.xz 
+Nota: comprobar si es requerido el superusuario
+
+- Navegar en consola entre la carpeta extraida y ejecutar con los siguientes comandos:
+cd Telegram
+./Telegram
+
+- Ya puedes usar telegram
+
+(probado hasta aqui por brahn)
+
+Opcional: 
+- Puedes mover el directorio "Telegram" a /opt, usado para almacenar aplicaciones de terceros en Linux. con los comandos: 
+$ su
+# mv Telegram/ /opt/
+
+- Crea un enlace-simbolico para ejecutar desde consola:
+ln -sf /opt/Telegram/Telegram /usr/bin/telegram
+
+FUENTE: https://www.linuxbabe.com/debian/3-ways-install-telegram-messenger-debian-9-stretch
