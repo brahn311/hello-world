@@ -1,23 +1,56 @@
-el enero-20-2019 ejecute el siguiente comando 
+Reparando el Discoduro SAMSUNG 500 GB SATA para laptop
 
+badblocks: 
+Primero, badblocks solo chequea los sectores malos del discoduro, entre sus opciones puedes solicitar un archivo de salida para mandarlos a 
+e2fsck y modificar el filesystem pero la revision del discodulo puede ser muy lenta.
+//  En lo personal investigue mas y no quise usar badblocks.
+
+https://manpages.debian.org/stretch/e2fsprogs/badblocks.8.en.html
+https://manpages.debian.org/stretch/e2fsprogs/e2fsck.8.en.html
+
+fdisk:
+// falta agregar los detalles, lo que investigue del programa
+
+https://manpages.debian.org/stretch/util-linux/fdisk.8.en.html
+
+fsck:
+// falta agregar los detalles, lo que investigue del programa
+
+https://manpages.debian.org/stretch/util-linux/fsck.8.en.html
+
+Pruebas al reparar el discoduro:
+-
+
+Antes de todo siempre hacer:
+# fdisk -l
+para mostrar la ubicacion de los discoduros
+# df 
+para mostrar las particiones montadas en el sistema 
+y verificar que la particion a revisar no esta montada
+# umount /dev/sdd2
+Para desmontar la particion en caso de que la particion si este montada
+
+El 18/01/19 ejecute el comando 
+# fsck -t ext4 /dev/sda
+El resultado parecia bien, pero fue atroz, me pedia confirmacion por cada diferencia, error, cambio, todo. y fue interminable.
+Coloque por 2 dias cosas encima de la tecla "Enter" para que aceptar cada confirmacion, hasta que desisti y cerre la consola...
+Fuente: https://laguialinux.es/analizar-sistema-de-archivos-y-particion/
+
+El enero-20-2019 ejecute comando con mas opciones
 # fsck -c -y -v -t ext4 /dev/sda
-
-detalles:
-
-el comando reviso el filesystem pero al terminar el disco no tenia la lista de particiones
-
+El comando reviso el filesystem pero al terminar el disco no tenia la lista de particiones
 entonces con fdisk revise la tabla de particiones y cree una particion nueva dejando la firma que tenia ext4
 # fdisk /dev/sda
-opcion p
-y no aparecia nunguna particion
-orden n
+Seleccione la orden: p 
+y no aparecia nunguna particion.
+Seleccione la orden: n
+Y me pidio los siguientes datos adicionales:
 tipo de particion: primaria
 numero de la particion: 1
 primer sector: predeterminado
 ultimo sector: predeterminado
-firma: dejar ext4
-
-luego, verifique el disco con gparted donde corrigio algunos detalles 
+firma: dejar firma anterior ext4
+abri gparted para verificar el disco y corrigio algunos detalles 
 volvi a verificar el disco y no dio errores.
 
 
