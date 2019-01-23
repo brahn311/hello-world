@@ -1,0 +1,98 @@
+Ubicacion actual:
+Personal Working Directory te muestra la ruta del directorio en que estás ubicado actualmente.
+
+$ pwd
+
+Crear directorios:
+Make Directory crea una nueva carpeta con el nombre que indiques
+
+$ mkdir nombre_del_directorio
+
+Crear archivo:
+Puedes crear nuevos archivos en el directorio actual
+
+$ touch mi_archivo.txt
+
+Ver contenido de carpetas 
+Lista los archivos y directorios de la carpeta actual
+
+$ ls -la
+
+- Si quieres mostrar elementos ocultos, usa el flag -a.
+- Para listar el contenido detallado usa el flag -l
+r
+t
+
+Navegar entre carpetas:
+Change directory permite moverse entre directorios del sistema
+
+$ cd ruta_absoluta_o_relativa
+
+Otros comandos que realizan la misma acción para moverte al directorio mi_carpeta desde:
+$ pwd
+/home/alejandro/EDteam/mi_carpeta
+
+$ cd /home/alejandro/EDteam/mi_carpeta
+$ cd ./mi_carpeta
+$ cd mi_carpeta
+
+- Para regresar al directorio anterior:
+$ cd -
+
+- Para moverte un directorio por encima de tu posición actual o una secuencia:
+$ cd ..
+$ cd ../..
+
+Copiar directorios:
+Para copiar directorios completos (con todos sus archivos y subcarpetas internas):
+
+cp -r directorio/ ruta_de_destino/nombre_copia > cp -r fonts/ ../fonts2
+
+- El comando cp crea una copia
+- La opcion -r indica recursividad (copia todos los elementos internos - archivos y subcarpetas)
+- El directorio debe terminar con (/) para indicar que se trata de una carpeta. si no linux trata archivo y genera error
+- Las rutas del directorio de origen y el de destino pueden ser relativas a la raiz o al directorio de trabajo actual
+
+Mover directorios:
+Mueve un directorio o un archivo (lo elimina de su ubicación original y coloca en una nueva ubicacion)
+
+mv directorio ruta_de_destino/nombre_directorio
+
+- No se necesita indicar recursividad
+- Puede cambiar el nombre del archivo
+
+Renombrar directorios:
+Para renombrar directorios usamos mv pero no es necesario indicar la ruta de destino, solo un nuevo nombre
+
+mv directorio directorio_renombrado
+
+- Basta escribir el nombre del directorio (sin barra al final) y el nuevo nombre
+
+Elimiar archivo:
+El comando elimina archivos. Su sintaxis es 
+$ rm nombre_del_archivo
+
+Eliminar directorio vacio: 
+Remove directory elimina carpetas vacías
+
+$ rmdir carpeta_vacia/
+
+- Eliminar directorios no vacíos con la opción -r
+$ rm -r cursos_copia/ 
+
+Ver el contenido de un archivo:
+Te permite leer el contenido de archivos
+
+$ cat notas.txt
+
+- Puedes mostrar las lineas del archivo con la opción -n
+$ cat -n notas.txt
+1 Estas son las notas de mi curso
+2 Fin de las notas de mi curso
+
+Buscar
+Find puede encontrar archivos
+
+$ find directorio_donde_buscar -iname "archivo_a_buscar"
+
+- la opcion -iname especifica el archivo_a_buscar
