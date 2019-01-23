@@ -19,28 +19,33 @@ fsck:
 https://manpages.debian.org/stretch/util-linux/fsck.8.en.html
 
 Pruebas al reparar el discoduro:
--
 
 Antes de todo siempre hacer:
+Para mostrar la ubicacion de los disco duros:
 # fdisk -l
-para mostrar la ubicacion de los discoduros
-# df 
-para mostrar las particiones montadas en el sistema 
-y verificar que la particion a revisar no esta montada
-# umount /dev/sdd2
-Para desmontar la particion en caso de que la particion si este montada
+
+Para mostrar las particiones montadas en el sistema y verificar que la particion a revisar no esta montada:
+# df
+
+Para desmontar la particion en caso de que la particion si este montada:
+# umount /dev/sda
 
 El 18/01/19 ejecute el comando 
 # fsck -t ext4 /dev/sda
+
 El resultado parecia bien, pero fue atroz, me pedia confirmacion por cada diferencia, error, cambio, todo. y fue interminable.
 Coloque por 2 dias cosas encima de la tecla "Enter" para que aceptar cada confirmacion, hasta que desisti y cerre la consola...
+
 Fuente: https://laguialinux.es/analizar-sistema-de-archivos-y-particion/
 
+---
 El enero-20-2019 ejecute comando con mas opciones
 # fsck -c -y -v -t ext4 /dev/sda
-El comando reviso el filesystem pero al terminar el disco no tenia la lista de particiones
-entonces con fdisk revise la tabla de particiones y cree una particion nueva dejando la firma que tenia ext4
+
+El comando revisa el filesystem pero al terminar el disco no tenia la lista de particiones
+entonces con fdisk revise la tabla de particiones y cree una particion nueva
 # fdisk /dev/sda
+
 Seleccione la orden: p 
 y no aparecia nunguna particion.
 Seleccione la orden: n
@@ -49,8 +54,13 @@ tipo de particion: primaria
 numero de la particion: 1
 primer sector: predeterminado
 ultimo sector: predeterminado
-firma: dejar firma anterior ext4
-abri gparted para verificar el disco y corrigio algunos detalles 
-volvi a verificar el disco y no dio errores.
+firma: eliminar firma
 
+Cambiar el tipo de formato del disco duro usar la orden: t
+Para NTFS: 7
+Para Linux: 83
 
+Formatear la particion creada:
+# mkfs.ext4 ********/faltante
+
+Luego se debe montar el disco, preferiblemente por consola.
