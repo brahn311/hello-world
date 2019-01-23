@@ -1,0 +1,28 @@
+mount
+
+1. Primero crearemos la carpeta donde montaremos la partición, a mí me gusta crear /media/temp
+
+mkdir /media/temp
+
+2. Debemos saber qué HDDs y particiones tenemos en el sistema, para ello usaremos uno de los comandos que les presenté antes en otro post: fdisk -l
+Ejecutemos en una terminal (recuerden, con privilegios de root): fdisk -l
+Veremos algo como esto:
+
+Les he señalado con amarillo lo importante 😉
+Primero debemos tener claro que lo que montaremos es una partición de un disco duro, no el disco duro como tal, aún así el disco duro tenga una sola partición que abarque sus 500GBs (como el mío), por lo que el disco duro es /dev/sdb y la partición que montaremos es /dev/sdb1
+Sé que es /dev/sdb y no /dev/sda porque ahí veo que sdb es el HDD de 500GB, y precisamente el externo mío es el de 500GB, el otro (160GB) es el HDD interno de la laptop.
+
+3. Bueno, una vez sabemos qué partición queremos montar simplemente la montamos, usaremos el comando mount y definiremos qué partición vamos a montar (/dev/sdb1) y en qué carpeta (/media/temp/):
+
+mount /dev/sdb1 /media/temp/
+
+Y listo, basta con listar el contenido de /media/temp/ para verificar que sí es el contenido de la partición: ls /media/temp/
+
+Por cierto, habrán sistemas que tal vez les pida que para poder montar la partición deberán ustedes especificar el tipo de archivo que tiene (vfat si es fat32, ntfs, etc), para ello usaremos el parámetro -t :
+
+mount -t vfat /dev/sdb1 /media/temp
+
+
+----
+MAS: https://www.solvetic.com/tutoriales/article/3607-comandos-montar-desmontar-particiones-linux/
+----
