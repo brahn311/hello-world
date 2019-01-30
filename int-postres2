@@ -1,0 +1,13 @@
+PostgreSQL: Consulta para saber en qué tabla está una columna
+-------------------------------------------------------------
+fuente: https://donnierock.com/2016/03/30/postgresql-consulta-para-saber-en-que-tabla-esta-una-columna/
+
+Lo hicimos en Oracle, en SQL-Server y en MySQL. No podíamos dejarnos PostgreSQL ¿cómo podemos saber en qué tabla está una columna sabiendo sólo el nombre de dicha columna?
+
+Pues con una consulta sobre la vista columns, que contiene información sobre las columnas de todas las tablas y vistas. Veamos cómo sabríamos en qué tabla está la columna “NombrePaciente” (por poner un ejemplo práctico):
+
+Select table_name
+from columns
+where column_name like 'NombrePaciente'
+
+En vuestro caso cambiáis NombrePaciente por el nombre de columna que corresponda.

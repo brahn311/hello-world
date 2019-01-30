@@ -1,0 +1,75 @@
+Descubriendo la metadata de una tabla (postgreSQL)
+--------------------------------------------------
+fuente: https://phenobarbital.wordpress.com/2008/02/25/descubriendo-la-metadata-de-una-tabla-postgresql/
+
+Mientras desarrollaba una idea de un ORM básico para PHP que auto-descubriera la metadata de una tabla (tal y como se hacen en mySQL con “DESCRIBE”), me encuentro con el problema de que en postgreSQL no existe nada parecido a DESCRIBE o a SHOW CREATE de mySQL; por ende, nos toca interrogar a los pg_catalogs para obtener la información de metadatos de la tabla.
+
+En este caso, queriamos obtener una estructura semejante a esta:
+
+column_name => cedula, datatype=>integer, key=>PRI, is_nullable=>NO, max_length=>8, column_default =>
+
+Donde:
+
+datatype: es un tipo de datos interno de postgresql
+
+key: UNI = Unique, el campo es un indice unico, PRI = Primary, el campo es un indice primario, FK = Foreign key, el campo es un indice de una clave foránea.
+
+max_length: Si el campo es integer, muestra la precisión del entero (2,4,8), si es un varchar, la longitud en caracteres (ej. 75)
+
+column_default: muestra el tipo de valor por defecto de la tabla; si la tabla es serial, veremos la llamada al nextval de la secuencia:
+
+ej. nexval(‘personas_cliente_id_seq’::regclass)
+
+Lo que nos permite determinar que campo de nuestra tabla es serial (auto-incremental).
+
+Entendiendo los esquemas: 
+
+Para entender; cada tabla del pg_catalog debe ser interrogada con el oid de la tabla, que lo sacamos de pg_class.
+
+Los campos y sus atributos, los sacamos de la tabla pg_attribute.
+
+El tipo de datos lo sacamos de la tabla pg_type
+
+los constraints de la tabla los obtenemos de la tabla pg_constraint
+
+y el valor por defecto, lo sacamos de la tabla pg_attrdef.
+
+La sentencia construida para sacar esa información de una sola vez de todas las tablas es esta:
+
+SELECT a.attname as column_name, t.typname as data_type,
+CASE
+WHEN cc.contype=’p’ THEN ‘PRI’
+WHEN cc.contype=’u’ THEN ‘UNI’
+WHEN cc.contype=’f’ THEN ‘FK’
+ELSE ” END AS key,
+CASE WHEN a.attnotnull=false THEN ‘YES’ ELSE ‘NO’ END AS is_nullable,
+CASE WHEN a.attlen=’-1′ THEN (a.atttypmod – 4) ELSE a.attlen END as max_length,
+d.adsrc as column_default
+FROM pg_catalog.pg_attribute a
+LEFT JOIN pg_catalog.pg_type t ON t.oid = a.atttypid
+LEFT JOIN pg_catalog.pg_class c ON c.oid = a.attrelid
+LEFT JOIN pg_catalog.pg_constraint cc ON cc.conrelid = c.oid AND cc.conkey[1] = a.attnum
+LEFT JOIN pg_catalog.pg_attrdef d ON d.adrelid = c.oid AND a.attnum = d.adnum
+WHERE c.relname = ‘<TABLA>’ AND a.attnum > 0 AND t.oid = a.atttypid
+
+donde <TABLA> representa el nombre de la tabla a la que queremos interrogar para obtener sus metadatos.
+
+Espero que les sirva; en la siguiente entrega, descubrir los metadatos de una tabla de mySQL y de una entrada de LDAP.
+
+probado y editado:
+------------------
+SELECT a.attname as column_name, t.typname as data_type,
+CASE
+WHEN cc.contype='p' THEN 'PRI'
+WHEN cc.contype='u' THEN 'UNI'
+WHEN cc.contype='f' THEN 'FK'
+ELSE '' END AS key,
+CASE WHEN a.attnotnull=false THEN 'YES' ELSE 'NO' END AS is_nullable,
+CASE WHEN a.attlen=-1 THEN (a.atttypmod - 4) ELSE a.attlen END as max_length,
+d.adsrc as column_default
+FROM pg_catalog.pg_attribute a
+LEFT JOIN pg_catalog.pg_type t ON t.oid = a.atttypid
+LEFT JOIN pg_catalog.pg_class c ON c.oid = a.attrelid
+LEFT JOIN pg_catalog.pg_constraint cc ON cc.conrelid = c.oid AND cc.conkey[1] = a.attnum
+LEFT JOIN pg_catalog.pg_attrdef d ON d.adrelid = c.oid AND a.attnum = d.adnum
+WHERE c.relname = 'usuarios' AND a.attnum > 0 AND t.oid = a.atttypid;

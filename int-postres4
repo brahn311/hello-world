@@ -1,0 +1,19 @@
+Listar tipo de datos y comentarios de una tabla
+-----------------------------------------------
+fuente: https://www.postgresql.org/message-id/CAHQFj70AwqYF9p%2BZfUxrc3qy3od9eD3XtriGR1fsL95NhYvP3g%40mail.gmail.com
+
+select
+cols.table_catalog,cols.table_name,cols.column_name,data_type,pg_catalog.col_description(c2.oid,cols.ordinal_position::int)
+from information_schema.columns cols
+inner join pg_catalog.pg_class c on  c.relname=cols.table_name
+inner join pg_catalog.pg_class c2 on c2.relname=cols.table_name
+where cols.table_name= 'tabla'
+
+probado y editado:
+------------------
+select
+cols.column_name,data_type,pg_catalog.col_description(c2.oid,cols.ordinal_position::int)
+from information_schema.columns cols
+inner join pg_catalog.pg_class c on  c.relname=cols.table_name
+inner join pg_catalog.pg_class c2 on c2.relname=cols.table_name
+where cols.table_name= 'usuarios';

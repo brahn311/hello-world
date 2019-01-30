@@ -1,0 +1,43 @@
+Listar tipo de datos y comentarios de una tabla
+-----------------------------------------------
+fuente: http://www.damianculotta.com.ar/bases-de-datos/simulando-show-tables-y-describe-de-mysql-en-postgresql
+
+Obtener la lista de tablas de una base de datos:
+SELECT
+  tables.table_name,
+  pg_description.description
+FROM
+  information_schema.tables
+  LEFT JOIN
+    pg_class ON tables.table_name::name = pg_class.relname
+  LEFT JOIN
+    pg_description ON pg_class.oid = pg_description.objoid AND pg_description.objsubid = 0
+WHERE
+  tables.table_schema::text = 'public'::text AND tables.table_type = 'BASE TABLE'::text
+ORDER BY
+  tables.table_name ASC;
+
+Describe la composición de una tabla:
+SELECT
+  columns.column_name,
+  columns.data_type,
+  columns.column_default,
+  columns.is_nullable,
+  columns.character_maximum_length,
+  columns.numeric_precision,
+  pg_description.description,
+  columns.table_name
+FROM
+  information_schema.columns
+  LEFT JOIN
+    pg_class ON columns.table_name::name = pg_class.relname
+  LEFT JOIN
+    pg_description ON pg_class.oid = pg_description.objoid AND columns.ordinal_position::integer = pg_description.objsubid
+WHERE
+  columns.table_schema::text = 'public'::text
+  AND
+  columns.table_name = 'errores'
+ORDER BY
+  columns.table_name ASC,
+  columns.ordinal_position ASC
+;

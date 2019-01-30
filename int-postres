@@ -1,0 +1,36 @@
+PostgreSQL: Consultar el tamaño de bases de datos, tablas y objetos
+-------------------------------------------------------------------
+
+Fuente: https://vjavierf.wordpress.com/2015/11/02/postgresql-consultar-el-tamano-de-bases-de-datos-tablas-y-objetos/
+
+Consultar el tamaño de las bases de datos:
+
+    SELECT
+    pg_database.datname,
+    pg_size_pretty(pg_database_size(pg_database.datname)) AS size
+    FROM pg_database;
+
+Consultar el Top10 de las tablas de una base de datos que más espacio consumen:
+
+    SELECT
+    relname as table,
+    pg_size_pretty(pg_total_relation_size(relid)) As size,
+    pg_size_pretty(pg_total_relation_size(relid) – pg_relation_size(relid)) as external_size
+    FROM pg_catalog.pg_statio_user_tables
+    ORDER BY pg_total_relation_size(relid) DESC LIMIT 10;
+
+Consultar el tamaño de todos los objetos:
+
+    SELECT
+    relname AS objectname, relkind AS objecttype,
+    reltuples AS “#entries”, pg_size_pretty(relpages::bigint*8*1024) AS size
+    FROM pg_class
+    ORDER BY relpages DESC;
+
+Esta última consulta muestra 4 campos:
+
+    objectname: el nombre del objeto.
+    objecttype: r = tabla, i = índice, S = secuencia, v = vista, c = tipo compuesto, t = tabla TOAST.
+    #entries: el número de entradas en el objeto (p.ej. filas)
+    size: el tamaño del objeto.
+
