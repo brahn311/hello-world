@@ -1,0 +1,59 @@
+Programacion Orientada a Objetos
+
+Entidades:
+FUENTE: https://www.youtube.com/watch?v=Nka4JSBgf7I
+
+- Teclado
+- Mouse
+- Lapiz
+- Hoja
+- Borrador
+
+Cada entidad seria un objeto...
+Cada objeto tiene caracteristicas distintas a otros...
+El objeto puede realizar acciones...
+
+Caracteristica = Atributos
+Acciones = Metodos
+
+Clase:
+
+Con dos objetos:
+- Lapiz
+- Color
+Ambos son el mismo tipo de objeto y tienen caracteristicas diferentes
+Pero quitando sus diferencias, obtenemos un molde 
+
+La clase es un molde para crear distintos objetos
+
+En UML una clase se representa de la siguiente manera
+
+--------------
+-   NOMBRE   -
+--------------
+- Atributos  -
+--------------
+- Metodos    -
+--------------
+
+---
+
+Herencia:
+FUENTE: https://www.youtube.com/watch?v=VTWa8DW7yTc
+
+Agrupa caracteristicas especificas para los objetos.
+
+De la clase de un objeto pueden desprenderse distintas categorias
+
+- Clase padre: posee los atributos y metodos comunes entre todos los objetos
+- Clase hijo: posee los atributos y metodos individuales (especificos a la categoria) y conserva los atributos y metodos heredados del padre.
+
+En UML la herencia se representa como un triangulo o debajo de la clase padre donde se origina las lineas a cada clase hijo.
+
+- Modificadores de acceso a atributos o metodos:
+	public (UML : +) puede ser accedido desde cualquier clase dentro y fuera del paquete
+	private (UML : -) puede ser accedido desde la misma clase
+	protected (UML : #) puede ser accedido desde las clases del mismo paquete o clases hijas
+	default // cuando no espesificas ninguna de las anteriores. puede ser accedido solo desde clases dentro del mismo paquete
+
+PAQUETE: (ver video de uso y funcionalidad de paquetes)
