@@ -1,0 +1,234 @@
+Curso Tecnologia web
+--------------------
+1- HTML
+2- HTML
+3- PHP Basico
+4- PHP Basico
+5- Javascript
+
+Curso PHP
+---------
+1- 
+2- 
+3- 
+4- 
+5- 
+
+Temario PHP (libro)
+-------------------
+
+GENERALIDADES FUNDAMENTALES
+	Incluyendo PHP
+	Caracteres espe
+		Tipos de datos
+		Datos escalares
+		Datos compuestos
+		Otros datos
+	Nombres de variables y funciones
+	Constantes
+	Mostrar valores en la pagina
+-	Gestion de errores
+-		Gestion estandar
+-		Gestion personalizada
+-		Depuracion en tiempos de ejecucion
+	Comandos del sistema operativo
+
+ESTRUCTURAS DE CONTROL
+	Condicionales
+		Operadores de condicionales
+	Bucles
+
+MATRICES
+	Creacion
+	Operaciones simples
+		Adicion
+		Diferencia
+		Comparacion
+		Conteo de elementos
+		Determinar un elemento
+		Reflejar e invertir
+		Implosion y explosion
+	Ordenar y desordenar
+		Ordenacion basica
+		Ordenacion natural
+		Ordenaciones personalizadas
+		Desordenaciones
+	Apilamientos
+		Apilamientos de stack
+		Apilamientos de queue
+	Unir matrices
+	Iteraciones
+		El punto de una matriz
+		El bucle foreach
+		Iteraciones personalizadas
+	Matrices con un rango de valores
+
+LAS FUNCIONES DEL USUARIO
+	Conceptos
+	Ambito de las variables
+	Paso de argumentos
+		Valores por defecto
+		Lista de argumentos
+		Paso de argumentos por valor y por referencia
+
+CADENAS
+	Creando cadenas
+	Tratamiento basico
+		Longitud
+		Permutacion
+		Comparacion
+		Busquedas
+		Subcadenas
+		Mascaras
+		Sustitucion de subcadenas
+		cadenas como matrices
+	Formateado de datos
+		Formateado de numeros
+		Formateado de valores monetarios
+		Otros modos de formateo
+	Expresiones regulares
+		Patrones de secuencia o fijacion
+		Patrones multiplicadores
+		Patrones de alternativa
+		Parentesis
+		Escapado de metacaracteres
+		Precedencia de patrones
+		Posix
+		Perl
+
+ALGO DE MATEMATICAS
+	Operadores a nivel de bit
+		Aritmeticos
+		Logicos
+	Libreria bcmath
+		bcadd()
+		bccomp()
+		bcdiv()
+		bcmod()
+		bcmul()
+		bcpow()
+		bcpowmod()
+		bcsqrt()
+		bcsub()
+
+PROGRAMANDO PARA INTERNET
+	Formularios
+		Envio
+		Recepcion de datos en el servidor
+		Envio de matrices
+		Codificacion url
+		Envio de ficheros
+		Paginas auto-procesadas
+	Cabeceras http
+	Cookies
+	Sessiones
+
+PROGRAMACION ORIENTADA A OBJETOS
+	Conceptos basicos
+		Creacion de clases
+		Iniciando una clase
+		Creacion basica de metodos y propiedades
+		Herencia
+		Este objeto ($this)
+		Constructores y destructores
+		Visibilidad
+		Uso de constantes
+		Propiedades y metodos estaticos
+	Funciones propias oop
+	Clases abstractas e interfaces
+		Clases abstractas
+		Interfases
+	Exepciones
+		Primera excepcion
+		Extendiendo la clase excepcion
+		Distintos tipos de excepciones
+		Capturando todas las excepciones
+	Carga en tiempo de ejecucion
+	Reflexion
+		Conceptos basicos
+		Informacion sobre una clase
+		Funciones de usuario
+		Mas sobre clases y metodos
+	Patrones
+		Singleton
+		Registry
+		Factory
+		Model-view-controller
+		Activerecord
+	Libreria estandar de php SPL
+
+BASES DE DATOS
+	Definicion
+	SQL
+		Consultas estructurales
+		Consultas de datos
+	Extension pdo
+		Instalar pdo
+		Uso basico
+		Consultas
+		Sentencias preparadas
+		Transacciones pdo
+
+PHP Y XML
+	Definicion
+	Relacion
+		Extension simplexml
+		Extension dom
+		Simplexml vs dom
+	Servicios web
+		Soap
+		Rest
+		Uso practico
+
+SEGURIDAD EN LA RED
+	Medidas basicas
+		Datos entrantes
+		Datos salientes
+	Posibles ataques
+		Directos contra un sitio
+		A una base de datos
+		De sesion
+		Code injection
+		Command injection
+		Servidores compartidos
+
+SECUENCIAS Y FLUJO DE DATOS
+	Los ficheros
+		Abrir
+		Cerrar
+		Leer
+		Escribir
+		Eliminar
+		Copiar
+		Renombrar
+		Propiedades
+		Permisos
+	Directorios
+		Gestion
+	Funciones complementarias
+		Recorte de ficheros
+		Ficheros csv
+		Mas
+	Acceso a ficheros remotos
+	Secuencias
+		Envolturas
+		Filtros
+		Contextos
+
+OTRAS PRESTACIONES DE PHP
+	Serializacion
+	Metodos magicos
+	Encriptacion
+	Comillas magicas
+
+PHP 4 y PHP 5
+	Generalidades
+	Bases de datos
+	Orientacion a objetos
+	Extensiones
+	Gestion de errores
+
+APENDICE B. OPERADORES DE PHP
+APENDICE C. DIRECTIVAS DE CONFIGURACION
+APENDICE E. MATRICES SUPERGLOBALES
+APENDICE F. ENTIDADES CON NOMBRE Y NUMERO
