@@ -1,0 +1,149 @@
+Actualizar sources.list (Post instalación 1)
+--------------------------------------------
+
+- Desde consola editar el archivo de fuentes
+$ su
+# gedit /etc/apt/sources.list
+
+- Comentar o elimiar el contenido anterior, Principalmente el cdrom añadiendo al inicio #
+# deb cdrom:[Debian GNU/Linux 9.6.0 _Stretch_ - Official amd64 DVD Binary-1 20181110-11:34]/ stretch contrib main
+
+- Tambien añadir:
+
+# stretch-oficiales
+deb http://ftp.us.debian.org/debian/ stretch main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ stretch main contrib non-free
+
+# stretch-actualizaciones-seguridad
+deb http://security.debian.org/debian-security stretch/updates main contrib non-free
+deb-src http://security.debian.org/debian-security stretch/updates main contrib non-free
+
+# stretch-updates, previously known as 'volatile'
+deb http://ftp.us.debian.org/debian/ stretch-updates main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ stretch-updates main contrib non-free
+
+# debian-multimedia
+deb http://www.deb-multimedia.org stretch main non-free
+
+- Guardar los cambios y cerrar gedit.
+
+- Actualizamos desde consola(*):
+# apt-get update
+
+*Nota: Aparecera un error, para corregir debe colocar en la terminal los siguientes comandos:
+
+- Descargamos la clave:
+# wget http://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
+
+- Instalamos la clave:
+# dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
+
+- Borramos el archivo descargado:
+# rm deb-multimedia-keyring_2016.8.1_all.deb
+
+- Actualizamos nuevamente desde consola:
+# apt-get update
+
+Actualizar el sistema (paquetes actualizables)
+----------------------------------------------
+# apt upgrade
+
+Instalación de paquetes básicos de compilación
+----------------------------------------------
+# apt install linux-headers-$(uname -r) build-essential checkinstall make automake cmake autoconf git git-core aptitude synaptic
+
+Instalación de Firmware
+-----------------------
+# apt install firmware-linux
+
+- Buscamos los firmwares faltantes en debian con el comando
+# dmesg | grep firmware
+
+Los resultados los podemos buscar en synaptic e instalarlos
+
+Tarjeta grafica  (no realizado)
+---------------
+-- Temporalmente omitido, Buscar en la FUENTE
+
+Multiarquitectura
+-----------------
+# dpkg --add-architecture i386 && apt-get update
+
+- Instalamos las librerias
+# apt install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
+
+- Para instalar / eliminar paquetes 
+Para instalar o eliminar paquetes desde repositorios de la arquitectura NO predeterminada solo especifica la arquitectura al final de la linea de comandos
+# apt install paquete:arquitectura
+
+- Pendiente eliminar ¿?
+
+- Para instalar desde archivos .deb
+# dpkg -i paquete_ versión_arquitectura.deb
+# dpkg -r paquete:arquitectura
+
+- Mas detalles: http://wiki.debian.org/Multiarch/HOWTO
+
+Codecs Multimedia
+-----------------
+# apt install libdvdcss2 gstreamer1.0-libav
+- Tambien para 64bit:
+# apt install w64codecs
+
+Herramientas de compresión/descompresión de archivos
+----------------------------------------------------
+# apt install bzip2 zip unzip unace rar unace p7zip p7zip-full p7zip-rar unrar lzip lhasa arj sharutils mpack lzma lzop cabextract
+
+/*
+Tipografias (no realizado)
+-----------
+apt install ttf-freefont ttf-mscorefonts-installer ttf-bitstream-vera ttf-dejavu ttf-liberation
+*/
+
+Otras Aplicaciones / Herramientas
+---------------------------------
+Hardinfo – Información del sistema, muestra un detalle del hardware utilizado
+# apt install hardinfo
+
+Grub2 (no realizado)
+-----
+Instalar en caso de que no reconozca particiones windows
+-- Temporalmente omitido, Buscar en la FUENTE
+
+FUENTE: https://pulpolibre.wordpress.com/2017/09/15/guia-basica-despues-de-instalar-debian-9-stretch/
+
+sudo y sudoers
+--------------
+-- Temporalmente omitido, Buscar en la FUENTE
+
+Gnome Tweak Tool
+----------------
+- Activar botones de minimizar y maximizar:
+  Ventanas > barra de titulo 
+- Alternar ventanas
+  Extensiones > Interuptor Alternate Tab
+
+Atajos de teclado
+-----------------
+Configuracion > Teclado > + (final de la lista) nueva entrada:
+- Terminal
+  Name: Terminal
+  Command: x-terminal-emulator
+  Shortcut: Ctrl + Alt + T
+- Explorador
+  Name: File Manager
+  Command: nautilus
+  Shortcut: Super + E
+
+
+Instalar aplicaciones principales
+---------------------------------
+apt install vlc
+
+FUENTE: https://maslinux.es/que-hacer-despues-de-instalar-debian-9-stretch/
+
+Otros enlaces:
+https://www.diversidadyunpocodetodo.com/despues-instalar-debia-9-stretch-configuracion/
+http://www.ubuntubuzz.com/2016/11/list-of-useful-gnome-shell-extensions-for-daily-usage.html
+https://blog.desdelinux.net/reparar-sectores-recuperar-hdd-linux/
+https://blog.carreralinux.com.ar/2016/09/procesos-en-segundo-plano-linux/
