@@ -1,0 +1,19 @@
+Instalar Chrome
+---------------
+
+Entrar en sources.list para editarlo
+# gedit /etc/apt/sources.list
+
+Agregar la siguiente linea:
+deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+
+Por consola añade la clave:
+# wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+
+Actualiza apt-get:
+# apt update
+
+introduce la siguiente linea para instalar:
+# apt install google-chrome-stable
+
+FUENTE:https://www.comoinstalarlinux.com/como-instalar-google-chrome-en-debian-9/ 
