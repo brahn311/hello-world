@@ -7,11 +7,6 @@ $ su
 - Comentar o elimiar el contenido anterior, Principalmente el cdrom añadiendo al inicio #
 # deb cdrom:[Debian GNU/Linux 9.6.0 _Stretch_ - Official amd64 DVD Binary-1 20181110-11:34]/ stretch contrib main
 
-- Añadir al archivo:
-deb  http://deb.debian.org/debian stretch main
-deb  http://deb.debian.org/debian stretch-updates main
-deb  http://security.debian.org/ stretch/updates main
-
 FUENTE: https://maslinux.es/que-hacer-despues-de-instalar-debian-9-stretch/
 
 - Tambien añadir:
