@@ -1,0 +1,36 @@
+Configurar Apache2 para usar PHP
+--------------------------------
+
+
+Instalar PHP:
+# apt -y install php php-cgi libapache2-mod-php php-common php-pear php-mbstring
+
+configurar Apache2:
+# a2enconf php7.0-cgi 
+Enabling conf php7.0-cgi.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+  
+Configurar tu zona horaria:
+# nano /etc/php/7.0/apache2/php.ini
+
+El la linea 924 descomentar borrando el punto y coma (;) y añadir la zona horaria:
+date.timezone = "America/Caracas"
+
+Reiniciar el servicio apache2
+# systemctl restart apache2 
+
+Crea un nuevo archivo PHP de prueba que posea los siguientes datos:
+# nano /var/www/html/info.php
+<html>
+<body>
+<?php phpinfo(); ?>
+</body>
+</html>
+
+Acceder al localhost/info.php y si observas las tablas con la informacion de php todo esta correcto
+
+FUENTE: https://www.server-world.info/en/note?os=Debian_9&p=httpd&f=3
+
+Mas enlaces:
+https://www.server-world.info/en/note?os=Debian_9&p=httpd&f=13
