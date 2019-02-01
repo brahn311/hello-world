@@ -17,6 +17,8 @@ Configurar tu zona horaria:
 El la linea 924 descomentar borrando el punto y coma (;) y añadir la zona horaria:
 date.timezone = "America/Caracas"
 
+Nota: Mas zonas horarias en el manual de php URL: http://php.net/manual/es/timezones.america.php
+
 Reiniciar el servicio apache2
 # systemctl restart apache2 
 
