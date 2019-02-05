@@ -1,0 +1,9 @@
+Instalar archivos .deb
+----------------------
+Especialmente cuando descargas un programa desde la pagina oficial y debes instalar
+
+En consola, en la carpeta donde esta el paquete introduce el comando
+# dpkg -i paquete.deb
+
+Si se presentan errores instalando puedes usar el siguiente comando para observar los detalles del error
+# dpkg --configure -a
