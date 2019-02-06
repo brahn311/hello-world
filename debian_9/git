@@ -1,0 +1,44 @@
+git
+---
+instalar git
+
+Clonar repositorio remoto
+git clone direccion_URL_repositorio
+
+Repositorios (github)
+https://github.com/brahn311/hello-world.git
+
+Cambiar el propietario para poder editar en el directorio del servidor:
+# chown operador hello-world
+# chown -R operador hello-world
+
+Entrar al repositorio:
+cd hello-world
+
+Configuracion inicial de git:
+git config user.name "brhan311"
+git config user.email "abrahannn311@gmail.com"
+Nota: en la carpeta del repositorio y SIN --global para que sea solo local
+
+Verificar configuracion de git:
+git config --list
+
+Prueba de creacion o modificacion de un nuevo archivo:
+echo 'prueba_1' > test1
+
+Verificar el estatus del repositorio:
+git status
+
+Agregar archivo a git:
+git add test1
+
+Comentario a git:
+git commit -m "it's only a test"
+
+*Añadir y comentar todo a git:
+git commit -a -m "it's only a test"
+
+Subir cambios al repositorio remoto:
+git push origin master
+
+FUENTE: https://git-scm.com/book/es/v2

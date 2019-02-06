@@ -1,0 +1,74 @@
+ls
+--
+Comando usado para mostrar listas del contenido e información opcional de directorios y archivos.
+
+Usado sin opciones:
+Muestra listado el contenido no oculto (que no empiece por .) del directorio actual en orden alfabetico.
+
+Su sintaxis es:
+ls opciones archivos
+
+Opciones mas usadas:
+
+-a
+Muestra todo, incluyendo archivos ocultos (que empiecen por .)
+
+-r
+Revierte el orden mientras ordena la lista
+
+-t
+Ordena por tiempo de modificado, dejando los mas nuevos primero.
+
+-l
+Muestra un formato de lista largo
+
+Total de archivos, directorios y subdirectorios
+Tipo y permisos del archivo
+Cantidad de links de acceso al inode
+Propietario del archivo
+Grupo a quien pertenece el archivo
+Tamaño del archivo en los bloques
+Ultima modificacion
+Nombre del archivo
+
+Tipo y permisos:
+El primer caracter indica el tipo de archivo, puede ser:
+(-) para archivos regulares
+(d) para subdirectorios
+(l) para link simbolicos
+El resto de caracteres indican los permisos del archivo, los cuales son:
+(r) si puede leer
+(w) si puede escribir o modificar
+(x) si puede ejecutar
+En el caso de que no tenga ningun permiso aparece el guion (-).
+Los permisos estan divididos en grupos de 3, donde a partir del segundo caracter encontramos:
+Los primeros 3 caracteres son los permisos del propietario del archivo:
+Los siguientes 3 caracteres son los permisos para los miembros del grupo del propietario de ese archivo
+Los ultimos 3 caracteres son de otros usuarios.
+
+Ejemplo:
+-rwxrw-r-- 1   hope   hopestaff  123   Feb 03 15:36   file.txt
+
+Ejemplos de uso:
+ls ~
+Muestra la lista de tu directorio home
+
+ls /
+Muestra la lista del contenido del directorio raiz
+
+ls ../
+Muestra la lista del contenido del directorio superior
+
+ls */
+Muestra la lista del contenido de todos los subdirectorios
+
+ls -d */
+Muestra solo los directorios del directorio actual
+
+ls *.{htm,php,cgi}
+Muestra lista de archivos que posean esas extensiones
+
+ls [aeiou]*
+Solo muestra los que comiencen con vocales
+
+FUENTE: https://www.computerhope.com/unix/uls.htm
