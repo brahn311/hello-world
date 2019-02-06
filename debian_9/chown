@@ -1,1 +1,36 @@
-chown brahn -R /media/DATOS
+chown
+-----
+Change Owner
+
+El comando chown en linux permite cambiar de propietario en archivos y directorios.
+
+Formas de usar el comando_
+
+La más básica es:
+# chown nuevousuario archivo1
+
+Ejemplo:
+# chown root /var/home/musica.mp3
+Establece como propietario del archivo musica.mp3 al usuario root.
+
+Para cambiar recursivamente el propietario a todos los archivos y subcarpetas, podemos usar:
+# chown -R root /var/home
+Aclaremos que la opcion -R modifica el propietario de los archivos y subdirectorios pero deja el directorio principal sin cambiar de propietario.
+
+Con la opcion -c se informará acerca de los cambios que haga
+# chown -R -c root /var/home
+
+Para cambiar el grupo y el propietario, podemos poner dos puntos despues del owner y a continuación añadir el grupo
+# chown web1:client1 /var/www/clients/client1/web1/robots.txt
+Ahora el archivo robots.txt pasará a tener como propietario web1 y como grupo client1.
+
+Para cambiar el usuario del los archivos y carpetas del directorio donde nos encontramos podemos usar:
+# chown nuevousuario *
+
+Tambien podemos además usar el formato numérico mediante el UID (identificador numérico del usuario) y el GID (identificador numérico de grupo)
+# chown -R 0:0 /etc
+Ademas lo usamos combinamos recursivamente.
+
+El modificador -v dentro del comando chown nos dará informará de los permisos aplicados.
+
+FUENTE: https://www.servidoresadmin.com/comando-chown-en-linux/
