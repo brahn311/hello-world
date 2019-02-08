@@ -35,7 +35,7 @@ git add test1
 Comentario a git:
 git commit -m "it's only a test"
 
-*Añadir y comentar todo a git:
+*Añadir todo contenido del directorio actual y comentar a git:
 git commit -a -m "it's only a test"
 
 Subir cambios al repositorio remoto:

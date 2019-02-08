@@ -1,0 +1,22 @@
+07/02/2019
+Probando iPod Shuffle en GNU/Linux
+
+Software instalado
+Rhythymbox
+gtkpod
+
+FUENTES: http://wiredrevolution.com/guides/sync-your-ipod-shuffle-with-linux
+
+Encuentra tu modelo de dispositivo apple
+-- https://support.apple.com/es-mx/HT204217
+
+Reconstruir la base de datos
+- http://shuffle-db.sourceforge.net/
+- https://sourceforge.net/projects/shuffle-db/
+
+Autorellenar
+- http://draxus.org/weblog/2007/01/12/rellenar-el-ipod-shuffle-en-ubuntu/
+
+Otros enlaces (pendientes por revisar):
+- https://es.wikihow.com/manejar-un-iPod-en-Linux
+- https://sourceforge.net/projects/jshuffle/

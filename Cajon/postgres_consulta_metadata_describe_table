@@ -1,5 +1,5 @@
-Descubriendo la metadata de una tabla (postgreSQL)
---------------------------------------------------
+Descubriendo la metadata de una tabla
+--------------------------------------
 fuente: https://phenobarbital.wordpress.com/2008/02/25/descubriendo-la-metadata-de-una-tabla-postgresql/
 
 Mientras desarrollaba una idea de un ORM básico para PHP que auto-descubriera la metadata de una tabla (tal y como se hacen en mySQL con “DESCRIBE”), me encuentro con el problema de que en postgreSQL no existe nada parecido a DESCRIBE o a SHOW CREATE de mySQL; por ende, nos toca interrogar a los pg_catalogs para obtener la información de metadatos de la tabla.

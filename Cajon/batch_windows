@@ -1,0 +1,295 @@
+Como manejar algunas funciones de Windows mediante archivos Batch
+-----------------------------------------------------------------
+
+Batch, según Wikipedia es:
+
+Es un archivo de procesamiento por lotes: se trata de archivos de texto sin formato, guardados con la extensión *.bat que contienen un conjunto de comandos DOS. Cuando se ejecuta este archivo bat, los comandos contenidos son ejecutados en grupo, de forma secuencial, permitiendo automatizar diversas tareas.
+Cualquier comando DOS puede ser utilizado en un archivo batch.
+
+Hay que aclarar Batch que no es un Lenguaje de Programación. Es un archivo de código que contiene comandos del, Shell de Windows, llamado MS-DOS, que pueden ejecutar desde Inicio->Ejecutar->CMD.
+
+Hay dos maneras de ejecutar comandos Batch.
+- Desde el Shell de Windows.
+- Escribiéndolos en un archivo de texto con extensión .bat y luego ejecutarlo.
+
+
+Hola Mundo en Batch
+-------------------
+
+Comenzaremos creando un Simple y clásico "Hola Mundo", escribiendo en un archivo de texto el siguiente código.
+Código :
+
+@echo off
+echo Hola Mundo
+pause
+exit
+
+Ahora guardemos el archivo como Nombre.bat y lo ejecutamos. Nos aparecerá una pantalla negra que dirá "Hola Mundo", luego una linea abajo dirá "Presione una tecla para continuar..."
+Explicamos:
+
+"@echo off" elimina el eco, la repetición de la ruta en la que nos encontramos en cada línea código.
+
+"echo"
+Imprime un texto en pantalla, que es el texto que viene después (el que le pasamos como parámetro), que en este caso es "Hola Mundo". Echo significa eco, por lo mismo 
+
+"pause"
+Como bien se lee, pausa la ejecución del código. Además muestra el texto "Presione una tecla para continuar"
+
+"exit"
+Cierra la ventana de comandos.
+
+Algunas funciones de Batch
+--------------------------
+
+CD o CHDIR:
+-----------
+Si has trabajado en PHP, te sera fácil entender este concepto. Sirve para cambiar de Directorio o Mostrar el nombre del actual. Para usarlo, CD o CHDIR seguido de la ubicación del directorio al cual nos moveremos.
+
+cd "C:\"
+chdir "C:\"
+Los ejemplos anteriores hacen exactamente lo mismo, cambian al Disco C
+
+COPY:
+-----
+Sirve para copiar uno o más archivos a otro destino.
+
+Su sintaxis es la siguiente:
+Copy "Dirección del archivo" "Nueva dirección"
+
+Código :
+Copy "C:\archivo.txt" "C:\archivo2.txt"
+
+Aquí copiaríamos un archivo del Disco C llamado "archivo.txt" como "archivo2.txt"
+
+Para acortar un poco podríamos usar:
+
+Código :
+cd "C:\"
+Copy "archivo.txt" "archivo2.txt"
+
+Donde primero cambiamos de directorio al Disco C con cd "C:\" y luego al copiar no tenemos que especificar que esta en el Disco C ya que ya nos encontramos en el.
+
+DEL:
+----
+Sirve para eliminar uno o más archivos.
+
+Su sintaxis es:
+Del "ARCHIVO"
+
+También se puede añadir:
+del /f /q "archivo"
+Donde no pide confirmación de eliminación (/q) y fuerza al archivo a borrarse ( /f )
+
+Move:
+-----
+Sirve para mover un archivo. 
+
+Su sintaxis es:
+Move "Dirección Archivo" "Nueva Dirección"
+
+Cls:
+----
+Sirve para limpiar el contenido de la pantalla:
+
+Código :
+@echo off
+echo Hola, Cuando pulses la tecla se borrara el contenido y cambiara por otro.
+pause
+cls
+echo ¿Ves?
+pause
+exit
+
+Si quisiéramos averiguar más sobre las funciones, o conocer algunas nuevas por nuestra propia cuenta podemos escribir en el Shell el nombre del comando seguido de /? y aparecerá toda la información necesaria.
+
+Podemos poner en práctica esto de la siguiente manera:
+
+1- Abramos el Shell de windows:
+Inicio > Ejecutar > CMD
+
+2- Una vez abierto escribamos: (Para eliminar el eco)
+echo off
+
+3- Luego para borrar el contenido de pantalla escribe:
+cls
+
+4- Ahora veamos la ayuda de la función Copy:
+copy /?
+
+5- Cerremos la ventana:
+exit
+
+EJEMPLOS:
+
+Vamos a crear un Batch que:
+1- copie un archivo,
+2- lo mueva a otro directorio
+3- borre el original
+4- vuelva a copiar el copiado.
+
+En la carpeta donde crearás el archivo .bat crea un archivo de texto llamado copiame.txt. 
+En él, escribe lo que quieras. Este será el archivo que copiaremos.
+
+Ahora el Batch:
+@echo off
+echo Hola, Copiaremos un archivo
+pause
+copy "copiame.txt" "copiado.txt"
+move "copiado.txt" "C:\copiado.txt"
+del "copiame.txt"
+cd "C:\"
+copy "copiado.txt" "copiado2.txt"
+exit
+
+Guárdalo en la carpeta como NombreQueTuQuieras.bat, y ejecútalo.
+
+Explicacion del ejemplo:
+Lo que ha hecho la cadena de instrucciones es más o menos lo siguiente:
+Primero apagamos el eco, luego imprimimos en pantalla "Hola, Copiaremos un archivo"
+Pausamos el intérprete para que no siga de largo.
+A continuación, copiamos el archivo "Copiame.txt" y su copia se llamará "copiado.txt". La movemos a la carpeta raíz del disco C, y eliminamos el original.
+Por ultimo cambiamos de directorio al disco C, copiamos la copia y cerramos el Batch.
+
+Después de que ejecutemos el Batch, si vamos al Disco C, veremos que hay dos nuevos archivos de texto: uno llamado copiado.txt y otro copiado2.txt.
+También si vamos a la carpeta del Batch, veremos no está el archivo de texto original, "copiame.txt".
+
+Creación de nuevos archivos:
+----------------------------
+Con Batch podemos crear otros archivos. Para ello, tenemos que escribir algo como esto:
+Código :
+
+echo TEXTO DE PRIMERA LINEA > nombre.extensión
+echo TEXTO SEGUNDA LINEA >> nombre.extensión
+echo TEXTO SIGUIENTE LINEA >> nombre.extensión
+
+Al escribir echo seguido de un texto y el signo > creamos un archivo con el nombre que siga.
+Si ocupamos un echo seguido de un texto y el doble signo > (>>) se escribirá en la siguiente linea vacía del archivo que prosiga.
+
+Hagamos la prueba:
+
+Código :
+
+echo Creando un Archivo de texto > nuevo.txt
+echo Esta es la Segunda linea >> nuevo.txt
+echo Y esta es la Siguiente >> nuevo.txt
+echo Esto esta genial >> nuevo.txt
+
+Si ejecutamos eso, la pantalla negra se abrirá y cerrará.
+Pero en la carpeta en la que está nuestro batch se abra creado un nuevo archivo "nuevo.txt" que si lo abrimos, dentro estará escrito lo que especificamos.
+
+Personalizando el SHELL
+-----------------------
+Seguro que no te gusta mucho el aspecto del Shell.
+Aquí veremos como personalizarlo un poco.
+
+COLOR:
+------
+Con la función color podemos cambiar los colores de fondo y las letras. Siendo su sintaxis:
+COLOR AB
+Donde A= El color de el Fondo y B= Color de las letras.
+Para ver todos los colores ve el MS-Dos y escribe color/?
+
+TITLE:
+------
+Para cambiar el título de la barra de tareas solo escribe:
+Title Loquequierascomotitulo
+
+Pause Personalizado:
+--------------------
+¿No te gusta que al poner pause salga "Presione una tecla para continuar..."?
+Pues si escribes "pause>nul" no aparecerá ni un texto.
+Entonces si anteponemos un mensaje, quedaría así.
+
+echo Aprieta cualquier tecla para seguir
+pause>nul
+
+Otros ejemplos:
+---------------
+
+Además puedes jugar con los caracteres. 
+Aquí un ejemplo, donde cambié los colores y jugué con los caracteres y personalicé el pause:
+
+@echo off
+color 30
+echo =================
+echo =               =
+echo = Personalizado =
+echo =               =
+echo =================
+echo.
+echo.
+echo Esto esta personalizado, para salir presiona una tecla.
+pause>nul
+exit
+
+Cabe mencionar que echo. (echo seguido de un punto) sirve para saltarse una línea. 
+
+Matando Procesos:
+-----------------
+como cuando abres el Administrador de tarea, y En la pestaña procesos salen algunos procesos que están andando en tu pc, haciéndoles clics y apretando "terminar proceso" lo puedes acabar.
+Con batch eso es muy fácil, se usa la función:
+Taskkill (No funciona en todos los pc, para ver si esta disponible escribe taskkill /?)
+
+Su sintaxis es:
+taskkill /f /im proceso.exe
+/f Fuerza el término del proceso.
+
+Ejemplo:
+taskkill /f /im wmplayer.exe
+Si lo ejecutas y tienes el Reproductor de Windows Media abierto, este se cerrará.
+
+ABRIENDO PROCESOS:
+------------------
+Ahora abramos ese proceso que cerramos y para abrir procesos se usa la función Start
+
+Su sintaxis es:
+start proceso.exe
+
+También puedes abrir paginas web con tu explorador predeterminado.
+
+Ejemplo:
+start wmplayer.exe
+Se abrirá el Reproductor de Música
+
+Ejemplo:
+start www.google.co.ve
+Se abrirá tu Explorador de Internet en Google.
+
+VARIABLES:
+----------
+Declarar variables. Para crear una se escribe:
+set NOMBREVARIABLE = VALOR
+Para llamarla debemos escribir su nombre entre los signos %%
+
+Ejemplo:
+@echo off
+set Nombre= Javier Letelier Ruiz
+echo %Nombre%
+pause
+
+Para cambiar el valor solo debemos hacer esto:
+Código :
+
+set Nombre= Nuevo Valor
+
+VARIABLES por Promt:
+--------------------
+Si quieres que tu Variable sea dinámica, osea que el Usuario la elija antepones /p
+
+Sintaxis:
+set /p Nombre=Escriba su Nombre:
+Donde el Batch se pausara solo mostrando el Mensaje que va luego del "=" dejando que el usuario escriba algo.
+
+También podemos multiplicarlas, sumarlas, etc... con /a:
+
+Ejemplo:
+set numero1=2
+ser numero2=43
+set /a suma= %numero1% + %numero2%
+echo %suma%
+pause
+exit
+
+Si ejecutamos este, nos devolverá la suma de 2 + 43, 45.
+
+Creo que con esto será suficiente.

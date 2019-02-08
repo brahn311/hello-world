@@ -1,0 +1,100 @@
+#!/bin/bash
+# randomcopy 0.6b
+# a general-purpose script for copying random files 
+# modified specifically for the ipod shuffle and the ipod shuffle database builder script
+
+bInMB=1048576
+
+window_title="Randomcopy 0.6b"
+window_icon="/usr/share/icons/gnome/16x16/devices/gnome-dev-ipod.png"
+tgtPath="/media/ipod/music" # where you wish to copy your music files to. if it doesn't exist the script will create it
+dbPath="/media/ipod/iPod_Control" # where the itunes db is kept
+rebuild_db="/media/ipod/.rebuild_db.py" # where the ipod shuffle database builder script is kept: this should always be on the root of the ipod
+
+redundancy=$(($bInMB/2)) # 1/2 MB is about enough space for the ipod shuffle database, overall
+searchPattern=".*\.\(aac\|aa\|mp3\)" # file extensions to copy
+minFS=$(($bInMB/2)) # smallest filesize to copy, in bytes
+maxFS=$(($bInMB*40)) # largest filesize to copy, in bytes
+
+useall=yes # comment-out this variable if you wish to be prompted for how many MB of files to copy, otherwise it will automatically use whatever space is left
+
+######################################################################
+
+if ! [ -e "$tgtPath" ] ; then mkdir "$tgtPath" ; fi
+
+dbFS=`du "$dbPath" -b -s | grep -o '^[0-9]*'`
+if [ $redundancy -gt $dbFS ] 
+	then redundancy=$(($redundancy-$dbFS))
+	else redundancy=$dbFS
+fi 
+
+tgtBFree=$(((`stat -f -c %f "$tgtPath"`*`stat -f -c %s "$tgtPath"`)-$redundancy))
+
+O=$IFS IFS=$'\n' srcPaths=(`zenity --file-selection --directory --multiple --separator=$'\n' --title="Select source directories" --window-icon="$window_icon"`) IFS=$O
+
+(
+
+echo 10
+for srcPath in "${srcPaths[@]}" ; do
+	srcB=$(($srcB+$(echo `find "$srcPath" -type f -size +$(($minFS-1))c -size -+$(($maxFS+1))c -iregex $searchPattern -print0 | xargs -0 stat -c %s+ ; echo 0` | bc)))		
+done
+echo 100
+
+if [ $useall ]
+	then 
+		if [ $srcB -lt $tgtBFree ]
+			then remSrcB=$srcB
+			else remSrcB=$tgtBFree
+		fi
+	else 
+		if [ $srcB -lt $tgtBFree ]
+			then dialog_entry_text=$(($srcB/$bInMB))
+			else dialog_entry_text=$(($tgtBFree/$bInMB))
+		fi
+		remSrcB=$(($bInMB*`zenity --entry --text="$(($srcB/$bInMB))MB of files $(($minFS/$bInMB))-$(($maxFS/$bInMB))MB found. $(($tgtBFree/$bInMB))MB free on device of /$(echo "$tgtPath" | sed 's/^.*\///'). How much to copy?" --entry-text="$dialog_entry_text" --title="$window_title" --window-icon="$window_icon"`))
+fi
+			
+initSrcB=$remSrcB
+
+if [ $srcB -gt 0 ] ; then # startof if not 0 Bytes found on quick scan
+
+	(
+
+	echo 10
+	for srcPath in "${srcPaths[@]}" ; do
+		O=$IFS IFS=$'\n' tempSrcF=( `find "$srcPath" -type f -size +$(($minFS-1))c -size -+$(($maxFS+1))c -iregex $searchPattern` ) IFS=$O
+		remSrcF=( "${remSrcF[@]}" "${tempSrcF[@]}" )
+	done
+	initSrcF="${#remSrcF[@]}"
+	echo 100
+
+	(
+
+	while [ ${#remSrcF[@]} -gt 0 ] && [ $remSrcB -ge $minFS ] ; do 
+		random=$(($RANDOM % $initSrcF)) 
+		if [ -n "${remSrcF[$random]}" ] ; then # if element is not empty
+			tgtFN_np=$(echo "${remSrcF[$random]}" | sed 's/^.*\///') # strips leading path
+			if [[ $tgtFN_np =~ '[a-zA-Z].*\.[^.]*$' ]] ; then tgtFN_np=$(echo "$tgtFN_np" | sed 's/^[^a-zA-Z]*//') ; fi # strip all nonalpha char before last extn
+			srcFS=$((`stat -c %s "${remSrcF[$random]}"`))
+			if [ $srcFS -le $remSrcB ] && [ $((`expr length "$(echo "$tgtPath" | sed 's/^.*\///')/$tgtFN_np"`)) -le 255 ] && ! [ -e "$tgtPath/$tgtFN_np" ] ; then # first condtn checks for space to copy, second condtn checks path not too long for ipod db rebuilder (255), third condition prevents overwrite
+				cp -i --reply=no "${remSrcF[$random]}" "$tgtPath/$tgtFN_np"
+				remSrcB=$(($remSrcB-$srcFS)) # post-copy!
+				srcCpB=$(($srcCpB+$srcFS))
+			fi
+			unset remSrcF[$random] # make element empty
+			echo $((100*($initSrcB-$remSrcB)/$initSrcB))
+		fi
+	done
+	echo 100
+
+	python "$rebuild_db" -l | zenity --text-info --title="iPod shuffle Database Builder" --window-icon="$window_icon"	
+
+	) | zenity --progress --auto-close --percentage=0 --text="copying $(($initSrcB/$bInMB))MB to $(echo "$tgtPath" | sed 's/^.*\///').." --title="$window_title" --window-icon="$window_icon"
+
+	) | zenity --progress --pulsate --auto-close --percentage=0 --text="deepscanning selected folders.." --title="$window_title" --window-icon="$window_icon"
+
+fi
+
+) | zenity --progress --pulsate --auto-close --percentage=0 --text="quickscanning selected folders.." --title="$window_title" --window-icon="$window_icon"
+
+exit
