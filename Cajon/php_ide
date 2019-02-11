@@ -1,5 +1,6 @@
 08/02/2019
 Probando IDE para programar en debian 9 (computador: operador)
+Buscando un editor de textos ligero en debian 9 (computador: canaima)
 
 FUENTES:
 - https://blog.desdelinux.net/18-herramientas-para-programar-en-gnulinux/
@@ -9,4 +10,4 @@ Programas instalados:
 
 Atom
 Bluefish
-gPHPEdit
+gPHPEdit (la fuente en el documento era muy pequeña y no supe como solucionarlo)
