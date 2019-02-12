@@ -6,6 +6,7 @@ anotar la cantidad de pastillas que poseo
 mostrar los dias en que debo tomarme la pastilla
 */
 
+/*
 // definicion del tratamiento
 $medicamento = "Bactron";
 $periodo = "Indefinido";
@@ -14,8 +15,22 @@ $intervalo = array("Mon","Wed","Fri");
 
 // deficinion del stock del medicamento
 $pastillas_en_blister = 10;
-$total_de_blisters = 6;
-$pastillas_sueltas = 8;
+$total_de_blisters = 7;
+$pastillas_sueltas = 4;
+*/
+
+// definicion del tratamiento
+$medicamento = "Viraday";
+$periodo = "Indefinido";
+$cantidad = "1";
+$intervalo = array("Mon","Thu","Wed","Tue","Fri","Sat","Sun");
+
+// deficinion del stock del medicamento
+$pastillas_en_blister = 30;
+$total_de_blisters = 1;
+$pastillas_sueltas = 7;
+
+// calcular disponibilidad
 $balance = ($pastillas_en_blister * $total_de_blisters) + $pastillas_sueltas;
 
 // calculo de tomas del medicamento
