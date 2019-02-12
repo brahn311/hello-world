@@ -1,0 +1,45 @@
+alias
+-----
+Configurar un alias para bash que resume una o varias instrucciones
+y al usar ese alias, el bash ejecuta esas instrucciones
+
+Su sintaxis es:
+$ alias nombre_alias='comandos'
+Nota: no debe haber espacios antes o despues de = (simbolo igual)
+
+Si necesitas una cadena de comandos usa el operador
+&&
+este operador ejecuta el comando y pasa al siguiente
+pero solo si la ejecucion del comando anterior fue exitosa
+
+Alias temporales
+----------------
+Solo creas el comando durante la sesion, al cerrar la sesion del terminal perderas el alias
+
+Eliminar alias (temporales):
+No es necesario salir de la secion para dejar de usar un alias con el comando:
+$ unalias nombre_alias
+$ unalias -a (quita todos los alias)
+
+Alias permanentes
+-----------------
+
+Metodo .bashrc
+--------------
+Añade el alias en el archivo .bashrc del directorio home del usuario
+$ nano ~/.bashrc
+
+El alias podras usarlo la proxima vez que ingreses al terminal
+es decir, debes salir y entrar nuevamente para usarlo.
+pero si eres impaciente y quieres usarlo inmediato, puedes ejecutar el comando:
+$ source ~/.bashrc
+
+FUENTE: https://www.hostingadvice.com/how-to/set-command-aliases-linuxubuntudebian/
+
+Metodo .bash_aliases
+--------------------
+Quizas quieras tener todos tus alias almacenados en un documento aparte
+Almacenalos en el directorio home de tu usuario (~) llamado .bash_aliases
+$ nano ~/.bash_aliases
+
+FUENTE: ~/.bashrc
