@@ -35,4 +35,6 @@ final class Golden extends Dog
 
 $golden = new Golden('Tommy');
 echo $golden->howIAm();
+
 ?>
+

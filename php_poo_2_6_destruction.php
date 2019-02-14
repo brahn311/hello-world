@@ -1,4 +1,5 @@
 <?php
+
 class indestructible
 {
   public function __construct($name)
