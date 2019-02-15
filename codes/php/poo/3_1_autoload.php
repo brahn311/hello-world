@@ -3,7 +3,7 @@
 
 // metodo uno, funcion generica (apartir de php 5.3)
 spl_autoload_register(function($class){
-  include 'php_poo_3_1_' . strtolower($class) . '.php';
+  include '3_1_' . strtolower($class) . '.php';
 });
 
 /*

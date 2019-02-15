@@ -1,6 +1,6 @@
 <?php
 
-require_once('php_poo_3_2_a_myclass.php');
+require_once('3_2_a_myclass.php');
 // aqui estamos agregando la clase por medio del metodo antiguo
 
 use MyNamespace\Myclass;
