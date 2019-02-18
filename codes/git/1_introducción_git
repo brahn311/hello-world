@@ -1,0 +1,11 @@
+Introducción a Git
+https://www.youtube.com/watch?v=zH3I1DZNovk
+
+Sistema de control de versiones
+Creador linus Torvalds
+Registra cambios realizados a archivos o conjunto de archivos / mejora la organizacion con commit
+
+Tres Estados:
+Working directory : donde trabajamos con los archivos
+Staging area : escogemos los archivos que estan listos y los que aun estan en proceso
+Repository : registro de todo el proyecto en el commit

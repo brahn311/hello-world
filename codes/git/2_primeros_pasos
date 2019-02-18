@@ -1,0 +1,16 @@
+Primeros pasos
+https://www.youtube.com/watch?v=XXdaqtLgOGI
+
+Instalacion de Git
+
+Configuracion
+$ git config --global user.name "nombre"
+$ git config --global user.email "correo"
+Nota1: Para ver esos valores ya almacenados podemos teclear los mimos comandos sin el valor en comillas
+Nota2: el --global hace que se configure ese nombre de usuario y correo para todos los proyectos, puedes usarlo sin el --global para configurar un valor distinto a algun repositorio especifico.
+
+Activar colores
+$ git config --global color.ui true
+
+Ver todas las configuraciones del usuario
+$ git config --global --list

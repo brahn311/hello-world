@@ -1,0 +1,34 @@
+Nuestro primer proyecto
+https://www.youtube.com/watch?v=vH9pkFf1D7M
+
+Empezar a monitoriar el proyectos
+$ git init
+Nota1: solo se realiza una sola vez al iniciar git en el proyecto
+
+Ver status del proyectos
+$ git status
+
+Añadir archivos listos (paso1)
+$ git add nombre_del_archivo (archivo especifico)
+o
+$ git add . (todos los archivos de carpeta y subcarpetas)
+$ git add -A (todos los archivos //probar)
+
+Guardar pasos que hicimos (paso2)
+$ git commit -m "mensaje"
+
+lista commits con su informacion
+$ git log
+
+Viajar en el tiempo
+$ git checkout hash_del_commit (a un commit anterior)
+$ git checkout master (al commit mas reciente)
+
+Eliminar commit
+$ git reset --soft hash_del_commit (borra Working area)
+$ git reset --mixed hash_del_commit (borra el Staging area, y no el Working area)
+$ git reset --hard hash_del_commit (borra los commit y el codigo tambien)
+
+Ver ayudas
+$ git help (todo)
+$ git help comando (solo lo relacionado al status)

@@ -1,0 +1,31 @@
+Empezando con Github
+https://www.youtube.com/watch?v=Qn186NyDqOk
+
+Repositorio = proyecto
+Repositorios remotos: estan en github/gitlab etc
+Repositorios locales: esta en la computadora
+
+Debes crear tu proyecto/repositorio en tu cuenta de github
+
+Vincula el repositorio local con el nuevo repositorio en github
+$ git remote add origin https_del_repositorio_github
+
+Comprobar repositorio remoto
+$ git remote -v
+
+Quitar conexion al repositorio remotos
+$ git remote remove origin
+
+Subir nuestro proyecto a github
+$ git push origin master
+Nota1: ya deberias tener tus commit, los locales seran guardados en el remoto
+Nota2: master se refiere a la rama, si es otra rama solo coloca su nombre
+Pedira usuario Github
+Pedira password
+
+Issues =  algo que no hemos hecho o que tengamos que cambiar
+Milestones = grupos de issues que aplican para proyecto o periodo de tiempo
+labels = organizan los issues
+
+
+*Buscar estilos con Markdown en github

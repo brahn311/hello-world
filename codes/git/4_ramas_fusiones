@@ -1,0 +1,31 @@
+Ramas y Fusiones
+https://www.youtube.com/watch?v=-UQulO_0prM
+
+Head: es el commit donde nos encotramos actualmente, pero puede variar si viajamos en el tiempo
+Ramas: lineas del tiempo en nuestro proyecto, sirve para arreglar errores, experimentar, hacer grandes cambios
+
+Rama master: rama estable - se genera por default al hacer "git init"
+
+Ver la rama donde nos encontramos
+$ git branch
+
+Crear nueva rama
+$ git branch rama
+
+Cambiar de ramas
+$ git checkout ramas
+
+Borrar ramas que no usamos
+$ git branch -D
+
+Fusiones: creacion de un commit juntando 2 Ramas
+
+Debemos situarnos en la rama que recibir los nuevos archivos
+$ git merge rama
+
+Posibles mensajes resultantes:
+Fast-Forward: hace la fusion en o archivos lineas distintos (union automatica)
+Manual Merge: interviene el usuario para terminar la fusion
+
+Crear y movernos a Ramas
+git checkout -b rama
