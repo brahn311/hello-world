@@ -1,0 +1,20 @@
+Github Pages
+https://www.youtube.com/watch?v=wfscXvHXKzk
+
+Pagina personal
+---------------
+Github ofrece paginas para usuarios y organizacion gratuitas ilimitadas pero sin backend
+Ideal para subir portafolios
+
+Debes crear un repositorio nuevo con el nombre con la siguiente estructura
+usuario.github.io
+
+En ese repositorio tendras todos los archivos de tu pagina personal
+
+Pagina del Repositorio
+----------------------
+Teniendo un repositorio, solo debes crear la rama gh-pages
+En esa rama tendras todos los archivos de la pagina del repositorio
+
+Cual sera la direccion?
+usuario_o_organizacion.github.io/repositorio

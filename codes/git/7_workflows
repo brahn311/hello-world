@@ -1,0 +1,101 @@
+Workflows
+https://www.youtube.com/watch?v=VMInoluaZ9o
+
+Workflows: flujos de trabajo
+  Proyectos propios
+  Proyectos en equipo
+  Proyectos con terceros
+
+Proyectos propios: Nosotros somos los dueños del repositorio, decidimos todo lo que pasa
+Nota1: todo lo visto anterior se refiere a repositorios propios
+
+Proyectos en equipo:
+Debes de crear una organizacion en Github especificando:
+- Nombre de la organizacion
+- Email
+- Plan de subscripcion
+- Participantes en Github
+
+A los participantes le especificas que pueden hacer en el repositorio, deberias darle el perfil de crear repositorios (tendra mas privilegios)
+
+Si el repositorio era propio:
+- Debes de transferirlo a la organizacion en configuracion de github
+- Desconectarte del respositorio propio (ese repositorio propio ya no existe)
+$ git remote remove origin
+- Debes conectarte al repositorio de la organizacion
+$ git remote add origin https_del_repositorio_github
+o
+Crear un repositorio nuevo en dicha organizacion
+
+El participante debera clonar el repositorio de la organizacion para trabajarlo localmente
+$ git clone https_del_repositorio_de_la_organizacion
+
+Luego de realizar cambios en su repositorio local, el participante debera subirlos al repositorio remotos como ya conocemos anteriormente:
+$ git add -A
+$ git commit -m "mensaje del participante"
+$ git push origin master
+
+---
+Si un participante realizo cambios, es posible que tu repositorio local no este actualizado con el repositorio remoto
+
+El repositorio local posee una rama oculta, origin/master. es el codigo original subido al repositorio remoto
+
+Ver ramas ocultas:
+$ git branch -a
+
+Sincronizando o actualizando la rama oculta de tu repositorio local
+$ git fetch origin
+
+Uniendo la rama oculta origin/master con tu rama master (tu rama local donde realizas cambios)
+$ git merge origin/master
+
+---
+Cuando distintos participantes modifican una misma linea: todo depende de quien suba los cambios primero
+El primer participante que realiza cambios no dara error.
+El segundo participante podra hacer:
+$ git add .
+$ git commit -m "mensaje"
+$ git push origin master (error > Git no dejara subir los cambios al remoto por no tener la rama oculta actualizada)
+
+Primero debera actualizar la rama oculta y hacer la fusion
+$ git fetch origin
+$ git merge origin/master (muestra un aviso de Automerge)
+
+Automerge: se unio la rama master con el conflicto que deberas editar manualmente y aparece el listados los archivos afectados.
+
+Debes ubicar el error y consultar a los participantes del error y dejar el codigo que corresponda
+<<<<<<<< HEAD (tu ultimo commit local)
+========
+>>>>>>>> origin/master (el commit en la rama oculta)
+
+Ahora si podras hacer un nuevo commit con los cambios y las observaciones respectivas
+$ git add .
+$ git commit -m "mensaje"
+$ git push origin master
+
+Proyectos de terceros:
+No somos dueños ni colaboradores, pero queremos ver o participar en el proyecto
+
+Fork = clonar un repositorio de terceros a nuestros repositorios
+Nosotros podremos acceder, modificar, solicitar subir nuestros cambios al repositorio
+
+Debemos hacer un fork en Github y copiamos su direccion https
+
+Debemos clonar el repositorio de terceros:
+$ git clone https_de_tu_repositorio_fork (no del repositorio del tercero)
+
+Ahora podras subir tus cambios a tu repositorio clonado tuyo (solo al fork clonado, al repositorio de terceros no tendras permisos) igualmente usando:
+$ git add .
+$ git commit -m "mensaje"
+$ git push origin master
+
+Para mantenerte actualizado con los cambios del repositorio de terceros:
+$ git fetch upstream (upstream se refiere al nombre de la rama original de terceros)
+Nota: El fork generara otra rama oculta generalmente llamada upstream/master (del repositorio del tercero) para mantenerte actualizado con los cambios oficiales, aunque la organizacion podra tener otras ramas ocultas y podras verlas usando:
+$ git branch -a
+
+Puedes notificar tus actualizaciones a terceros (desde github) con el boton:
+Create pull request
+- Podras colocarle titulo y comentarios y usar los Markdown.
+
+El tercero sera notificado y decide si aceptar esos cambios o no haciendo un commit con el cambio.

@@ -1,0 +1,41 @@
+Deployment con git
+https://www.youtube.com/watch?v=Q5kQmlslOwA&t
+
+Conectar tu computador con el repositorio y con el servidor usando ssh
+
+SSH = Permite la conexion a un servidor sin tener que poner una password a cada momento
+
+Debes generar una llave ssh:
+
+(Usando linux/mac)
+$ ssh-keygen
+- Pedira una generar una contraseña de confirmacion (puedes usar el Enter)
+- Pedira la confirmacion de la contraseña (igual al anterior)
+
+(Usando windows)
+Desgarga y ejecuta puTTYgen:
+https://www.puttygen.com/download-putty
+
+Selecciona el tipo como: SSH-2 RSA.
+Preciona el boton: Generate.
+Mueve el mouse en el espacio en blanco hasta que la barra de progreso este llena
+Escribe y confirma una contraseña, puedes dejarla vacia, pero no es recomendable
+Guarda la clave privada, la necesitas para conectarte.
+/*Click the Save private key button to save the private key. Warning! You must save the private key. You will need it to connect to your machine.*/ creo que esto es solo para conectarte a esa maquina via putty.
+Copia todo el contenido de public-key
+Añade la nueva clave En Github > Settings > SSH > New SSH key (Boton)
+Colocar el nombre
+Pegar y guarda la public-key generada.
+
+Ahora solo debes actualizar el remote de tu repositorio local usando:
+$ git remote remove
+$ git remote add direccion_SSH
+
+Puedes hacer los mismos pasos en el servidor para que solo tengas que actualizar el repositorio con:
+$ git pull
+Nota1: este comando unifica los comandos:
+$ git fletch origin
+y
+$ git merge origin/master
+
+De este modo tendras actualizados tu repositorio remoto y tu servidor
