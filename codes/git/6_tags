@@ -10,8 +10,9 @@ $git push origin master -f (forzar, dado a que realmente no hay commits en esta 
 Tags = puntos especificos en la historia del repositorio, se usan para marcar versiones
 
 Tags anotadas: requiere especificar mas opciones pero poseen informacion mas completa, son objetos dentro de la base de Git
-$ git tag -a tag -m "mensaje"
-Nota1: tag se refiere al nombre o nomenclatura del tag creado
+$ git tag -a tag -m "mensaje" hash
+Nota1: tag se refiere al nombre o nomenclatura que tendra
+Nota2: sin especificar el hash asigna el tag al ultimo commit, con el hash se lo asigna al commit especificamente
 
 Subir el tag
 $ git push origin tag (para subir un tag especifico)

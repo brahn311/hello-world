@@ -1,2 +1,57 @@
 Git Hooks (final)
 https://www.youtube.com/watch?v=FEsV5P0mh9g
+
+Hooks = mecanismos para enganchar y activar scripts cuando suceden ciertas acciones
+
+<<<<<<<< Ejercicio no realizado.
+
+Acciones definidas:
+	applypatch-msg
+	pre-applypatch
+	post-applypatch
+	pre-commit
+	prepare-commit-msg
+	commit-msg
+	post-commit
+	pre-rebase
+	post-checkout
+	post-merge
+	pre-receive
+	update
+	post-receive
+	post-update
+	pre-auto-gc
+	post-rewrite
+	pre-push
+FUENTE: https://githooks.com/
+
+Usando post-commit
+------------------
+Se activa al hacer un:
+$ git commit -m "mensaje"
+
+Se configura el hook para:
+-	$ git push
+-	Acceder al servidor por SSH
+	-	Ejecutar un scripts.sh
+		-	Cambiar de carpeta repositorio
+		-	$ git pull
+
+Pasos realizados:
+
+Crea el hooks en la carpeta del repositorio
+.git/hooks
+crear archivo con el nombre del hook (previamente descrito)
+post-commit
+Dicho archivo debe contener:
+#!/bin/sh
+git pull origin master
+ssh root@filisantillan.com 'bash -s' < script.sh
+Darle privilegios al hook para ejecutar
+
+Crear el archivo para el servidor
+script.sh
+El contendio del archivo sera el siguiente:
+cd /var/www/ghost/content/themes/FiliSantillan
+git pull origin master
+sudo service ghost restart

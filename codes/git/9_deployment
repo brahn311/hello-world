@@ -2,6 +2,7 @@ Deployment con git
 https://www.youtube.com/watch?v=Q5kQmlslOwA&t
 
 Conectar tu computador con el repositorio y con el servidor usando ssh
+De este modo tendras actualizados tu repositorio remoto y tu servidor y remoto
 
 SSH = Permite la conexion a un servidor sin tener que poner una password a cada momento
 
@@ -21,7 +22,8 @@ Preciona el boton: Generate.
 Mueve el mouse en el espacio en blanco hasta que la barra de progreso este llena
 Escribe y confirma una contraseña, puedes dejarla vacia, pero no es recomendable
 Guarda la clave privada, la necesitas para conectarte.
-/*Click the Save private key button to save the private key. Warning! You must save the private key. You will need it to connect to your machine.*/ creo que esto es solo para conectarte a esa maquina via putty.
+>>>>>>>> Click the Save private key button to save the private key. Warning! You must save the private key. You will need it to connect to your machine.
+<<<<<<<< Creo que esto es solo para conectarse a esa maquina via putty.
 Copia todo el contenido de public-key
 Añade la nueva clave En Github > Settings > SSH > New SSH key (Boton)
 Colocar el nombre
@@ -38,4 +40,45 @@ $ git fletch origin
 y
 $ git merge origin/master
 
-De este modo tendras actualizados tu repositorio remoto y tu servidor
+Ignorar archivos para no subirlos del repositorio local al remoto usando:
+$ git add -A
+
+Crea un archivo de texto llamado ".gitignore"
+Especificando en el las extensiones que deseas que no suban al repositorio
+
+Ejemplo:
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.sh
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Sporlight-V100
+.trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs programm
+*~ bluefish (debian)

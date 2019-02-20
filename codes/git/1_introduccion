@@ -5,6 +5,9 @@ Sistema de control de versiones
 Creador linus Torvalds
 Registra cambios realizados a archivos o conjunto de archivos / mejora la organizacion con commit
 
+Los sistemas de Control de Versiones Distribuidos (DVCS por sus siglas en inglés) ... (como Git, Mercurial, Bazaar o Darcs), los clientes no solo descargan la última copia instantánea de los archivos, sino que se replica completamente el repositorio. De esta manera, si un servidor deja de funcionar y estos sistemas estaban colaborando a través de él, cualquiera de los repositorios disponibles en los clientes puede ser copiado al servidor con el fin de restaurarlo. Cada clon es realmente una copia completa de todos los datos.
+FUENTE: https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Acerca-del-Control-de-Versiones
+
 Tres Estados:
 Working directory : donde trabajamos con los archivos
 Staging area : escogemos los archivos que estan listos y los que aun estan en proceso
