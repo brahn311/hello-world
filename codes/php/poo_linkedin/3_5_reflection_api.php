@@ -25,12 +25,13 @@ class Cat extends Animal {
   }
 }
 
-$reflection_class = new ReflectionClass('Dog');
+$dog_reflection_class = new ReflectionClass('Dog');
+Reflection::export($dog_reflection_class);
 
-echo $reflection_class->getName() . "\n";
-var_dump($reflection_class->isAbstract());
-var_dump($reflection_class->isInstantiable());
-var_dump($reflection_class->isInternal());
+echo $dog_reflection_class->getName() . "\n";
+var_dump($dog_reflection_class->isAbstract());
+var_dump($dog_reflection_class->isInstantiable());
+var_dump($dog_reflection_class->isInternal());
 
 // tambien podemos ver el comportamiento de metodos y los parametros que reciben
 // puede ser util para:
