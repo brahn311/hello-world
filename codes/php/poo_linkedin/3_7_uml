@@ -1,0 +1,44 @@
+UML = lenguaje unificado de modelado (Unified Modeling Language)
+
+Estandar de notacion para modelar objetos de la vida real, en conjunto con la metodologia de diseños de clases
+
+Ayuda visual para entender:
+- diseño de clases
+- arquitecturas mas grandes
+- casos de uso
+
+
+Puede modelar:
+- clases
+- objetos
+- relaciones entre clases y objetos
+- responsabilidades
+- actividades
+- interfases
+- paquetes
+
+Clases:
+------------------------------
+|     nombre_de_la_clase     |
+------------------------------
+| atributos                  |
+------------------------------
+| metodos                    |
+------------------------------
+
+Accesos:
++ publico
+- Privado
+# protegido
+
+Relaciones:
+Linea continua > herencia
+Linea punteada > implementacion de interfaz
+
+las puntas de flechas pueden indicar quien es el padre
+
+Herramientas:
+https://www.draw.io/
+
+Existen multiples herramientas usadas para el modelado UML
+Existen otras que hasta puedes generar el codigo.

@@ -1,0 +1,34 @@
+
+
+Frameworks: Symphony
+Frameworks: Laravel (basado en Symphony)
+Composer : manejador de dependencias (ayuda a instalar bibliotecas)
+
+Herramientas para probar codigo y clases
+PHPUnit : probar la funsionalidad de nuestras Clases
+
+Instalar composer
+
+Comprovar version composer (windows/cmd):
+> composer --version
+
+En el directorio de trabajo colocar el archivo
+composer.json
+Contenido: (el archivo debe tener los datos que se desea instalar)
+{
+	"require-dev": {
+		"phpunit/phpunit": "5.0.*"
+	}
+}
+
+Actualizar dependencias e Instalar:
+> composer update
+// Descarga y copia las librerias y sus dependencias en el directorio de trabajo (carpetas)
+
+Para ejecutar PHPUnit:
+> vendor\phpunit\phpunit\phpunit (windows)
+$ vendor/phpunit/phpunit/phpunit (linux-mac)
+
+Archivos para probar:
+	PersonTest.php
+	Person.php

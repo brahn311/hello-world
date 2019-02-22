@@ -1,0 +1,51 @@
+7.3 Guardado rapido y limpieza
+FUENTE: https://git-scm.com/book/es/v2/Herramientas-de-Git-Guardado-r%C3%A1pido-y-Limpieza#r_git_stashing
+
+$ git stash
+$ git stash save
+
+Comando para guardar rapidamente todos los archivos en que se encuentren en edicion, pero que no esten listos para un commit
+Necesario debido a git requiere trabajar en un directorio limpio para ejecutar otros comandos, como por ejemplo:
+- Hacer cambios de ramas
+- Actualizar repositorio
+- Fusionar ramas
+
+El comando stash guarda por default los archivos que ya esten gestionados en el indice de git
+
+Para ver archivos guardados:
+$ git stash list
+Ejemplo:
+$ git stash list
+stash@{0}: WIP on master: 049d078 added the index file
+stash@{1}: WIP on master: c264051 Revert "added file_size"
+
+Para acceder al contenido del guardado rapido:
+$ git stash apply (Para recuperar archivos guardados mas resientes)
+$ git stash apply stash@{2}
+
+Puede que git no recupere tus archivos con cambios previamente add (añadidos) puedes forzarlo contenido
+$ git stast --index
+Esto indica a git que recupere los archivos con cambios previamente add (añadidos)
+
+Los archivos que guardes y apliques tambien se conservan, puedes borrarlos con:
+$ git stash drop stash@{0}
+Tambien puedes entrar para aplicarlos y luego borrarlos usando:
+$ git stash pop
+
+Otras opciones:
+
+$ git stash save --keep-index
+Para indicarle a git que no guarde los cambios que ya tienes agregados, podras hacer commit y luego regresar por el resto.
+
+$ git stash -u
+$ git stash --include-untracked
+Indica que tambien guarde cualquier archivo que no este incluido aun en indice del control de versiones
+
+$ git stash --patch
+No guarda automaticamente, te muestra primero los cambios y luego te pregunta si deseas guardarlo o no.
+
+---
+Limpiar archivos cruft (archivos de residuos, codigos de versiones viejas)
+$ git clean
+
+>>>>>>>> Pendiente

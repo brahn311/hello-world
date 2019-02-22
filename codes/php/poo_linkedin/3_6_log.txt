@@ -1,0 +1,1 @@
+22-02-2019- 08:09:08 ::: Error. Debe tener nombre. Error en el archivo D:\Users\aomana03\Personal\xampp\htdocs\hello-world\codes\php\poo_linkedin\3_6_magic_constants.php, en la linea 11, en la clase Dog, en el metodo myUtilities::sayMyName, en el trait myUtilities
