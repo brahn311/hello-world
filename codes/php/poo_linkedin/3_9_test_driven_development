@@ -1,0 +1,10 @@
+Test driven development
+Programacion orientada a pruebas
+
+Es un paradigma que no es especifico para progracion de objetos, pero es muy compatible
+
+Se intenta hacer pruebas primero, para hacer que nuestro codigo pase las pruebas.
+
+Para esto, requerimos nuevamente usar el framework PHPUnit
+Recuerde que esta ubicado en la carpeta de vendor
+Nota: Ver el documento anterior 3_8_phpunit con el instructivo de como descargarlo.
