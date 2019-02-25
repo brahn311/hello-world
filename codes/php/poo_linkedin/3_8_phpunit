@@ -1,20 +1,20 @@
-
+Unidad de pruebas de phpunit
+surge debido a la incorporacion de nuevos paradigmas como programacion de objetos y sus nuevas impletemtaciones de frameworks
 
 Frameworks: Symphony
 Frameworks: Laravel (basado en Symphony)
 Composer : manejador de dependencias (ayuda a instalar bibliotecas)
 
-Herramientas para probar codigo y clases
-PHPUnit : probar la funsionalidad de nuestras Clases
+PHPUnit: Herramientas para probar codigo y la funcionalidad de nuestras Clases
 
 Instalar composer
 
 Comprovar version composer (windows/cmd):
 > composer --version
 
-En el directorio de trabajo colocar el archivo
+En el directorio de trabajo colocar el archivo que contienen los datos las librerias que se desea instalar:
 composer.json
-Contenido: (el archivo debe tener los datos que se desea instalar)
+Contenido:
 {
 	"require-dev": {
 		"phpunit/phpunit": "5.0.*"
@@ -23,12 +23,36 @@ Contenido: (el archivo debe tener los datos que se desea instalar)
 
 Actualizar dependencias e Instalar:
 > composer update
-// Descarga y copia las librerias y sus dependencias en el directorio de trabajo (carpetas)
+// Descarga y copia las librerias y sus dependencias en el directorio de trabajo
 
 Para ejecutar PHPUnit:
 > vendor\phpunit\phpunit\phpunit (windows)
-$ vendor/phpunit/phpunit/phpunit (linux-mac)
+$ php vendor/phpunit/phpunit/phpunit (linux-mac)
 
-Archivos para probar:
-	PersonTest.php
-	Person.php
+Los ejercicios y sus archivos se encuentran en la carpeta
+./folder_3_8
+
+Lo normal es usar un autoload para cargar las clases que se requieran en los test, aunque usaremos solo la clase:
+Person.php
+
+Las pruebas que se realizaran estaran almacenadas en el archivo:
+PersonTest.php
+
+Para ejecutar la prueba usamos el comando: (linux-mac)
+$ php vendor/phpunit/phpunit/phpunit PersonTest.php
+
+Al ejecutar la prueba, recordar que PHPUnit esta basado en assertions, sentencias que deben comprobadas para ser verdaderas o falsas
+
+La estructura de la prueba deberia ser la siguiente:
+<?php
+require_once('Person.php');
+
+class StackTest extends PHPUnit_Framework_TestCase
+{
+    public function testPersonConstruct()
+    {
+		# test_codes
+    }
+}
+?>
+Todos los metodos que su nombre empiecen por test, los tomara como pruebas. el restante seran metodos para las clases que puedan ser comprobadas

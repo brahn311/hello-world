@@ -1,12 +1,34 @@
 PHP Orientado a Objetos
 Videobrain > Linkedin
 
-1
+1 Introducción a PHP orientado a objetos/
+	1- Historia del paradigma orientado a objetos en PHP
+	2- Clases y objetos en PHP
+	3- Constructores y métodos
+	4- Primitivos y tipos de clases
+	5- Herencia en PHP
+	6- Acceso y visibilidad de métodos y atributos
+	7- Acceso privado y protegido en PHP
+	8- Métodos y propiedades estáticas en PHP
 
-2
+2 Herramientas de programación orientada a objetos
+	1- Propiedades constantes en PHP
+	2- Clases abstractas e interfaces
+	3- Traits en PHP
+	4- Excepciones en PHP
+	5- Clases y métodos finales
+	6- Métodos de destrucción en PHP
+	7- Conversión de objetos a cadenas
+	8- Sobrecarga de métodos
+	9- Objetos clonados en PHP
 
-3
-6	Constantes magicas
-7	UML en PHP
-8	Conocemos PHPUnit
-9	Programacion orientada a pruebas
+3 Ordenando, buscando, documentando, y probando código en PHP
+	1- Autoload en PHP
+	2- Paquetes y namespaces
+	3- Búsqueda de clases en PHP
+	4- Búsqueda de métodos en PHP
+	5- API Reflection
+	6- Constantes magicas
+	7- UML en PHP
+	8- Conocemos PHPUnit
+	9- Programacion orientada a pruebas

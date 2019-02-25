@@ -48,7 +48,7 @@ class Dog extends Animal
 {
 	use myUtilities;
 
-	//public $name = "Marxcelino";
+	public $name = "Marxcelino";
 
 	public function makesound()
 	{

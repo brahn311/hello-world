@@ -7,4 +7,5 @@ En consola, en la carpeta donde esta el paquete introduce el comando
 
 Si se presentan errores instalando puedes usar el siguiente comando para observar los detalles del error
 # dpkg --configure -a
+
 FUENTE: https://www.comoinstalarlinux.com/como-solucionar-problemas-al-instalar-o-actualizar-paquetes-en-ubuntu-o-linux-mint/
