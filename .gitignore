@@ -1,0 +1,6 @@
+# Ignorados por abrahan... (aun no se que hacer con estos directorios)
+/bootstrap-4.3.1-dist
+
+# Ignorados automaticamente
+/codes/java/romatutorials_curso/prueba/nbproject/private/
+/codes/java/romatutorials_curso/prueba/build/
