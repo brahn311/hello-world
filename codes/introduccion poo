@@ -1,6 +1,18 @@
 Programacion Orientada a Objetos
 
-Entidades:
+Paradigma de programacion basado en los objetos y sus interacciones, para diseñar aplicaciones y programas informaticos
+
+Tecnicas:
+	Herencia
+	Abstraccion
+	Polimorfismo
+	Encapsulamiento
+
+Objetos: Entidad provista de conjuntos de
+- Propiedades o atributos (datos)
+- Comportamientos o funcionalidad (metodos)
+
+Ejemplo de entidades: (objeto)
 FUENTE: https://www.youtube.com/watch?v=Nka4JSBgf7I
 
 - Teclado
@@ -9,11 +21,12 @@ FUENTE: https://www.youtube.com/watch?v=Nka4JSBgf7I
 - Hoja
 - Borrador
 
-Cada entidad seria un objeto...
-Cada objeto tiene caracteristicas distintas a otros...
-El objeto puede realizar acciones...
+Un objeto es una instancia a una clase
 
+Cada objeto tiene caracteristicas distintas a otros...
 Caracteristica = Atributos
+
+El objeto puede realizar acciones...
 Acciones = Metodos
 
 Clase:
@@ -22,7 +35,7 @@ Con dos objetos:
 - Lapiz
 - Color
 Ambos son el mismo tipo de objeto y tienen caracteristicas diferentes
-Pero quitando sus diferencias, obtenemos un molde 
+Pero quitando sus diferencias, obtenemos un molde
 
 La clase es un molde para crear distintos objetos
 

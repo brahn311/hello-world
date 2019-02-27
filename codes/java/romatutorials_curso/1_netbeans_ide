@@ -2,7 +2,21 @@ Conociendo nuestro IDE
 https://www.youtube.com/watch?v=WIF-Ue_QvHg
 
 Instalacion
+
 Creando el primer proyecto
+- Proyecto Nuevo
+Pasos:
+1 Seleccionar proyecto
+	Categoria Java
+	Proyecto: Java Application
+	Siguiente
+2 Nombre y ubicacion
+	Nombre:
+	Ubicacion:
+	Crear clase principal
+	Configurar como proyecto principal
+	Terminar
+
 Instalar plugins
 Creando plantillas
 Cambiando la fuente

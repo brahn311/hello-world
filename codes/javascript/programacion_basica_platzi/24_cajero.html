@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>24- Cajero Automatico</title>
+</head>
+<body>
+	<h1>Cajero automatico</h1>
+	<p>Cuanto desea retirar?</p>
+	<input type="number" name="dinero" id="monto" />
+	<input type="button" value="Extraer" id="extraer" />
+	<br />
+	<p id="respuesta"></p>
+	<!-- <script src="24/cajero.js"></script> -->
+	<script type="text/javascript">
+		class Billete
+		{
+			constructor(valor, cantidad)
+			{
+				this.valor=valor;
+				this.cantidad=cantidad;
+			}
+		}
+
+		function retirarDinero()
+		{
+			var saldo = 0;
+			for (var billetes of caja)
+			{
+				saldo = saldo + billetes.valor * billetes.cantidad;
+			}
+			console.log("Disponible en cajero: " + saldo);
+
+			var dinero = parseInt(document.getElementById("monto").value);
+			console.log("Monto de retiro: " + dinero);
+			
+			if (dinero <= saldo)
+			{
+				for (var disponible of caja)
+				{
+					if (dinero > 0)
+					{
+						var papeles = 0;
+						var calculo = Math.floor(dinero / disponible.valor);
+						if (disponible.cantidad <= calculo)
+						{
+							papeles = disponible.cantidad;
+						}
+						else
+						{
+							papeles = calculo;
+						}
+						entregado.push(new Billete(disponible.valor, papeles));
+						dinero = dinero - (disponible.valor * papeles);
+						console.log("Billete: " + disponible.valor + " Cantidad: " + disponible.cantidad + " Entregar: " + papeles);
+					}
+				}
+
+			}
+			else 
+			{
+				document.getElementById("respuesta").innerHTML = "No hay Dinero suficiente para realizar su transacci&oacute;n!";
+			}
+			
+			if (dinero > 0)
+			{
+				console.log("Error: Monto inexacto!");
+				document.getElementById("respuesta").innerHTML = "El monto solicitado no puede ser entregado por el cajero!";
+			}
+			else
+			{			
+				for (var billetes of entregado)
+				{
+					if (billetes.cantidad > 0)
+					{
+						document.getElementById("respuesta").innerHTML += "Billete de " + billetes.valor + " = Cantidad: " + billetes.cantidad + "<br />";
+					}
+				}
+			}
+		}
+
+		var caja = [];
+		caja.push(new Billete(50, 3));
+		caja.push(new Billete(20, 2));
+		caja.push(new Billete(10, 2));
+		
+		var entregado = [];
+
+		var boton = document.getElementById("extraer");
+		boton.addEventListener("click", retirarDinero);
+
+	</script>
+</body>
+</html>
