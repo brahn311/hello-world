@@ -16,7 +16,7 @@ Entrar al repositorio:
 cd hello-world
 
 Configuracion inicial de git:
-git config user.name "brhan311"
+git config user.name "brahn311"
 git config user.email "abrahannn311@gmail.com"
 Nota: en la carpeta del repositorio y SIN --global para que sea solo local
 

@@ -1,0 +1,339 @@
+
+
+
+java
+
+javax  programa
+
+
+       codigo--->>> byte aplicacion      
+
+
+
+jcn                                                        double a = 20   caso probable no usar en los programas pero es validos
+
+variables 
+
+lomg      64 bit > 8 byte                                imtx= cast(a),
+
+imteger  4 byte
+
+short   2 byte                                            %
+	
+byte    1                                                  25 /3					
+
+char    2                                                (1)   8 
+
+float   8
+
+double  4
+
+boulean 2           ---->>>>>   thru
+                                falce 
+array  vector
+
+
+aritmetica  
+bit :
+01010101010   disponble operaciones de desplazamiento de bit
+
+logica
+comparacion
+>
+<
+<=
+>=
+==
+¡=
+
+
+&& = and  operaciones de iguaLDAD
+
+||  = or
+^[
+!
+
+
+filosofia 
+
+clase -->>>    comjuncion de propiedades y metodos  que se refiere a variable y funciones 
+
+el objetos es llevar al plano arquitectonico a una clase (en relacion es un programa)
+
+
+
+propiedades
+
+metodos
+
+objeto          creacion del objeto
+estadistica = new estadistica 
+
+
+
+las propiedades pueden ser  publicas
+                            privadas
+                            protected
+                            sim especificar 
+
+
+
+
+public class VolumenCaja {
+    private double largo=12.0,ancho=10.2,profundidad=11.5;
+
+    
+    public VolumenCaja(double largo){
+        System.out.println("el volumen del cubo es :"+largo*largo*largo);
+        largo--;
+    }
+    
+      public VolumenCaja(double largo,double ancho,double profundidad){
+          System.out.println(" el volumen del cubo es c2 "+largo*ancho*profundidad);
+      }
+      public  VolumenCaja(int largo,int ancho,int profundidad){
+          System.out.println(" el volumen del cubo es c3 "+largo*ancho*profundidad );
+      }
+}
+
+public cllas estadistica { 
+
+      public imt x;
+      public double y;
+
+ public void promedio() {
+
+ public void  DesEst(){
+
+  public imt z;  
+
+
+program con this 
+
+package dia1cados;
+
+/**
+ *
+ * @author Instructor
+ */
+public class VolumenCaja {
+    private double largo=12.0,ancho=10.2,profundidad=11.5;
+public VolumenCaja(){
+    System.out.println("el volumen del cubo es c0"+this.largo*this.ancho*this.profundidad);
+}
+
+    
+    public VolumenCaja(double largo){
+        System.out.println("el volumen del cubo es :"+largo*largo*largo);
+        largo--;
+    }
+    
+      public VolumenCaja(double largo,double ancho,double profundidad){
+          System.out.println(" el volumen del cubo es c2 "+largo*ancho*profundidad);
+      }
+      public  VolumenCaja(int largo,int ancho,int profundidad){
+          System.out.println(" el volumen del cubo es c3 "+largo*ancho*profundidad );
+      }
+}
+
+
+pase de un vector
+
+package pasevalorporeferenci;
+
+/**
+ *
+ * @author Instructor
+ */
+public class PaseValorporeferenci {
+    static int vector2[]={59,12,20,39,32,87,99};
+    static int n;
+   
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        PasoVector vec=new PasoVector();
+        n=2018;
+        vec.recibe(vector2,n);
+        for(int i=0;i<vector2.length;i++){
+            System.out.println("vector"+i+":"+vector2[i]);
+        }
+        System.out.println("el valor de n :"+n);
+    }
+    
+}
+
+package dia1cados;
+
+/**
+ *
+ * @author Instructor
+ */
+public class VolumenCaja {
+    private double largo=12.0,ancho=10.2,profundidad=11.5;
+public VolumenCaja(){
+    System.out.println("el volumen del cubo es c0"+this.largo*this.ancho*this.profundidad);
+}
+
+    
+    public VolumenCaja(double largo){
+        System.out.println("el volumen del cubo es :"+largo*largo*largo);
+        largo--;
+    }
+    
+      public VolumenCaja(double largo,double ancho,double profundidad){
+          System.out.println(" el volumen del cubo es c2 "+largo*ancho*profundidad);
+      }
+      public  VolumenCaja(int largo,int ancho,int profundidad){
+          System.out.println(" el volumen del cubo es c3 "+largo*ancho*profundidad );
+      }
+}
+
+clase tres integral
+
+area
+
++lado
+-area
+
+calculo
+
+
+
+
+package dia1ca5;
+
+import com.sun.javafx.geom.Area;
+
+/**
+ *
+ * @author Instructor
+ */
+public class Integral extends Area {
+    public int altura;
+    public int volumen;
+    
+ public void volumen(int largo)  {
+        
+     
+     
+     altura=15;
+        
+        
+        
+     volumen=largo*ancho*altura;
+ } 
+    
+    
+}
+
+package dia1ca5;
+
+/**
+ *
+ * @author Instructor
+ */
+public class Area1 {
+    public int largo;
+    public int ancho;
+    public int area;
+    public int altura;
+    
+    public void area(){
+        System.out.println("soy el contructor padre :...");
+        
+        largo=20;
+        ancho=10;
+        altura=12;
+        this.area();
+        
+        int volumen;
+        volumen=largo*ancho*altura;
+        
+        
+    }
+    
+}
+
+
+poliformismo  buscar en google 
+
+java como aprender a programar
+
+
+
+
+un progrma que registra 
+
+cod_falla Fecha_ocu  Fecha-reparacion Cod_trabajador  tabla 1 
+
+cod_falla desc_cod_falla    tabla2
+
+
+cod_trabajador nombre apellido     tabla 3
+
+las tres tablascomforman la base de datos
+
+
+se requieren varios reportes
+
+. promedio por falla
+. promedio por trabajador
+.detalle de una falla
+. reporte de los estatus ordena por tipo de status
+los estatus pueden ser a: resuelto
+                       b: en proceso
+                       c: otra cola
+
+tipo de base de datos innd o bo.
+
+procesos realisar 
+
+añadir
+
+
+
+borrar
+modificar
+
+reportes de aberias se llama el prollecto .
+
+para crear tablas
+
+grace;peña;2500;01/08/18
+proyecto  java avansado sistemas
+nobre proyecto: reporte averias
+
+create  table falla(
+cod_falla int(4)  auto_increment,
+descripcion varchar(50) not null,
+primary key(cod_falla)
+) ENGINE=innodb;
+
+create table trabajador(
+cod_trabajador int(4) auto_increment,
+nombre varchar (20) not null,
+appellido varchar(20) not null,
+primary key (cod_trabajador)
+)ENGINE innodb; 
+
+create  table ocurrencia (
+cod_evento int(4) auto_increment,
+cod_falla int(4),
+fecha_ocu date not null,
+fecha_rep date not null,
+cod_trabajador int(4),
+estatus varchar(2),
+index (cod_falla),
+FOREIGN KEY (cod_falla) references
+falla(cod_falla) ON DELETE RESTRICT
+ON UPDATE cascade,
+index (cod_trabajador),
+FOREIGN KEY (cod_trabajador) references
+trabajador(cod_trabajador) ON DELETE RESTRICT
+ON UPDATE cascade,
+primary key(cod_evento)
+)ENGINE innodb; 
