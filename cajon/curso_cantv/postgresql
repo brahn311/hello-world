@@ -1,0 +1,87 @@
+apt-get install pgadmin3 postgresql php5-pgsql
+
+service postgresql restart
+
+passwd postgres
+
+psql postgres
+ALTER ROLE postgres PASSWORD '1234';
+
+\q
+exit
+
+
+su postgres
+
+psql -h localhost -U postgres -W -l
+
+
+\q
+exit
+
+php5-gd
+
+service apache2 restart
+
+nano /etc/php5/apache2/php.ini
+
+
+
+
+
+
+
+
+
+
+// pagina de pruebas de consultas a la base de datos del portal-sstap
+
+// CONFIGURACION DE CONEXION A UNA BASE DE DATOS
+// Variables requeridas para crear una conexion con la Base de Datos local de POSTGRESQL
+
+
+$user = 'postgres';
+$passwd = '1234';
+$db = 'proyecto';
+$port = 5432;
+$host = 'localhost';
+
+// Construccion de cadena requerida para conectar con POSTGRESQL
+
+$cadena_conexion = "host=$host port=$port dbname=$db user=$user password=$passwd";
+
+
+
+
+
+
+// Llamada al procedimiento de conexion con POSTGRESQL
+
+// Si la conexion es correcta se ejecuta el resto del codigo, si no, muestra el error.
+
+
+
+$conexion = pg_connect($cadena_conexion) or die ("Error de conexion. ". pg_last_error());
+
+$cadena_consulta="SELECT * FROM usuarios";
+
+/consultando en sql por medio de php
+$resultado_consulta=pg_query($conexion,$cadena_consulta);
+
+while ($fila = pg_fetch_array($resultado_consulta)){
+
+// Mostrando los datos en una linea de texto
+
+
+
+list ($usuario, $nombre, $cedula, $clave, $perfil) = $fila;
+
+echo $usuario, $nombre, $cedula, $perfil;
+
+
+
+
+	echo $usuario." / ".$nombre." / ".$cedula." / ".$perfil."<br>";
+}
+
+pg_close($conexion);

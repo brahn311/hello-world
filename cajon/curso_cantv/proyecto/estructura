@@ -1,0 +1,19 @@
+cabecera.php // estructura
+barra_navegacion.php // estructura
+conexion.php // parametros servidor bd
+index.php
+cuenta.php
+movimientos.php
+usuarios.php // perfil 2 administrador
+salir.php
+inicio_sesion.php
+registro.php
+perfil.php
+cambiar_clave.php // incompleto
+
+
+
+
+
+
+
