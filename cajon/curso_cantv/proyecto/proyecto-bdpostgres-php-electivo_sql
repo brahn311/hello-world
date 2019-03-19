@@ -1,0 +1,260 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.4.12
+-- Dumped by pg_dump version 9.4.12
+-- Started on 2017-08-31 13:07:39 -04
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 2019 (class 1262 OID 17917)
+-- Dependencies: 2018
+-- Name: proyecto; Type: COMMENT; Schema: -; Owner: postgres
+--
+
+COMMENT ON DATABASE proyecto IS 'Proyecto de php para el curso de estudiantes productivos';
+
+
+--
+-- TOC entry 1 (class 3079 OID 11861)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2022 (class 0 OID 0)
+-- Dependencies: 1
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 176 (class 1259 OID 17937)
+-- Name: usuarios; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE usuarios (
+    id_usuario integer NOT NULL,
+    alias character(8),
+    nombre character varying(40),
+    cedula integer,
+    correo character varying(40),
+    clave character(8),
+    perfil integer
+);
+
+
+ALTER TABLE usuarios OWNER TO postgres;
+
+--
+-- TOC entry 173 (class 1259 OID 17918)
+-- Name: usuarios1; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE usuarios1 (
+    id_usuario integer NOT NULL,
+    nombre character varying(40),
+    cedula integer,
+    clave character(8),
+    perfil integer
+);
+
+
+ALTER TABLE usuarios1 OWNER TO postgres;
+
+--
+-- TOC entry 2023 (class 0 OID 0)
+-- Dependencies: 173
+-- Name: TABLE usuarios1; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON TABLE usuarios1 IS 'Gestion de usuarios del portal del proyecto';
+
+
+--
+-- TOC entry 2024 (class 0 OID 0)
+-- Dependencies: 173
+-- Name: COLUMN usuarios1.perfil; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN usuarios1.perfil IS 'usuario=1
+administrador=2';
+
+
+--
+-- TOC entry 175 (class 1259 OID 17935)
+-- Name: usuarios2_id_usuario_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE usuarios2_id_usuario_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE usuarios2_id_usuario_seq OWNER TO postgres;
+
+--
+-- TOC entry 2025 (class 0 OID 0)
+-- Dependencies: 175
+-- Name: usuarios2_id_usuario_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE usuarios2_id_usuario_seq OWNED BY usuarios.id_usuario;
+
+
+--
+-- TOC entry 174 (class 1259 OID 17921)
+-- Name: usuarios_id_usuario_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE usuarios_id_usuario_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE usuarios_id_usuario_seq OWNER TO postgres;
+
+--
+-- TOC entry 2026 (class 0 OID 0)
+-- Dependencies: 174
+-- Name: usuarios_id_usuario_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE usuarios_id_usuario_seq OWNED BY usuarios1.id_usuario;
+
+
+--
+-- TOC entry 1892 (class 2604 OID 17940)
+-- Name: id_usuario; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY usuarios ALTER COLUMN id_usuario SET DEFAULT nextval('usuarios2_id_usuario_seq'::regclass);
+
+
+--
+-- TOC entry 1891 (class 2604 OID 17923)
+-- Name: id_usuario; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY usuarios1 ALTER COLUMN id_usuario SET DEFAULT nextval('usuarios_id_usuario_seq'::regclass);
+
+
+--
+-- TOC entry 2013 (class 0 OID 17937)
+-- Dependencies: 176
+-- Data for Name: usuarios; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY usuarios (id_usuario, alias, nombre, cedula, correo, clave, perfil) FROM stdin;
+6	myancy01	Mayreth Yancy	23641775	mayrethyancy@gmail.com	0987    	1
+1	aomana03	Abrahan Omaña	17754849	abrahan.omana@gmail.com	1234    	2
+\.
+
+
+--
+-- TOC entry 2010 (class 0 OID 17918)
+-- Dependencies: 173
+-- Data for Name: usuarios1; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY usuarios1 (id_usuario, nombre, cedula, clave, perfil) FROM stdin;
+1	root	17765849	root    	2
+2	Abrahan	17764849	holahola	1
+\.
+
+
+--
+-- TOC entry 2027 (class 0 OID 0)
+-- Dependencies: 175
+-- Name: usuarios2_id_usuario_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('usuarios2_id_usuario_seq', 9, true);
+
+
+--
+-- TOC entry 2028 (class 0 OID 0)
+-- Dependencies: 174
+-- Name: usuarios_id_usuario_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('usuarios_id_usuario_seq', 2, true);
+
+
+--
+-- TOC entry 1894 (class 2606 OID 17928)
+-- Name: pk_usuario; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY usuarios1
+    ADD CONSTRAINT pk_usuario PRIMARY KEY (id_usuario);
+
+
+--
+-- TOC entry 1896 (class 2606 OID 17942)
+-- Name: pk_usuarios; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY usuarios
+    ADD CONSTRAINT pk_usuarios PRIMARY KEY (id_usuario);
+
+
+--
+-- TOC entry 1898 (class 2606 OID 17944)
+-- Name: ui_alias; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY usuarios
+    ADD CONSTRAINT ui_alias UNIQUE (alias);
+
+
+--
+-- TOC entry 1900 (class 2606 OID 17946)
+-- Name: ui_cedula; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY usuarios
+    ADD CONSTRAINT ui_cedula UNIQUE (cedula);
+
+
+--
+-- TOC entry 2021 (class 0 OID 0)
+-- Dependencies: 6
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2017-08-31 13:07:39 -04
+
+--
+-- PostgreSQL database dump complete
+--
+

@@ -1,0 +1,12 @@
+root@canaima-uno:/home/brahn# apt-get update
+root@canaima-uno:/home/brahn# apt-get install git git-core
+root@canaima-uno:/home/brahn# git config --global user.name "Abrahan Omaña"
+root@canaima-uno:/home/brahn# git config --global user.email "abrahan.omana@gmail.com"
+root@canaima-uno:/home/brahn# apt-get install apache2
+root@canaima-uno:/home/brahn# apt-get install php5
+root@canaima-uno:/var/www/html# git init
+Initialized empty Git repository in /var/www/html/.git/
+root@canaima-uno:/var/www/html# git clone https://gitlab.com/aomana03/twebclass.git
+Username for 'https://gitlab.com': aomana03
+Password for 'https://aomana03@gitlab.com': 
+root@canaima-uno:/var/www/html# service apache2 restart

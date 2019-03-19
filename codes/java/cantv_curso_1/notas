@@ -1,0 +1,187 @@
+Algoritmos Complejos
+
+lenguaje: JAVA
+aplicacion: NETBEAN
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+DIA 1 24-09-18
+
+- Logica y algoritmo
+- Variables
+- Tipos operaciones
+- Uml
+- Desarrollo ejemplos
+
+
+LOGICA
+ciencia que estudia la diciplina del razonamiento para resolver problemas
+
+ALGORITMO
+secuencia de pasos
+
+TIPOS DE VARIABLES
+long		8bytes
+integer		4bytes
+short		2bytes
+byte		1byte
+character	1byte
+
+float		4bytes
+double		8bytes
+boolean		1byte
+
+vectores
+
+*las variables tienen un ambito global y local
+
+php: lenguaje debilmente tipeado
+java: lenguaje rigido
+
+OPERACIONES ARITMETICAS
++
+-
+*
+/
+% resto
+
+OPERACIONES DE COMPARACION
+>
+>=
+<
+<=
+==
+!=
+
+OPERACIONES LOGICAS
+&&	y
+|| 	o
+XOR detector de igualdad o diferente
+
+PROGRAMACION DE OBJETOS
+
+			clase
+			|
+funciones			variables
+|					|
+metodos				propiedades
+|
+instancia
+|
+objeto
+
+
+UML
+-----------------
+--    clase    --
+-----------------
+--             --
+-- propiedades --
+--             --
+-----------------
+--             --
+--   metodos   --
+--             --
+-----------------
+
+DESARROLLO DE EJEMPLOS
+desarrollar una interfaz que nos permita recopipar informacion
+
+NETBEANS
+nuevo proyecto
+Java -> Java Application
+
+Nombre del proyecto : PrimerasLetrasEnMayuscula
+
+AbrahanSumarDosDatos
+		int sumando_a;
+		int sumando_b;
+		int resultado;
+		sumando_a=44;
+		sumando_b=32;
+		resultado=sumando_a+sumando_b;
+		System.out.println("El resultado de la suma es: "+resultado);
+
+Nombre del proyecto: LeerTeclado
+
+grabado en libreria, sera un metodo para ser usado en todos los proyectos... invocando 
+
+crear distintos metodos para crear capturar del teclado, el tipo estatico es usado para cuando no son objetos
+
+un proyecto puede ser un programa principal o una libreria
+
+Ejercicio 1
+-----------
+codigo que sume dos variables numericas
+
+Ejercicio 2
+-----------
+programa que pregunte dos numeros enteros y los sume
+
+Ejercicio 3
+-----------
+sumar numeros con decimales hasta que el usuario precione 0
+sumar los positivos. sumar los negativos
+mostrar cuantos positivos y cuantos negativos fueron introducidos
+
+Ejercicio 4
+-----------
+repetir el ejercio anterior usando un for y preguntando cuantos datos sumara
+
+Ejercicio 5
+-----------
+codigo que dependiendo del numero introducido (del 1 al 7) muestre el dia de la semana correspondiente
+
+Ejercicio de tarea
+------------------
+desarrollar un programa que se le introduzca un numero y dermine si es primo o no
+
+Elaborar un programa al cual se le introduzca un numero y diga cuantos numeros primos hay entre 1 y n, es cuales son.
+
+DIA 2 25-09-18
+
+METODO DE LA BURBUJA
+Ordena un arrego comparando par de elementos y intercambiando indices para ubicar el menor arriba
+
+Ejemplo
+
+posicion 0  1  2  3  4  5
+  a[5] = 9  5  7  4  6  3
+
+Primer ciclo:
+         5 (9) 7  4  6  3
+         5  7 (9) 4  6  3
+         5  7  4 (9) 6  3
+         5  7  4  6 (9) 3
+         5  7  4  6  3 (9)
+
+En este metodo el menor siempre queda abajo el mayor, mientras los menores tardan en subir
+
+las veces que se repita este ciclo es la cantidad de elementos del vector menos uno
+
+repite (y=0; y<arreglo.length-1;y++) {
+	repite (x=0;x<arreglo.length-1) {
+		comprobar arreglo[y] > arreglo[y+1] {
+			si
+			memoria = arreglo[y]
+			arreglo[y]=arreglo[y+1]
+			arreglo[y+1]=memoria
+		}
+	}
+}
+
+mostar caja de mensajes :JOptionPane
+
+fractales
+autosimilitud
+
+desarrollar metodos para el trafico de un servidor
+
+calcular:
+promedio, rangos y desviacion estandar 
+
+
+

@@ -1,0 +1,48 @@
+Aspectos básicos
+
+Definicion de Java:
+lenguaje multiplataforma
+
+Tipos de datos: (en java se tienen que especificar)
+- Booleano
+	boolean
+- Caracteres
+	Char
+- Entero
+	Byte
+	Short
+	Int
+	Long
+- Punto Flotante
+	Float
+	Double
+
+Variables:
+	tipo nombre = valor;
+
+Operadores:
+	+
+	-
+	*
+	/
+
+Incrementales:
+	++
+	--
+
+Relacionales:
+	>
+	<
+	==
+	>=
+	<=
+	!=
+
+Estructuras de control:
+Bucles, bifurcaciones, secuencias
+
+Böhm-jacopini con su teorema del programa estructurado demuestra que:
+todo programa puede escribirse usando:
+	Secuencia
+	Instrucciones condicionales
+	Iteraccion

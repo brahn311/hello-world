@@ -1,0 +1,3 @@
+Abrahan;Omaña;2500;16-12-2016
+Maria;Campos;2400;15-3-2017
+Karla;Acosta;2200;26-10-2014

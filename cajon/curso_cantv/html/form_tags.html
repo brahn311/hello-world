@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba de formulario</title>
+</head>
+<body>
+	<form action="-form.html" method="get">
+	<!-- input -->
+		<label for="nombre">Ingrese su nombre</label>
+		<input type="text" name="nombre" size="20">
+		<br>
+		<input type="hidden" value="10:20" name="hora">
+		<br>
+		Identificacion
+		<input disabled type="text" name="identificacion" value="12345" size="20">		
+		<br>
+		Contrase&ntilde;a
+		<input type="password" name="contrasena">
+		<br>
+		<!-- Radio -->
+		Seleccione la secci&oacute;n donde desea ingresar:
+		<br>
+		<input type="radio" name="seccion" value="1" disabled>Ni&ntilde;os<br>
+		<input type="radio" name="seccion" value="2">Adolescentes<br>
+		<input type="radio" name="seccion" value="3">Mayores<br>
+		Seleccione los lenguajes que conoce:
+		<br>
+		<!-- checkbox -->
+		<input type="checkbox" name="lenguaje[1]">Java<br>
+		<input type="checkbox" name="lenguaje[2]">C++<br>
+		<input type="checkbox" name="lenguaje[3]">C<br>
+		<input type="checkbox" name="lenguaje[4]">C#<br>
+		<!-- select -->
+		Seleccione su pais:
+		<select name="pais">
+			<option disabled selected>Seleccione uno</option>
+			<option value="1">Argentina</option>
+			<option value="2">España</option>
+			<option value="3">México</option>
+			<option value="4">Guatemala</option>
+			<option value="5">Honduras</option>
+			<option value="7">El Salvador</option>
+			<option value="8">Venezuela</option>
+			<option value="9">Colombia</option>
+			<option value="10">Cuba</option>
+			<option value="11">Bolivia</option>
+			<option value="13">Perú</option>
+			<option value="14">Ecuador</option>
+			<option value="15">Paraguay</option>
+			<option value="16">Uruguay</option>
+			<option value="17">Chile</option>
+		</select>
+		<br>
+		<!-- textarea -->
+		Observaciones:<br>
+		<textarea name="comentarios" rows="5" cols="60" placeholder="Escriba aqu&iacute;"></textarea>
+		<br>
+		<input type="submit" value="enviar" name="usuario">
+	</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Ignorados por abrahan... (aun no se que hacer con estos directorios)
+/bootstrap-4.3.1-dist
+
+# bluefish (LINUX Debian 9)
+*~
+
+# netbeans (java proyects / Windows 7)
+build
+dist
+private
+
+# netbeans (LINUX Debian 9)
+
+# Ignorados automaticamente
+/codes/java/romatutorials_curso/prueba/nbproject/private/
+/codes/java/romatutorials_curso/prueba/build/
+/codes/java/romatutorials_curso/video_2_area_cuadrado/nbproject/private/
+/codes/java/romatutorials_curso/video_2_area_cuadrado/build/
+/codes/java/romatutorials_curso/video_2_area_cuadrado/dist/
+/codes/java/romatutorials_curso/video_2_sumar_2_multiplicar_2/nbproject/private/
+/codes/java/romatutorials_curso/video_2_sumar_2_multiplicar_2/build/

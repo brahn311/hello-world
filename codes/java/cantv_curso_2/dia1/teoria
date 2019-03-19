@@ -1,0 +1,30 @@
+Filosofia JAVA
+
+Orientado a objeto
+
+Objeto: creacion de una instancia en memoria.
+
+Clase: conjuncion de variables y funciones
+		en java las clases comienzan con mayusculas
+
+Propiedades:
+-son las variables decretadas dentro de la clase
+
+Metodos:
+-son las funciones dentro de la clase
+
+Pueden ser:
+	-Publicas = entre todas las clases
+	-Privadas = solo la clase
+	-Protected = padre e hijos
+	-Sin Especificar = publica
+
+
+construcctor, es tener un metodo con el mismo nombre de la clase
+
+pilares fundamentales
+
+Herencia: hijo hereda propiedades publicas y protected del padre
+Polimorfismo
+Abstraccion: basta que tengamos un metodo abstracto para que la clase se a abstracta.
+Encapsulado

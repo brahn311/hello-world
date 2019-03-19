@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jugando contigo y JS</title>
+    </head>
+    <body>
+
+        <h2>Este titulo no usa JavaScript</h2>
+        <p>Este parrafo tampoco usa JavaScript</p>
+        <div id="momento">
+            <button type="button" onclick="mostrar_tiempo()">Ver la hora</button>
+        </div>
+        <div>
+            <h3>Esta algo oscuro?</h3>
+            <button onclick="document.getElementById('bombillo').src='https://www.w3schools.com/js/pic_bulbon.gif'">Enciende la luz</button>
+            <img id="bombillo" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+            <button onclick="document.getElementById('bombillo').src='https://www.w3schools.com/js/pic_bulboff.gif'">Apaga la luz</button>
+        </div>
+        <div>
+            <h3>El texto es muy pequeño?</h3>
+            <p id="texto">Este texto tendra otro tamaño.</p>
+            <button type="button" onclick="document.getElementById('texto').style.fontSize='50px'">Mostrar mas grande</button>
+        </div>
+        <div>
+            <h3>Eres curioso?</h3>
+            <p id="bloqueado" style="display:none"><em>¿Que hiciste? </em>No tenias porque ver este texto.
+            </p>
+            <button type="button" onclick="document.getElementById('bloqueado'
+                ).style.display='block'">Ver</button>
+        </div>
+        <div>
+            <h2>Un poco de matematicas</h2>
+            <p>Puedes tener variables como: x, y, con los valores: 5, 6, respectivamente.</p>
+            <p>Pero no sabias que tambien tenias una variable z que tendra el resultado de x + y</p>
+            <p id="z"></p>
+            <script>
+                var x, y, z;
+                x = 5;
+                y = 6;
+                z = x + y;
+                document.getElementById("z").innerHTML = z;
+            </script>
+            <p>En conclusion, si tienes variables, entonces puedes tener hacer bucles</p>
+        </div>
+        <div>
+            <h2>Sabes cuales son los numeros del 1 al 4?</h2>
+            <p><strong>Alto, STOP!</strong> <em>Aun no,</em> hazlo al final de haber leido esta pagina completa, si no, sera fastidioso</p>
+            <button type="button" onclick="numeros()" >Observalos</button>
+        </div>
+        <div>
+            <h2>Advertencia</h2>
+            <p>No es por ser fastidiosos, pero esta pagina contiene elementos fuertes</p>
+            <form>
+            	Eres mayor de edad:<br>
+            	<input type="radio" id="mayor" name="mayor_edad">Si
+            	<input type="radio" id="menor" name="mayor_edad">No
+            	<br>
+            	<input type="button" onclick="validar_edad()" value="Entrar" >
+            </form>
+        </div>
+        <div>
+            <script type="text/javascript">
+            	function leer_deportes() {
+            		var cadena = '';
+            		if (document.getElementById('checkbox1').checked){
+            			cadena = cadena+'Futbol';
+            		}
+            		if (document.getElementById('checkbox2').checked){
+            			if (cadena != '') {
+            				cadena = cadena+', ';
+            			}
+            			cadena = cadena+'Basket';
+            		}
+            		if (document.getElementById('checkbox3').checked){
+            			if (cadena != '') {
+            				cadena = cadena+', ';
+            			}
+            			cadena = cadena+'Tenis.';
+            		}
+            		else {
+            			if (cadena != '') {
+            				cadena = cadena+'.';
+            			}
+            			else {
+            				cadena = 'Ninguno';
+            			}
+            		}
+            	alert('Deportes seleccionados: '+cadena);
+            	}
+            </script>
+            <h2>Tienes pasatiempos?</h2>
+            <form>
+            	Marca los deportes que practicas:<br>
+            	<input type="checkbox" name="checkbox1" id="checkbox1">Futbol<br>
+            	<input type="checkbox" name="checkbox2" id="checkbox2">Basket<br>
+            	<input type="checkbox" name="checkbox3" id="checkbox3">Tenis<br>
+            	<input type="button" onclick="leer_deportes()" value="Guardar">
+            </form>
+        </div>
+        <div>
+            <h2><span id="nombre"></span> nosotros sabemos cosas de ti!</h2>
+            <p><strong>Tu numero favorito es el </strong><em id="favorito"></em> ¿Verdad?</p>
+            <p><strong>Tendras </strong><em id="hijos"></em> ¡Hey...son como muchos no?</p>
+            <p><strong>Tendras </strong><em id="matrimonios"></em> Matrimonios</p>
+        </div>
+        <h2>Terminamos, ya puedes ver los 100.000 numeros.</h2>
+                <script>
+            function mostrar_tiempo()
+            {
+                document.getElementById('momento').innerHTML = Date();
+            }
+            function numeros() {
+            	var x=0;
+            	while (x<4) {
+            		x=1+x;
+            		document.write(x,"<br>");
+            	}
+
+            }
+        	function validar_edad() {
+        		if (document.getElementById('mayor').checked) {
+        			alert('Bienvenido, en un momento seras redireccionado al portal. Mentira! no hay nada fuerte aqui.')
+        		}
+        		if (document.getElementById('menor').checked) {
+        			alert('Disculpe, debes ser mayor de 18 para acceder al portal, FUERA!!!!!!!')
+        		}
+        	}
+//            window.alert("Bienvenido: si precionas 'Aceptar' podras matar un poco de tu curiosidad");
+        	var captura1 = parseInt(prompt('Introduzca un numero (1)',''));
+        	var captura2 = parseInt(prompt('Introduzca un numero (2)',''));
+        	var captura3 = parseInt(prompt('Introduzca un numero (3)',''));
+        	var nombre = prompt('Ultima pregunta: Cual es tu nombre?','');
+            var programa = "<h1>JavaScript</h1>";
+            document.write(programa);
+                document.getElementById('nombre').innerHTML=nombre;
+                document.getElementById('favorito').innerHTML=captura1;
+            	document.getElementById('hijos').innerHTML=captura2+1*3;
+            	document.getElementById('matrimonios').innerHTML=captura3;
+            </script>
+    </body>
+</html>
+
