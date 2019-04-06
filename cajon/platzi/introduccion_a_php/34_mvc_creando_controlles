@@ -14,15 +14,26 @@ De un modo muy puristas:
 - los modelos son la estructura de clases y maneja los datos 
 los modelos y las vistas no pueden hablar entre si
 
-Mientras mas esquematizado tengamos los controladores mejor sera el mantenimiento
-
 Tratar de mantener el Caps-sensitive de las rutas y spacenames
 
 En nuestro proyecto dentro de la carpeta app:
 Creamos las carpetas:
 Controllers
 
+Mientras mas esquematizado tengamos los controladores
+Podemos tener estructurado un controlador para:
+index
+jobs
+settings
+
+No es recomendable tener un mega controlador gigantes por razones de mantenimiento
+
 Dentro de app/Controllers crear un nuevo archivo llamado:
 IndexController.php
+Tendra un nuevo namespace App\Controllers
+Sera una nueva clase
+class IndexController{}
+Tendra los metodos de ese controlador
+Inicialmente:
+public function IndexAction();
 
-Views
