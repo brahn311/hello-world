@@ -1,0 +1,27 @@
+Video_25
+Introduccion a Base de datos
+
+Bases de datos: collecciones de datos
+
+Sistemas manejador de bases de datos
+MySQL
+PosgreSQL
+
+Modelo relacional:
+Los datos estan organizados en columnas
+
+Podemos crear consultas que nos regresen esos datos almacenados para usarlos
+
+Usaremos phpMyAdmin para conectarnos en la base de datos
+
+Creamos una base de datos:
+	curso_introduccion_php
+Creamos la primera tabla:
+	jobs
+	(con 5 columnas)
+Creamos las columnas:
+	id (int, primari, auto-incrementable)
+	title (text)	
+	description (text)
+	months (int)
+	visible (tinyint)

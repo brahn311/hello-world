@@ -1,0 +1,32 @@
+Video_22
+Namespaces
+
+Esta es una forma de mantener distintos contextos con distintos nombres de los archivos en el mismo directorio.
+Esto nos permite tener mejor organizadas las librerías el proyecto.
+
+El namespace solo afecta a clases, traits, interfaces, funciones y constantes
+
+Para declararlo debe ser lo primero que debes de declarar antes de cualquier otra instrucción PHP, excepto de declare
+namespace nombre_del_namespace;
+
+Un estándar es usar sub-nombres similares a la estructura de carpetas
+Antes de PHP 7:
+use app\Models\Job;
+use app\Models\Project;
+use app\Models\Printable;
+Es necesario hacerlo por cada clase que requiramos
+
+A partir de PHP 7:
+use app\Models\{Job,Project,Printable};
+En una sola linea y entre llaves se colocan las clases
+
+Nota:
+Usar \ para los sub-espacios, recordar que no es similar a una carpeta
+
+Al momento de usar esas librerías debemos decretar su uso al inicio
+use nombre_del_namespace\nombre_de_la_clase;
+
+Esto es útil al momento de que queremos usar una librería externa y la misma tiene en uso nombres de las clases que nosotros también usamos
+PHP no permite sobre-escribir clases y tener clases con igual nombre generaría un error
+
+permite repetir nombres simples de clases en un espacio y contexto seguro de que los nombres no colisionen con otros 

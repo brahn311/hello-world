@@ -1,0 +1,19 @@
+Video_27
+Formularios
+
+Crear formulario html:
+<form action="" method="GET">
+</form>
+(metodo get)
+
+<form action="" method="POST">
+	<label for=""></label>
+	<input type="text" name="text">
+	<button type="submit">save</button>
+</form>
+(metodo post)		
+
+Al inicio agregamos codigo php con 
+<?php
+var_dump($_POST);
+?>

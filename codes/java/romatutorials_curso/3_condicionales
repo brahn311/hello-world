@@ -1,0 +1,5 @@
+Inicio
+Condicion
+	- Codigo en caso de que la condicion se cumpla
+	- Codigo en caso de que la condicion no se cumpla
+Ffin

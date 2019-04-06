@@ -1,0 +1,49 @@
+Bases de datos (Database db)
+Coleccion de datos 
+Esquematizados de forma logica y fisica dentro de un contexto en comun
+
+Modelos
+- Jerarquicas
+- de Red
+- Relacionales
+- Orientadas a objetos
+
+Jerarquicas:
+En forma de arbol, donde un elemento solo tiene un padre
+
+de Red:
+Similar a las jerarquicas, aunque permiten que un nodo tenga mas de un padre.
+
+Relacionales:
+Distintas entidades logicas (tablas) se relacionan entre si por medio del uso de codigos.
+
+Orientadas a Objetos:
+Similar a los lenguajes de programacion modernos
+
+Sistemas de Gestion de BD (SGBD):
+En una BD, existe una independencia entre los datos y el sistema gestor
+Permite acceder a una misma base de datos, independiente del gestor elegido por el usuario y el administrador
+
+Objetivos del SGBD:
+- Abstraccion de la informacion
+- Independencia
+- Consistencia
+- Seguridad
+- Manejo de transacciones
+
+Abstraccion de la informacion:
+Ahorran al usuario conocer detalles tecnicos
+
+Independencia:
+La aplicacion es independiente a los datos, permitiendo modificaciones del esquema logico o fisico,
+sin tener que realizar cambios a las aplicaciones que sirven de ella 
+
+Consistencia:
+Permite evitar redundancia de datos, o la vigilancia coerente de los mismos
+
+Seguridad:
+Ofrece a usuarios y grupos tener diversas categorias de permisos para acceder o administrar la informacion almacenada
+
+Manejo de transacciones:
+Se refiere al manejo de cada operacion del usuario como operaciones y controla
+los mecanismos de vigilancia de fallas en las operaciones

@@ -3,6 +3,10 @@
 
 # bluefish (LINUX Debian 9)
 *~
+*.bfproject
+
+# composer
+vendor
 
 # netbeans (java proyects / Windows 7)
 build

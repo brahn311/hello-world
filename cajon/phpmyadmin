@@ -1,0 +1,24 @@
+Cómo instalar phpMyAdmin en Debian 9
+https://maslinux.es/como-instalar-phpmyadmin-en-debian-9/
+
+apt-get install phpmyadmin
+
+En la siguiente pantalla, selecciona SÍ para configurar una base de datos para phpMyAdmin con dbconfig-common
+
+y finalmente establece una contraseña para el usuario ‘phpmyadmin’ en MySQL:
+
+RECORDAR:
+Contraseña phpmyadmin: xzsawq21
+
+---
+Probando phpmyadmin:
+
+Entrando con el usuario root:
+(desde localhost no puedes entrar con el usuario root)
+Ver MariaDB para habilitar el usuario root
+
+Entrando con el usuario phpmyadmin:
+$ mysql u- phpmyadmin -p
+(no puedes entrar sin password)
+(la password debe ser correcta)
+(phpmyadmin no puede ver todas las tablas ni crear nuevas)

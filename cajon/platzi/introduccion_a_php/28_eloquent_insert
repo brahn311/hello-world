@@ -1,0 +1,80 @@
+Video_28
+Eloquent
+
+Busca composer eloquent
+
+En packagist encontraras:
+illuminate/database
+
+Es un ORM 
+
+Pagina web:
+https://packagist.org/packages/illuminate/database?
+
+Para instalarlo usamos el comando desde terminal en la carpeta de nuestro proyecto con composer
+php composer.phar require illuminate/database
+
+Nota: no deberia de subirse al repositorio la carpeta vendor 
+
+Configurando el eloquent en el proyecto para el acceso a la base de datos:
+
+Copiamos de la documentacion del paquete: (ver documentacion)
+- Crea una nueva capsula (Usage Instructions)
+- No copiar el bloque del dispacher que no sera necesario(Set the event dispatcher...)
+- Hacer eloquent como global (Make this Capsule instance available globally...)
+- Configurar eloquent ORM (Setup the Eloquent ORM... )
+
+Modificando nuestro proyecto:
+
+En Job.php: 
+- Quitamos el constructor 
+- Agregamos el modelo de eloquent:
+use Illuminate\Database\Eloquent\Model;
+- Dejamos el nombre del espacio:
+namespace App\Models;
+- Quitamos la herencia de BaseElement
+class Job extends BaseElement { ... }
+- Colocamos la nueva herencia:
+class Job extends Model { ... }
+- Dentro de la clase añade:
+protected $table = 'jobs';
+(jobs, se refiere al nombre de la tabla que usaremos con dicha clase)
+
+Recuerda que el archivo jobs.php era de practicas...
+
+En addJob.php:
+- Agregar el autoload en addJob.php:
+include_once 'vendor/autoload.php';
+Recuerda que al momento de instalar el autoload ya no es necesario usar los require (tampoco en Job.php)
+- Recuerda que luego del use as Capsule; debes dejar el use de Models
+use App\Models\Job;
+- Lo que recibimos de $_POST lo guardamos en una nueva instancia:
+$job = new Job();
+
+- Cada campo recibido en $_POST por cada atributo decretado tambien en nuestro formulario addJob.php:
+$job->title = $_POST['title'];
+$job->description = $_POST['description'];
+- pedimos ejecutar el metodo save de nuestra nueva instancia:
+$job->save(); 
+- Recordemos configurar los parametros de la base de datos en la capsula:
+'database'=> 'portafolio',
+'password'=> 'password',
+
+Este documento tiene 2 comportamientos por ser un formulario recursivo:
+- En caso que no tenga valores $_POST:
+	Mostrar el formulario
+- En caso de tener valores $_POST:
+	Instaciar la variable
+
+Validar si $_POST esta vacio:
+if (!empty($_POST)){
+	$job = new Job();
+	#...
+}	
+-Al final dejamos el formulario html
+
+En la base de datos:
+Eloquent exige que en la tabla, existan 2 campos adicionales:
+created_at(datetime)
+updated_at(datetime)
+

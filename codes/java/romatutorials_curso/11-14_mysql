@@ -1,0 +1,85 @@
+MySQL
+
+Hacer consola de comandos MySQL (windows):
+Crear archivo de texto
+*.bat:
+Contenido (ruta y comando de conexion):
+cd C:\wamp\bin\mysql\mysql5.5.24\bin\
+mysql -h localhost -u root 
+mysql -h localhost -u root -p contraseña (si tienes configurado una contraseña)
+
+Comandos:
+show databases;
+
+create database nombre_database;
+
+use nombre_database;
+
+create table tabla1
+(
+id int primary key,
+nombre varchar(20) not null,
+dni varchar(9) unique not null
+);
+
+show tables;
+
+create table tabla2
+(
+id_venta int primary key,
+total_venta int,
+fecha_venta date,
+id_cli int,
+foreign key (id_cli) references tabla1(id)
+);
+/*crear tablas*/
+
+insert into tabla1 values
+(
+1, 'abrahan', '17754849'
+);
+/*insertar datos (cadenas deben tener comilla simple)*/
+
+select * from tabla1;
+select nombre from tabla1;
+/*consultas*/
+
+delete from tabla1;
+truncate tabla1;
+/*borrar contenido tabla*/
+
+delete from tabla1 where id=1;
+/*borrar registro segun criterio (id)*/
+
+update tabla1 set nombre='pablo' where id=2;
+
+
+Video 13
+--------
+Workbench
+
+
+drop table nombre_tabla;
+/*borrar la tabla (si tiene clave foraneas o relaciones dara error)*/
+
+drop database nombre_database;
+/*borrar la base de datos*/
+
+Video 14
+--------
+Comandos avanzados:
+
+create view nombre_vista as select
+/*crear vista*/
+
+Otros comandos:
+group by 
+group by * having
+order by
+limit
+join
+triggers
+
+as
+/*alias para alterar el nombre de columnas o tablas*/
+

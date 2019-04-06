@@ -1,0 +1,20 @@
+video_26
+ORM
+
+PHP posee librerias, que por ejemplo nos permiten conectarnos con bases de datos
+Al inicio estas librerias con estilo de programacion estructurada
+
+Inicialmente se usaban un estilo estatico para esas conexiones 
+El lenguaje SQL trataba de estandarizar las consultas a las bases de datos
+Desafortunadamente con las diferencias entre los SGDB (Sistemas Gestores de Base de Datos) permanecian algunas diferencias
+
+Con el paso del tiempo y la adaptación a POO esas librerías fueron adaptadas
+
+PDO: php data object
+Capa que nos permite estandarizar las conexiones a base de datos.
+
+ORM: Object Relational Map
+Concepto para crear modelos de clases basados en las tablas, 
+
+Usando ORM nos permite mantener nuestra capa orientada a objetos y conectarnos a bases de datos con los mismos sin usar estructuras estáticas
+Tambien protege de vulnerabilidades e inyeccion de datos.

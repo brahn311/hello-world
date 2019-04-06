@@ -1,0 +1,18 @@
+Video_18
+Constructor y Metodos
+
+Metodo:
+public function getDurationAsString() {}
+
+__construct()
+Usado para iniciar valores al instanciar el objeto 
+public function __construct() {}
+
+Nota al inciar los atributos, puedo ponerle valor por defecto!
+private months = 0;
+
+Metodos magicos:
+Son todos los metodos que veamos que empiezan con __ (doble piso)
+Realizan funciones especiales antes o despues de alguna instruccion
+
+(Pendiente: investigar otros metodos magicos y testearlos)

@@ -1,0 +1,16 @@
+Hibernate 1 (Video 16)
+
+
+Que es?
+Herramienta GNU de Mapeo objeto-relacional (ORM) para desarrollar en java
+
+Genera automaticamente las clases para manejar como objetos las DB relacionales
+(reingenieria)
+
+Esquema:
+Interfaz de usuario -> Controlador -> Modelo -> Hibernate -> DB
+Interfaz de usuario <- Controlador <- Modelo <- Hibernate <- DB
+
+---
+
+Hibernate 2 (Video 17)

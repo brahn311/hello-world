@@ -1,0 +1,58 @@
+Video_32
+PSR7
+
+Estandar que nos permite normalizar un request y un response en PHP.
+
+Documentación: 
+https://www.php-fig.org/psr/psr-7/
+
+Para este estandar usaremos el framework de zend diactoros:
+https://zendframework.github.io/zend-diactoros/usage/
+
+Para instalarlo:
+$ php composer.phar require zendframework/zend-diactoros
+
+en public/index.php:
+Para inicializar diactoros, agragamos el siguiente codigo:
+$request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
+    $_SERVER,
+    $_GET,
+    $_POST,
+    $_COOKIE,
+    $_FILES
+);
+Para probar a diactoros y ver la ruta puedes usar:
+var_dump($request->getUri()->getPath());
+
+Ahora usaremos el archivo htaccess para configurar la url:
+creamos un archivo en la raiz del proyecto llamado:
+htaccess
+(es un archivo de configuracion de apache)
+Contenido:
+RewriteEngine On
+(habilitar el motor para reescribir la url)
+RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+(condicion para reescribir, si ya estas en la carpeta public con algo, no debe hacer alguna otra direccion)
+RewriteRule ^ %1 [L,NE,R=302]
+(regla de redireccion: cuando encuentre el request lo mande como redireccion 302 hacia public)
+RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+(regla: cuando encuentre cualquier cosa la mande a public)
+
+En la carpeta public:
+Hacer otro documento .htaccess
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+(condicion si el pedido no es un directorio)
+RewriteCond %{REQUEST_FILENAME} !-f
+(condicion si el pedido no es un archivo)
+RewriteRule ^ index.php [QSA,L]
+(regla: todo lo damas lo mandara a index, donde todo lo que se agrege lo mande a la cadena query QSA y no redireccionar mas)
+
+###########################
+#                         #
+# htaccess no me funciona #
+#                         #
+###########################
+NOTA: en esta instalacion de debian 9 con servidor apache no tiene configurado el htaccess... 
+TAREA: Activar htaccess!!!
+

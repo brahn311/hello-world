@@ -1,0 +1,82 @@
+Rubik
+
+Pasos para resolverlo
+
+Leyenda
+
+Lado
+U = Superior (up)
+R = Derecho (right)
+F = Frontal/Frente (front)
+L = Izquierdo (left)
+D = Inferior/Abajo (down)
+
+Movimientos:
+Para mover cada cara se toma como punto de orientacion el frente de cada dicha cara y sentido de las agujas del reloj.
+
+El Movimiento Basico:
+En sentido a las agujas del reloj
+(Escrito solo con el nombre del lado que debes mover)
+U
+R
+F
+L
+D
+
+Movimiento inverso:
+En contra el sentido de agujas del reloj
+(Escrito con el nombre de la cara que debes mover y la letra i para identificar que el movimiento es en sentido inverso al reloj)
+Ui
+Ri
+Fi
+Li
+Di
+
+Consideraciones Iniciales:
+- tienes 6 caras y 6 colores, cada cara tiene 9 cuadros
+- Solo hay un cuadro que no cambia de posicion, el central, que identifica el color que debes poner en dicha cara.
+- Puedes iniciar con cualquier cara (el color para empezar puede ser el blanco, que regularmente tiene el logo de la marca del cubo)
+
+Como agarrar el cubo y identificar sus lados:
+---
+Sostiene un lado del cubo con tu mano derecha agarrandolo por los bordes y puedas ver 3 caras
+basicamente podras ver:
+- Cara superior (U): la cara hacia arriba
+- Cara derecha (D): la cara hacia la derecha
+- Cara frontal (F): la cara hacia la izquierda
+
+Iniciando a resolver el cubo: (resolviendo primero el color blanco)
+
+Forma una cruz de color blanco dejando las caras laterales en su posicion correcta:
+- blanco rojo, (lado rojo con rojo)
+- blanco azul, (lado azul con azul)
+- blanco naranja, (lado naranja con naranja)
+- blanco verde, (lado verde con verde)
+
+Paso 1: haciendo la cruz blanca (Verificar)
+Ri - U - Fi - Ui
+
+Paso 2: Haciendo las esquinas blancas
+(dejando en la esquina que que deseas ubicar en la pocision correcta en el borde inferior al lugar donde debe ir para intercambiar posiciones)
+Ri - Di - R - D (repetir x1, x3, x5)
+
+Al terminar Ya debiste tener terminadas la cara blanca y tener el borde de las hileras laterales resueltas (una linea de cada color) y formando una (T pequeña) con cada centro
+
+Paso 3: Bordes intermedios
+Antes de empezar debes:
+- Voltear el cubo dejando el lado blanco abajo y arriba debe estar el lado con el centro amarillo)
+- Ubicar el borde de colores correctos en la parte superior y formando una (T grande)
+
+Si la (T grande) esta en la cara derecha:
+Ui - Fi - U - F
+U - R - Ui - Ri
+
+Si la (T grande) esta en la cara frontal:
+U - R - Ui - Ri
+Ui - Fi - U - F
+
+--Pendiente
+Paso 4:
+Paso 5:
+Paso 6:
+Paso 7:

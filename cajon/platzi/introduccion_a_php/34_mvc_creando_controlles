@@ -1,0 +1,28 @@
+Video_34
+MVC, Creando Controllers
+
+MVC:
+Patron de diseño arquitectonico
+Trata de dividir la aplicacion en tres areas:
+M = Modelo
+V = Vistas
+C = Controladores
+
+De un modo muy puristas:
+- las vistas solo son despliegues de informacion
+- los controladores son los que reciben los request llaman a acciones
+- los modelos son la estructura de clases y maneja los datos 
+los modelos y las vistas no pueden hablar entre si
+
+Mientras mas esquematizado tengamos los controladores mejor sera el mantenimiento
+
+Tratar de mantener el Caps-sensitive de las rutas y spacenames
+
+En nuestro proyecto dentro de la carpeta app:
+Creamos las carpetas:
+Controllers
+
+Dentro de app/Controllers crear un nuevo archivo llamado:
+IndexController.php
+
+Views

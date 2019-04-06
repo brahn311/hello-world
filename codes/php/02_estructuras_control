@@ -1,0 +1,50 @@
+Condicionales
+
+if, else if, else:
+Evalua una condicion (simple o compleja) como boolean y ejecuta una instruccion u otra en caso de que la condicion se cumpla
+
+if (condicion_inicial) }
+	/* instrucciones */ 
+}
+else if (condicion_particular) {
+	/* instrucciones */
+}
+else {
+	/* instrucciones */
+}
+
+if:
+Ejecuta las instrucciones en caso de ser verdadera la condicion inicial
+
+else if:
+"Si por el contrario" Usando cuando requerimos mas de 2 comportamientos especificos
+Puede usarse sin el espacio "elseif"
+
+else:
+Complemento de cierre opcional del "if"
+Ejecuta las intrucciones en caso de que no se cumpla "ninguna" condicion (inicial o particular)
+No requiere que se especifiquen mas condiciones
+
+---
+
+switch:
+Podria sustituit al if, else if, else
+Evalua el valor de una variable
+Dependiendo del valor de la variable se declaran instrucciones para cada caso particular
+Ofrece mejor legibilidad del codigo
+
+switch (variable) {
+	case (valor_1): /* instrucciones */
+	break;
+	case (valor_x): /* instrucciones */
+	break;
+	default: /* instrucciones */
+}
+
+break: 
+Termina la ejecucion del switch
+En su ausencia, a partir de que se cumpla determinado "case", permite ejecutar las instrucciones restantes hasta terminar el switch o encontrar un break,
+En "default" break deberia ser opcional ¿no?
+
+
+---

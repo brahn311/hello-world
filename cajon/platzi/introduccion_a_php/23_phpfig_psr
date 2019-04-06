@@ -1,0 +1,14 @@
+Video_23
+PSR y PHPFIG
+
+PHPFIG:
+Grupo de desarrolladores que tienen como objetivo lograr avanzar en la interoperabilidad de las librerías y herramientas que tenemos en PHP
+
+PSR (PHP Standars Recommendations):
+Han sido diferentes estándares que han ido generando a lo largo del tiempo para poder lograr esta interoperabilidad en nuestros proyectos
+
+https://www.php-fig.org/
+
+Estandar usados en el curso:
+PSR4
+PSR7

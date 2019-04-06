@@ -1,0 +1,37 @@
+Video_31
+Front Controller
+
+En casi todo proyecto con PHP (sitio web) estructurado de manera estatica, implica duplicar codigo
+
+Para evitar ello, sobretodo en la interfaz de usuario, se desarrolla este patron de diseño
+
+Como podemos inferir de su nombre, permite tener una capa de controlador para el lado del cliente
+Configuraciones para la aplicacion:
+	- Conexiones a base de datos
+	- Plantillas HTML
+	- Paginas del portal
+	- Paginas de PHP de modelos de datos (clases)
+
+En este proyecto crearemos una carpeta llamada public
+(Serian los archivos del portal)
+Dentro crearemos un nuevo index.php
+
+Importante... inicializar valores de PHP:
+ini_set('display_errors', 1);
+ini_set('display_starup_error', 1);
+error_reporting(E_ALL);
+
+Copiamos el codigo de eloquent que estaba en index.php
+
+Creamos un route:
+$route = $_GET['route'] ?? '/';
+(valida los parametros en la url, si existe el indice route en GET)
+$route = $_GET['route'] ?? '/';
+Nota: ?? fusion de null: si el primer valor es null se asigna el segundo, se pueden concatenar (en respuesta al ternario)
+
+Validamos el contenido de route y generamos acciones:
+if ($route == '/') require '../index.php';
+elseif ($route == 'addJob') require '../addJob.php';
+else echo 'No encontrado';
+
+De todas formas esto no es la version final, es la parte inicial de como funciona el front controller 

@@ -1,0 +1,15 @@
+Video_29
+Listar registros de la base de datos con Eloquent
+
+En este ejercicio, no trabajamos un un documento aparte como hicimos con addJob.php
+Ahora trabajaremos con Eloquent extrayendo el contenido de la tabla jobs.
+
+Para conectarnos con la base de datos en toda la aplicación, por el momento copiaremos el codico de la capsule:
+	El mismo que usamos en addJob.php
+	
+Rn el index tambien agregamos una nueva variable:
+$jobs = Job::all();
+Busca todos los registros de la tabla asociada a la clase Job y los guarda en un arreglo de objetos
+	
+Para imprimir los valores... recuerde que esto estaba configurado con el metodo de printElement de Job
+Solo queda provar si el metodo o funcion para imprimir lo hace correctamente

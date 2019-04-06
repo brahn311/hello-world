@@ -1,0 +1,17 @@
+Video_20
+Herencia
+
+Herencia:
+Propiedad de la poo
+Se una la palabra reservada extends para referirse que la clase hija hereda las propiedades y metodos del padre
+class Job extends BaseElement() {}
+
+Nota: si la clase padre posee atributos o metodos con acceso privado, solo se pueden acceder desde la misma clase.
+si se desea extender los accesos a los hijos, deben cambiarse a protected.
+
+Polimorfismo:
+Propiedad donde una clase hijo puede modificar algun metodo de la clase padre
+El metodo sobreescrito constra de definir nuevamente el metodo exactamente igual que en la clase padre
+Si de igual forma se requiere usar parte del metodo de la clase padre, se llama con la palabra reservada:
+parent::nombre_del_metodo
+Se puede añadir funcionalidades antes o despues de llamar al metodo de la clase padre generando un metodo especifico para la clase hija

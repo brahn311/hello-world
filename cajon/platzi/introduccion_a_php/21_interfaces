@@ -1,0 +1,23 @@
+Video_21
+Interfaces
+
+interface:
+Permite crear codigo con el cual especificamos que metodos deben ser implementados por una clase
+Es una forma de garantizar que que funcionen correctamente metodos especificados y cumplan con determinadas caracteristicas
+interface Printable
+{
+	public function getDescription();
+}
+Se declara como una clase pero sus metodos no deben poseer ninguna definicion
+Solo usan metodos de acceso publico porque la intension es exponer funcionalidad en que se comunican las clases
+
+implements:
+class BaseElement implements printable { }
+PHP posee herencia sencilla, solo puedes heredar de un solo padre, pero puedes hacer varias implementaciones
+Cuando implementas en un padre, se hereda a los hijos
+
+Type hitting (Declaracion de tipos):
+permiten a las funciones requerir que los parámetros sean de cierto tipo durante una llamada
+Puede ser un tipo de dato, una clase o una interfaz
+function printElement(Printable $job) { }
+Usado para validar el tipo de dato y darle mayor rigidez a nuestro codigo

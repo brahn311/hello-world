@@ -1,0 +1,11 @@
+Clases
+
+Al crear un proyecto en NETBEANS automaticamente te crea la clase principal
+
+Para crear una nueva clase en el proyecto, solo debemos:
+- Seleccionamos el paquete y click con el boton secundario
+- Seleccionamos nuevo, class
+
+
+Segun las buenas practicas, cada clase deberia estar separada en un documento aparte
+
