@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\{Job, Proyect}
+use App\Models\{Job, Proyect};
 
 class IndexController
 {
