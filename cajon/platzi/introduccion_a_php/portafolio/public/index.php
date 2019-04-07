@@ -76,9 +76,8 @@ else
 	
 	$controller = new $controllerName;	
 	$controller->$actionName();	
-
-
 }
+
 
 
 
