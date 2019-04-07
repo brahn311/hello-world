@@ -1,0 +1,17 @@
+Video_35
+MVC, Reestructurando vistas y controladores
+
+Siguiendo con el patro de diseño MVC
+
+En views deberiamos tener nuestros componentes de la interfaz, sin datos, lo mas puro posible a modo de plantillas.
+
+Esas piezas html deberian estar dispuestas para que el controlador, que es el que configura la accion configure los datos
+y tambien construya la pagina dinamicamente dependiendo de la accion solicitada
+
+En la pagina de index.php: 
+El La pagina html del portafolio index, (que muestra todos los datos) se debera encontrar en la carpeta views, "sin codigos php"
+La consulta a la base de datos, debera estar en un controlador para esa pagina indexController
+
+En la pagina de addJob.php:
+El formulario html se debe ubicar en views, "sin codigos php"
+La organizacion de los datos, la llamada a guardar en la base de datos y mostrar el formulario, lo realiza jobsController

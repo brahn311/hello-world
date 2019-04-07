@@ -51,11 +51,14 @@ $map = $routerContainer->getMap();
 
 // Add a route to the map, and a handler for it
 // $map->get('nombre', 'contenido_del_url','archivo_o_accion(handler)');
-$map->get('index', '/hello-world/cajon/platzi/introduccion_a_php/portafolio/public/', [
+$map->get('index', '/', [
 	'controller' => 'App\Controllers\IndexController',
 	'action' => 'indexAction',
 	]);
-$map->get('addJob', '/jobs/add', '../addJob.php');
+$map->get('addJob', '/jobs/add', [
+	'controller' => 'App\Controllers\JobsController',
+	'action' => 'getAddJobAction',
+]);
 
 // Get the route matcher from the container and try to match the request to a route.
 $matcher = $routerContainer->getMatcher();
@@ -77,7 +80,6 @@ else
 	$controller = new $controllerName;	
 	$controller->$actionName();	
 }
-
 
 
 

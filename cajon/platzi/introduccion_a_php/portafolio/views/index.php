@@ -1,11 +1,3 @@
-<?php
-
-use App\Models\Job;
-
-$jobs = Job::all();;
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
