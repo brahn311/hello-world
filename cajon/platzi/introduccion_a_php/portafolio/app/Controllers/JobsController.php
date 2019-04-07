@@ -7,15 +7,16 @@ use App\Models\{Job};
 class JobsController
 {
 
-	public function getAddJobAction()
+	public function getAddJobAction($request)
 	{
-		if (!empty($_POST)) 
+		if ($request->getMethod() == 'POST') 
 		{
 			$job = new Job();
-			$job->title = $_POST['title'];
-			$job->description = $_POST['description'];
-			$job->months = $_POST['months'];
-			$job->visible = $_POST['visible'];
+			$postData = $request->getParsedBody()
+			$job->title = $postData['title'];
+			$job->description = $postData['description'];
+			$job->months = $postData['months'];
+			$job->visible = $postData['visible'];
 			$job->save();
 		}
 		

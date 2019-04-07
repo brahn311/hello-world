@@ -43,7 +43,7 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
 );
 
 // probando diactoros
-var_dump($request->getUri()->getPath());
+// var_dump($request->getUri()->getPath());
 
 // Create the router container and get the routing map
 $routerContainer = new RouterContainer();
@@ -56,6 +56,9 @@ $map->get('index', '/', [
 	'action' => 'indexAction',
 	]);
 $map->get('addJob', '/jobs/add', [
+	'controller' => 'App\Controllers\JobsController',
+	'action' => 'getAddJobAction',
+$map->post('saveJob', '/jobs/add', [
 	'controller' => 'App\Controllers\JobsController',
 	'action' => 'getAddJobAction',
 ]);
@@ -71,14 +74,14 @@ if (! $route)
 else
 {
 	// testing de handler result
-	var_dump($route->handler);
+	// var_dump($route->handler);
 	
 	$handlerData = $route->handler;
 	$controllerName = $handlerData['controller'];
 	$actionName = $handlerData['action'];
 	
 	$controller = new $controllerName;	
-	$controller->$actionName();	
+	$controller->$actionName($request);	
 }
 
 

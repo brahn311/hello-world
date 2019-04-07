@@ -1,0 +1,18 @@
+Video_36
+MVC Controller de la entidad Job
+
+Siguiendo con el patron de diseño MVC
+
+Ahora queda configurar la accion cuando se origina un POST con los datos del formulario
+
+Debemos en /public/index.php generar un nuevo valor en el mapa
+$map->post
+Aunque el contenido es exactamente igual
+y en donde se llama a instanciar un nuevo actionName... debemos enviar el contenido de ese post
+Solo que el nameAction del index. deberia mostrar 
+
+En el JobsController debemos cambiar los metodos para validar el post, que ya no lo hacemos directamente
+
+Reconoceriamos que en la solicitud viene un post y ese contenido lo debemos mandar al controlador tambien
+A partir de alli el controlador gestiona los datos
+ 
