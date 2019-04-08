@@ -14,6 +14,9 @@ class IndexController extends BaseController
 		
 		$jobs = Job::all();
 		
-		include '../views/index.php';
+		return new HtmlResponse($this->renderHTML('index.twig', [
+			'name' => $name,
+			'jobs' => $jobs,
+		]);
 	}
 }
