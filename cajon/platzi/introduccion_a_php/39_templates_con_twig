@@ -35,3 +35,5 @@ Y se imprime el cuerpo de la respuesta html
 echo $response->getBody();
 
 Nota: no faltara el mismo tipo de funcionamiento para JobsController?
+Respuesta: No, porque quien genera el HtmlResponse es el metodo del padre
+que posee el contenido Html generado el metodo o acción del controlador que es de la clase hijo.
