@@ -10,16 +10,16 @@ class JobsController extends BaseController
 
 	public function getAddJobAction($request)
 	{
-		$responseMessage = null;		
+		$responseMessage = null;
 		
 		if ($request->getMethod() == 'POST')
 		{
 			$postData = $request->getParsedBody();
-
+			
 			$jobValidator = v::key('title', v::stringType()->notEmpty())
 				->key('description', v::stringType()->notEmpty());
 			
-			// probando el assert			
+			// probando el assert
 			// var_dump($jobValidator->assert($postData));
 			
 			try
@@ -37,13 +37,13 @@ class JobsController extends BaseController
 			catch(\Exception $e)
 			{
 				// probando el mensaje
-				// var_dump($e->getMessage());
+				// var_dump($e->getFullMessage());
 				$responseMessage = $e->getMessage();
 			}
 		}
 		
 		return $this->renderHTML('addJob.twig', [
-			'responseMessage ' => $responseMessage, 		
+			'responseMessage' => $responseMessage,
 		]);
 	}
 }
