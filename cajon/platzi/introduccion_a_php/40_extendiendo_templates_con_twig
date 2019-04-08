@@ -1,0 +1,28 @@
+Video_39
+Extendiendo Templates con Twig
+
+Extender templates nos permitirá hacer sitios más dinámicos reutilizando código HTML.
+
+Usaremos parte del codigo de index.twig para generar una plantilla base
+En views, creamos un nuevo archivo llamado layout.twig
+
+En layout.twig:
+Tendremos el documento html
+el el punto donde queremos contenido dinamico debemos crear un contenedor
+<tags html>
+	{% block nombre %}
+	{% endblock %}
+</tags>
+El contenido de ese bloque sera llenado, dejando este como plantilla
+
+En index.twig
+En addJob.twig
+
+Al inicio colocamos que ambos son hijos de layout.twig
+{% extends "layout.twig" %}
+Luego solo falta iniciar en contenedor que sera puesto en layout.twig
+{% block nombre %}
+	<tags html>
+	<tags>
+{% endblock %}
+El interior de este contenedor tendra el contenido especial que sera puesto en layout.twig
