@@ -1,0 +1,37 @@
+Video_39
+Templates con Twig
+
+Primero falta hacer el mismo tratamiento de addJob.twig con index.php
+Con la difenrencia que index.php si presenta valores que imprimir
+
+Revisar la documentacion con el manual de referencias para twig
+Ver como podemos llenar de contenido las plantillas de twig
+Porque twig ya no reconoce archivos con script PHP
+
+Para el indexController
+Al momento de renderizar, debemos enviar un arreglo con el template.twig a renderizar y los datos que usaremos 
+
+Para index.twig mostrar una valiable:
+Para variables usamos autoescape
+{{ name }}
+Para bucles for:
+{% for job in jobs %}
+	<li class="work-position">
+		<h5>{{ job.title }}</h5>
+	</li>
+{% endfor %}
+
+Podemos hacer que la respuesta del controlador no sea un include, si no una respuesta html de Diactoros
+
+En BaseController.php:
+Hacemos que use:
+use Zend\Diactoros\Response\HtmlResponse;
+y al retornar el include, ahora retornamos una nueva instancia de HtmlResponse() 
+
+Ahora en index.php:
+Recibe la instancia de respuesta
+$response = $controller->$actionName($request);
+Y se imprime el cuerpo de la respuesta html
+echo $response->getBody();
+
+Nota: no faltara el mismo tipo de funcionamiento para JobsController?
