@@ -18,7 +18,8 @@ $capsule->addConnection([
     'host'      => 'localhost',
     'database'  => 'portafolio',
     'username'  => 'root',
-    'password'  => 'zxasqw12',
+    //'password'  => 'zxasqw12',
+    'password'  => '',
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',
@@ -58,6 +59,7 @@ $map->get('index', '/', [
 $map->get('addJob', '/jobs/add', [
 	'controller' => 'App\Controllers\JobsController',
 	'action' => 'getAddJobAction',
+	]);
 $map->post('saveJob', '/jobs/add', [
 	'controller' => 'App\Controllers\JobsController',
 	'action' => 'getAddJobAction',

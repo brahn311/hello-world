@@ -12,7 +12,7 @@ class JobsController
 		if ($request->getMethod() == 'POST') 
 		{
 			$job = new Job();
-			$postData = $request->getParsedBody()
+			$postData = $request->getParsedBody();
 			$job->title = $postData['title'];
 			$job->description = $postData['description'];
 			$job->months = $postData['months'];
