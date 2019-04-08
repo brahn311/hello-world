@@ -1,0 +1,19 @@
+Video_37
+Template engines
+
+Inicialmente PHP fue pensado como un template Engine
+para dar funcionalidad a las paginas html al momento de construir sitios dinamicos
+con el paso del tiempo php se ha enfocado en la programacion y no al rendereo
+
+Template engines:
+Motores que sirven para renderear el código html
+Sustituir las partes de código con los datos que se tienen que imprimir.
+
+Tambien maneja soluciones seguras a conocidos vulnerabilidades
+Ejemplo:
+
+Ataques XSS (cross site scripting):
+Scripts Javascript enviados a la pase de datos para efectuar tareas maliciosas
+y ejecutados al momento de cargar las paginas
+
+Validar y nunca confiar en las entradas de los usuarios

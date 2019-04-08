@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     '72579e7bd17821bb1321b87411366eae' => $vendorDir . '/illuminate/support/helpers.php',
+    '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
     'cf97c57bfe0f23854afd2f3818abb7a0' => $vendorDir . '/zendframework/zend-diactoros/src/functions/create_uploaded_file.php',
     '9bf37a3d0dad93e29cb4e1b1bfab04e9' => $vendorDir . '/zendframework/zend-diactoros/src/functions/marshal_headers_from_sapi.php',
     'ce70dccb4bcc2efc6e94d2ee526e6972' => $vendorDir . '/zendframework/zend-diactoros/src/functions/marshal_method_from_sapi.php',

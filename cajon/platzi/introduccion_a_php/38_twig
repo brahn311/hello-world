@@ -1,0 +1,45 @@
+Video_38
+Twig
+
+Es un template engine, pero hay muchos otros
+
+Para instalar:
+php composer.phar require twig/twig
+
+Para usar twig usaremos los conceptos de poo y crearemos un nuevo controller llamado:
+BaseController.php
+
+No olvides colocar el namespace de controllers
+namespace App\Controllers;
+
+Tampoco olvides colocar el uses de twig:
+uses Twig\Loader\FilesystemLoader;
+(ya no es necesario, ya que al instanciarlo ya posee una \ y PHP no lo busca en App\Controllers)
+
+Creamos la clase del mismo nombre
+Declaramos una instancia de twig con el atributo protegido para que se pueda heredar a hijos
+protected $templateEngine;
+Creamos el constructor de la clase
+Declaramos la ubicacion de los template, nuestras plantillas para importar las vistas
+$loader = new \Twig\Loader\FilesystemLoader('../views');
+Creamos el entrono de twig:
+$this->templateEngine = new \Twig\Environment($loader, [
+	'debug' => true,
+	'cache' => false,
+]);
+(debug: muestra los errores, cache: almacena el documento a la cache pero no lo usaremos en desarrollo)
+Creamos el metodo renderHTML para crear el template y ser llamada de los controladores hijos:
+(con el nombre del archivo y los datos)
+public function renderHTML($fileName, $data = [])
+{
+	return $this->templateEngine->render($fileName, $data);
+}
+
+Como los controladores del index y addJob.php generan una salida html esos seran hijos del BaseController
+Ahora tendran sus propios atributos mas los atributos del padre, es decir, estos seran su propio template
+
+Tendremos que cambiar el include con el archivo de views
+
+Estos archivos deberan cambiar de extension de addJob.php a addJob.twig
+
+Recuerda que un no esta totalmente implementado todas las funciones de twig

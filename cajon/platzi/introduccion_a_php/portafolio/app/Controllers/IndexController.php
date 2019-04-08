@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\{Job, Proyect};
 
-class IndexController
+class IndexController extends BaseController
 {
 
 	public function indexAction() 
