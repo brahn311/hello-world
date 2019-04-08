@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use Respect\Validation\Validator as v;
 use App\Models\{Job};
 
 class JobsController extends BaseController
@@ -9,17 +10,40 @@ class JobsController extends BaseController
 
 	public function getAddJobAction($request)
 	{
-		if ($request->getMethod() == 'POST') 
+		$responseMessage = null;		
+		
+		if ($request->getMethod() == 'POST')
 		{
-			$job = new Job();
 			$postData = $request->getParsedBody();
-			$job->title = $postData['title'];
-			$job->description = $postData['description'];
-			$job->months = $postData['months'];
-			$job->visible = $postData['visible'];
-			$job->save();
+
+			$jobValidator = v::key('title', v::stringType()->notEmpty())
+				->key('description', v::stringType()->notEmpty());
+			
+			// probando el assert			
+			// var_dump($jobValidator->assert($postData));
+			
+			try
+			{
+				$jobValidator->assert($postData);
+				$job = new Job();
+				$job->title = $postData['title'];
+				$job->description = $postData['description'];
+				$job->months = $postData['months'];
+				$job->visible = $postData['visible'];
+				$job->save();
+				
+				$responseMessage = 'Saved';
+			}
+			catch(\Exception $e)
+			{
+				// probando el mensaje
+				// var_dump($e->getMessage());
+				$responseMessage = $e->getMessage();
+			}
 		}
 		
-		return $this->renderHTML('addJob.twig');
+		return $this->renderHTML('addJob.twig', [
+			'responseMessage ' => $responseMessage, 		
+		]);
 	}
 }

@@ -1,0 +1,52 @@
+Video_41
+Validaciones
+
+Debemos de desconfiar del contenido introducido por el usuario
+Protegerla aplicación de datos invalidos que generen errores
+Codigos con ataques maliciosos
+
+Debemos validar el contenido para que la aplicacion funcione de manera correcta
+Evitar fallas de la aplicacion
+No afectar la seguridad de la aplicacion
+
+Usaremos el framework:
+php composer.phar require respect/validation
+
+Para incluirlo a JobsController:
+use Respect\Validation\Validator as v;
+
+Para comprobar un arreglo con el contenido del post en el request configuras la validacion:
+$jobValidator = v::key('title', v::stringType()->notEmpty())
+	->key('description', v::stringType()->notEmpty());
+(podemos usar un key si validamos un arreglo, o un attribute en caso de objetos)
+Luego es que se realiza la validacion
+$jobValidator->validate($postData);
+(validate envia solo un verdadero o falso)
+Podemos usar excepcion en vez de validacion
+$jobValidator->asserte($postData)
+(assert genera un mensaje de pendiendo de la excepcion y no detiene la ejecucion)
+
+Usaremos el assert dentro de un bloque try catch:
+try
+{
+	$jobValidator->assert($postData);
+	// ... save en la base de datos ...
+	$responseMessage = 'Saved';
+}
+catch(\Exception $e)
+{
+	$responseMessage = $e->getMessage();
+}
+($responseMessage es una valiable que posee la confirmacion o el error)
+Creamos el $responseMessage como atributo null del getAddJobController
+$responseMessage = null;
+y en el retorno del renderHTML enviamos un array con el $responseMessage
+return $this->renderHTML('addJob.twig', [
+	'responseMessage ' => $responseMessage, 		
+]);
+
+
+Tambien debemos en addJob.twig incluir el codigo para el mensaje
+<div class="alert alert-primary" role="alert">
+	{{ responseMessage }}	
+</div>

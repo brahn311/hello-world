@@ -2,6 +2,9 @@
 
 {% block content %}
 	<h1>Add Job</h1>
+	<div class="alert alert-primary" role="alert">
+		{{ responseMessage }}	
+	</div>
 	<form action="/jobs/add" method="POST">
 		<label for="title">Title:</label>
 		<input type="text" name="title"/>
