@@ -1,0 +1,49 @@
+Video_41
+Ejemplo de subida de archivos
+
+Este es un ejemplo rapido de como subir una imagen en un formulario
+
+Por rapidez este solo sera un ejemplo
+El tema requiere mucho estudio debido a que es potencialmente peligroso para el servidor y datos
+
+En el formulario de addJob.twig:
+Al formulario añadimos un input
+<input type="file" name="logo"><br>
+a nivel de la etiqueta form añadimos
+enctype="multipart/form-data"
+
+En JobsController.php:
+Dentro del try, luego de getParsedBody();
+Recuperamos del request el/los archivo subidos
+$files = $request->getUploadedFiles();
+Extraeamos el archivo como objeto
+$avatar = $files['avatar'];
+Comprobamos si no hubieron errores
+if ($avatar->getError() == UPLOAD_ERR_OK)
+{
+Recuperamos el nombre del archivo
+$fileName = $avatar->getClientFilename();
+Movemos el archivo a la ruta donde estara almacenado
+$avatar->moveTo("uploads/$fileName");
+}
+(esto saca el archivo de los temporales y lo deja en su directorio final)
+
+Debes crear una carpeta para subir los archivos (dentro de public por ejemplo)
+uploads
+Lo ideal es tener un servidor aparte para subir los archivos, eso permite no dejar expuestos los datos
+Esa carpeta debe de tener los permisos para PHP pueda almacenar
+Desde la consola ubicado en la carpeta public:
+# chmod 777 uploads/
+(esos son los permisos mas flexibles para este ejemplo
+Debemos estudiar cuales seran los permisos mas adecuados almacenar archivos subidos a la aplicacion)
+
+Queda pendiente almacenar en la base de datos los datos referentes a estos archivos para luego buscarlos
+
+Tambien se deberia validar:
+- Tipo de archivo
+- Extension del archivo
+- Nombre del archivo (recomendado cambiar el nombre)
+
+Investigar tips de seguridad para la subida de archivos
+
+

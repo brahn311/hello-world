@@ -37,14 +37,14 @@ catch(\Exception $e)
 {
 	$responseMessage = $e->getMessage();
 }
-($responseMessage es una valiable que posee la confirmacion o el error)
+($responseMessage es una variable que posee cadena con el mensaje de confirmación o error)
+(con $e->getFullMessage() extraemos de la excepcion un mensaje mas especifico)
 Creamos el $responseMessage como atributo null del getAddJobController
 $responseMessage = null;
 y en el retorno del renderHTML enviamos un array con el $responseMessage
 return $this->renderHTML('addJob.twig', [
-	'responseMessage ' => $responseMessage, 		
+	'responseMessage' => $responseMessage, 		
 ]);
-
 
 Tambien debemos en addJob.twig incluir el codigo para el mensaje
 <div class="alert alert-primary" role="alert">
