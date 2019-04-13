@@ -12,17 +12,10 @@ use Aura\Router\RouterContainer;
 Crea el contenedor del route:
 $routerContainer = new RouterContainer();
 Crea el mapa de las rutas del sitio
-$matcher = $routerContainer->getMatcher();
-
-// .. and try to match the request to a route.
-$route = $matcher->match($request);
-if (! $route) {
-    echo "No route found for the request.";
-    exit;
-}:
 $map = $routerContainer->getMap();
 Diseña y configura las rutas que deseas usar en el url:
-$map->get('nombre', 'contenido_del_url','archivo_o_accion');
+$map->get('nombre', 'contenido_del_url','archivo_o_accion_o_arreglo_de_parametros');
+En ese ejemplo realizamos un get, pero puede configurarse para post y otros
 Agregar el matcher, el comparador a ver si coincide el url con el mapa:
 $matcher = $routerContainer->getMatcher();
 Asigna a la ruta el valor obtenido
@@ -39,5 +32,3 @@ else
 
 	require $route->handler;
 }
-
-En ese ejemplo realizamos un get, pero puede configurarse para post y otros

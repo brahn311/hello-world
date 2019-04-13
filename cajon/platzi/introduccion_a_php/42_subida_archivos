@@ -13,10 +13,11 @@ a nivel de la etiqueta form añadimos
 enctype="multipart/form-data"
 
 En JobsController.php:
-Dentro del try, luego de getParsedBody();
+Dentro del try, antes del assert
 Recuperamos del request el/los archivo subidos
 $files = $request->getUploadedFiles();
-Extraeamos el archivo como objeto
+(ese seria un arreglo con todos los archivos enviados en el formulario - 
+Extraeamos el archivo como objeto que esta dentro del array $files['avatar']
 $avatar = $files['avatar'];
 Comprobamos si no hubieron errores
 if ($avatar->getError() == UPLOAD_ERR_OK)
