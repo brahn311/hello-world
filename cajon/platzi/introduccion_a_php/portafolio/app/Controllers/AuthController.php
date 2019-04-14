@@ -25,27 +25,27 @@ class AuthController extends BaseController
 			$user = User::where('email', $postData['email'])->first();
 			if ($user)
 			{
-				echo "Found";
+				// User found
 				if (password_verify($postData['password'], $user->password))
 				{
-					// Correct credentials;
+					// Correct credentials
 					return new RedirectResponse('/admin');
 				}
 				else
 				{
-					// Wrong password;
+					// Wrong password
 					$responseMessage = 'Bad credentials';
 				}
 			}
 			else
 			{
-				// User not found
+				// User not found 
 				$responseMessage = 'Bad credentials';
 			}
 			
 		}
 
-		return $this->renderHTML('addUser.twig', [
+		return $this->renderHTML('login.twig', [
 			'responseMessage' => $responseMessage,
 		]);
 	}

@@ -81,11 +81,12 @@ $map->post('authUser', '/login', [
 	'action' => 'getPostLoginAction',
 ]);
 // incompleto aun
+/*
 $map->get('', '/admin', [
 	'controller' => 'App\Controllers\AuthController',
 	'action' => 'getLogin',
 ]);
-
+*/
 // Get the route matcher from the container and try to match the request to a route.
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
