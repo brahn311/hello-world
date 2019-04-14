@@ -85,7 +85,7 @@ $map->post('authUser', '/login', [
 	'controller' => 'App\Controllers\AuthController',
 	'action' => 'getPostLoginAction',
 ]);
-$map->get('logoutUser', '/login', [
+$map->get('logoutUser', '/logout', [
 	'controller' => 'App\Controllers\AuthController',
 	'action' => 'getLogout',
 	'auth' => true,
@@ -114,7 +114,7 @@ else
 	$actionName = $handlerData['action'];
 	$needsAuth = $handlerData['auth'] ?? false;
 	
-	$ssesionUserId = $_SESSION['userId'] ?? null
+	$ssesionUserId = $_SESSION['userId'] ?? null;
 	if ($needsAuth && !$ssesionUserId)
 	{
 		echo "Protected route";
@@ -135,22 +135,3 @@ else
 	
 	echo $response->getBody();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
