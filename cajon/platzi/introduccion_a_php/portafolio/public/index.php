@@ -64,6 +64,14 @@ $map->post('saveJob', '/jobs/add', [
 	'controller' => 'App\Controllers\JobsController',
 	'action' => 'getAddJobAction',
 ]);
+$map->get('addUser', '/users/add', [
+	'controller' => 'App\Controllers\UsersController',
+	'action' => 'getAddUserAction',
+	]);
+$map->post('saveUser', '/users/add', [
+	'controller' => 'App\Controllers\UsersController',
+	'action' => 'getAddUserAction',
+]);
 
 // Get the route matcher from the container and try to match the request to a route.
 $matcher = $routerContainer->getMatcher();
