@@ -1,0 +1,57 @@
+Video_45
+Autenticando usuarios
+
+en public/index.php
+Agregamos una nueva ruta tipo get al $map
+$map->post('loginForm', '/login', [
+	'controller' => 'App\Controllers\AuthController',
+	'action' => 'getLogin',
+]);
+
+Creamos AuthController.php
+(no olvides decretar el namespace y los use)
+class AuthController extends BaseController
+{
+	public function getLogin()
+	{
+		return $this->renderHTML('login.twig');
+	}
+}
+
+Crea el formulario login.twig con: 
+<form action="/auth" method="POST">
+
+Genera la nueva ruta en el map del public/index.php para los valores del post
+$map->post('auth', '/auth', [
+	'controller' => 'App\Controllers\AuthController',
+	'action' => 'getPostLoginAction',
+]);
+
+En el controlador, ahora crea la accion que recibe el post y valida los datos
+public function getPostLoginAction($request)
+{
+	$responseMessage = null;
+	if ($request->getMethod() == 'POST')
+	{
+		$postData = $request->getParsedBody();
+
+		$user = User::where('email', $postData['email'])->first();
+		if ($user) 
+		{
+			echo "Found";
+			if (password_verify($postData['password'], $user->password)) 
+			{
+				echo "Correct";
+			}
+			else
+			{
+				echo "Wrong";
+			}
+		}
+		else
+		{
+			echo "Not Found";
+
+		}
+	}
+}

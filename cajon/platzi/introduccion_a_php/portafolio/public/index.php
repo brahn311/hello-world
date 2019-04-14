@@ -72,6 +72,14 @@ $map->post('saveUser', '/users/add', [
 	'controller' => 'App\Controllers\UsersController',
 	'action' => 'getAddUserAction',
 ]);
+$map->get('loginForm', '/login', [
+	'controller' => 'App\Controllers\AuthController',
+	'action' => 'getLogin',
+]);
+$map->post('auth', '/auth', [
+	'controller' => 'App\Controllers\AuthController',
+	'action' => 'getPostLoginAction',
+]);
 
 // Get the route matcher from the container and try to match the request to a route.
 $matcher = $routerContainer->getMatcher();
