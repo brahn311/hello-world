@@ -1,0 +1,35 @@
+Video_48
+Variables de entorno
+
+No es recomendable tener en el codigo las variables del entorno
+Nos referimos a tener los parametros de seguridad, configuracion a bases de datos dentro del codigo y visibles a todos
+
+Deberiamos tener esas variables en un archivo de configuracion externo al codigo
+Y de alli, llamarlas e incorporarlas al codigo
+
+Para ello usamos la siguiente libreria
+https://packagist.org/packages/vlucas/phpdotenv
+
+para instalarlo usamos composer
+php composer.phar require vlucas/phpdotenv
+
+Creamos un archivo .env
+Dentro tendremos variables siguiendo este formato
+INDICE_A='VALOR'
+INDICE_B=VALOR
+
+Para inicializar la libreria debemos añadir a nuestro index
+$dotenv = Dotenv\Dotenv::create(__DIR__);
+$dotenv->load();
+En nuestro caso las variables estan en un nivel de carpeta superior por ello concatenamos
+$dotenv = Dotenv\Dotenv::create(__DIR__ . "/..");
+
+Para extraer los valores del archivo solo debemos usar alguno de estos metodos
+$s3_bucket = getenv('S3_BUCKET');
+$s3_bucket = $_ENV['S3_BUCKET'];
+$s3_bucket = $_SERVER['S3_BUCKET'];
+
+Notas:
+Se recomienda tener en .gitignore el archivo .env para no mostrar los valores originales
+Puedes tener un archivo .env.sample que muestre como se debe configurar los valores del archivo .env
+Los valores dentro del .env, pueden no tener comillas
