@@ -1,0 +1,24 @@
+Video_44
+Reto. Creacion de usuarios
+
+Para autenticar usuario y darle acceso a detarminadas acciones del portal debemos:
+
+Crear una tabla de usuarios con:
+id
+correo
+contraseña
+
+Crear el modelo:
+Puedes usar esta variable para evitar usar created_at updated_at en la tabla
+public $timestamps = false;
+
+Crear el formulario
+
+Añadir en el mapa del router
+
+Crear el controlador que muestra el formulario y si tiene post, salva la informacion
+
+Antes de guardar la contraseña, deberias encryptarla.
+Para generar una contraseña encryptada, se recomienda el uso de:
+password_hash("password_del_usuario", PASSWORD_DEFAULT);
+https://www.php.net/manual/es/function.password-hash.php
