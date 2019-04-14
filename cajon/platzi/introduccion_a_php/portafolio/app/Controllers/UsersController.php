@@ -26,7 +26,6 @@ class UsersController extends BaseController
 				$user = new User();
 				$user->email = $postData['email'];
 				$user->password = password_hash($postData['password'], PASSWORD_DEFAULT);
-
 				/*
 				Abrahan Omaña
 				PHP Developer
@@ -37,19 +36,15 @@ class UsersController extends BaseController
 				*/
 
 				$files = $request->getUploadedFiles();
-
-				var_dump($files);
-
 				$avatar = $files['avatar'];
 				if ($avatar->getError() == UPLOAD_ERR_OK)
 				{
 					$fileName = $postData['email']."_".$avatar->getClientFilename();
 					$avatar->moveTo("avatars/$fileName");
+					$user->avatar = $fileName;
 				}
 
-				$user->avatar = $fileName;
 				$user->save();
-
 				$responseMessage = 'Saved';
 			}
 			catch(\Exception $e)

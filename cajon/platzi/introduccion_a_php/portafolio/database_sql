@@ -14,7 +14,7 @@ CREATE TABLE `portafolio`.`users` (
 	`id` INT NOT NULL AUTO_INCREMENT ,
 	`email` TEXT NOT NULL ,
 	`password` TEXT NOT NULL ,
-	`avatar` TEXT NOT NULL ,
+	`avatar` TEXT NULL ,
 	`created_at` DATETIME NOT NULL ,
 	`updated_at` DATETIME NOT NULL,
 	PRIMARY KEY (`id`)
