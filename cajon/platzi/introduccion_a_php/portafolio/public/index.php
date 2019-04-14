@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 
 require_once '../vendor/autoload.php';
 
+session_start();
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Aura\Router\RouterContainer;
@@ -59,18 +60,22 @@ $map->get('index', '/', [
 $map->get('addJob', '/jobs/add', [
 	'controller' => 'App\Controllers\JobsController',
 	'action' => 'getAddJobAction',
+	'auth' => true,
 	]);
 $map->post('saveJob', '/jobs/add', [
 	'controller' => 'App\Controllers\JobsController',
 	'action' => 'getAddJobAction',
+	'auth' => true,
 ]);
 $map->get('addUser', '/users/add', [
 	'controller' => 'App\Controllers\UsersController',
 	'action' => 'getAddUserAction',
+	'auth' => true,
 	]);
 $map->post('saveUser', '/users/add', [
 	'controller' => 'App\Controllers\UsersController',
 	'action' => 'getAddUserAction',
+	'auth' => true,
 ]);
 $map->get('loginUser', '/login', [
 	'controller' => 'App\Controllers\AuthController',
@@ -80,13 +85,17 @@ $map->post('authUser', '/login', [
 	'controller' => 'App\Controllers\AuthController',
 	'action' => 'getPostLoginAction',
 ]);
-// incompleto aun
-/*
-$map->get('', '/admin', [
+$map->get('logoutUser', '/login', [
 	'controller' => 'App\Controllers\AuthController',
-	'action' => 'getLogin',
+	'action' => 'getLogout',
+	'auth' => true,
 ]);
-*/
+$map->get('admin', '/admin', [
+	'controller' => 'App\Controllers\AdminController',
+	'action' => 'getAdminIndex',
+	'auth' => true,
+]);
+
 // Get the route matcher from the container and try to match the request to a route.
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
@@ -103,7 +112,15 @@ else
 	$handlerData = $route->handler;
 	$controllerName = $handlerData['controller'];
 	$actionName = $handlerData['action'];
+	$needsAuth = $handlerData['auth'] ?? false;
 	
+	$ssesionUserId = $_SESSION['userId'] ?? null
+	if ($needsAuth && !$ssesionUserId)
+	{
+		echo "Protected route";
+		exit;
+	}
+
 	$controller = new $controllerName;	
 	$response = $controller->$actionName($request);
 	

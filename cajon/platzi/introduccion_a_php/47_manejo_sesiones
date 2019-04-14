@@ -1,0 +1,70 @@
+Video_47
+Manejo de sesiones
+
+Ya tienes la redireccion para /admin, pero necesitamos crear la pagina de admin
+Deberia contener un dashboard que nos permita acceder a la parte con el acceso logueado
+
+Esto significa tambien crear nuevo controller llamado
+AdminController.php
+con:
+class AdminController extends BaseController
+{
+	public function getAdminIndex()
+	{
+		return $this->renderHTML('admin.twig');
+	}
+}
+
+Crear el contenido de la pagina de admin
+admin.twig
+Dejando una lista de enlaces a las paginas para el administrador
+Tambien debes hacer el enlace para salir de /admin
+
+En public/index.php 
+Terminamos de configurar nuestra mapa de ruta de /admin
+Añadimos un nuevo indice llamado auth
+$map->get('admin', '/admin', [
+	'controller' => 'App\Controllers\AdminController',
+	'action' => 'getAdminIndex',
+	'auth' => true,
+]);
+El indice de auth se lo agregamos a los valores del map que se necesita estar logeado
+En la parte del handler, recuperamos del match el valor de auth
+$needsAuth = $handlerData['auth'] ?? false;
+
+Ahora necesitamos usar la variable global de sesiones
+Luego del require de autoload
+session_start(); 
+
+Regresando al AuthController.php
+Cuando el usuario sea correcto y antes de redireccionar añadimos un valor al session
+$_SESSION['userId'] = $user->id;
+
+Ahora public/index.php
+En la parte del match donde encuentra la ruta debemos 
+Recuperamos el valor del session
+$ssesionUserId = $_SESSION['userId'] ?? null
+
+Y validar el permiso auth
+if ($needsAuth && !$ssesionUserId)
+{
+	echo "Protected route";
+	exit;
+}
+
+Ahora ya el usuario podra entrar a admin solo si hizo login primero y fue correcto
+Pero tambien necesitamos agregar una accion de salida al AuthController.php	
+public function getLogout()
+{
+	unset($_SESSION['userId']);
+	return new RedirectResponse('/login');
+}
+
+En public/index.php debemos añadir al mapa de rutas de para /logout con getLogout
+$map->get('logoutUser', '/login', [
+	'controller' => 'App\Controllers\AuthController',
+	'action' => 'getLogout',
+	'auth' => true,
+]);
+
+Reto: en vez de colocar un mensaje de ruta protegida, deberiamos redireccionar a login
