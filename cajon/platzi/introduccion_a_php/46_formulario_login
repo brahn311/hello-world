@@ -1,0 +1,33 @@
+Video_45
+Formulario login
+
+Primero, el comportamiento del login es que al validar usuario
+Cuando sea incorrecto te muestre el mensaje en el formulario de login
+Cuando sea correcto te redireccione a una nueva url 
+
+En AuthController.php
+Primero, hacemos que getPostLoginAction envie una respuesta en caso de error
+Incializamos la variable respuesta
+$responseMessage = null;
+En donde debemos retornar el mensaje
+return $this->renderHTML('addUser.twig', [
+	'responseMessage' => $responseMessage,
+]);
+Para asignar el mensaje:
+$responseMessage = 'Bad credentials';
+
+Para el redireccionamiento tenemos que usar diactoros
+use Zend\Diactoros\Response\RedirectResponse;
+Cuando sea correcto retornamos una instancia de RedirectResponse
+return new RedirectResponse('/admin');
+
+En public/index.php
+Antes de imprimir la respuesta debemos revisar los encabezados, leer los header y determinar si debemos hacer una redireccion 
+foreach($response->getHeaders() as $name => $values)
+{
+	foreach($values as $value)
+	{
+		header(sprintf('%s: %s', $name, $value), false);
+	}
+}
+http_response_code($response->getStatusCode());

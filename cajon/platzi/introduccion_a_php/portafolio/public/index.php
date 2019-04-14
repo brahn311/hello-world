@@ -72,13 +72,18 @@ $map->post('saveUser', '/users/add', [
 	'controller' => 'App\Controllers\UsersController',
 	'action' => 'getAddUserAction',
 ]);
-$map->get('loginForm', '/login', [
+$map->get('loginUser', '/login', [
 	'controller' => 'App\Controllers\AuthController',
 	'action' => 'getLogin',
 ]);
-$map->post('auth', '/auth', [
+$map->post('authUser', '/login', [
 	'controller' => 'App\Controllers\AuthController',
 	'action' => 'getPostLoginAction',
+]);
+// incompleto aun
+$map->get('', '/admin', [
+	'controller' => 'App\Controllers\AuthController',
+	'action' => 'getLogin',
 ]);
 
 // Get the route matcher from the container and try to match the request to a route.
@@ -100,6 +105,15 @@ else
 	
 	$controller = new $controllerName;	
 	$response = $controller->$actionName($request);
+	
+	foreach($response->getHeaders() as $name => $values)
+	{
+		foreach($values as $value)
+		{
+			header(sprintf('%s: %s', $name, $value), false);
+		}
+	}
+	http_response_code($response->getStatusCode());
 	
 	echo $response->getBody();
 }

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Respect\Validation\Validator as v;
+use Zend\Diactoros\Response\RedirectResponse;
 use App\Models\{User};
 
 class AuthController extends BaseController
@@ -27,16 +28,19 @@ class AuthController extends BaseController
 				echo "Found";
 				if (password_verify($postData['password'], $user->password))
 				{
-					echo "Correct";
+					// Correct credentials;
+					return new RedirectResponse('/admin');
 				}
 				else
 				{
-					echo "Wrong";
+					// Wrong password;
+					$responseMessage = 'Bad credentials';
 				}
 			}
 			else
 			{
-				echo "Not Found";
+				// User not found
+				$responseMessage = 'Bad credentials';
 			}
 			
 		}
