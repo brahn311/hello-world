@@ -55,11 +55,12 @@ $ bash init.sh
 (Esto creara un archivo llamado Homestead.yaml)
 Editamos el archivo con nano
 $ nano Homestead.yaml
+Donde dice -ip elegir la ip para la maquina virtual (recuerdala porque la usaras configurando el virtual hosts)
 Donde dice -folders se liga la carpeta local con la carpeta de la maquina virtual
 Donde dice -sites se configuran los virtual host y puedes tener multiples proyectos
-donde dice -databases se añaden tus bases de datos (pueden ser muchas)
+Donde dice -databases se añaden tus bases de datos (pueden ser muchas)
 
-para iniciar la maquina virtual usa
+Para iniciar la maquina virtual utiliza el comando
 $ vagrant up
 (para iniciar la maguina virtual, debo estar desde la carpeta homestead)
 ATENCION: me aparecio un error!! -> SOLLUCIONADO
@@ -69,4 +70,8 @@ Para solucionar el error use el siguiente codigo
 $ ssh-keygen -t rsa -b 4096 -C "abrahan.omana@gmail.com"
 (Crear una clave ssh con comentario, se guarda en el home de mi maguina y la deje sin clave)
 ...Continuando con $ vagrant up
-luego de usar ese comando se genera un proceso llamado aprovisionamiento el cual levanta la maquina virtual
+Luego de usar ese comando por primera vez se genera un proceso llamado aprovisionamiento
+El cual instala o configura lo necesario para la maquina virtual
+
+Para apagar la maquina virtual usa el comando
+$ vagrant halt

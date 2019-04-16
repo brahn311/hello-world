@@ -1,0 +1,55 @@
+Video_04
+Configuración de virtual host
+
+Proceso para configurar nuestro ordenador para que cierta url esta relacionada con cierta ip
+
+Para linux/mac debes ir a /etc/host y añadir la ip en el archivo Homestead.yaml con el nombre de la url
+192.168.10.20	portafolio.test
+(Esta direccion es la que aparece en homestead/Homestead.yaml)
+
+Para este paso debes hacerlo con la Maquina virtual apagada... o reiniciarla luego de modificar la ip
+
+Ya con la VM (Virtual-Machine) encendida de nuevo puedes usar a la url
+portafolio.test
+
+-En mi caso la primera vez dio error, pero me respondio ngnix
+-Luego de reiniciar logre entrar por primera vez!
+
+Tendremos que ir levantando la aplicacion en nuestro servidor virtual
+
+Lo primero fue que aparece error por no encontrar vendor
+Debemos instalarla, el metodo es por ssh, para entrar en la VM de vagrant usas el comando
+$ vagrant ssh
+Como Homestead ya tiene composer, ubicado en la carpeta del proyecto, (donde esta composer.json) tipea el comando
+$ composer install
+(instalara todas las librerias y dependecias requeridas ya previamente)
+
+Si actualizamos, ahora solo tendremos error el la base de datos donde no tendremos las tablas aun
+En el video usaron Sequel Pro, 
+host: localhost
+username: homestead
+password: secret
+database: portafolio
+ssh host: 192.168.10.20
+ssh username: vagrant
+ssh password: vagrant
+(en el video, Sequel Pro modificó el host a 127.0.01)
+Esto lo anoto por si deseo configurar PHPMyAdmin
+
+Por practicar (y por lentitud de mi computador) opte por usar consola por el ssh
+$ mysql -u root
+(Logre entrar / sin necesidad de usar el comando -p que me pide anotar la password)
+Otra opcion que use:
+$ mysql -u root -p
+(password secret -> logre entrar)
+
+Cree las tablas requeridas
+
+Al refrescar el navegador aun no conectava
+Recuerde que debo modificar el .env con los nuevos parametros de la VM
+DB_HOST='localhost'
+DB_NAME='portafolio'
+DB_USER='root'
+DB_PASS='secret'
+(logro conectar en el navegador y me mostro el index)
+

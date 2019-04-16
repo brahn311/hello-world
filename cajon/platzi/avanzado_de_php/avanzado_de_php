@@ -5,15 +5,14 @@ Fecha de Finalización:
 
 TEMARIO:
 
---------------------------------------------------------------------------- Resolver	*	https://
 1. Introducción
 	01	Introducción
---------------------------------------------------------------------------- Avance
 2. Herramientas
 	02	IDEs
 	03	Virtualización
 	04	Configuración de virtual host
 3. Características avanzadas del lenguaje
+--------------------------------------------------------------------------- Avance
 	05	Closures
 	06	Type Hinting
 	07	Agregar imágenes en Jobs
@@ -52,3 +51,5 @@ TEMARIO:
 9. Conclusiones
 	34	Crea una API Rest
 	35	Cierre
+
+--------------------------------------------------------------------------- Resolver	*	https://
