@@ -2,6 +2,12 @@ Ramas y Fusiones
 https://www.youtube.com/watch?v=-UQulO_0prM
 
 Head: es el commit donde nos encotramos actualmente, pero puede variar si viajamos en el tiempo
+
+Para cambiar el head solo debes usar el comando
+$ git checkout hash_del_comit
+Para regresar para el ultimo commit solo dirigete al master
+$ git checkout master
+
 Ramas: lineas del tiempo en nuestro proyecto, sirve para arreglar errores, experimentar, hacer grandes cambios
 
 Rama master: rama estable - se genera por default al hacer "git init"
