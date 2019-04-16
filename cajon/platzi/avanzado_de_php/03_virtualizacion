@@ -1,0 +1,72 @@
+Video_03
+Virtualizacion
+
+Usar maquinas virtuales para distintos proyectos
+
+Permite crear entornos virtuales para poder tener entornos de desarrollos ideales para programar
+
+Opciones a explorar:
+Vagrant
+Maquinas virtuales completas (usado para el curso)
+
+Docker
+Ofrece distintos contenedores para solo una maquina virtual
+
+Instalar Vagrant:
+- Descarga desde la pagina oficial
+- instalar desde terminal como root:
+	# dpkg -i vagrant*.deb
+- desde terminal (con o sin root) ejecuta el comando
+	$ vagrant
+	// Debe aparecerte el los comandos e informacion de ayuda
+
+Virtualbox:
+Debes tener virtualbox instalado para usar homestead
+FUENTE: https://www.virtualbox.org/wiki/Linux_Downloads
+Añades la pagina de virtualbox al la lista de fuentes
+$ nano /etc/apt/sources.list
+Dentro añade la fuente 
+deb https://download.virtualbox.org/virtualbox/debian stretch contrib
+Descargas la clave de apt desde:
+https://www.virtualbox.org/download/oracle_vbox_2016.asc
+Añades la clave a la lista de programas
+$ apt-key add oracle_vbox_2016.asc
+Para hacer ambos en un solo paso solo usa el siguiente codigo
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+Solo queda actualizar apt
+$ apt-get update
+Ahora si empiezas a instalar
+$ apt-get install virtualbox-6.0
+
+Laravel Homestead:
+Con los pasos anteriores descargaste Vagrant y tienes virtualbox
+Vagrant es una maquina virtual y la llamas box, las puedes publicar luego que ya las tienes listas
+Desde la pagina de laravel homestead
+https://laravel.com/docs/5.7/homestead
+Debes descargar su caja para Vagrant con el comando
+# vagrant box add laravel/homestead
+Ahora debes instalar el homestead desde git
+git clone https://github.com/laravel/homestead.git
+Nota: por lo que veo, el clone lo haces dentro de tu carpeta del proyecto
+(como quiero que quede para mis nuevos proyectos lo hare en hello-world)
+Creas el archivo de configuracion para homestead dentro de la carpeta clonada
+$ cd homestead
+$ bash init.sh
+(Esto creara un archivo llamado Homestead.yaml)
+Editamos el archivo con nano
+$ nano Homestead.yaml
+Donde dice -folders se liga la carpeta local con la carpeta de la maquina virtual
+Donde dice -sites se configuran los virtual host y puedes tener multiples proyectos
+donde dice -databases se añaden tus bases de datos (pueden ser muchas)
+
+para iniciar la maquina virtual usa
+$ vagrant up
+(para iniciar la maguina virtual, debo estar desde la carpeta homestead)
+ATENCION: me aparecio un error!! -> SOLLUCIONADO
+operador@debian9:~/repositories/hello-world/homestead$ vagrant up
+Check your Homestead.yaml (or Homestead.json) file, the path to your private key does not exist.
+Para solucionar el error use el siguiente codigo
+$ ssh-keygen -t rsa -b 4096 -C "abrahan.omana@gmail.com"
+(Crear una clave ssh con comentario, se guarda en el home de mi maguina y la deje sin clave)
+...Continuando con $ vagrant up
+luego de usar ese comando se genera un proceso llamado aprovisionamiento el cual levanta la maquina virtual

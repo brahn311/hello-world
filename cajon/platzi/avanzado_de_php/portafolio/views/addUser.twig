@@ -1,0 +1,32 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+	<h1>Add User</h1>
+	<div class="alert alert-primary" role="alert">
+		{{ responseMessage }}	
+	</div>
+	<form action="/users/add" method="POST" enctype="multipart/form-data">
+		<label for="email">Email:</label>
+		<input type="email" name="email"/>
+		<br>
+		<label for="password">Password:</label>
+		<input type="password" name="password" />
+		<br>
+		<!--
+		<label for="months">Months:</label>
+		<input type="number" name="months" />
+		<br>
+		<label for="visible">Visible:</label>
+		<select name="visible">
+			<option selected="" disabled="">...</option>
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</select>
+		<br>
+		-->
+		<label for="avatar">Avatar:</label>
+		<input type="file" name="avatar">
+		<br>
+		<button type="submit">Save</button>
+	</form>
+{% endblock %}

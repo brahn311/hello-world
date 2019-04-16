@@ -1,9 +1,12 @@
 # Ignorados por abrahan... (aun no se que hacer con estos directorios)
 /bootstrap-4.3.1-dist
 
+# IDEs
 # bluefish (LINUX Debian 9)
-*~
 *.bfproject
+*~
+# laravel/homestead git repository
+/homestead
 
 # composer
 vendor
@@ -23,3 +26,4 @@ private
 /codes/java/romatutorials_curso/video_2_area_cuadrado/dist/
 /codes/java/romatutorials_curso/video_2_sumar_2_multiplicar_2/nbproject/private/
 /codes/java/romatutorials_curso/video_2_sumar_2_multiplicar_2/build/
+

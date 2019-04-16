@@ -1,0 +1,54 @@
+Curso Avanzado de PHP
+
+Fecha de Inicio: 15/04/2019
+Fecha de Finalización: 
+
+TEMARIO:
+
+--------------------------------------------------------------------------- Resolver	*	https://
+1. Introducción
+	01	Introducción
+--------------------------------------------------------------------------- Avance
+2. Herramientas
+	02	IDEs
+	03	Virtualización
+	04	Configuración de virtual host
+3. Características avanzadas del lenguaje
+	05	Closures
+	06	Type Hinting
+	07	Agregar imágenes en Jobs
+---------------------------------------------------------------------------	Visto
+	08	Salvar imágenes en Jobs
+	09	Traits
+	10	Endpoint to delete Jobs
+	11	Third party Traits - Soft Delete
+4. Técnicas de programación
+	12	SOLID
+	13	SOLID a profundidad
+	14	Inyección de dependencias
+	15	Contenedor de inyección de dependencias
+	16	Middlewares y PSR15
+	17	Implementando el server request handler
+	18	Creando un middleware
+5. Errores y debug
+	19	Error Handling
+	20	La biblioteca SPL
+	21	Debug
+	22	Xdebug
+	23	Logs
+	24	Trabajando con Monolog
+6. Databases
+	25	Migraciones de bases de datos
+7. Comandos y Tareas asíncronas
+	26	Comandos
+	27	Formulario para contacto
+	28	Emails
+	29	Async tasks
+	30	Procesar tareas asíncronas
+	31	Crear un comando para agregar usuarios
+8. Seguridad
+	32	Security
+	33	Security Examples
+9. Conclusiones
+	34	Crea una API Rest
+	35	Cierre

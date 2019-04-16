@@ -9,3 +9,8 @@ Si se presentan errores instalando puedes usar el siguiente comando para observa
 # dpkg --configure -a
 
 FUENTE: https://www.comoinstalarlinux.com/como-solucionar-problemas-al-instalar-o-actualizar-paquetes-en-ubuntu-o-linux-mint/
+
+Para desinstalar un archivo .deb, en la terminal escriba:
+# apt-get remove nombre_del_paquete
+
+FUENTE:https://help.ubuntu.com/kubuntu/desktopguide/es/manual-install.html

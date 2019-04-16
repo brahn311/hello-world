@@ -1,14 +1,16 @@
 Introduccion a PHP
+https://platzi.com/clases/php/
 
 Fecha de Inicio: 28/03/2019
+Fecha de Finalización: 14/04/2019
 
 TEMARIO:
 
-1- Introducción a PHP
+1. Introducción a PHP
 	01	1:00 min	Presentación del curso													https://platzi.com/clases/1338-php/12913-presentacion-del-curso8561/
 	02	4:00 min	¿Qué es PHP?															https://platzi.com/clases/1338-php/12914-que-es-php4446/
 	03	11:00 min	Setup y Herramientas													https://platzi.com/clases/1338-php/12915-setup-y-herramientas/
-2- Conceptos Básicos de PHP
+2. Conceptos Básicos de PHP
 	04	2:00 min	Revisando el template que usaremos										https://platzi.com/clases/1338-php/12916-revisando-el-template-que-usaremos/
 	05	5:00 min	Sintaxis de PHP															https://platzi.com/clases/1338-php/12917-sintaxis-de-php/
 	06	9:00 min	Variables tipos de datos y cadenas										https://platzi.com/clases/1338-php/12918-variables-tipos-de-datos-y-cadenas/
@@ -22,46 +24,46 @@ TEMARIO:
 	14	Articulo	Ejercicios Operadores ---------------------------------	Resolver		https://platzi.com/clases/1338-php/12926-ejercicios-operadores/
 	15	13:00 min	Funciones																https://platzi.com/clases/1338-php/12927-funciones9167/
 	16	8:00 min	Agregando archivos externos												https://platzi.com/clases/1338-php/12928-agregando-archivos-externos/
-3- Programación Orientada a Objetos
+3. Programación Orientada a Objetos
 	17	13:00 min	Programación Orientada a Objetos										https://platzi.com/clases/1338-php/12929-programacion-orientada-a-objetos1172/
 	18	10:00 min	Constructor y Métodos ---------------------------------	Investigar		https://platzi.com/clases/1338-php/12930-constructor-y-metodos/
 	19	17:00 min	Herencia																https://platzi.com/clases/1338-php/12931-herencia4055/
 	20	2:00 min	Herencia y polimorfismo													https://platzi.com/clases/1338-php/16406-herencia-y-polimorfismo9153/
 	21	8:00 min	Interfaces																https://platzi.com/clases/1338-php/12932-interfaces6240/
 	22	9:00 min	Namespaces																https://platzi.com/clases/1338-php/12933-namespaces8948/
-4- Herramientas para Proyectos PHP
+4. Herramientas para Proyectos PHP
 	23	2:00 min	PSR y PHPFIG															https://platzi.com/clases/1338-php/12934-psr-y-phpfig/
 	24	9:00 min	Composer																https://platzi.com/clases/1338-php/12935-composer/ 
-5- Bases de Datos
+5. Bases de Datos
 	25	3:00 min	Introducción a las Bases de Datos 										https://platzi.com/clases/1338-php/12936-introduccion-a-las-bases-de-datos/
 	26	3:00 min	ORM																		https://platzi.com/clases/1338-php/12937-orm/
 	27	10:00 min	Formularios																https://platzi.com/clases/1338-php/12938-formularios7301/
 	28	15:00 min	Eloquent																https://platzi.com/clases/1338-php/12939-eloquent8724/
 	29	5:00 min	Listar registros de la base de datos con Eloquent						https://platzi.com/clases/1338-php/12940-listar-registros-de-la-base-de-datos-con-eloquent/
 	30	22:00 min	Insertar datos en MySql con PHP	----------------------- Resolver	*	https://platzi.com/clases/1338-php/12941-insertar-datos-en-mysql-con-php/
-6- Estructura/Arquitectura de una applicacion web
+6. Estructura/Arquitectura de una applicacion web
 	31	12:00 min	Front Controller														https://platzi.com/clases/1338-php/12942-front-controller/
 	32	14:00 min	PSR7																	https://platzi.com/clases/1338-php/12943-psr7/
 	33	10:00 min	Router																	https://platzi.com/clases/1338-php/12944-router/
 	34	12:00 min	MVC, Creando Controllers												https://platzi.com/clases/1338-php/12945-mvc-creando-controllers/
 	35	10:00 min	MVC Reestructurando Vistas y Controladores							*	https://platzi.com/clases/1338-php/12946-mvc-reestructurando-vistas-y-controladores/
 	36	9:00 min	MVC Controller de la entidad Job									*	https://platzi.com/clases/1338-php/12983-mvc-controller-de-la-entidad-job/
-7- Template engines
+7. Template engines
 	37	4:00 min	Template engines													*	https://platzi.com/clases/1338-php/12984-template-engines/
 	38	13:00 min	Twig																*	https://platzi.com/clases/1338-php/12985-twig/
 	39	11:00 min	Templates con Twig													*	https://platzi.com/clases/1338-php/12986-templates-con-twig/
 	40	7:00 min	Extendiendo Templates con Twig										*	https://platzi.com/clases/1338-php/12987-extendiendo-templates-con-twig/
-8- Validaciones
+8. Validaciones
 	41	15:00 min	Validaciones														*	https://platzi.com/clases/1338-php/12991-validaciones/
-9- Subida de archivos
+9. Subida de archivos
 	42	13:00 min	Ejemplo de subida de archivos 										*	https://platzi.com/clases/1338-php/12988-ejemplo-de-subida-de-archivos/
 	43	Articulo	Tips de seguridad para subir archivos en PHP							https://platzi.com/clases/1338-php/12989-tips-de-seguridad-para-subir-archivos-en-php/
-10- Autenticación de usuarios y manejo de sesiones
+10. Autenticación de usuarios y manejo de sesiones
 	44	2:00 min	Reto. Creación de usuarios 											*	https://platzi.com/clases/1338-php/12993-reto-creacion-de-usuarios/
 	45	16:00 min	Autenticando usuarios												*	https://platzi.com/clases/1338-php/12990-autenticando-usuarios/
 	46	10:00 min	Formulario de Login													*	https://platzi.com/clases/1338-php/12992-formulario-de-login/
 	47	14:00 min	Manejo de sesiones													*	https://platzi.com/clases/1338-php/12994-manejo-de-sesiones6416/
-11 -Liberación de código/release
+11. Liberación de código/release
 	48	8:00 min	Variables de entorno												*	https://platzi.com/clases/1338-php/12995-variables-de-entorno/
 --------------------------------------------------------------------------- Avance
 	49	6:00 min	Deploy en Heroku													*	https://platzi.com/clases/1338-php/12996-deploy-en-heroku/

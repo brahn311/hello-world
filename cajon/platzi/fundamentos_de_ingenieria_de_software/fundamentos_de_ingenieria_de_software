@@ -1,0 +1,45 @@
+Fundamentos de Ingeniería de Software
+
+Fecha de Inicio:
+
+TEMARIO:
+
+--------------------------------------------------------------------------- Resolver	*	https://
+--------------------------------------------------------------------------- Avance
+1. Computación, procesadores y memoria
+	01	Qué es un system on a chip
+	02	Cómo funcionan las computadoras y los teléfonos móviles
+	03	Qué son Bits y Bytes
+	04	Cómo funcionan los circuitos electrónicos
+---------------------------------------------------------------------------	Visto
+	05	Procesadores y arquitecturas de CPU
+	06	Qué es la memoria RAM y cómo funcionan los discos duros
+	07	GPUs, tarjetas de video y sonido
+	08	Periféricos y sistemas de entrada de información
+	09	Arquitectura de la computación
+2. Cómo funciona Internet
+	10	Introducción a las redes, protocolos e Internet
+	11	Puertos y protocolos de red
+	12	Qué es una dirección IP y el protocolo de Internet
+	13	Cables submarinos, antenas y satelites en Internet
+	14	Qué es un dominio, DNS o Domain Name System
+	15	Cómo los ISP hacen Quality of Service o QoS
+	16	Cómo funciona la velocidad en internet
+	17	Qué es el Modelo Cliente/Servidor
+	18	Cómo funciona realmente un sitio web
+	19	Internet es más grande de lo que crees
+3. Sistemas operativos
+	20	Diferencias entre Windows, Linux, Mac, iOS y Android
+	21	Permisos, niveles de procesos y privilegios de ejecución
+	22	Fundamentos de sistemas operativos móviles
+	23	Sistemas operativos embebidos e Internet of Things
+4. Archivos y estructuras de datos
+	24	Metadatos, cabeceras y extensiones de archivos
+	25	Cómo funciona el formato JPG
+	26	Videos, contenedores, codecs y protocolos
+	27	Cómo funciona .zip: Árboles binarios
+5. Contenido Bonus
+	28	Qué es una red neuronal
+	29	¿Qué es SQL y NoSQL?
+	30	Qué es un algoritmo
+	31	El poder de un Raspberry Pi
