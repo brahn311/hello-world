@@ -1,0 +1,22 @@
+Articulo_07
+Reto, Agregar imagenes a Jobs
+
+(fragmentos del articulo)
+
+Antes de continuar, debemos preparar este código
+porque usaremos este código para ejemplificar
+el uso de Traits dentro de nuestra aplicación.
+
+Se pretende darle una mejor vista a nuestra aplicación web,
+por lo que permitiremos que cada Job cuente con alguna imagen o logotipo que lo defina mejor.
+
+Reto:
+Agrega una nueva columna en la tabla Jobs para almacenar la URL de una imagen.
+En la sección “Add Job” permite al usuario agregar una imagen.
+La imagen debe ser guardada dentro de la carpeta public/uploads.
+Una vez que la imagen se almacenó guarda la URL dentro de la base de datos.
+
+NOTA: (PERSONAL)
+No quiero almacenar imagenes a cada experiencia laboral, me parece tonto,
+Preferí guardar el avatar del usuario como "avatar" en la base de datos
+Prefiero terminar la parte de projectos, esas si quiero ponerle imagenes

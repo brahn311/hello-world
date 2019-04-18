@@ -10,9 +10,9 @@ El servicio MariaDB se iniciará automáticamente
 Verificar servicio:
 # systemctl status mariadb
 
-Respuesta:
+Captura del terminal:
 ● mariadb.service - MariaDB 10.1.37 database server
-   Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor preset: 
+   Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor preset:
    Active: active (running) since Tue 2019-04-02 06:26:14 -04; 46s ago
      Docs: man:mysqld(8)
            https://mariadb.com/kb/en/library/systemd/
@@ -24,7 +24,7 @@ Respuesta:
 Asegurando MariaDB:
 # mysql_secure_installation
 
-Respuestas:
+Captura del terminal:
 
 NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
       SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
@@ -34,7 +34,7 @@ password for the root user.  If you've just installed MariaDB, and
 you haven't set the root password yet, the password will be blank,
 so you should just press enter here.
 
-Enter current password for root (enter for none): 
+Enter current password for root (enter for none):
 OK, successfully used password, moving on...
 
 Setting the root password ensures that nobody can log into the MariaDB
@@ -43,8 +43,8 @@ root user without the proper authorisation.
 You already have a root password set, so you can safely answer 'n'.
 
 Change the root password? [Y/n] y
-New password: 
-Re-enter new password: 
+New password:
+Re-enter new password:
 Password updated successfully!
 Reloading privilege tables..
  ... Success!
@@ -87,82 +87,21 @@ Thanks for using MariaDB!
 
 
 RECORDAR:
-Contraseña root: zxasqw12
+Contraseña root:
+zxasqw12
+NOTA: distinta a usar la contraseña de phpmyadmin
 
 ---
 Probando MariaDB:
 
 Para entrar a mysql:
 $ mysql -u root
-(no me pidio password)
+(si me pidio password / debo usar el siguiente comando)
 
 $ mysql u- root -p
-(si pide password, pero puede colocar cualquier password y igual me dejo crear una nueva base de datos)
+(si pide password, pero debe ser la clave root colocada arriba)
 
 quit // salir de mysql
 exit // salir de mysql
 
 ---
-Configuracion para usar phpmyadmin:
-Por default, phpmyadmin desabilita el uso del usuario root 
-(El usuario root tiene activado un plugin que no permite ser usado)
-
-https://www.youtube.com/watch?v=wh-I5f-xc9g
-
-Habilitar usuario root:
-Desde terminal insertar el comando:
-$ mysql -u root -p
-Dentro de MySQL:
-> use mysql;
-Consultar los plugin de usuarios:
-> select user, plugin from user;
-Cambiar el plugin y dejarlo vacio:
-> update user set plugin='' where user='root';
-Puedes comprobar el cambio:
-> select user, plugin from user;
-Debes actualizar privilegios para terminar:
-> flush privileges;
-
-Respuesta:
-$ mysql -u root -p
-Enter password: 
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 190
-Server version: 10.1.37-MariaDB-0+deb9u1 Debian 9.6
-
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-
-MariaDB [(none)]> use mysql;
-Reading table information for completion of table and column names
-You can turn off this feature to get a quicker startup with -A
-
-Database changed
-MariaDB [mysql]> select user, plugin from user;
-+------------+-------------+
-| user       | plugin      |
-+------------+-------------+
-| root       | unix_socket |
-| phpmyadmin |             |
-+------------+-------------+
-2 rows in set (0.02 sec)
-
-MariaDB [mysql]> update user set plugin='' where user='root';
-Query OK, 1 row affected (0.12 sec)
-Rows matched: 1  Changed: 1  Warnings: 0
-
-MariaDB [mysql]> select user, plugin from user;
-+------------+--------+
-| user       | plugin |
-+------------+--------+
-| root       |        |
-| phpmyadmin |        |
-+------------+--------+
-2 rows in set (0.00 sec)
-
-MariaDB [mysql]> flush privileges;
-Query OK, 0 rows affected (0.05 sec)
-
-MariaDB [mysql]> exit

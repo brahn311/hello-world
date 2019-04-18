@@ -1,0 +1,37 @@
+Video_09
+Traits
+
+Recordemos que los traits se usan para compartir funcionalidades entre clases que no tienen herencia
+
+Nos saldremos un poco del modelo MVC:
+
+Dentro del folder app/
+Creamos la carpeta Traits
+El contenido sera un nuevo trait que buscara la imagen defailt para un jobs
+No olvides colocar el namespace
+namespace App\Traits;
+
+Declarando el trait:
+trait NombreDelTrait
+{
+	public function getImage()
+	{
+		// code...
+		return "getImage";
+	}
+}
+(el "getImage" en el return es a modo de prueba)
+Recuerda que el trait se declara como casi una clase, es decir las PrimerasLetras en mayusculas
+
+Implementando el trait en app/Models/Job.php:
+Al inicio del documento indicamos el documento que usaremos con su namespase
+use App\Traits\HasDefaultImage;
+y dentro de la clase, decretamos nuevamente,
+use HasDefaultImage;
+
+Como no es una herencia, no se coloca al momento de decretar, sino internamente en la clase
+Esa instruccion implica que a partir de aqui, te traes las funcionalidades del trait
+
+Debemos actualizar views/index.twig
+
+Por ultimo actualizamos el traits a su version final

@@ -1,0 +1,53 @@
+Video_05
+Closures
+
+Funciones anonimas
+Tambien conocidas como cierres / Closures
+Son funciones pero tambien tienen clase (tambien se pueden implementar)
+
+Son funciones sin nombre, que se pueden declarar dentro de una variable
+Pueden ser asignadas a funciones, usada como parametros y valores de retorno
+
+Para hacer un ejemplo:
+$closure = function () {
+	echo 'hola platzi';
+}
+$closure();
+
+En app/Controllers/IndexController
+Para mostrar como trabaja activaremos el filtrado de Jobs segun los meses
+
+Primero que nada explico el codigo:
+array_filter($arreglo, funcion ());
+Funcion que filtra arreglos, recibe como parametros:
+el arreglo a filtrar
+la funcion para filtrar dicho arreglo
+y el resultado lo guarda en un nuevo arreglo
+
+Me imagino que la utilidad es dada a que una funcion no se puede sobre escribir
+Pero estando como variable, el valor de la funcion si puede sobre-escribirse
+
+toArray():
+Entiendo que es un metodo, como jobs es un arreglo de objetos, lo transforma en arreglo
+
+$jobs = array_filter($jobs->toArray(), function($job) {
+	return $job['months']>= 10;
+});
+
+Complicando el codigo:
+Podriamos almacenar la funcion dentro de una variable y no dentro del array_filter
+Si dentro de la funcion necesitamos un valor, lo podremos definir como variable arriba
+
+$limitMonths = 15;
+$filterFunction = function ($job) use ($limitMonths) {
+	return $job['months']>= $limitMonths;
+};
+$jobs = array_filter($jobs->toArray(), $filterFunction);
+
+Nota: las variables dentro de una funcion, deberian estar definidas dentro de ese scope
+si viene de arriba, podemos usar una palabra reservada:
+use ($variables)
+
+Mas informacion:
+https://www.php.net/manual/es/class.closure.php
+https://www.php.net/manual/es/functions.anonymous.php

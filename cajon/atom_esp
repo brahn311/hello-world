@@ -9,3 +9,7 @@ minimap
 emmet
 autocomplete-php (for autocomplete+)
 atom-beautify
+
+Para investigar:
+Sublime Text y PHPStorm:
+Ambos validan el codigo asociando clases y muestran tooltips y enlaces tipo ancla

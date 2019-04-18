@@ -2,21 +2,26 @@ CREATE DATABASE `portafolio`;
 CREATE TABLE `portafolio`.`jobs` (
 	`id` INT NOT NULL AUTO_INCREMENT ,
 	`title` TEXT NOT NULL ,
-	`description` TEXT NOT NULL , 
-	`months` TEXT NOT NULL , 
-	`visible` TINYINT NOT NULL ,
+	`description` TEXT NOT NULL ,
+	`months` TEXT NOT NULL ,
+	`image` TEXT NULL
 	`created_at` DATETIME NOT NULL ,
 	`updated_at` DATETIME NOT NULL,
+    `deleted_at` DATETIME NULL ,
 	PRIMARY KEY (`id`)
 )
 ENGINE = InnoDB;
+-- ALTER TABLE `jobs` ADD `deleted_at` DATETIME NULL AFTER `updated_at`;
+-- ALTER TABLE `jobs` ADD `image` TEXT NULL AFTER `months`;
 CREATE TABLE `portafolio`.`users` (
 	`id` INT NOT NULL AUTO_INCREMENT ,
+    `name` TEXT NOT NULL ,
+    `title` TEXT NULL ,
 	`email` TEXT NOT NULL ,
 	`password` TEXT NOT NULL ,
-	`avatar` TEXT NULL ,
+	`image` TEXT NULL ,
 	`created_at` DATETIME NOT NULL ,
-	`updated_at` DATETIME NOT NULL,
+	`updated_at` DATETIME NOT NULL ,
 	PRIMARY KEY (`id`)
 )
 ENGINE = InnoDB;

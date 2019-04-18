@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Zend\Diactoros\Response\RedirectResponse;
+use Zend\Diactoros\ServerRequest;
 use App\Models\{User};
 
 class AuthController extends BaseController
@@ -12,8 +13,8 @@ class AuthController extends BaseController
 	{
 		return $this->renderHTML('login.twig');
 	}
-	
-	public function getPostLoginAction($request)
+
+	public function getPostLoginAction(ServerRequest $request)
 	{
 		$responseMessage = null;
 
@@ -39,7 +40,7 @@ class AuthController extends BaseController
 			}
 			else
 			{
-				// User not found 
+				// User not found
 				$responseMessage = 'Bad credentials';
 			}
 		}

@@ -27,22 +27,25 @@
     </div>
     <div class="row">
       <div class="col">
-        <div>
-          <h3 class="border-bottom-gray" >Work Experience</h3>
-          <ul>
-            {% for job in jobs %}
-            	<li class="work-position">
-            		<h5>{{ job.title }}</h5>
-            		<p>{{ job.description }}</p>
-            		<p>{{ job.months }}</p>
-					<strong>Achievements:</strong>           		
-            		<ul>
-            			<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-            			<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-            		</ul>
-            	</li>
-            {% endfor %}
-          </ul>
+		<div>
+			<h3 class="border-bottom-gray" >Work Experience</h3>
+			{% for job in jobs %}
+				<div class="row work-position">
+					<div class="col-3">
+						<img src="{{ job.getImage(job.title, 160) }}" alt="" >
+					</div>
+					<div class="col">
+						<h5>{{ job.title }}</h5>
+						<p>{{ job.description }}</p>
+						<p>{{ job.months }}</p>
+						<strong>Achievements:</strong>
+						<ul>
+							<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
+							<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
+						</ul>
+					</div>
+				</div>
+			{% endfor %}
         </div>
         <div>
             <h3 class="border-bottom-gray">Projects</h3>
@@ -107,4 +110,3 @@
       </div>
     </div>
 {% endblock %}
-

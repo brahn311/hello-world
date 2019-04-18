@@ -1,7 +1,7 @@
 Curso Avanzado de PHP
 
 Fecha de Inicio: 15/04/2019
-Fecha de Finalización: 
+Fecha de Finalización:
 
 TEMARIO:
 
@@ -12,15 +12,15 @@ TEMARIO:
 	03	Virtualización
 	04	Configuración de virtual host
 3. Características avanzadas del lenguaje
---------------------------------------------------------------------------- Avance
 	05	Closures
 	06	Type Hinting
 	07	Agregar imágenes en Jobs
----------------------------------------------------------------------------	Visto
-	08	Salvar imágenes en Jobs
+	08	Salvar imágenes en Jobs ------------------------------------------- Resolver
 	09	Traits
+--------------------------------------------------------------------------- Avance
 	10	Endpoint to delete Jobs
 	11	Third party Traits - Soft Delete
+---------------------------------------------------------------------------	Visto
 4. Técnicas de programación
 	12	SOLID
 	13	SOLID a profundidad

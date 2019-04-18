@@ -8,17 +8,86 @@ En la siguiente pantalla, selecciona SÍ para configurar una base de datos para 
 y finalmente establece una contraseña para el usuario ‘phpmyadmin’ en MySQL:
 
 RECORDAR:
-Contraseña phpmyadmin: xzsawq21
+Contraseña phpmyadmin:
+xzsawq21
+NOTA: esta contraseña no tiene permisos
 
 ---
 Probando phpmyadmin:
-
-Entrando con el usuario root:
-(desde localhost no puedes entrar con el usuario root)
-Ver MariaDB para habilitar el usuario root
 
 Entrando con el usuario phpmyadmin:
 $ mysql u- phpmyadmin -p
 (no puedes entrar sin password)
 (la password debe ser correcta)
 (phpmyadmin no puede ver todas las tablas ni crear nuevas)
+
+
+---
+Entrando con el usuario root:
+
+Luego de intentos::desde localhost no puedes entrar con el usuario root
+Por default, al instalar la seguridad de MariaDB, se desabilita el uso del usuario root
+(Ver mysql_secure_installation en MariaDB)
+
+Configuracion para usar phpmyadmin en MariaDB:
+FUENTE https://www.youtube.com/watch?v=wh-I5f-xc9g
+
+El usuario root tiene activado un plugin que no permite ser usado
+
+Habilitar usuario root:
+Desde terminal insertar el comando:
+$ mysql -u root -p
+Dentro de MySQL:
+> use mysql;
+Consultar los plugin de usuarios:
+> select user, plugin from user;
+Cambiar el plugin y dejarlo vacio:
+> update user set plugin='' where user='root';
+Puedes comprobar el cambio:
+> select user, plugin from user;
+Debes actualizar privilegios para terminar:
+> flush privileges;
+
+Captura del terminal:
+$ mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 190
+Server version: 10.1.37-MariaDB-0+deb9u1 Debian 9.6
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+
+MariaDB [(none)]> use mysql;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MariaDB [mysql]> select user, plugin from user;
++------------+-------------+
+| user       | plugin      |
++------------+-------------+
+| root       | unix_socket |
+| phpmyadmin |             |
++------------+-------------+
+2 rows in set (0.02 sec)
+
+MariaDB [mysql]> update user set plugin='' where user='root';
+Query OK, 1 row affected (0.12 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [mysql]> select user, plugin from user;
++------------+--------+
+| user       | plugin |
++------------+--------+
+| root       |        |
+| phpmyadmin |        |
++------------+--------+
+2 rows in set (0.00 sec)
+
+MariaDB [mysql]> flush privileges;
+Query OK, 0 rows affected (0.05 sec)
+
+MariaDB [mysql]> exit

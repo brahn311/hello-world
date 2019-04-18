@@ -1,0 +1,26 @@
+Video_06
+Type Hinting
+
+Caracteristica de PHP que nos permite especificar el valor
+de los parametros que recibe una funcion y el retorno de esa funcion
+
+Regresamos a IndexController para hacer un ejemplo
+
+$limitMonths = 15;
+$filterFunction = function (array $job) use ($limitMonths){
+	return $job['months']>= $limitMonths;
+};
+$jobs = array_filter($jobs->toArray(), $filterFunction);
+
+A partir de PHP 7.1 a parte tener Type Hinting en los tipos tradicionales
+Tambien podemos tener Type Hinting en clases, interfases y tipos escalares
+
+Revisando el codigo, en public/index.php:
+Luego del match la instancia de la accion observamos que el objeto creado es de clase
+ServerRequest, por ello, lo colocamos con el Type Hinting en la accion
+Entonces otro ejemplo lo haremos con AuthController, cuando recibimos el postLogin
+
+public function getPostLoginAction(ServerRequest $request)
+{
+
+Es importante convertir el Type Hinting en una practica comun en todos los codigos
