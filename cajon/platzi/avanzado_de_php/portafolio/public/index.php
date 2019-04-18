@@ -72,12 +72,12 @@ $map->post('saveJob', '/jobs/add', [
 $map->get('addUser', '/users/add', [
 	'controller' => 'App\Controllers\UsersController',
 	'action' => 'getAddUserAction',
-	'auth' => true,
+//	'auth' => true,
 	]);
 $map->post('saveUser', '/users/add', [
 	'controller' => 'App\Controllers\UsersController',
 	'action' => 'getAddUserAction',
-	'auth' => true,
+//	'auth' => true,
 ]);
 $map->get('loginUser', '/login', [
 	'controller' => 'App\Controllers\AuthController',

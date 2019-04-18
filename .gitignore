@@ -1,14 +1,15 @@
 # Ignorados por abrahan... (aun no se que hacer con estos directorios)
 /bootstrap-4.3.1-dist
 
-# IDEs
-# bluefish (LINUX Debian 9)
+# IDE bluefish (LINUX Debian 9)
 *.bfproject
 *~
-# laravel/homestead git repository
+
+# IDE laravel/homestead (git repository)
 /homestead
 
 # composer
+composer.phar
 vendor
 
 # netbeans (java proyects / Windows 7)
@@ -16,14 +17,8 @@ build
 dist
 private
 
-# netbeans (LINUX Debian 9)
+# Files uploads in projects
+uploads
+avatars
 
 # Ignorados automaticamente
-/codes/java/romatutorials_curso/prueba/nbproject/private/
-/codes/java/romatutorials_curso/prueba/build/
-/codes/java/romatutorials_curso/video_2_area_cuadrado/nbproject/private/
-/codes/java/romatutorials_curso/video_2_area_cuadrado/build/
-/codes/java/romatutorials_curso/video_2_area_cuadrado/dist/
-/codes/java/romatutorials_curso/video_2_sumar_2_multiplicar_2/nbproject/private/
-/codes/java/romatutorials_curso/video_2_sumar_2_multiplicar_2/build/
-

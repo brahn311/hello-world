@@ -16,7 +16,8 @@ class UsersController extends BaseController
 		{
 			$postData = $request->getParsedBody();
 
-			$userValidator = v::key('email', v::stringType()->notEmpty())
+			$userValidator = v::key('name', v::stringType()->notEmpty())
+				->key('email', v::stringType()->notEmpty())
 				->key('password', v::stringType()->notEmpty());
 
 			try
@@ -24,27 +25,28 @@ class UsersController extends BaseController
 				$userValidator->assert($postData);
 
 				$user = new User();
+				$user->name = $postData['name'];
 				$user->email = $postData['email'];
 				$user->password = password_hash($postData['password'], PASSWORD_DEFAULT);
 				/*
-				Abrahan Omaña
-				PHP Developer
 				Mail: hector@mail.com
 				Phone: 1234567890
 				LinkedIn: https://linkedin.com
 				Twitter: @hectorbenitez
 				*/
 
+				$filePath = 'avatars';
 				$files = $request->getUploadedFiles();
-				$avatar = $files['avatar'];
-				if ($avatar->getError() == UPLOAD_ERR_OK)
+				$image = $files['avatar'];
+				if ($image->getError() == UPLOAD_ERR_OK)
 				{
-					$fileName = $postData['email']."_".$avatar->getClientFilename();
-					$avatar->moveTo("avatars/$fileName");
-					$user->avatar = $fileName;
+					$fileName = $filePath.'/'.$postData['email'].'_'.$image->getClientFilename();
+					$image->moveTo($fileName);
+					$user->image = $fileName;
 				}
 
 				$user->save();
+				
 				$responseMessage = 'Saved';
 			}
 			catch(\Exception $e)

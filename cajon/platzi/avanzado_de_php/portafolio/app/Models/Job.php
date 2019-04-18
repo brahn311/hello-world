@@ -29,6 +29,6 @@ class Job extends Model
 		{
 			$duration .= '';
 		}
-		return $duration."\n";
+		return $duration;
 	}
 }

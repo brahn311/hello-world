@@ -32,12 +32,12 @@
 			{% for job in jobs %}
 				<div class="row work-position">
 					<div class="col-3">
-						<img src="{{ job.getImage(job.title, 160) }}" alt="" >
+						<img id="profile-picture" src="{{ job.getImage( job.title , 255) }}" alt="{{ job.title }}" />
 					</div>
 					<div class="col">
 						<h5>{{ job.title }}</h5>
 						<p>{{ job.description }}</p>
-						<p>{{ job.months }}</p>
+						<p>{{ job.getDuration() }}</p>
 						<strong>Achievements:</strong>
 						<ul>
 							<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>

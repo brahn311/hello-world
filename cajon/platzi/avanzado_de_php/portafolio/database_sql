@@ -1,13 +1,13 @@
 CREATE DATABASE `portafolio`;
 CREATE TABLE `portafolio`.`jobs` (
 	`id` INT NOT NULL AUTO_INCREMENT ,
-	`title` TEXT NOT NULL ,
-	`description` TEXT NOT NULL ,
-	`months` TEXT NOT NULL ,
-	`image` TEXT NULL
+	`title` TEXT NULL ,
+	`description` TEXT NULL ,
+	`months` TEXT NULL ,
+	`image` TEXT NULL ,
 	`created_at` DATETIME NOT NULL ,
-	`updated_at` DATETIME NOT NULL,
-    `deleted_at` DATETIME NULL ,
+	`updated_at` DATETIME NOT NULL ,
+	`deleted_at` DATETIME NULL ,
 	PRIMARY KEY (`id`)
 )
 ENGINE = InnoDB;

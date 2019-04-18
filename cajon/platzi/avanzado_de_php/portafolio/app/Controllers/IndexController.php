@@ -17,7 +17,8 @@ class IndexController extends BaseController
 		$filterFunction = function (array $job) use ($limitMonths){
 			return $job['months']>= $limitMonths;
 		};
-		$jobs = array_filter($jobs->toArray(), $filterFunction);
+		// el codigo usa toArray() que no permite usar los metodos y traits al hacer hacer el renderHTML 
+		// $jobs = array_filter($jobs->toArray(), $filterFunction);		
 
 		return $this->renderHTML('index.twig', [
 			'name' => $name,

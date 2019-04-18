@@ -1,0 +1,28 @@
+Cuando intento acceder a:
+portafolio.test
+nginx reporta error 502 bad gateway
+
+Pruebas:
+Accedi al VM por ssh
+$ vagrant ssh 
+Realice prueba de conexion con localhost
+$ ping localhost
+
+Solucion:
+FUENTE: https://github.com/laravel/homestead/issues/1045
+
+$ sudo phpdismod xdebug
+$ sudo service php7.3-fpm reload
+$ sudo service php7.3-fpm start
+
+Captura de terminal:
+vagrant@homestead:/var/www/html$ sudo phpdismod xdedug
+WARNING: Module xdedug ini file doesn't exist under /etc/php/7.3/mods-available
+WARNING: Module xdedug ini file doesn't exist under /etc/php/7.3/mods-available
+WARNING: Module xdedug ini file doesn't exist under /etc/php/7.2/mods-available
+WARNING: Module xdedug ini file doesn't exist under /etc/php/7.2/mods-available
+WARNING: Module xdedug ini file doesn't exist under /etc/php/7.1/mods-available
+WARNING: Module xdedug ini file doesn't exist under /etc/php/7.1/mods-available
+vagrant@homestead:/var/www/html$ sudo service php7.3-fpm reload
+php7.3-fpm.service is not active, cannot reload.
+vagrant@homestead:/var/www/html$ sudo service php7.3-fpm start
