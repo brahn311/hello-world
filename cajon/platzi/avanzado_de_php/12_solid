@@ -1,0 +1,32 @@
+Video_12
+SOLID
+
+5 principios básicos de la programación orientada a objetos.
+Estos 5 principios ayudan a tener un código más claro y más limpio aunque no son fáciles de implementar en un principio.
+
+- Single responsibility principle
+- Open-closed principle
+- Liskov substitution principle
+- Interface segregation principle
+- Dependency inversion principle
+
+Single responsibility principle (Responsabilidad única)
+Cuando crees una clase, ésta sólo debe tener un propósito que debe ser sencillo
+El no hacerlo hace que nuestro código se pueda ver afectado ya que una sola cosa controla muchas otras
+
+Open-closed principle (Abierto-cerrado)
+Deberíamos programar nuestras clases pensando que sean abiertas a la extensión pero cerradas a la modificación
+Debemos tratar que nuestras clases estén listas para ser heredadas o extendidas pero no deba ser necesario modificar el código interno
+
+Liskov substitution principle (Sustitución de Liskov)
+Con una clase padre y clases hijas, en las partes en las que usemos nuestra clase padre, deberíamos ser capaces de usar nuestras clases hijas.
+Las clases hijas deben poder funcionar con lo que funcionaba la clase padre
+
+Interface segregation principle (Segregación de interfaces)
+Dice que no debemos implementar o tener interfaces que incluyan métodos o cosas que la clase no necesita.
+
+Dependency inversion principle o (Inversión de dependencias)
+Desacoplar nuestro código; en lugar de crear clases internamente, vamos a inyectarlas o agregarlas.
+La inyección de dependencias se usa mucho.
+
+La recomendación es que sigas intentando hacerlo, que sigas leyendo, entrenando y preparándote y todo va a ir saliendo de manera natural.

@@ -1,0 +1,76 @@
+SOLID
+Wikipedia
+FUENTE: https://es.wikipedia.org/wiki/SOLID
+
+Ingenieria de software
+
+Es un acrónimo mnemónico introducido por Robert C. Martin
+
+SOLID
+	SRP	Single responsibility
+	OCP	Open-closed
+	LSP	Liskov substitution
+	ISP	Interface segregation
+	DIP	Dependency inversion
+
+Principio de responsabilidad única
+(Single responsibility principle)
+La noción de que un objeto solo debería tener una única responsabilidad.
+
+Principio de abierto/cerrado
+(Open/closed principle)
+La noción de que las “entidades de software … deben estar abiertas para su extensión, pero cerradas para su modificación”.
+
+Principio de sustitución de Liskov
+(Liskov substitution principle)
+La noción de que los “objetos de un programa deberían ser reemplazables por instancias de sus subtipos
+sin alterar el correcto funcionamiento del programa”. (Ver también diseño por contrato).
+
+Principio de segregación de la interfaz
+(Interface segregation principle)
+La noción de que “muchas interfaces cliente específicas son mejores que una interfaz de propósito general”.
+
+Principio de inversión de la dependencia
+(Dependency inversion principle)
+La noción de que se debe “depender de abstracciones, no depender de implementaciones”.
+La Inyección de Dependencias es uno de los métodos que siguen este principio.
+
+Diseño por contrato
+Metodología para el diseño e implementación de aplicaciones y componentes popularizada por el lenguaje de programación Eiffel.
+Consiste en considerar los elementos de diseño como participantes de una relación similar al contrato de negocios.
+Así, se pueden diseñar los componentes asumiendo que se cumplirán ciertas condiciones de entrada (pre-condiciones),
+mientras que se deberán garantizar ciertas condiciones de salida (post-condiciones),
+así como la invariante de clase (propiedades que se mantienen invariantes a pesar del procesamiento realizado por el componente).
+
+Esta metodología promete:
+-	Una mejor comprensión de la programación orientada a objetos.
+	Esto se debe a que el propio prototipo de un recurso de una clase es también parte del contrato que éste ofrece.
+	Mediante razonamientos de este tipo, por ejemplo, se justifica
+	el comportamiento covariante de los tipos de retornos de los métodos en Eiffel.
+-	Menos errores en el código gracias a una mejor representación de las especificaciones.
+-	Un sistema efectivo para detectar errores.
+-	Una forma práctica de documentar el código al mismo tiempo en que se programa.
+-	Una imbricación eficaz con los mecanismos de herencia y reutilización.
+
+Inyección de dependencias
+(Dependency Injection, DI)
+Es un patrón de diseño orientado a objetos
+Se suministran objetos a una clase en lugar de ser la propia clase la que cree dichos objetos.
+Esos objetos cumplen contratos que necesitan nuestras clases para poder funcionar (de ahí el concepto de dependencia).
+Nuestras clases no crean los objetos que necesitan, sino que se los suministra otra clase 'contenedora'
+que inyectará la implementación deseada a nuestro contrato.
+
+Motivación
+En los comienzos de la programación, los programas eran lineales y monolíticos.
+El flujo de ejecución era simple y predecible, ejecutándose línea tras línea.
+
+Aparecieron dos conceptos para estructurar el código:
+la modularidad y la reutilización de los componentes
+se crean bibliotecas de componentes reutilizables.
+
+El flujo se complica, saltando de componente a componente, y aparece un nuevo problema:
+la dependencia (acoplamiento) entre los componentes.
+
+El problema se empieza a considerar lo suficientemente importante como para definir
+nuevos conceptos en el diseño como la Inversión de Control (IoC)
+implementada a través de Inyección de Dependencias o de eventos.
