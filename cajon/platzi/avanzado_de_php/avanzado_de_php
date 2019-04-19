@@ -15,13 +15,13 @@ TEMARIO:
 	05	Closures
 	06	Type Hinting
 	07	Agregar imágenes en Jobs
-	08	Salvar imágenes en Jobs ------------------------------------------- Resolver
+	08	Salvar imágenes en Jobs
 	09	Traits
---------------------------------------------------------------------------- Avance
 	10	Endpoint to delete Jobs
+--------------------------------------------------------------------------- Avance
 	11	Third party Traits - Soft Delete
----------------------------------------------------------------------------	Visto
 4. Técnicas de programación
+---------------------------------------------------------------------------	Visto
 	12	SOLID
 	13	SOLID a profundidad
 	14	Inyección de dependencias

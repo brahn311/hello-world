@@ -22,5 +22,7 @@ Entonces otro ejemplo lo haremos con AuthController, cuando recibimos el postLog
 
 public function getPostLoginAction(ServerRequest $request)
 {
+Esto requiere decretar el uso en la parte superior
+use Zend\Diactoros\ServerRequest;
 
 Es importante convertir el Type Hinting en una practica comun en todos los codigos

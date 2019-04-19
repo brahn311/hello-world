@@ -58,26 +58,36 @@ $map = $routerContainer->getMap();
 $map->get('index', '/', [
 	'controller' => 'App\Controllers\IndexController',
 	'action' => 'indexAction',
-	]);
+]);
+$map->get('indexJobs', '/jobs', [
+	'controller' => 'App\Controllers\JobsController',
+	'action' => 'indexAction',
+	'auth' => true,
+]);
 $map->get('addJob', '/jobs/add', [
 	'controller' => 'App\Controllers\JobsController',
 	'action' => 'getAddJobAction',
 	'auth' => true,
-	]);
+]);
 $map->post('saveJob', '/jobs/add', [
 	'controller' => 'App\Controllers\JobsController',
 	'action' => 'getAddJobAction',
 	'auth' => true,
 ]);
+$map->get('deleteJob', '/jobs/delete', [
+	'controller' => 'App\Controllers\JobsController',
+	'action' => 'getDeleteJobAction',
+	'auth' => true,
+]);
 $map->get('addUser', '/users/add', [
 	'controller' => 'App\Controllers\UsersController',
 	'action' => 'getAddUserAction',
-//	'auth' => true,
-	]);
+	'auth' => true,
+]);
 $map->post('saveUser', '/users/add', [
 	'controller' => 'App\Controllers\UsersController',
 	'action' => 'getAddUserAction',
-//	'auth' => true,
+	'auth' => true,
 ]);
 $map->get('loginUser', '/login', [
 	'controller' => 'App\Controllers\AuthController',

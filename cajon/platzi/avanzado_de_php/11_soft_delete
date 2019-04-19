@@ -1,0 +1,33 @@
+Video_11
+Third party Traits - Soft Delete
+
+Usaremos un trait para modificar el borrado de un elemento y ocultarlo
+
+Esto necesita que agregar el campo deleted_at a la tabla en cuestion
+
+En app/Models/Jobs.php:
+
+Añadimos la ubicacion del trait
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+Dentro de la clase colocamos:
+use SoftDeletes;
+
+y ya esta....
+
+NOTA: ahora al consultar, esos resultados borrados estaran omitidos
+
+Para mostrar todos los resultados (incluyendo los soft deletes):
+En vez que hacer Job::all(), debemos hacer un
+$jobs = Job::withTrashed()->get();
+
+Si solo quieres ver los borrados con soft detele:
+$jobs = Job::onlyTrashed()->get();
+
+Para recuperar el borrado con soft deletes:
+$job->restore();
+
+Para borrado fisico:
+$job->forceDelete();
+
+NOTA: Puedes encontrar como usar otros en la documentacion

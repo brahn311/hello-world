@@ -3,6 +3,11 @@ Traits
 
 Recordemos que los traits se usan para compartir funcionalidades entre clases que no tienen herencia
 
+La funcionalidad que buscamos es para las imagenes
+Debe mostrar la ubicacion (atributo src) de la imagen para mostrarla y
+si no hay la imagen en el servidor, deseamos tener una generica personalizadadel API de la pagina web:
+https://ui-avatars.com/api/?name=Nombre+Buscado&size=255
+
 Nos saldremos un poco del modelo MVC:
 
 Dentro del folder app/
@@ -34,4 +39,18 @@ Esa instruccion implica que a partir de aqui, te traes las funcionalidades del t
 
 Debemos actualizar views/index.twig
 
-Por ultimo actualizamos el traits a su version final
+Por ultimo actualizamos el traits a su version final:
+
+Añadimos el pase por parametros del texto alternativo y el tamaño de la imagen
+public function getImage(string $altText, int $size)
+{
+	// si no existe una imagen utiliza una imagen default obtenida del API con los parametros enviados
+	if (!$this->image) {
+		return "https://ui-avatars.com/api/?name=$altText&size=$size";
+	}
+	// y se tiene la imagen almacenada en la base de datos, se envia ese valor
+	return $this->image;
+}
+
+Nota: Se comenta el bloque del filtro de jobs, este trabaja con un array_filter y maneja arreglos con la funcion toArray
+Se deberia buscar otra alternativa para no perder dicha funcionalidad

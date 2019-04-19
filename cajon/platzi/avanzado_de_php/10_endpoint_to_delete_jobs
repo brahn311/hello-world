@@ -1,0 +1,68 @@
+Video_10
+Endpoint to delete jobs
+
+Añadiremos el borrado fisico de los jobs de la base de datos con eloquent
+
+Antes, una pagina que muestre el listado de los trabajos almacenados
+
+En JobsControllers.php:
+public function indexAction()
+{
+	$jobs = Job::all();
+	Buscamos todos los jobs
+	return $this->renderHTML('jobs/index.twig', compact('jobs'));
+	enviamoes el resultado a un nuevo template de twig
+}
+NOTA: buscar que hace compact
+
+Creamos la carpeta y el archivo en views/jobs/index.php
+{% extends "layout.twig" %}
+
+{% block content %}
+	<div class="row">
+		<h1>Jobs</h1>
+		<table class="table">
+			<thead>
+				<th>Job Title</th>
+				<th>Delete</th>
+			</thead>
+			<tbody>
+				{% for job in jobs %}
+					<tr>
+						<td>{{ job.title }}</td>
+						<td><a href="/jobs/delete?id={{ job.id }}">Delete</a></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endblock %}
+
+Creamos los url en el map para el listado
+$map->get('indexJobs', '/jobs', [
+	'controller' => 'App\Controllers\JobsController',
+	'action' => 'indexAction',
+	'auth' => true,
+]);
+
+Ahora para el borrado:
+
+Creamos el url
+$map->get('deleteJob', '/jobs/delete', [
+	'controller' => 'App\Controllers\JobsController',
+	'action' => 'getDeleteJobAction',
+	'auth' => true,
+]);
+
+en JobsControllers.php:
+
+Creamos el metodo para borrar el registro
+public function getDeleteJobAction(ServerRequest $request)
+{
+	//var_dump($request);
+	$params = $request->getQueryParams();
+	$job = Job::find($params['id']);
+	$job->delete();
+
+	return new RedirectResponse('/jobs');
+}

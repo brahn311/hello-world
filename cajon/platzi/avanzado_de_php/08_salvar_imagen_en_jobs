@@ -1,0 +1,51 @@
+Video_08
+Salvar imagen en Jobs
+
+Realmente fue sencillo
+
+En app/Controllers/JobsController.php:
+
+En la base de datos añadimos el campo llamado
+image TEXT NULL
+
+
+Dentro del try, luego de validar el contenido del $request
+Extraemos los archivos enviados en el $request y lo guardamos en un arreglo llamado $files
+$files = $request->getUploadedFiles();
+del arreglo $files, nos traemos el contenido del indice logo (nombre del input) que es el nombre del campo en el formulario 
+$image = $files['logo'];
+Definimos la ruta donde se guardara el archivo si todo es correcto
+$filePath = 'uploads';
+Comprobamos si existe algun error, si no lo hay se ejecutara los siguentes pasos
+if ($image->getError() == UPLOAD_ERR_OK)
+{
+	Asignamos a $filemane la ruta con nombre del archivo subido en $image
+	$fileName = $filePath.'/'.$image->getClientFilename();
+	Movemos el archivo, de los temporales a la carpeta final, la ruta es el $fileName
+	$image->moveTo($fileName);
+	En la base de datos, guardamos tambien el nombre y la ruta donde se ubica el archivo para recuperarlo luego	
+	$job->image = $fileName;
+}
+
+si no hay archivo o hay algun error, no se salva la imagen y el valor en base de datos queda como null
+
+En views/index.twig:
+Modificamos el archivo y incorporamos las etiquetas HTML para mostrar la imagen
+Dentro del ciclo for de twig:
+{% for job in jobs %}
+	<div class="row work-position">
+		<div class="col-3">
+			<img id="profile-picture" src="{{ job.image }}" alt="" />
+		</div>
+		<div class="col">
+			<h5>{{ job.title }}</h5>
+			<p>{{ job.description }}</p>
+			<p>{{ job.getDuration() }}</p>
+			<strong>Achievements:</strong>
+			<ul>
+				<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
+				<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
+			</ul>
+		</div>
+	</div>
+{% endfor %}
