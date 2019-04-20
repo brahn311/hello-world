@@ -28,7 +28,7 @@ class JobsController extends BaseController
 	{
 		//var_dump($request);
 		$params = $request->getQueryParams();
-		$this->$jobService->deleteJob($params['id']);
+		$this->jobService->deleteJob($params['id']);
 
 		return new RedirectResponse('/jobs');
 	}

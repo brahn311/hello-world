@@ -14,6 +14,9 @@ use Aura\Router\RouterContainer;
 $dotenv = Dotenv\Dotenv::create(__DIR__ . "/..");
 $dotenv->load();
 
+// Contenedor de dependencias
+$container = new DI\Container();
+
 // Capsule aims to make configuring the library for usage outside of the Laravel framework as easy as possible.
 $capsule = new Capsule;
 
@@ -133,15 +136,8 @@ else
 		exit;
 	}
 
-  // inyección de dependencias
-  if ($controllerName === 'App\Controllers\JobsController')
-  {
-    $controller = new $controllerName(new App\Services\JobService());
-  }
-  else
-  {
-    $controller = new $controllerName;
-  }
+  // inyección de dependencias desde el contenedor
+  $controller = $container->get($controllerName);
 
   $response = $controller->$actionName($request);
 

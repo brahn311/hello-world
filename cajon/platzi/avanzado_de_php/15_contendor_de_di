@@ -1,0 +1,40 @@
+Video_15
+Contenedor de inyeccion de dependencias
+
+El manejar las dependencias manualmente generara codigo al momento de añadir parametros adicionales
+
+Por ello, podemos usar distintas alternativas para inyectar las dependencias
+
+Podemos
+- Usar el patron de Factory
+- Usar un contenedor de inyección de dependencias
+
+Usaremos El contenedor:
+https://packagist.org/packages/php-di/php-di
+
+Como ya tenemos homestead, y este tiene composer... ya no necesitamos usar el comando
+$ php composer.phar require paquete
+
+Solo necesitamos usar:
+composer require php-di/php-di
+
+Segun la documentacion de php-di tenemos varios metodos para implementarlo
+El que usaremos sera la auto inyeccion
+
+El cual, requiere que usemos el Type Hinting para que resuelva esas dependencias
+
+En public/index.php agregamos
+$container = new DI\Container();
+
+Y al momento de hacer la inyeccion de dependencias eliminamos esto que no sera necesario hacer esto:
+if ($controllerName === 'App\Controllers\JobsController')
+{
+  $controller = new $controllerName(new App\Services\JobService());
+}
+else
+{
+  $controller = new $controllerName;
+}
+
+Ahora solo necesitamos:
+$controller = $container->get($controllerName);

@@ -1,8 +1,8 @@
 <?php
 
-use App\Models\Job;
-
 namespace App\Services;
+
+use App\Models\Job;
 
 class JobService
 {
