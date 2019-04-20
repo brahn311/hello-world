@@ -21,10 +21,10 @@ TEMARIO:
 	11	Third party Traits - Soft Delete
 4. Técnicas de programación
 	12	SOLID
---------------------------------------------------------------------------- Avance
-	13	SOLID a profundidad ----------------------------------------------- Resolver
+	13	SOLID a profundidad ------------------------------------------------- Resolver
 	14	Inyección de dependencias
 	15	Contenedor de inyección de dependencias
+--------------------------------------------------------------------------- Avance
 ---------------------------------------------------------------------------	Visto
 	16	Middlewares y PSR15
 	17	Implementando el server request handler

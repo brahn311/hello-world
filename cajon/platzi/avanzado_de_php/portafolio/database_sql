@@ -11,12 +11,10 @@ CREATE TABLE `portafolio`.`jobs` (
 	PRIMARY KEY (`id`)
 )
 ENGINE = InnoDB;
--- ALTER TABLE `jobs` ADD `deleted_at` DATETIME NULL AFTER `updated_at`;
--- ALTER TABLE `jobs` ADD `image` TEXT NULL AFTER `months`;
 CREATE TABLE `portafolio`.`users` (
 	`id` INT NOT NULL AUTO_INCREMENT ,
-    `name` TEXT NOT NULL ,
-    `title` TEXT NULL ,
+  `name` TEXT NOT NULL ,
+  `title` TEXT NULL ,
 	`email` TEXT NOT NULL ,
 	`password` TEXT NOT NULL ,
 	`image` TEXT NULL ,
@@ -25,3 +23,6 @@ CREATE TABLE `portafolio`.`users` (
 	PRIMARY KEY (`id`)
 )
 ENGINE = InnoDB;
+
+-- ALTER TABLE `jobs` ADD `deleted_at` DATETIME NULL AFTER `updated_at`;
+-- ALTER TABLE `jobs` ADD `image` TEXT NULL AFTER `months`;

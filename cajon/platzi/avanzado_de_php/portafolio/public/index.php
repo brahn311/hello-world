@@ -82,12 +82,12 @@ $map->get('deleteJob', '/jobs/delete', [
 $map->get('addUser', '/users/add', [
 	'controller' => 'App\Controllers\UsersController',
 	'action' => 'getAddUserAction',
-	'auth' => true,
+//	'auth' => true,
 ]);
 $map->post('saveUser', '/users/add', [
 	'controller' => 'App\Controllers\UsersController',
 	'action' => 'getAddUserAction',
-	'auth' => true,
+//	'auth' => true,
 ]);
 $map->get('loginUser', '/login', [
 	'controller' => 'App\Controllers\AuthController',
@@ -120,12 +120,12 @@ else
 {
 	// testing de handler result
 	// var_dump($route->handler);
-	
+
 	$handlerData = $route->handler;
 	$controllerName = $handlerData['controller'];
 	$actionName = $handlerData['action'];
 	$needsAuth = $handlerData['auth'] ?? false;
-	
+
 	$ssesionUserId = $_SESSION['userId'] ?? null;
 	if ($needsAuth && !$ssesionUserId)
 	{
@@ -133,9 +133,18 @@ else
 		exit;
 	}
 
-	$controller = new $controllerName;	
-	$response = $controller->$actionName($request);
-	
+  // inyección de dependencias
+  if ($controllerName === 'App\Controllers\JobsController')
+  {
+    $controller = new $controllerName(new App\Services\JobService());
+  }
+  else
+  {
+    $controller = new $controllerName;
+  }
+
+  $response = $controller->$actionName($request);
+
 	foreach($response->getHeaders() as $name => $values)
 	{
 		foreach($values as $value)
@@ -144,6 +153,6 @@ else
 		}
 	}
 	http_response_code($response->getStatusCode());
-	
+
 	echo $response->getBody();
 }

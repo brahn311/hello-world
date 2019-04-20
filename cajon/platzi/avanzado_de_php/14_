@@ -1,0 +1,42 @@
+Video_14
+Inyeccion de dependecias
+
+Principio de Inversion de dependencias
+D (en SOLID) implica manejar la premisa de que una clase no debe depender de otra,
+ello requise usar la inyeccion de dependencias,
+hacer que nuestras clases no instancien por si mismas objetos de otras clases
+sino, manejarlo por medio de interfases.
+
+Para manejarlo, usaremos servicios
+Creamos la carpeta
+app/Services
+
+Dentro, tendremos la classe
+JobService.php
+Con la funcion publica
+DeleteJob
+Que recibe un parametro $id
+
+Copiamos el contenido que teniamos en getDeleteJobAction del JobsController
+$job = Job::find($id);
+$job->delete();
+
+Esta es la modificacion de que del JobsController, enviamos el parametro $id
+y el servicior hara el borrado
+
+En JobsController
+Ahora, el controlador accedera al servicio por medio de una variable
+private $JobService;
+
+Y el constructor es el que llama su inicializacion (Esto es en si la inyeccion de dependencias...)
+public function __construct(JobService $jobService)
+{
+  parent::__construct;
+  $this->JobService = $jobService;
+}
+
+Ya el controlador no borra, sino que llama al JobService y envia el parametro
+$this->$jobService->deleteJob($params['id']);
+
+Este servicio debe de iniciarce por el contenedor de inyeccion
+que en la proxima clase la inicia un tercero.
