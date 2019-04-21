@@ -1,0 +1,18 @@
+Video_19
+Error Handling
+
+Donde da error actualmente es en el app/services/JobService.php
+
+Para manejar el error de que no encuentra el id en la base de datos
+
+Manejamos el try y catch en public/index.php
+
+La excepcion no detiene la ejecucion
+El error detiene la ejecucion
+
+Podemos tener un solo try y multiples catch
+
+Tambien podemos usar el Standart PHP Lenguage SPL
+
+
+

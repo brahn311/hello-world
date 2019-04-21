@@ -27,3 +27,6 @@ AuraRouter no es compatible con PSR 15 y por eso debemos buscar una implementaci
 
 Cuando entramos a un middleware siempre vamos a necesitar revisar el método process que nos dice cómo está funcionando todo.
 Sólo se deben editar librerías de terceros para realizar debug.
+
+Video_17
+Corrigiendo el error del middleware

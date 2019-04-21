@@ -85,24 +85,27 @@ if (!$route)
 }
 else
 {
-	// testing de handler result
-	// var_dump($route->handler);
+    try
+    {
+        // implementando harmony
+        $harmony = new Harmony($request, new Response());
+        $harmony
+            ->addMiddleware(new HttpHandlerRunnerMiddleware(new SapiEmitter()))
+            ->addMiddleware(new \App\Middlewares\AuthenticationMiddleware())
+            ->addMiddleware(new Middlewares\AuraRouter($routerContainer))
+            ->addMiddleware(new DispatcherMiddleware($container, 'request-handler'));
 
-    /*
-	$handlerData = $route->handler;
-	$controllerName = $handlerData['controller'];
-	$actionName = $handlerData['action'];
-	$needsAuth = $handlerData['auth'] ?? false;
+        $harmony();
 
-    */
-
-    // implementando harmony
-    $harmony = new Harmony($request, new Response());
-    $harmony
-        ->addMiddleware(new HttpHandlerRunnerMiddleware(new SapiEmitter()))
-        ->addMiddleware(new \App\Middlewares\AuthenticationMiddleware())
-        ->addMiddleware(new Middlewares\AuraRouter($routerContainer))
-        ->addMiddleware(new DispatcherMiddleware($container, 'request-handler'));
-
-    $harmony();
+    }
+    catch (Exception $e)
+    {
+       $emitter = new SapiEmitter();
+       $emitter->emit(new Response\EmptyResponse(400));
+    }
+    catch (Error $e)
+    {
+        $emitter = new SapiEmitter();
+        $emitter->emit(new Response\EmptyResponse(500));
+    }
 }
