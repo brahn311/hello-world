@@ -1,6 +1,10 @@
 # Ignorados por abrahan... (aun no se que hacer con estos directorios)
 /bootstrap-4.3.1-dist
 
+# Respaldo de clases del curso
+curso-introduccion-*
+
+
 # IDE bluefish (LINUX Debian 9)
 *.bfproject
 *~

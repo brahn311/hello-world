@@ -8,11 +8,16 @@ require_once '../vendor/autoload.php';
 
 session_start();
 
-use Illuminate\Database\Capsule\Manager as Capsule;
-use Aura\Router\RouterContainer;
-
 $dotenv = Dotenv\Dotenv::create(__DIR__ . "/..");
 $dotenv->load();
+
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Aura\Router\RouterContainer;
+use WoohooLabs\Harmony\Harmony;
+use WoohooLabs\Harmony\Middleware\DispatcherMiddleware;
+use WoohooLabs\Harmony\Middleware\HttpHandlerRunnerMiddleware;
+use Zend\Diactoros\Response;
+use Zend\HttpHandlerRunner\Emitter\SapiEmitter;
 
 // Contenedor de dependencias
 $container = new DI\Container();
@@ -58,63 +63,22 @@ $map = $routerContainer->getMap();
 
 // Add a route to the map, and a handler for it
 // $map->get('nombre', 'contenido_del_url','archivo_o_accion(handler)');
-$map->get('index', '/', [
-	'controller' => 'App\Controllers\IndexController',
-	'action' => 'indexAction',
-]);
-$map->get('indexJobs', '/jobs', [
-	'controller' => 'App\Controllers\JobsController',
-	'action' => 'indexAction',
-	'auth' => true,
-]);
-$map->get('addJob', '/jobs/add', [
-	'controller' => 'App\Controllers\JobsController',
-	'action' => 'getAddJobAction',
-	'auth' => true,
-]);
-$map->post('saveJob', '/jobs/add', [
-	'controller' => 'App\Controllers\JobsController',
-	'action' => 'getAddJobAction',
-	'auth' => true,
-]);
-$map->get('deleteJob', '/jobs/delete', [
-	'controller' => 'App\Controllers\JobsController',
-	'action' => 'getDeleteJobAction',
-	'auth' => true,
-]);
-$map->get('addUser', '/users/add', [
-	'controller' => 'App\Controllers\UsersController',
-	'action' => 'getAddUserAction',
-//	'auth' => true,
-]);
-$map->post('saveUser', '/users/add', [
-	'controller' => 'App\Controllers\UsersController',
-	'action' => 'getAddUserAction',
-//	'auth' => true,
-]);
-$map->get('loginUser', '/login', [
-	'controller' => 'App\Controllers\AuthController',
-	'action' => 'getLogin',
-]);
-$map->post('authUser', '/login', [
-	'controller' => 'App\Controllers\AuthController',
-	'action' => 'getPostLoginAction',
-]);
-$map->get('logoutUser', '/logout', [
-	'controller' => 'App\Controllers\AuthController',
-	'action' => 'getLogout',
-	'auth' => true,
-]);
-$map->get('admin', '/admin', [
-	'controller' => 'App\Controllers\AdminController',
-	'action' => 'getAdminIndex',
-	'auth' => true,
-]);
+$map->get('index', '/', ['App\Controllers\IndexController','indexAction',]);
+$map->get('indexJobs', '/jobs', ['App\Controllers\JobsController','indexAction',]);
+$map->get('addJob', '/jobs/add', ['App\Controllers\JobsController','getAddJobAction',]);
+$map->post('saveJob', '/jobs/add', ['App\Controllers\JobsController','getAddJobAction',]);
+$map->get('deleteJob', '/jobs/delete', ['App\Controllers\JobsController','getDeleteJobAction',]);
+$map->get('addUser', '/users/add', ['App\Controllers\UsersController','getAddUserAction',]);
+$map->post('saveUser', '/users/add', ['App\Controllers\UsersController','getAddUserAction',]);
+$map->get('loginUser', '/login', ['App\Controllers\AuthController','getLogin',]);
+$map->post('authUser', '/login', ['App\Controllers\AuthController','getPostLoginAction',]);
+$map->get('logoutUser', '/logout', ['App\Controllers\AuthController','getLogout',]);
+$map->get('admin', '/admin', ['App\Controllers\AdminController','getAdminIndex',]);
 
 // Get the route matcher from the container and try to match the request to a route.
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
-if (! $route)
+if (!$route)
 {
     echo "No route";
     exit;
@@ -124,6 +88,7 @@ else
 	// testing de handler result
 	// var_dump($route->handler);
 
+    /*
 	$handlerData = $route->handler;
 	$controllerName = $handlerData['controller'];
 	$actionName = $handlerData['action'];
@@ -135,20 +100,14 @@ else
 		echo "Protected route";
 		exit;
 	}
+    */
 
-  // inyección de dependencias desde el contenedor
-  $controller = $container->get($controllerName);
+    // implementando harmony
+    $harmony = new Harmony($request, new Response());
+    $harmony
+        ->addMiddleware(new HttpHandlerRunnerMiddleware(new SapiEmitter()))
+        ->addMiddleware(new Middlewares\AuraRouter($routerContainer))
+        ->addMiddleware(new DispatcherMiddleware($container, 'request-handler'));
 
-  $response = $controller->$actionName($request);
-
-	foreach($response->getHeaders() as $name => $values)
-	{
-		foreach($values as $value)
-		{
-			header(sprintf('%s: %s', $name, $value), false);
-		}
-	}
-	http_response_code($response->getStatusCode());
-
-	echo $response->getBody();
+    $harmony();
 }

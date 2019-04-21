@@ -1,0 +1,29 @@
+Video_16
+Middlewares y PSR15
+
+Los middleware están siendo muy utilizados no solamente en PHP sino en otros lenguajes.
+PHP tiene definido un PSR (PSR 15) con una interfaz común para trabajar los middleware.
+
+Funcionan de la siguiente manera:
+Tenemos muchas capas encerrando nuestra aplicación,
+las cuales serán filtros que le darán funcionalidad
+Y así un request que entre no deberá entrar al core de la aplicación y se obtendrá una respuesta si no pasa los filtros.
+Estos middleware pueden ser autenticaciones, revisiones de permisos, llamadas y conceptos de ese estilo.
+
+Implementamos Harmony de Woohoolabs que es compatible con PSR15.
+https://packagist.org/packages/woohoolabs/harmony
+
+Es el motor que nos permite usar middlewares y al final utilizar el dispatcher.
+Siempre que estemos usando librerías compatibles con PSR, ellas dependerán siempre de las librerías de PSR que ofrece las interfaces.
+
+En el ejemplo de uso de Harmony, ellos utilizan FastRoute y nosotros ya usamos AuraRouter en nuestro proyecto
+Pero al ambos estar basados en los mismos estándares, no hay problema de acoplamiento.
+
+ServerRequestFactory sirve para crear un objeto request que nosotros ya hacemos con Zend.
+
+HttpHandlerRunner ejecuta una interfaz tipo PSR 15 y emite la respuesta generada.
+
+AuraRouter no es compatible con PSR 15 y por eso debemos buscar una implementación que lo mete dentro de un contenedor que lo hará compatible.
+
+Cuando entramos a un middleware siempre vamos a necesitar revisar el método process que nos dice cómo está funcionando todo.
+Sólo se deben editar librerías de terceros para realizar debug.
