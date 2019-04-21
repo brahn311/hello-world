@@ -11,8 +11,8 @@ session_start();
 $dotenv = Dotenv\Dotenv::create(__DIR__ . "/..");
 $dotenv->load();
 
-use Illuminate\Database\Capsule\Manager as Capsule;
 use Aura\Router\RouterContainer;
+use Illuminate\Database\Capsule\Manager as Capsule;
 use WoohooLabs\Harmony\Harmony;
 use WoohooLabs\Harmony\Middleware\DispatcherMiddleware;
 use WoohooLabs\Harmony\Middleware\HttpHandlerRunnerMiddleware;
@@ -94,18 +94,13 @@ else
 	$actionName = $handlerData['action'];
 	$needsAuth = $handlerData['auth'] ?? false;
 
-	$ssesionUserId = $_SESSION['userId'] ?? null;
-	if ($needsAuth && !$ssesionUserId)
-	{
-		echo "Protected route";
-		exit;
-	}
     */
 
     // implementando harmony
     $harmony = new Harmony($request, new Response());
     $harmony
         ->addMiddleware(new HttpHandlerRunnerMiddleware(new SapiEmitter()))
+        ->addMiddleware(new \App\Middlewares\AuthenticationMiddleware())
         ->addMiddleware(new Middlewares\AuraRouter($routerContainer))
         ->addMiddleware(new DispatcherMiddleware($container, 'request-handler'));
 

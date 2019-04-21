@@ -1,0 +1,17 @@
+Video_18
+Creando un middleware
+
+Creamos nuestra carpeta app/Middlewares
+
+Dentro, la clase
+AutenticationhMiddleware
+
+Dentro de public/index.php
+
+Añadimos el middleware luego de sapiEmitter:
+->addMiddleware(new \App\Middlewares\AuthenticationMiddleware())
+
+Recordemos que los Middleware tienen un diseño de capas...
+
+Si todo esta correcto, pasa a la capa sisguiente con el handler,
+si no, envia una respuesta en este caso vacia
