@@ -1,0 +1,11 @@
+Video_21
+Debug
+
+Instalando whoops
+Instalando el middleware de whoops
+
+Añandimos el middleware a nuestro proyecto en public/index
+->addMiddleware(new \Franzl\Middleware\Whoops\WhoopsMiddleware())
+
+Para esto debemos comentar la excepcion que colocamos en el JobService.php
+y evitar capturarlo al final del index.php

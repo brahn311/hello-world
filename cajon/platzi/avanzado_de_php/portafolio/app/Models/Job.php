@@ -12,7 +12,7 @@ class Job extends Model
 
 	protected $table = 'jobs';
 
-	public function getDuration()
+    public function getDuration()
 	{
 		$years = floor($this->months / 12);
 		$months = $this->months % 12;
