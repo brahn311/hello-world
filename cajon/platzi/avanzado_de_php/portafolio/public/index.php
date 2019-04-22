@@ -1,8 +1,10 @@
 <?php
-
-ini_set('display_errors', 1);
-ini_set('display_starup_error', 1);
-error_reporting(E_ALL);
+if (getenv('DEBUG' === true))
+{
+    ini_set('display_errors', 1);
+    ini_set('display_starup_error', 1);
+    error_reporting(E_ALL);
+}
 
 require_once '../vendor/autoload.php';
 
@@ -16,8 +18,13 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 use WoohooLabs\Harmony\Harmony;
 use WoohooLabs\Harmony\Middleware\DispatcherMiddleware;
 use WoohooLabs\Harmony\Middleware\HttpHandlerRunnerMiddleware;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
 use Zend\Diactoros\Response;
 use Zend\HttpHandlerRunner\Emitter\SapiEmitter;
+
+$log = new Logger('app');
+$log->pushHandler(new StreamHandler(__DIR__ . '/../logs/app.log', Logger::WARNING));
 
 // Contenedor de dependencias
 $container = new DI\Container();
@@ -90,8 +97,12 @@ else
         // implementando harmony
         $harmony = new Harmony($request, new Response());
         $harmony
-            ->addMiddleware(new HttpHandlerRunnerMiddleware(new SapiEmitter()))
-            ->addMiddleware(new \Franzl\Middleware\Whoops\WhoopsMiddleware())
+            ->addMiddleware(new HttpHandlerRunnerMiddleware(new SapiEmitter()));
+        if (getenv('DEBUG' === true))
+        {
+            $harmony->addMiddleware(new \Franzl\Middleware\Whoops\WhoopsMiddleware());
+        }
+        $harmony
             ->addMiddleware(new \App\Middlewares\AuthenticationMiddleware())
             ->addMiddleware(new Middlewares\AuraRouter($routerContainer))
             ->addMiddleware(new DispatcherMiddleware($container, 'request-handler'));
@@ -99,11 +110,12 @@ else
         $harmony();
 
     }
-//    catch (Exception $e)
-//    {
-//       $emitter = new SapiEmitter();
-//       $emitter->emit(new Response\EmptyResponse(400));
-//    }
+    catch (Exception $e)
+    {
+        $log->error($e->getMessage());
+        $emitter = new SapiEmitter();
+        $emitter->emit(new Response\EmptyResponse(400));
+    }
     catch (Error $e)
     {
         $emitter = new SapiEmitter();

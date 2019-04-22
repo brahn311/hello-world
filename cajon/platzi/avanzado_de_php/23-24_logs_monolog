@@ -1,0 +1,35 @@
+Video_23
+Logs
+
+En homestead la ruta para encontrar los archivos de error que genera php es
+/var/log/nginx
+
+Estan divididos segun el portal que tengas configurado en tu:
+Homestead.yaml
+
+Puedes mejar tus propios log por medio de otra libreria:
+https://packagist.org/packages/monolog/monolog
+
+Para acoplarlo:
+
+En public/index.php
+$log = new Logger('app');
+$log->pushHandler(new StreamHandler(__DIR__.'../logs/app.log', Logger::WARNING));
+
+Video_24
+Monolog
+
+Cuando generamos el catch del error agregamos un el tipo del error y el texto
+$log->warning('Error SOS Ayuda');
+
+Tambien puedes extraer la informacion del exception
+$log->error($e->getMessage());
+
+Tambien puedes ver en monolog los tipos de logs que almacena
+Con esa linea ya guardamos el registro del archivo
+
+Como el log no necesitas guardarlo en el repositorio
+puedes crear un .gitignore con:
+*
+!.gitignore
+ello significa que te registra la carpeta y el .gitignore pero no el contenido de la carpeta

@@ -1,0 +1,117 @@
+Video_22
+Xdebug
+
+Instalado ya en Homestead
+
+Confirma su instalacion con el archivo
+phpinfo();
+
+Veredicto: no tiene xdebug instalado...
+
+Tambien necesitas
+
+Instalar una extension en chrome
+https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc
+inicia una sesion de xdebug
+
+Configurar el servidor de phpstorm
+la direccion del servidor
+la carpeta de tu directorio
+la carpeta de tu servidor
+Podras marcar los puntos de parada y continuar con la ejecucion del script
+
+Xdebug detiene el codigo y muestra:
+las variables del servidor durante el transcurso de la ejecucion del script en phpstorm
+
+TRATANDO DE USAR XDEBUG:::::::::::::::::::::::::::::::::::
+
+Segun google:
+Pasos para instalar xdebug en vagrant:
+
+Entrar al servidor por ssh
+$ vagrant ssh
+
+Ejecutar el comando: phpinfo()
+$ php -i
+
+debes de guardar la salida
+$ php -i > php_output
+
+Copiar el contenido de php_output y pegarlo en la pagina:
+https://xdebug.org/index.php
+
+Resultado:
+Summary
+Xdebug installed: no
+Server API: Command Line Interface
+Windows: no
+Zend Server: no
+PHP Version: 7.3.1-1
+Zend API nr: 320180731
+PHP API nr: 20180731
+Debug Build: no
+Thread Safe Build: no
+OPcache Loaded: no
+Configuration File Path: /etc/php/7.3/cli
+Configuration File: /etc/php/7.3/cli/php.ini
+Extensions directory: /usr/lib/php/20180731
+
+Instructions
+1   Download xdebug-2.7.1.tgz
+    http://xdebug.org/files/xdebug-2.7.1.tgz
+2   Install the pre-requisites for compiling PHP extensions.
+    On your Ubuntu system, install them with: apt-get install php-dev autoconf automake
+3   Unpack the downloaded file with tar -xvzf xdebug-2.7.1.tgz
+4   Run: cd xdebug-2.7.1
+5   Run: phpize (See the FAQ if you don't have phpize).
+
+    As part of its output it should show:
+
+    Configuring for:
+    ...
+    Zend Module Api No:      20180731
+    Zend Extension Api No:   320180731
+    If it does not, you are using the wrong phpize. Please follow this FAQ entry and skip the next step.
+
+6   Run: ./configure
+7   Run: make
+8   Run: cp modules/xdebug.so /usr/lib/php/20180731
+9   Edit /etc/php/7.3/cli/php.ini and add the line:
+    zend_extension = /usr/lib/php/20180731/xdebug.so
+
+FUENTE: https://medium.com/@michalisantoniou6/set-up-xdebug-with-homestead-phpstorm-and-php7-85b5ac8f0c79
+
+Nota:
+    No pude hacer el paso 9 no encontre el xdebug en php.ini
+
+    Al final del make... aparecio el sigiente error
+
+    ----------------------------------------------------------------------
+    Libraries have been installed in:
+       /home/vagrant/code/xdebug-2.7.1/modules
+
+    If you ever happen to want to link against installed libraries
+    in a given directory, LIBDIR, you must either use libtool, and
+    specify the full pathname of the library, or use the '-LLIBDIR'
+    flag during linking and do at least one of the following:
+       - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+         during execution
+       - add LIBDIR to the 'LD_RUN_PATH' environment variable
+         during linking
+       - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+       - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+    See any operating system documentation about shared libraries for
+    more information, such as the ld(1) and ld.so(8) manual pages.
+    ----------------------------------------------------------------------
+
+    Build complete.
+    Don't forget to run 'make test'.
+
+    make: warning:  Clock skew detected.  Your build may be incomplete.
+
+Otras opciones:
+FUENTE: https://hotsechu.wordpress.com/2016/03/09/activar-xdebug-en-xampp/
+
+
+

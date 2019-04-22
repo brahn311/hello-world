@@ -4,6 +4,8 @@
 # Respaldo de clases del curso
 curso-introduccion-*
 
+# IDE PHPStorm
+.idea
 
 # IDE bluefish (LINUX Debian 9)
 *.bfproject
@@ -20,9 +22,5 @@ vendor
 build
 dist
 private
-
-# Files uploads in projects
-uploads
-avatars
 
 # Ignorados automaticamente
