@@ -1,0 +1,37 @@
+Video_01
+Que es un System on a chip
+
+Arquitectura
+
+En el mundo de la computacion la arquitura es bastante compleja
+es la union de distintos perifericos por medio de tarjertas
+y que cada tarjeta posee distintos chips
+
+En el mundo IoT (Internet of Thinks)
+necesitamos cada vez computadores que se adapten a equipos muy pequeños
+por ejemplo un smartphone, un smartwatch, neveras, microondas... televisores
+
+El system on a chip es una arquitectuta donde puedes tener un computador
+completo en una sola tarjeta
+
+Un ejemplo de ellos es el RaspberryPI 
+posee todos los componentes en una sola tarjeta muy comprimidos
+
+Tarjeta madre
+Puertos
+CPU (Procesador)
+Memoria RAM
+Bios
+Puertos usb
+Radio (bluetooth, wifi, 3g, 4g, radio)
+Audio
+MicroSD
+Conexion a Perifericos (Pantallas Tactiles, mouse...)
+
+Excepto el discoduro.... 
+Excepto la bateria...
+
+Pero la Raspberry tiene:
+Entrada de energia para colocarle un adaptador
+Ranura para MicroSD
+
