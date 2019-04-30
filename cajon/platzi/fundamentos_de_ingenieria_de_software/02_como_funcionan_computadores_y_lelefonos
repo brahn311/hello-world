@@ -1,3 +1,70 @@
-Video_2
+Video_02
 Como funcionan los computadores y los telefonos moviles
 
+Escribir y enviar un mail
+Lo resumimos como:
+
+Computador del que envia
+|
+Nube de internet
+|
+Celular de quien recibe
+
+Elementos involucrados:
+Computador
+navegador chrome
+pagina de enviar correo
+correo escrito
+presiona enter
+señal del teclado
+tarjeta madre
+cpu
+os (drivers)
+navegador
+Evento Enviar
+Javascript
+AJAX
+JSON
+REST
+HTTP
+
+
+
+1.      Redactamos el Email hasta terminar el texto
+2.      Apretamos en el teclado "Enter" para enviar el mail
+2.1.    Se envia una señal eléctrica desde el teclado a la motherboardla
+2.2.    La motherboard envia la señal al CPU
+2.3.    La CPU recibe la señal y la envia al sistema operativo a través de drivers
+        (softwares que interpretan las señales eléctricas de los periféricos)
+2.4.    El driver interpreta la señal eléctrica y reconoce que es un evento del navegador
+        (como estamos en una pestaña de chrome, este tiene en un documento html con scripts)
+2.5.    El navegador entiende que al ocurrir el evento "Enter" tiene que enviar el Email
+        (Un script que esta preparado para hacer algo al momento de pulsar la tecla enter
+        procede a hacer los pasos para que el procesador realice e envio del correo)
+2.6.    Javascript (lenguaje que ejecuta el script del html del navegador)
+        recupera los datos y contenido del Email escrito por el usuario utiliza un API
+        (Application Program Interface) llamado AJAX
+2.6.1.  AJAX encapsula los datos (el mail en este caso) en un formato llamado JSON
+        dirigido a un servidor por medio de un y los envia sin rescargar la pagina
+2.6.2.  Una API REST (metodo de envio de informacion) recive el JSON a través de HTTP
+        (protocolos de transferencia de texto, especifica las reglas y el medio para envio)
+2.6.3.  El paquete se envía por HTTP o HTTPS a un servidor DNS
+        (tiene la relacion entre los dominios y  direcciones IP
+        HTTPS es mas seguro porque encapsula los paquetes y solo el servidor
+        al cual estamos enviando podra interpretarlo)
+2.7.    El servidor recibe los datos en forma de señales eléctricas
+2.7.1.  El servidor recibe los datos HTTP,  y el OS transforma los datos con el TCP/IP
+2.7.2.  El servidor procesa el correo y guarda el respaldo en su DB
+2.8.    Y envia el correo al servidor de destino identificado con el @.
+2.9     Hace el camino inverso de regreso hacia un servidor dns que ubica el destino
+2.10.   El servidor de correo del almacena en su DB el correo recibido
+2.10.1  El servidor destino avisa que el mensaje fue recibido correctamente
+2.10.2. La pagina de email avisa al remitente que fue el correo fue enviado
+2.11.   El celular del usuario envia un comando a la API REST para chequear su bandeja
+2.11.1  EL API REST envia una notificacion como respuesta a la app del celular del destino
+2.12.   El celular recibe la notificación, y la app avisa que se ha recibido un mail.
+2.13.   El app del celular envia una notificacion al servidor API REST que el correo
+        ha sido leido
+
+En la actualidad existen los servidores de notificaciones
+Estos utilizan un protocolo UTP El cual no espera una respuesta

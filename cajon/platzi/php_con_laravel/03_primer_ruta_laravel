@@ -1,0 +1,38 @@
+Video_03
+Primer ruta en laravel
+
+Ahora solo tenemos la ruta principal que activamos con
+php artisan serve
+
+Ahora podemos activar mas rutas
+
+En la carpeta del proyecto, encontramos la carpeta
+\routes
+Dentro se encuentra un archivo llamado web.php
+
+En ese archivo estan las rutas creadas
+Route::get('/',function () {
+	return view('welcome');
+});
+Esto indica que renderea la plantilla de welcome ubicada en la carpeta:
+\views
+con el nombre welcome.blade.php
+
+Tambien puedes enviar un texto
+Route::get('/text',function () {
+	return 'text';
+});
+
+Tambien puedes enviar un arreglo
+Route::get('/text',function () {
+	return [
+	'indice' => 'cero',
+	'tipo' => 'arreglo',;
+	]
+});
+
+Otros metodos parausar
+Route::post
+Route::put
+Route::delete
+Route::any

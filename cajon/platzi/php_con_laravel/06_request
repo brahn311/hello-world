@@ -1,0 +1,29 @@
+Video_06
+Request
+
+Es el espacio de la memoria que contiene la informacion (parametros)
+que llegan al servidor cuando se realiza alguna peticion al mismo 
+
+Por ejemplo, cuando llega parametros en la url
+http://localhost/dashboard?title=abrahan
+
+Puede contener datos recibidos por formularios GET, POST y datos de la URL
+
+No olvides que para usar el recuest debes declarar su uso
+use Illuminate\Http\Request;
+
+Podemos hacer pruebas en el DashboardController.php
+public function index(Request $request)
+{
+	$parametro = $request->query('parametro', 'default');
+	// extraemos los valores recibidos de la url
+	//var_dump($parametro);die;
+	dd($parametro);
+	// dd() es un helper de laravel similar a var_dump();die; y da formato a la salida
+	return $parametro;
+}
+
+Igual mente toda esa funcion index la podemos escribir
+return $request->query('parametro', 'default');
+
+Los request seran usados durante todo el desarrollo del proyecto

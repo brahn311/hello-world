@@ -1,0 +1,41 @@
+Video_04
+Como funciona Blade
+
+Blade es un motor de render html
+
+
+Primero que nada, puedes observar que las views de blade son archivos PHP
+
+Es decir que dentro,puedes escribir scripts de PHP pero no es un buen uso
+
+Aunque de igual manera plade posee sus propias estructuras de control de blade
+llamadas helpers y se reconocen 
+@
+
+como:
+@if
+@elseif
+@endif
+@auth
+(Ver la documentacion para ver todos)
+
+
+Puedes mandar variables al template de blade al momento de hacer el rendereo,
+Route::get('/text',function () {
+	return view('welcome',[
+		'saludo' => 'hola';
+	]);
+});
+Luego del nombre, separado con coma, escribe el arreglo con las variables
+
+Para usarlas dentro del template
+Solo colocas el indice recibido como si fuera una variable de php
+Para escaparla usa dobles llaves
+{{ $saludo }}
+
+ejemplo:
+@isset($saludo)
+{{ $saludo }}
+@else
+{{ 'No saludo' }}
+@endisset

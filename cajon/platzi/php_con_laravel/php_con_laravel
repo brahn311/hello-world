@@ -6,9 +6,6 @@ Fecha de Finalización:
 
 TEMARIO:
 
---------------------------------------------------------------------------- Resolver	*	https://
---------------------------------------------------------------------------- Avance
----------------------------------------------------------------------------	Visto
 1. Introducción
 	01	Intro y caracteristicas de Laravel
 2. Fundamentos
@@ -17,7 +14,9 @@ TEMARIO:
 	04	Cómo funciona Blade
 	05	Controladores en Laravel
 	06	Request
+--------------------------------------------------------------------------- Avance
 	07	Configuración de laravel
+---------------------------------------------------------------------------	Visto
 3. Bases de Datos
 	08	Cómo funcionan las Migraciones de DB
 	09	Migraciones en Artisan
@@ -42,3 +41,5 @@ TEMARIO:
 	24	Login
 8. Cierre
 	25	Cierre
+
+--------------------------------------------------------------------------- Resolver	*	https://

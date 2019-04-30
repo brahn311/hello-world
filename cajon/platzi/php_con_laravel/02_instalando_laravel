@@ -1,0 +1,39 @@
+Video_02
+Instalacion de Laravel
+
+Desde la maquina virtual de homestead por ssh y usando composer
+$ composer global require laravel/installer
+cd
+Este comando instala laravel en todo el computador.
+Significa que esta instalado en nuestra maquina
+
+Con el comando
+$ laravel
+Verificas que este instalado...
+Ves comandos basicos
+
+Usamos el comando
+$ laravel new nombre_del_proyecto
+para crear un nuevo proyecto y se crean todas las carpetas incluyendo vendor
+
+ESTOS PASOS NO ME FUNCIONARON DESDE LA MAQUINA VIRTUAL DE HOMESTEAD
+----- 
+INSTALARE COMPOSER DESDE:
+https://getcomposer.org/download/
+
+(Desde windows)
+USANDO EL INSTALADOR DE WINDOWS
+Composer-Setup.exe
+lo instale como Developer mode
+
+---
+Cuando ya tengas todo instalado entra en la carpeta y escribe:
+$ php artisan
+Veras todos sus comando y usaremos
+$ php artisan serve
+y te mostrara una direccion url, en mi caso fue 127.0.0.1:8000
+
+Si al entrar alli tienes una pantalla que dice "Laravel" todo fue instalado correctamente
+
+ 
+
