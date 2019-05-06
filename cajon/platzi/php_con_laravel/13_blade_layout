@@ -1,0 +1,29 @@
+Video_13
+Blade layout
+
+Para organizar los templates de blade, crearemos la carpeta layouts en:
+resources\views
+
+Dentro creamos un archivo base.blade.php
+
+Buscamos el template base de la documentacion de bootstrap y lo copiamos dentro
+
+Dentro del template ubicamos donde esta declarado el container y modificamos
+<div class="container">
+	@yield('content')
+</div>
+Esto indica que content no esta definido y se obtiene este del hijo, quien lo busca y lo inserta
+
+En resource\views\expenseReport\index.blade.php
+Borramos todo MENOS el contenido del container (incluyendo el container)
+Y al inicio añadimos (antes de todo)
+
+@extends('layout.base')
+Esto indica que es hijo de base
+
+Creamos una seccion
+@section('content')
+@endsection
+Esta seccion se coloca en los hijos y indica el contenido que se insertara en el base
+
+Dentro de seccion pegamos el contenido que cortamos de container

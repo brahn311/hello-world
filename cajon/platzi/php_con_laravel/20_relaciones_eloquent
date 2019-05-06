@@ -1,0 +1,53 @@
+Video_20
+Relaciones con Eloquent
+
+Relacionaremos un reporte con distintos gastos
+
+Crearemos un nuevo modelo
+
+Usaremos el comando
+php artisan make:model -m Expense
+La opcion -m crea de una vez el archivo para la migracion
+
+La migracion ya se crea con los comandos para crear tabla
+Complementamos en up los campos que hacen falta
+$table->unsignedInteger('expense_report_id');
+$table->text('description');
+$table->decimal('amount');
+
+En la consola hacemos la migracion
+$ php artisan migrate
+
+Los modelos, especificamos la relacion
+
+Abrimos el modelo:
+app\ExpenseReport.php
+Creamos dentro el metodo
+public function expenses()
+{
+	return $this->hasMany(Expense::class);
+}
+	
+Abrimos el modelo:
+app\Expense.php
+Creamos dentro el metodo
+public function expenseReport()
+{
+	return $this->belongsTo(ExpenseReport::class);
+}
+
+Puedes hacer pruebas con el comando tinker
+
+>>> App\ExpenseReport::first();
+Busca en la tabla expense_report y trae el primer resultado que encuentre
+
+>>> App\ExpenseReport::first()->expenses;
+Busca todos los gastos que posea ese reporte (en este caso traera ninguno si no guardaste alguno)
+Fijate que expenses lo llamas como atributo, no como funcion....
+En ese caso se usan propiedades magicas y por eso lo accedes como atributo y no como metodo
+
+>>> App\Expense::first();
+Busca en la tabla el primer registro almacenado
+
+>>> App\Expense::first()->expenseReport;
+Trae los datos del reporte al que pertenece este gasto

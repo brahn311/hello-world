@@ -1,0 +1,61 @@
+Video_22
+Acción para enviar un mail
+
+Podremos usar la aplicacion para que envie un correo!
+
+Editaremos la plantilla de:
+show.blade.php
+Añadiremos el boton que ejecutara la accion de enviar correo
+Podemos duplicar el boton de back
+Cambiaremos el href y la clase del boton:
+<div class="row">
+    <div class="col">
+        <a class="btn btn-primary" href="/expense_reports/{{ $report->id }}/confirmSendMail">Send email</a>
+    </div>
+</div>
+
+En el archivo: 
+routes\web.php
+Creamos la nueva ruta copiando la base de confirmDelete:
+Route::get('/expense_reports/{id}/confirmSendMail', 'ExpenseReportController@confirmSendMail');
+
+En el controlador:
+app\Http\Controllers\ExpenseReportController.php
+Debemos crear ese metodo que añadimos a las rutas:
+public function confirmSendMail($id) {
+    $report = ExpenseReport::find($id);
+    return view('expenseReport.confirmSendMail', [
+        'report' => $report
+    ]);
+}
+
+Copiamos la vista de:
+resources\views\create.blade.php
+Y la guardamos como:
+resources\views\confirmSendMail.blade.php
+Modificamos el titulo <h1>:
+<h1>Send Report</h1>
+Modificamos el formulario:
+<label for="email">Email:</label>
+<input type="text" class="form-control" id="email" name="email" placeholder="Type a email" value="{{ old('email') }}" >
+Modificamos el action del form:
+<form action="/expense_reports/{{ $report->id }}/sendMail" method="POST">
+Modificamos el texto del boton
+<button class="btn btn-primary" type="submit" >Send mail</button>
+
+Ahora de regreso al documento de las rutas
+routes\web.php
+Duplicamos la ruta de
+confirmSendMail
+y la editamos para tener
+Route::post('/expense_reports/{id}/sendMail', 'ExpenseReportController@sendMail');
+
+De nuevo en el controlador:
+app\Http\Controllers\ExpenseReportController.php
+Creamos el metodo de sendMail:
+public function sendMail($id) {
+    $report = ExpenseReport::find($id);
+    return $report;
+}
+Por el momento solo mostramos el correo... 
+En la siguiente clase confirmamos el correo

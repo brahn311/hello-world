@@ -1,0 +1,89 @@
+Video_21
+Trabajando con relaciones
+
+En el template de show ubicado en
+resources\views\expenseReport\show.blade.php
+
+Donde teniamos los detalles
+Ubicamos el ultimo:
+<div class="col">
+Agregaremos dentro:
+<h3>Details</h3>
+<table class="table">
+    @foreach($report->expenses as $expense)
+        <tr>
+            <td>{{ $expense->description }}</td>
+            <td>{{ $expense->created_at }}</td>
+            <td>{{ $expense->amount }}</td>
+        </tr>
+    @endforeach
+</table>
+
+Crearemos un nuevo controlador como recurso
+php artisan make:controller --resource ExpenseController
+
+De regreso en el template creamos un ultimo
+<div class="row">
+    <div class="col">
+        <a class="btn btn-primary" href="/expense_reports/{{ $report->id }}/expenses/create">New expense</a>
+    </div>
+</div>
+
+Definimos las 2 rutas:
+Route::get('/expense_reports/{expense_report}/expenses/create', 'ExpenseController@create');
+Route::post('/expense_reports/{expense_report}/expenses', 'ExpenseController@store');
+
+En el controlador
+app\ExpenseController.php
+En el metodo create
+Usamos el modelo del model binding pidiendo como parametro
+(ExpenseReport $expenseReport)
+Y dentro retornamos una vista
+return view('expense.create', [
+	'report' => $expenseReport
+]);
+
+Ahora copiamos la plantilla del:
+resource\views\expenseReport\create.blade.php
+Y el nuevo templete lo ubicamos y llamamos en: 
+resource\views\expense\create.blade.php
+
+Modificamos el titulo <h1>
+<h1>New Expense</h1>
+Modificamos el href="" del boton de back
+<a class="btn btn-secondary" href="/expense_reports/{{ $report->id }}">Back</a>
+Modificamos el action del form
+<form action="/expense_reports/{{ $report->id }}/expenses" method="POST">
+Modificamos los input y añadimos los nuevos
+<div class="form-group">
+    <label for="description">Description:</label>
+    <input type="text" class="form-control" id="description" name="description" placeholder="Type a description" value="{{ old('title') }}" >
+</div>
+<div class="form-group">
+    <label for="amount">Amount:</label>
+    <input type="text" class="form-control" id="amount" name="amount" placeholder="Type a amount" value="{{ old('title') }}" >
+</div>
+
+Y de regreso al controlador de ExpenseController
+en el metodo de:
+store
+Hacemos una prueba
+dd($request->all());
+Si todo esta bien, entonces en los parametros añadimos el model binding con:
+, ExpenseReport $expenseReport)
+Dentro creamos:
+$expense = new Expense();
+$expense->expense_report_id = $expenseReport->id;
+$expense->description = $request->get('description');
+$expense->amount = $request->get('amount');
+$expense->save();
+return redirect('/expense_reports/' . $expenseReport->id);
+
+Faltaron las validaciones...
+
+Las validaciones del monto y la descripcion estan como reto
+
+Faltaron tambien el resto de opciones CRUD:
+Update
+Delete
+ 

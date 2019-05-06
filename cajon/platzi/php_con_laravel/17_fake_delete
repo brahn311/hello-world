@@ -1,0 +1,76 @@
+Video_17
+Borrando reportes
+
+Crearemos una pagina de confirmacion que nos permita confirmar si deseamos borrar un elemento
+
+Usaremos Http DELETE pero como no lo permite el formulario usaremos el helper de fake Delete
+
+DELETE
+El método DELETE borra un recurso en específico.
+
+En el resources\views\expenseReport\index.blade.php 
+Debemos añadir una nueva columna que nos envie a la pagina de confirmacion
+<td><a href="/expense_reports/{{ $expenseReport->id }}/confirmDelete">Delete</a></td>
+Debes recordar que esta ruta no esta creada realmente
+
+En routes\web.php
+Añadimos:
+
+Route::get('/expense_reports/{id}/confirmeDelete', 'ExpenseReportController@confirmDelete');
+
+En el controlador creamos un nuevo metodo:
+public function confirmDelete($id)
+{
+	dd('confirmDelete ' . $id);
+}
+
+Copiamos la vista:
+resources\views\expenseReport\edit.blade.php
+Pegamos creando un nuevo template llamado:
+resources\views\expenseReport\confirmDelete.blade.php
+Realizamos el cambio de titulo <h1>
+<h1>Delete Report {{ $report->id }}</h1>
+Modificamos el fake metodo:
+@method('delete')
+Borramos div del formulario y su contenido:
+<div class="form-group">
+Dejamos el boton y cambiamos el nombre por Delete
+
+Ahora podemos probarlo.
+
+De nuevo en el controlador: 
+app\Http\Controllers\ExpenseReportController
+Ubicamos el metodo
+confirmDelete 
+Comentamos el dd
+Mandamos renderizar la vista 
+$report = ExpenseReport::findOrFail($id);
+return view('expenseReport.confirmDelete', [
+	'report'=> $report
+]);
+
+Como ultimo paso configuraremos el borrado
+En el metodo
+destroy($id)
+Copiamos los pasos del comfirmDelete como base
+$report = ExpenseReport::findOrFail($id);
+Añadimos la funcion de eliminar
+$report->delete();
+Haremos un redirec para index:
+return redirect('/expense_reports');
+
+Con esto ya terminamos todas las funcionalidades del CRUD
+
+NOTA:
+La funcion de eloquent:
+report->destroy();
+Es para eliminar varios $ids,
+Por eso usamos:
+report->delete();
+
+Si usadmos otra funcion de eloquent:
+find($id);
+Esta funcion generara un error cuando no encuentre el $id
+Para evitar que muestre el error se usa:
+findOrFail($id);
+Esta funcion, sino encuentra el $id, envia una respuesta de error 404

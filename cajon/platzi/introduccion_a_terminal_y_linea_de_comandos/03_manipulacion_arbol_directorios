@@ -1,0 +1,41 @@
+Video_03
+Manipulación y modificación del árbol de directorios
+
+$ mkdir
+crea un directorio
+
+$ touch
+crea un archivo
+Si no existe el archivo lo va a crear
+Si existe le cambia la fecha de modificación
+$ touch archivo{01,2,03,4}
+Crea varios archivos
+
+mv
+$ mv lo_que_moveras a_donde_lo_moveras
+Mueve un archivo
+$ mv nombre_actual nombre_nuevo
+Te ayuda a modificarlo
+
+rm
+$ rm archivo
+Elimina archivos o links
+(No funciona para eliminar un directorio)
+$ rm -rf
+Elimina un directorio recursivamente
+(Borra carpeta y todo su contenido)
+
+$ man comando
+Manual de la terminal Para cuando tu quieras para entender:
+qué hace un comando y sus banderas
+Con espacio pasas una página
+Con b te regresas una página 
+Con q sales del manual
+
+cp
+Copia un archivo a otros directorios
+
+$ pushd ruta_del_directorio
+Termite navegar a otro directorio sin usar cd
+$ popd
+Te permite regresar al sitio donde hiciste pushd

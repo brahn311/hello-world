@@ -1,0 +1,50 @@
+Video_08
+Cómo funcionan las Migraciones de DB
+
+En la clase anterior tenemos creada la base de datos
+
+Ahora continuaremos con la estructura
+Lo haremos usando el sistema de migraciones que ofrece laravel
+Este sistema es un control de versiones y actualizador con respecto a la base de datos
+
+Ejecutando 
+$ php artisan
+Veremos todos los comandos de artisan
+
+En la seccion de:
+make
+Encontraras el comando:
+make:migration
+permite crear archivos de migraciones
+
+Entre estos buscaremos la sección de: 
+migrate
+Alli veremos todos los comandos relacionados con la migracion
+el comando:
+migrate (solamente migrate) permite ejecutar todas las migraciones que esten pendientes en tu equipo
+
+Otros comandos:
+migrate:fresh (va a borrar todas las tablas y las creará de nuevo utilizando todas las migraciones que tenemos)
+migrate:rollback (nos permite regresar uno o varios pasos)
+
+Regresando a la carpeta del proyecto, todas las migraciones estan en la carpeta de 
+database\migrations
+Laravel te ofrece ya 2 migraciones por default:
+- Crear una tabla de usuarios
+- Crear tabla de reset de password
+
+Los archivos de migracion poseen 2 partes
+- metodo up (lo que hace la migracion)
+- metodo down (lo que hace para revertir la migracion cuando se usa el comando rollback)
+
+Para ver los parametros para construir esas tablas, revisa esos archivos de las migraciones :3
+
+Ahora en nuestra consola, haremos la primera migracion:
+$ php artisan migrate
+
+Observaras que ahora en tu DB que estaba vacia ya tienes 3 tablas nuevas
+- migraciones
+- usuarios
+- password_reset
+
+Esas tablas son las usadas para la autenticacion de usuarios asi que no las borres

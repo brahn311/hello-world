@@ -1,0 +1,106 @@
+Video_2
+Enviando emails
+
+Para enviar correos electrónicos necesitamos usar algún servicio especializado 
+en lugar de cuentas propias tipo gmail tienden a bloquearse al detectar mucha actividad de envíos.
+
+Tenemos servicios para envio de correos masivos como:
+mailgun.com
+mailchimp.com
+
+Usaremos un servicio especial para probar cómo funciona el envío de correos
+durante el desarrollo de una aplicación.
+mailtrap.io
+
+Configuramos nuestras variables
+En nuestra bandeja de entrada de 
+mailtrap.io 
+Encontramos las credenciales
+SMTP
+Host:	smtp.mailtrap.io
+Port:	25 or 465 or 587 or 2525
+Username:	d32e6e4668ebf2
+Password:	a016b5f7dc7f31
+Auth:	PLAIN, LOGIN and CRAM-MD5
+TLS:	Optional (STARTTLS on all ports)
+
+Configurando desde .env
+Ahora ubicamos la seccion de nuestro archivo .env identificada con
+MAIL_*
+Y modificamos los valores de:
+MAIL_USERNAME=d32e6e4668ebf2
+MAIL_PASSWORD=a016b5f7dc7f31
+
+Si usamos los valores de configuracion de mail real ubicamos el archivo:
+config\mail.php
+
+Artisan tiene un comando llamado
+make:mail
+Crea una nueva clase de Email
+php artisan make:mail SummaryReport
+Ahora tenemos una carpeta:
+app\Mail
+Dentro tendremos la clase creada:
+app\Mail\SummaryReport.php
+Dentro del constructor inyectamos la dependencia con el correo usando Type Hinting
+public function __construct(ExpenseReport $expenseReport)
+{
+     //
+}
+Creamos un nuevo atributo a la clase:
+private $expenseReport;
+Y dentro del constructor almacenamos las dependencias inyectadas
+$this->expenseReport = $expenseReport;
+
+Ahora en el metodo:
+build()
+Ya dentro tenemos:
+return $this->view('view.name');
+Con ello Laravel nos ofrece la posibilidad de hacer render de un template de blade para el contenido del correo
+Nosotros lo modificaremos un nuevo templete distinto:
+return $this->view('mail.expenseReport', [
+	'report' => $this->expenseReport
+]);
+
+Ahora vamos a las vistas y creamos la carpeta y archivo: 
+resources\views\mail\expenseReport.blade.php
+El contenido tendra los siguientes datos:
+<div class="row">
+    <div class="col">
+        <h1>Expense Report {{ $report->id }}: {{ $report->title }}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <h2>Expenses</h2>
+        <table class="table">
+            @foreach($report->expenses as $expense)
+                <tr>
+                    <td>{{ $expense->description }}</td>
+                    <td>{{ $expense->created_at }}</td>
+                    <td>{{ $expense->amount }}</td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
+</div>
+Contiene entonces:
+- Titulo del reporte
+- Tabla con el listado de gastos en ese reporte
+
+Ahora falta enviar el correo
+Dentro del controlador
+app\Html\Controllers\ExpenseReportController.php
+En el metodo:
+SendMail
+Inyectamos la dependencia Request
+(Request $request, $id)
+Luego de obtener el 
+$report 
+Utilizamos el facade mail:
+Mail::to($request->get('email'))->send(new SummaryReport($report));
+- Mail es un paquete que viene de [Illuminate\Support\Facades]
+- to viene del request del formulario de enviar correo
+- send toma la clase del correo con los datos del $report
+Por ultimo debemos modificar el return para hacer la redireccion 
+return redirect('/expense_reports/' . $id)

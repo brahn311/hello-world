@@ -1,0 +1,50 @@
+Video_14
+Form para agregar reportes
+
+En nuestro template de blade expenseReport/index.blade.php
+Primero creamos un nuevo enlace tipo boton para enviarnos al formulario
+
+Entro del @section('content'):
+Lo agregamos debajo del titulo reestructurando el codigo asi:
+<div class="row">
+    <div class="col">
+        <h1>Reports</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+		<a class="btn btn-secondary" href="/expense_reports/create">Create a new report</a>
+    </div>
+</div>
+Seguido del contenido del row con la tabla
+
+Duplicamos el template con el nuevo nombre de create.blade.php
+
+Modificamos el titulo
+<h1>New Report</h1>
+
+Modificamos el enlace para que regrese al listado de reportes
+<a class="btn btn-primary" href="/expense_reports">Back</a>
+
+En vez de la tabla, dejamos el formulario
+<div class="row">
+    <div class="col">
+        <form action="/expense_reports" method="POST">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Type a title">
+            </div>
+            <button class="btn btn-primary" type="submit" >Submit</button>
+        </form>
+    </div>
+</div>
+
+Modificamos el controlador para el metodo create
+{
+return view('expenseReport.create');
+}
+
+
+
+
+

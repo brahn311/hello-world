@@ -1,0 +1,66 @@
+Video_16
+Fake PUT/PATCH
+
+HTTP define un conjunto de métodos de petición para indicar la acción que se desea realizar
+para un recurso determinado.
+
+PUT
+El modo PUT reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.
+
+PATCH
+El método PATCH  es utilizado para aplicar modificaciones parciales a un recurso.
+
+En Laravel cuando usamos recursos nos pone Put y Patch
+como una opción para modificar nuestros recursos
+
+El problema de esto es que en un form no se puede especificar directamente y solo nos deja hacer GET o POST
+
+Como nos sugieren hacer un Put o un Patch para el recourse
+Laravel tambien nos ofrece un mecanismo para hacerlo llamado ”Fake PUT/PATCH”
+
+Es necesario poner dentro del form de manera auxiliar:
+@method(‘tipo de método usado’)
+
+Para comenzar editamos el template:
+resourse\views\expenseReport\index.blade.php
+Luego del titulo
+<td>{{ $expenseReport->title }}</td>
+Agregamos una nueva columna
+<td><a href="/expense_reports/{{ $expenseReport->id }}/edit">Edit</a></td>
+
+Hacemos una copia del template de:
+resourse\views\expenseReport\index.blade.php
+Lo llamamos:
+edit.blade.php
+Cambiamos el titulo <h1> a:
+Edit Report
+Modificamos la accion:
+action="/expenseReports/{id}"
+
+En el metodo edit del controlador añadimos:
+$report = ExpenseReport::findOrFail($id); 
+return view('expenseReport.edit', [
+	'report' => $report
+]);
+
+Ahora de regreso a: 
+resourse\views\expenseReport\edit.blade.php
+Ya podemos agregarle al titulo de antes
+Edit Report {{ $report->id }}
+Y en el formulario, modificamos el action:
+action="/expense_reports/{id}"
+Ahora luego del helper:
+@csrf
+Añadimos el fake PUT/PATCH:
+@method('put')
+Esto hace que al momento de enviarlo, laravel detecte como PUT 
+
+De regreso al controlador ahora modificamos el metodo:
+update
+Añadiendo como contenido
+$report = ExpenseReport::find($id);
+$report->title = $request->get('title');
+$report->save();
+return redirect('/expense_reports');
+
+        

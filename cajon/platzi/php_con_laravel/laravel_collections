@@ -1,0 +1,91 @@
+Para qué sirven los Collections en Laravel
+https://platzi.com/blog/collection-laravel/
+
+AUTOR:
+@HectorBenitez (platzi)
+
+En PHP una de las estructuras de datos más usadas son los arreglos, sin embargo, tiene una pequeña debilidad
+Dentro de PHP los arreglos no son objetos, y tenemos que usar funciones auxiliares para manipularlos
+Además algunas veces estas funciones son inconsistentes en el orden de los parámetros o en la forma de usarse
+
+Cuando trabajamos en Laravel este problema se soluciona con las Collections
+Es un objeto especial que viene a crear una especie de capa superior dentro de nuestros arreglos tradicionales
+
+Considera que existe un modelo llamado User en tu proyecto de Laravel:
+Cuando nosotros usamos el código: “User::all();“ 
+Lo que realmente nos está regresando no es un array, es más bien un objeto Collection.
+Lo más interesante de esto es que a pesar de ser un objeto, aún puedes seguir accediendo a cada elemento:
+Usando el índice correspondiente
+
+Por ejemplo:
+<
+$users = Users::all(); // Esto regresa un Collection
+$firstUser = $users[0];
+>
+
+Otra forma de crear una Collection es usando el método collect sobre un array regular:
+<
+$users = collect([$user1, $user2]);
+>
+
+Además de poder usar este objeto como un arreglo, también cuenta con otros métodos especiales: 
+
+Para acceder a elementos de una forma más natural:
+<
+$firstUser = $users->first();
+$lastUser = $users->last();
+>
+
+Buscar elementos:
+Las Collections brillan es la forma en la que podemos buscar elementos
+Collection cuenta con diversos métodos que podemos utilizar, por ejemplo:
+
+<
+$users = $users->where(‘name’, ‘Jhon Doe’);
+>
+La colección buscará todos los elemento que tengan la propiedad name con el valor ‘Jhon Doe’, 
+
+Y como esto regresa otra colección, puedes encadenar los métodos:
+<
+$users = $users->where(‘name’, ‘Jhon Doe’)->first();
+>
+
+Recorrer los elementos:
+Métodos especiales que nos permitirán recorrer los elementos y usar un closure sobre ellos
+
+Por ejemplo:
+<
+$filtered = $users->filter(function($user) {
+	return $user->age > 18;
+}); // Regresa a los users con edad mayor a 18
+
+$mapped = $users->map(function($user) {
+	return $user->email;
+}); // regresa un nuevo arreglo solo con los emails de los usuarios
+
+$pluckValues $users->pluck(‘email’); // regresa un nuevo arreglo solo con los emails de los usuarios
+>
+
+Obtener partes del arreglo
+También es muy sencillo obtener sub grupos del arreglo
+
+Por ejemplo:
+<
+$users->take(2); // regresa los primeros 2 elementos
+
+$users->chunk(3); // regresa un arreglo de colecciones y cada una tendrá máximo 3 elementos
+>
+
+Matemáticas:
+Las colecciones nos ofrecen algunos métodos que nos permiten hacer operaciones aritméticas dentro de nuestro código
+Por ejemplo:
+<
+collect([2, 3, 4, 5])->avg(); // nos regresa el valor promedio
+$users->sum(‘age’); // Nos regresa la suma de todas las edades de los usuarios
+>
+
+Recuerda que esto solo es una parte de lo que te pueden ofrecer las colecciones usando Laravel, no olvides consultar la documentación y seguir aprendiendo acerca de lo que ofrecen.
+
+Por supuesto que si lo que quieres es aprender Laravel desde 0 y conocer muchas más cosas que puedes hacer, pues olvides tomar el curso de Laravel que tenemos aquí en Platzi.
+
+

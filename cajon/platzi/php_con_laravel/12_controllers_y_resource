@@ -1,0 +1,82 @@
+Video_12
+Controladores y recursos
+
+Comenzaremos a darle las acciones de CRUD a nuestros reportes
+
+CRUD
+- Create (crear)
+- Read (leer)
+- Update (actualizar o editar)
+- Delete (eliminar)
+
+Crearemos los controladores
+Crearemos las rutas
+
+Revisando los comandos de artisan encontramos
+make:controller
+Revisando su ayuda obtenemos la opcion:
+--resource
+Genera un clase controller como recurso
+
+Usamos el comando
+$ php artisan make:controller ExpenseReportController --resource
+
+Al revisar el controlador, tenemos varios metodos creados:
+-	index: Aquí se despliegan todos los elementos a mostrar.
+-	create: Creará nuevos elementos.
+-	store: Guardará los elementos creados en create.
+-	show: Mostrará a detalle un solo elemento y por eso es que recibe un id.
+-	edit: Edita los elementos que mostramos en show.
+-	update: Almacena los cambios de edit en la base de datos.
+-	destroy: Eliminará los elementos.
+
+Podemos ver la lista de rutas creadas en nuestra app con el comando de artisan
+$ php artisan route:list 
+
+Vamos a crear ahora las rutas en nuestro archivo routes\web.php
+
+No usamos get o post, sino directamente la estructura:
+Route::resource('/nombre_ruta', 'nombre_controlador');
+De esta manera se nos crearán rutas para cada uno de los métodos creados por el controlador resource.
+
+Quedaria asi:
+Route::resource('/expense_reports', 'ExpenseReportController');
+
+Puedes comprobar de nuevo el listado de rutas con:
+$ php artisan route:list  
+ 
+Ahora regresamos a nuestro controlador y en el metodo de index añadimos:
+return ExpenseReport::all();
+
+Podemos encender nuestro serve y realizar pruebas entrando a
+http://127.0.0.1:8000/expense_reports
+Debe aparecer el escapado el arreglo con el registro
+
+Aunque procedemos a crear una nueva carpeta y dentro, el archivo index.blade.php ubicandolo en:
+recourses\views\expenseReport
+Copiado de:
+welcome.blade.php
+
+Podemos borrar el div del contenido y colocamos:
+<div class="content">
+	<div class="row">
+		<div class="col">
+			<h1>Reports</h1>
+			<table class="table">
+				@foreach($expenseReports as $expenseReport)
+					<tr>
+						<td>{{ $expenseReport->title }}</td>
+					</tr>					
+				@endforeach
+			</table>
+		</div>
+	</div>
+</div>
+
+Volvemos a nuestro ExpenseReportController y modificamos el metodo index
+{
+	return view('expenseReport.index', [
+		'expenseReports' => ExpenseReport::all()
+	]);
+}
+ 

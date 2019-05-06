@@ -1,0 +1,78 @@
+Video_24
+Login
+
+Artisan nos ofrece un comando para la autenticacion:
+make:auth
+Es una estructura que nos ofrece un login y registro basico con vistas y rutas
+Lo usaremos como:
+php artisan make:auth
+
+Ahora, cuando ingresas en el url de tu proyecto, te aparece:
+- La pantalla para login
+- Enlace a la pagina de registro
+- Cuando se registra un usuario, lo loguea y redirecciona a la pagina de home (dashboard)
+
+Estos template los puedes modificar o usar otros buscando su ubicacion:
+home:
+- resources\views\home.blade.php
+barra de navegacion (base):
+resources\views\layouts\app.blade.php
+login, register, verify:
+resources\views\auth\.
+
+Que sucede sucede con nuestas rutas de expense_reports?
+Aun no estan protegidas
+
+Proteger el controlador:
+Creamos un constructor para ese controlador
+public function __construct()
+{
+	//
+}
+Agrega la línea: 
+$this->middleware('auth'); 
+Ahora quiere decir que no puede ser accedido si el usuario no está logueado
+
+Tambien podemos usar la plantilla de 
+resources\views\layouts\app.blade.php
+En nuestras paginas protegidas
+Solo cambiando la herencia en nuestro modelo
+En el caso de:
+resources\views\expenseReport\index.blade.php
+cambiamos la linea de la herencia a:
+@extends('layouts.app')
+
+En este caso, nuestro template debemos añadir:
+<div class='content'>
+...
+</div>
+
+Podemos añadir enlaces a la barra de navegacion
+En nuestro templete app:
+resources\views\layouts\app.blade.php
+Ubicamos el 
+<!-- Left Side Of Navbar -->
+Dentro del <ul></ul>
+Añadimos los enlaces:
+<li><a href="/expense_reports" >Expense Reports</a></li>
+
+Para cambiar el titulo de la barra de navegacion:
+Debemos ir a nuestro archivo:
+.env 
+Modificamos la variable:
+APP_NAME=
+
+RETOS:
+Proteger otros controladores
+Agregar la relacion de usuarios y los reportes
+
+INTERESANTES:
+
+Comentario:
+https://platzi.com/comentario/545332/
+Que podemos hacer cuando necesitamos personalizar modulos con distintos permisos?
+Por ejemplo:
+Un usuario para crear los reportes
+Otro usuario usuario que solo pueda leerlos
+Respuesta:
+Para estos casos suelo usar el package Laravel permission y personalizar los middlewares.

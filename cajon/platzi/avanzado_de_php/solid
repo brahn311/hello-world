@@ -1,0 +1,75 @@
+Principios de programación SOLID
+https://platzi.com/blog/principios-de-programacion-solid/
+
+AUTOR:
+@HectorBenitez (platzi)
+
+Los principios de programación SOLID son una excelente guía para mejorar tus habilidades de programación
+Recuerda que los patrones y los principios de programación son solo guías
+No debes seguirlos al pie de la letra, lo importante es que los entiendas
+
+Usalo como herramientas para poder evaluar cada caso de uso
+
+Hablemos un poco de cada uno de estos principios:
+
+Single Responsibility
+Este principio es probablemente uno de los más sencillos para comenzar
+Se refiere a que cada clase debe tener una responsabilidad única y bien definida
+
+Por ejemplo:
+Si necesitamos:
+- crear un endpoint que recibe un request
+- Validar la autenticación
+- Consultar la base de datos
+- Regresar una respuesta
+Deberíamos tratar de hacerlo en múltiples clases
+y no crear una sola clase que cargue con todas las responsabilidades
+
+Open-Close Principle
+Se refiere a que una clase debe estar abierta para su extensión pero cerrada para su modificación
+Esto normalmente lo podemos lograr usando herencia o interfaces
+
+Por ejemplo:
+Si tenemos una sección de nuestra app que recibe un módulo de autenticación
+Y que funciona basado en email/password pero queremos que ahora también funcione con un token jwt
+En lugar de buscar modificar las clases actuales
+Podríamos buscar extender la funcionalidad mediante herencia o interfaces
+
+Liskov Substitution
+Teniendo cualquier abstracción, todas las clases derivadas deben poder funcionar correctamente,
+Es decir, si tenemos una clase que recibe alguna clase Abstracta o una Interfaz
+Cualquier elemento derivado que inyectamos debe poder funcionar dentro de ella
+
+Interface Segregation Principle
+Se refiere a que no debemos forzar clases a implementar elementos o características que no necesitan
+
+Por ejemplo:
+Si tenemos una interfaz que nos obliga a implementar 2 funciones diferentes
+Pero tenemos un objeto que solo utilizará una de esas funciones
+Probablemente lo más adecuado será dividir la interfaz en 2 interfaces con un solo método
+Y dejar que los objetos solo implementen los métodos que realmente van a necesitar.
+
+Dependency Inversion Principle
+Este principio habla de cómo podemos desacoplar nuestro código
+Nos dice que no debemos crear clases con dependencias muy estrictas
+
+Por ejemplo:
+Si tenemos una clase A y dentro del constructor creamos la instancia de una clase B
+Podemos decir que la clase A está muy acoplada con la clase B (una depende directamente de la otra)
+Por lo tanto será más complicado mantenerlas en caso de que necesitemos modificar su funcionamiento
+Entonces podrías:
+Inyectar un objeto de la clase B en lugar de crearlo
+Dividimos un poco más el control al dejar la creación de la clase B fuera de nuestro constructor
+Pero mejor aún:
+Si en lugar de que nuestro método reciba la clase B recibe una abstracción superior
+(Como una clase abstracta o una interfaz) pues estamos desacoplando aún más nuestro código
+Ahora la clase será capaz de intercambiar objetos externos a esta clase
+Sin que ello se afecte el funcionamiento de la misma
+Y tendrás bajo acoplamiento y una mejor estructura en tu proyecto.
+
+Estos principios de programación, así como los patrones de diseño
+Son herramientas muy poderosas que te ayudarán a mejorar como desarrollador cada día
+Sin embargo, recuerda que nunca debes seguir reglas ciegamente
+
+Sigue aprendiendo y sigue practicando para que logres conocerlas a fondo
+Así tener la capacidad de realmente aplicar las cosas que necesitas en el momento en el que las necesitas

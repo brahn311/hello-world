@@ -1,0 +1,51 @@
+Video_19
+Creamos la vista de reportes
+
+La estructura del proyecto es que el reporte contenga varios gastos
+
+Primero convertiremos el nombre del reporte en el expenseReport\index
+Donde aparece el title:
+<td>{{ $expenseReport->title }}</td>
+Lo convertimos en un enlace
+<td><a href="/expense_reports/{{ $expenseReport->id }}">{{ $expenseReport->title }}</a></td>
+
+Le daremos funcionalidad al enlace en el controlador ExpenseReportController con en el metodo 
+show 
+Dentro colocamos algo similar al edit:
+$report = ExpenseReport::findOrFail($id);
+return view('expenseReport.show', [
+    'report' => $report
+]);
+
+Ahora nos falta el correspondiente template blade
+Tomamos y duplicamos el template de: 
+expenseReport\edit.blade.php
+Ahora con el nombre de: 
+show.blade.php
+
+Por ahora modificamos el titulo <h1>:
+<h1>Report: {{ $report->title }}</h1>
+
+Borramos el contenido del ultimo:
+<div class="col">
+Dejando dentro solo el texto:
+Detalles...
+Esto sera el area donde mostrarelos los detalles que haremos lluego
+
+NOTA:
+Laravel ofrece una tecnica llamada model binding
+Esta consta, que en vez de mandar un $id al metodo show
+Le mandemos de una vez con Type hinting un parametro:
+(ExpenseReport $expenseReport)
+Ahora podemos borrara la linea donde esta el:
+findOrFail($id)
+Y donde enviabamos como arreglo:
+'report' => $report
+Sera sustituido por el $report por
+$expenseReport
+
+SUGERENCIA:
+Podemos usar el model binding en el resto de controladores,
+Por ejemplo en los de eliminar que creamos en la
+clase 16 (editar)
+clase 17 (borrar)

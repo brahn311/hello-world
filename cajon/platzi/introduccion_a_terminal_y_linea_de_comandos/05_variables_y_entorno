@@ -1,0 +1,50 @@
+Video_05
+Variables y entorno
+
+Cada vez que abrimos la terminal se ejecuta un archivo llamado:
+.bash_profile 
+Es una serie de comandos que da de alta unas variables.
+NOTA:
+Si no lo encuentras es porque por defecto el sistema usa:
+.profile
+El archivo indica que si tienes un archivo:
+.bash_profile
+Entonces se dejaria de leer
+.profile 
+
+Estos archivos de profile cargan unas variables para el entorno
+
+$ which nombre_del_comando 
+Muestra donde se ubica el binario de ese ejecutable (comando)
+Como por ejemplo el alias
+
+Los archivos ejecutables deben estar en carpetas especificas donde
+Tenemos permiso para ejecutar esos comandos
+
+En la variable:
+$PATH
+Se almacenan los nombre de los directorios que si tienen permiso
+de ejecutar sus binarios por medio de comandos
+
+Como ver tu $PATH
+$ echo $PATH
+Muestra todos los directorios que le das permiso a la computadora
+para que ejecute los binarios de los comandos que alli se encuentran
+
+En el archivo:
+.profile
+Podriamos agregar rutas a esas variables $PATH
+Para de ese modo que usando el comando el sistema si lo pueda ejecutar
+
+alias
+- Explicaron el alias temporal
+
+Despues de un alias puedes colocar el resto de texto e igual lo lee
+
+COMENTARIOS:
+alias tree
+(usado por el profesor en el video)
+ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e  's/^//' -e 's/-/|/'
+
+Enlace a 400 comandos de terminal
+https://blog.desdelinux.net/mas-de-400-comandos-para-gnulinux-que-deberias-conocer/

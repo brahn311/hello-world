@@ -1,0 +1,39 @@
+Video_09
+https://www.youtube.com/watch?v=NW71C3mHWIU
+Migraciones en Artisan
+
+Por el momento solo cuentas con las tablas al momento de hacer la primera migracion
+- Crea la tabla de usuarios
+- Crea la tabla de migraciones
+
+Crearemos la tabla de los reportes de gastos
+
+En la consola usa el comando:
+php artisan
+Utilizaremos el comando:
+make:migration
+Para ver las ayudas del comando:
+php artisan make:migration --help
+Usaremos el metodo donde nos crea la magracion ya con la tabla
+php artisan make:migration create_table_expense_report --create=expense_reports
+
+Para tomar notas la estructura del comando es:
+php artisan <comando> [nombre] <--opcion>[=nombre_de_la_tabla]
+
+Creara el archivo de la migracion y estara lleno con lo basico para crear una tabla
+
+Dentro del metodo 
+up
+Tendras dentro las llamadas a metodos para:
+- increment('id'); // para el primary key
+- timestamps(); // para el create_at, update_at
+
+Dentro del metodo
+down
+Tendras el metodo para elimiar la tabla
+Este metodo aplica cuando usas el comando:
+php artisan migrate:rollback
+Y con ello eliminaria los pasos (los pasos las ves en la tabla de migraciones como bash)
+
+Para aplicar las migraciones y actualizar tu base de datos usas el comando:
+php artisan migrate

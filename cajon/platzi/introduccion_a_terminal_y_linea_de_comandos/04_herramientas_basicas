@@ -1,0 +1,26 @@
+Video_04
+Herramientas básicas
+
+$ xdg-open archivo
+Abre el archivo usando la mejor aplicacion del sistema   
+(El comando en MAC es: open)
+
+$ more archivo
+Muestra el contenido del archivo
+Paginado como lo hace:
+man
+
+$ cat archivo
+Concatena el texto y muestra todo
+(No tiene paginador)
+TRUCO:
+$ cat > nombre_de_archivo
+(el pront quedara esperando)
+Puedes seleccionar otro texto y copiar y pegarlo en la terminal
+Todo lo copiado lo almacenara en nombre_de_archivo
+Es decir, lo que genere cat, > lo guarde en un archivo
+
+$ tail archivo
+Muestra las últimas 10 líneas de un archivo
+$ tail -[numero]
+Especificas la cantidad de lineas mostradas

@@ -1,0 +1,80 @@
+Video_06
+Streams
+
+Cualquier programa posee tres estandares
+- STDIN  -> Input  (Entrada)
+- STDOUT -> output (Salida)
+- STDERR -> Error  (Notificacion de error)
+
+Para practicar esto usaremos un archivo con un script de php:
+<?php 
+echo "número: ";
+$d = trim(fread(STDIN, 100));
+$i = 0;
+
+while(true) {
+    if(++$i % $d == 0) {
+        fwrite(STDOUT, sprintf("El %d es múltiplo de %d.\n", $i, $d));
+    } else {
+        fwrite(STDERR,
+            sprintf("Error, El %d NO es múltiplo de %d \n", $i, $d));
+    }
+    sleep(1);
+}
+?>
+Repite incrementando desde cero al infinito
+Calcula el resto del acumulador entre el numero
+Si el resultado del contador es:
+- Si es multiplo del numero introducido    -> Manda una salida STDOUT
+- Si no es multiplo del numero introducido -> Manda una salida STDERR
+
+Puedes ejecutar el archivo php asi:
+$ php stream.php
+(muestra todas las salidas en pantalla)
+
+>
+(la salida es almacenada en archivo y si tienen valores se sobre-escriben)
+>>
+(la salida es almacenada al final del archivo concatenandose)
+
+$ php stream.php > archivo
+(muestra las salidas de error en pantalla)
+(guarda las salidas normales en archivo)
+
+$ php stream.php 1> archivo_1 2> archivo_2
+(igual pide el numero, pero no muestra nada en pantalla)
+(guarda las salidas normales en archivo_1)
+(guarda las salidas de error en archivo_2)
+(no muestra mas nada por pantalla)
+
+$ php stream.php 1> archivo 2>&1
+(no muestra mas nada por pantalla)
+(ambas salidas seran guardadas en el mismo archivo)
+
+$tail -f archivo
+(muestra la ultima linea del archivo siempre)
+
+Puedes abrir varias terminales (2 mas)
+En cada una usas el mismo comando pero usas:
+$tail -f archivo_1
+(Para ver siempre la ultima linea del archivo_1)
+
+$tail -f archivo_2
+(Para ver siempre la ultima linea del archivo_2)
+
+---
+Asi como las salidas las podemos mandar a archivos
+Podemos usar archivos para introducirlos en programas
+
+Por ejemplo
+Sabiendo que archivo.sql son sentencias SQL que:
+- Crean una nueva DB
+- Crea tablas
+ 
+$ mysql -u root -p < archivo.sql
+Esto abrirá MySQL y pedira la contraseña
+Acto seguido envia el archivo SQL y lo ejecuta
+
+NOTA:
+Control+R hace una busqueda inversa
+Al precionar una tecla, busca el ultimo comando que contenga esa tecla

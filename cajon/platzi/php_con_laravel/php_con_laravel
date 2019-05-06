@@ -1,8 +1,8 @@
 PHP con Laravel
 https://platzi.com/clases/curso-php-laravel/
 
-Fecha de Inicio: 
-Fecha de Finalización: 
+Fecha de Inicio: 27/04/2019
+Fecha de Finalización: 03/05/2019
 
 TEMARIO:
 
@@ -14,9 +14,8 @@ TEMARIO:
 	04	Cómo funciona Blade
 	05	Controladores en Laravel
 	06	Request
---------------------------------------------------------------------------- Avance
+--------------------------------------------------------------------------- Proyecto
 	07	Configuración de laravel
----------------------------------------------------------------------------	Visto
 3. Bases de Datos
 	08	Cómo funcionan las Migraciones de DB
 	09	Migraciones en Artisan
@@ -41,5 +40,3 @@ TEMARIO:
 	24	Login
 8. Cierre
 	25	Cierre
-
---------------------------------------------------------------------------- Resolver	*	https://

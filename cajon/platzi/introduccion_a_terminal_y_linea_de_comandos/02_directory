@@ -1,0 +1,77 @@
+Video_02
+
+La terminal es escribir comandos
+Con el tiempo te aprenderas varios comandos
+
+
+Para consultar archivos y directorios:
+$ ls 
+Muestra los archivos en varias columnas
+
+Las banderas se añaden a los comandos
+y ls tiene varias banderas
+ 
+Por ejemplo:
+$ ls -l
+Muestra los archivos y directorios 
+- listados hacia abajo 
+Ofrece datos adicionales:
+- Si es directorio
+- Permisos 
+- Autor
+- A que grupo pertenece el autor
+- Tamaño en bite
+- Fechas
+- Nombre
+
+Con ls se pueden agrupar las banderas
+
+$ ls -lh
+Escribe la lista y muestra el peso legible humanamente
+
+ls no muestra en que directorio estamos
+ls posee mas comandos
+
+$ pwd
+(Working Directory) Position? Point
+Muestra el punto donde uno se encuentra trabajando
+
+El profesor tiene un comando llamado 
+$ tree
+(Conjunto de comandos anidados)
+Muestra la lista de todas las carpetas (arbol) hacia arriba
+
+Las carpetas que estan hacia la raiz se le llama bajar
+Un punto . es el directorio actual
+dos puntos .. indica el directorio padre
+
+$ more
+Muestra mas sobre un archivo
+- si es un archivo de texto muestra el contenido
+- Si es un directorio te lo especifica
+
+Al escribir un comando que implique especificar un archivo
+El tabulador autocompleta el nombre 98% efectivo
+Si existen distintas posibilidades, te las muestra
+Y te matiene lo escrito para que lo termines de ajustar
+
+Control+l
+(Limpia toda la pantalla)
+
+clear
+(te desplaza hacia abajo simulando que limpiaste)
+
+$cd 
+(change directory / cambio de directorio)
+
+$ cd archivo_o_directorio
+$ cd .. 
+$ cd .
+
+$ cd ~
+$ cd
+(ir a mi home)
+
+$ cd /
+(ir a la raiz)
+
