@@ -1,0 +1,36 @@
+Video_08
+Power Tools: Comandos poderosos de búsqueda
+Usados en el dia a dia
+
+grep
+Busca una cadenas usando expresiones regulares dentro de un arbol de archivos (sean binarios o texto)
+
+Como usarlo:
+$ grep -[opcion] -[opcion] ... [ruta_o_archivo]
+Banderas
+-r (recursivo)
+-e (expresion) seguido_de_la_expresion_a_buscar
+-n (numero de linea donde encuentra dicha cadena)
+-i (case insencible) (no probado)
+
+---
+$ date
+Muestra la fecha y HH:MM:SS 
+
+$ time
+Tiempo del procesador
+
+Esto significa que podemos hacer:
+
+Por ejemplos
+
+$ date; grep -r . -e stream; date
+(Correcto. UBUNTU/VAGRANT) pero fueron muchisicicicimos resultados.... detenido con Control+c
+
+$ grep peliculas.cvs -e Drama | wc -l
+Concatenando comandos
+
+find
+Comando para buscar en nombres tipo de archivos (metadata)
+
+--

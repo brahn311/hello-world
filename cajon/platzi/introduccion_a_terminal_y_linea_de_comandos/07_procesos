@@ -1,0 +1,76 @@
+Video_07
+Procesos desde la terminal
+
+Cada vez que ejecutamos algo en nuestra computadora es un proceso
+
+El orden en que esto se ejecuta y la cercanía del procesador
+Son muy importantes para las prioridades que se le va a dar a dicho proceso
+
+Aprenderemos revisar, manipular y matar los procesos que corren dentro de tu computadora.
+
+Todos los procesos los vemos desde terminal con el comando
+$ top
+
+Entre toda la informacion tomaremos atencion en su 
+PID
+Identificador del proceso (Process ID)
+
+Top
+Permite que le introduzcas parametros (ordenes) presionando la tecla
+o
+El comando es:
+cpu
+(Ordena de mauor a menor los procesos segun la el uso de cpu)
+Otra orden es:
+pid
+(Para ordenar por PID)
+(Esto no lo he probado en linux)
+
+Podemos matar los procesos desde consola
+Usando el comando:
+kill <-bandera> [PID]
+Es lo mas cercano a:
+Control+Alt+Supr > Procesos > Terminar proceso
+Este comando de terminal tiene varias banderas
+-9 significa mata el proceso completamente
+
+Podemos mandar a ejecutar comandos en background
+(Se ejecutaran pero no se mostrara en consola)
+Al usar un comando en terminal, le analidmos:
+[espacio]&
+Muestra el numero de tarea en background y el PID
+Ese proceso se ejecuta por detras pero no interrumpe el terminal, este queda libre
+
+Puedes en una misma linea mandar distintos comandos separados por ; (punto y coma)
+Cada comando se ejecuta y al terminar un comando ejecutara el siguiente
+
+Niveles de interacciones con el usuario
+Background
+Reposo
+En espera que de uno termine para iniciar el siguiente
+
+Lista de todos los procesos que se estan ejecutando (sin interaccion)
+$ ps -wA
+(segun el instructor solo para MAC)
+$ ps -wS
+(segun el instructor solo para Linux)
+
+NOTA:
+Ambos me funcionaron, pero con respuestas distintas (USANDO UBUNTU/VAGRANT)
+(wA = Correcto. UBUNTU/VAGRANT si las muestra)
+(wS = No se que hace. UBUNTU/VAGRANT)
+
+$ ps -wA | wc -l
+wc = What count?
+ -l = lineas
+Muestra cuantas lineas (procesos que se ejecutan)
+(Correcto. UBUNTU/VAGRANT si las muestra)
+$ ps -wA | grep [palabra]
+Busca todos los procesos que tengan en su nombre esa palabra
+(No probado en UBUNTU/VAGRANT)
+
+El grep se usa para ubicar procesos perdidos
+
+$ uptime
+(Correcto. UBUNTU/VAGRANT si las muestra)
+Muestra los procesos en el equipo
