@@ -1,0 +1,34 @@
+video_04
+Como funcionan los circuitos electronicos
+
+La electricidad es un flujo constante de electrones y se miden en:
+voltaje y amperaje
+
+Los voltios
+Son la fuerza que mueve la electricidad guiada por un cable
+Del negativo de una bateria al positivo
+Polo negativo se le llama tierra
+
+El voltaje
+Es como la presion del agua en un tubo
+En una bateria es de 9v
+En un cable USB es de 5v
+En una corriente de pared es de 110v a 220v
+
+Un led con energia se puede recalentar
+Pero se soluciona colocando una resistencia en el negativo
+La resistencia se mide en Ohms (ohmnios)
+
+Los motores electricos poseen internamente imanes que se repelen el uno al otro 
+Estimulados por la electricidad rotando sobre su propio eje
+Los robot se mueven por motores electricos muy precisos llamados servos
+
+Un circuito digital transforma los impulsos electricos en datos binarios 
+Estos se pueden almacenar en ram (solo mientras este encendido)
+En un discoduro (se mantienen y se recuperan luego de apagarse)
+
+La pantalla es una matriz de muchos led microscopicos
+
+Podemos programar nuestras propias computadoras usando: 
+- Arduino
+- Raspberry Pi

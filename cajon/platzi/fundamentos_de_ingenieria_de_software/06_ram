@@ -1,0 +1,32 @@
+Video_06
+Que es la memoria RAM y como funcionan los disco duros
+
+RAM
+---Ver minuto 10:20
+
+
+Discoduros
+Disco de rotacion con cabezal lector
+Secuencial (se lee desde el inicio)
+Estructurada (forma de guardar el archivo del OS: sistemas de archivos)
+
+Windows {FAT32, NTFS}
+Linux {Ext3, Ext4}
+MacOS {HFS, APFS}
+
+Fragmentacion:
+Los fragmentos almacenados hacen mover bruscamente el cabezal lector
+
+Tarda bastante tiempo en encontrar y extraer la informacion
+
+En las cabeceras del discoduro contiene los indices:
+Estos almacenan los archivos e indica cual es su ubicacion en el disco
+Los archivos que se pierden, es cuando no quedan indexados
+los archivos de recuperacion buscan en todo el DD
+cuales son esas estructuras no indexadas
+
+La CPU usa su memoria cache guarda lo fundamental de uso inmediato
+
+Lo menos importante pero activo lo guarda en la RAM
+SSD
+Discos estado solido (chips flash)

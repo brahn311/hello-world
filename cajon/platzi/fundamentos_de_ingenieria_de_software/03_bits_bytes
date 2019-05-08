@@ -1,0 +1,56 @@
+Video_03
+Que son Bits y Bytes
+
+Bytes
+Conjunto de 8 bits, cada bit es un numero binario (uno y cero)
+
+El concepto binario se origina a travez de las ondas de frecuencia de 
+transmision de datos.
+
+Se logro transmitir:
+Audios
+Imagenes
+
+Pero como transmitimos textos?
+
+Al trabajar los metodos digitales se tomaron las altas como 1 y las 
+bajas como 0
+Donde la minima expresion era SI=1 y NO=0
+
+Los procesadores captan esos impulsos electricos y lo traducen para 
+hacer calculos matematicos
+
+Cada impulso se traduce a: en un rango de 0 a 256 valores
+
+El Byte fue estandarizado por IBM en 1956
+Fue usado para procesar la informacion y almacenarla en espacios de memoria
+
+la convercion implica que segun la posicion de digito binario se debe 
+sumar el valor del mismo.
+
+Por ejemplo:
+Binario ___0___1___0___1___0___1___0___1_
+Valor     128  64  32  16  8   4   2   1
+
+NOTA:
+Base binaria usa 2 numeros: 01
+Base Hexadecimal usa 10 digitos: 0123456789
+
+Ese Byte arriba, corresponde a 64+16+4+1 = 85
+
+En el caso de los textos:
+Actualmente es usado el estandar ASCII
+Existen las tablas de simbolos UTF-8
+Donde almacena la correspondencia de bytes y caracteres 
+Tambien existe UTF-16 el cual por tener mas capacidad, para emojis
+UNICODE determina cual es el estandar de codificacion
+
+Por ejemplo:
+@ = Alt+64 = 01000000
+
+La direccion ip: 192.168.1.1
+Casualmente cada valor nunca pasa de 255
+Una IPv4 son de 4Bytes
+
+En las imagenes, cada punto de color es un byte. por ello se dice que
+la computadora posee 255 colores

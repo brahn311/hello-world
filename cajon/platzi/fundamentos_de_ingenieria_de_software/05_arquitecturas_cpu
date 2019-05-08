@@ -1,0 +1,65 @@
+Video_05
+Procesadores y arquitecturas de CPU
+
+Nuestra tecnologia trabaja del mismo modo
+
+Existen distintas arquitecturas:
+PC
+LAPTOPS
+
+Ambas son arquitecturas de escritorio en su estructura
+CPU: intel, AMD 
+Poseen: 
+Ghz (velocidad para procesar)
+Cores (cantidad de procesos)
+
+Pasos para encender la pc:
+> Al pasar la corriente de la fuente de poder la envia a la tarjeta madre
+
+> Se inicia el Bios
+
+Bios:
+Sistema operativo de arranque
+Chequea todos los componentes
+
+> la bios reconoce que tiene un discoduro
+
+Discoduro:
+Para almacenar permanentemente
+Su lectura es lenta y funciona como un tocadiscos
+
+> El discoduro reconoce la existencia del OS
+
+Sistema operativo:
+Controla todos los dispositivos, tareas ejecutandose, procesos, eventos
+
+> El OS se envia al RAM para que sean ejecutados los procesos en el CPU 
+
+RAM:
+Memora de acceso aleatorio, volatil
+Se almacenan los binarios de lo que esta ejecutandose
+
+> Gracias al OS se determina cuando se debe extraer datos del DD
+
+Existen distintos tipos de discoduros:
+IDE
+SSD (originados por los usb, por las memorias flash) 
+
+> El procesador determina y se conecta con otros perifericos
+
+Perifericos:
+Mouse
+Teclado
+Monitor
+Cornetas
+DVD
+Puertos- Conectores USB
+(otros)
+
+Los Teclados, Mouse, Puertos requieren Drivers: 
+Controladores de impulsos electricos y bytes
+
+---
+Buscar:
+Memristor
+Pieza electronica que logra guardar la ona electrica que paso por ella
