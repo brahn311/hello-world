@@ -1,5 +1,5 @@
 Video_08
-Power Tools: Comandos poderosos de búsqueda
+Power Tools: Comandos poderosos de busqueda
 Usados en el dia a dia
 
 grep
@@ -11,7 +11,7 @@ Banderas
 -r (recursivo)
 -e (expresion) seguido_de_la_expresion_a_buscar
 -n (numero de linea donde encuentra dicha cadena)
--i (case insencible) (no probado)
+-i (case insensitive) (no probado)
 
 ---
 $ date
@@ -28,9 +28,28 @@ $ date; grep -r . -e stream; date
 (Correcto. UBUNTU/VAGRANT) pero fueron muchisicicicimos resultados.... detenido con Control+c
 
 $ grep peliculas.cvs -e Drama | wc -l
-Concatenando comandos
+Concatenando comandos (pipe)
 
 find
-Comando para buscar en nombres tipo de archivos (metadata)
+Comando para buscar en nombres y tipo de archivos (metadata)
 
---
+$ find [ruta] -name [nombre] -type [type]
+Por ejemplo:
+$ find . -name *.php -type f
+$ find . -name *.php -type f | wc -l
+$ find . -name *.php -type f | more 
+$ date; find ~/src/ -name *php -type f > resultados ; date
+* comodin (wildcard) busca todo
+-type f (file)
+-type d (directory)
+
+NOTA: 
+Usando:
+more
+La tecla Enter
+Avanza uno a uno cada linea del contenido
+
+Como usar find?
+ubicar archivos que no sepamos la ruta_o_archivo
+
+

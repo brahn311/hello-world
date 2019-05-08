@@ -1,0 +1,16 @@
+Video_09
+Power Tools: curl, zip y tar
+
+curl
+Emulador de un navegador
+$ curl [url] (emula un navegador)
+
+Puedes especificar la salida en un archivo:
+$ curl [url] > [nombre_archivo] 
+$ curl [url] -o [nombre_archivo] igual que el anterior
+
+NOTA:
+Si el archivo descargado es binario, iqual lo muestra en consola
+
+
+
