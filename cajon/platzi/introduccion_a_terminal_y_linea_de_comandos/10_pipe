@@ -1,0 +1,15 @@
+Video_10
+Pipe
+
+Pronunciacion: paip
+Envia el STDOUT de un comando y la envia como STDIN al siguiente comando
+
+Similar al operador > que la salida la guarda en un archivo
+
+Operador
+|
+
+Por ejemplo:
+$ ls -l | wc -l 
+
+No tiene limites para usar, el minimo son 2 comandos

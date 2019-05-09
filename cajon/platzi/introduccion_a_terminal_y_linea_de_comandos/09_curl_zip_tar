@@ -42,17 +42,38 @@ $ unzip -vl respaldo_fotos.zip
 
 Tar
 No comprime, solo empaqueta un archivo que tiene varios adentro
+
 Para comprimir usas el comando
-$ tar cfz nombre_archivo_empaquetado.tar.gz archivos_a_comprimir
+$ tar cfz nombre_archivo_empaquetado.tar.gz archivos_a_comprimir ...
 
 Para descomprimir
 $ tar xfz respaldo_fotos.tar-gz
+
+awk
+Con pipe y expresiones regurales toma diferentes columnas de un .csv
+Puedes especificar la cadena que usaras para separar esas columna
 
 Pipe
 |
 Operador para concatenar comandos
 
 Por ejemplo:
-$ cat archivo.csv | awk -F"::" '{printf("%s - %s/n",$2)}'
+$ cat archivo.csv | awk -F"::" '{printf("%s\n", $)}'
+$ cat archivo.csv | awk -F"::" '{printf("%s - %s\n",$2)}'
 
---- corregir
+Banderas:
+-F	
+formato de separacion
+
+"::"	
+Cadena de separacion
+
+'{printf(expresiones_regualres, columnas)}'
+Especifica como sera la salida)
+
+$ 
+Sin numero: todas las columnas
+Con numero: identificador de la columna
+
+NOTA:
+links es un navegador por consola
