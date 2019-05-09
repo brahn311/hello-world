@@ -3,7 +3,14 @@ Power Tools: curl, zip y tar
 
 curl
 Emulador de un navegador
-$ curl [url] (emula un navegador)
+Simula conectarse a un servidor (console download manager)
+Extrae o descarga la informacion
+- Imagenes, archivos de texto, CSV,
+Puedes simular cookies, conexiones
+
+Muestra un panel mostrando metadatos e informacion de la descarga
+
+$ curl [url]
 
 Puedes especificar la salida en un archivo:
 $ curl [url] > [nombre_archivo] 
@@ -12,5 +19,40 @@ $ curl [url] -o [nombre_archivo] igual que el anterior
 NOTA:
 Si el archivo descargado es binario, iqual lo muestra en consola
 
+(curl no esta instalado en debian 9 > Por favor buscar como instalar)
 
+zip
+Comprime archivos
+$ zip nombre_del_paquete_comprimido.zip archivos_a_comprimir
 
+Por ejemplo:
+$ zip respaldo_fotos.zip *.jpg
+(Guarda las fotos en un zip)
+
+Extraer el contenido del .zip:
+Si extraes en carpeta nueva, debes crearla primero
+Mover el archivo zip a esa ubicacion
+Usa el comando para extraer:
+$ unzip nombre_del_paquete_comprimido.jpg
+(no destruye el archivo original)
+
+Mostrar el contenido del *.zip
+$ unzip -vl respaldo_fotos.zip
+(Muestra un listado con todo el contenido)
+
+Tar
+No comprime, solo empaqueta un archivo que tiene varios adentro
+Para comprimir usas el comando
+$ tar cfz nombre_archivo_empaquetado.tar.gz archivos_a_comprimir
+
+Para descomprimir
+$ tar xfz respaldo_fotos.tar-gz
+
+Pipe
+|
+Operador para concatenar comandos
+
+Por ejemplo:
+$ cat archivo.csv | awk -F"::" '{printf("%s - %s/n",$2)}'
+
+--- corregir
