@@ -1,7 +1,7 @@
 Introducción a Terminal y Línea de Comandos
 
 Inicio: 04/05/2019
-Finalizacion:
+Finalizacion: 09/05/2019
 
 Temario
 
@@ -12,7 +12,6 @@ Temario
 	04	Herramientas básicas
 	05	Variables y entorno
 	06	Streams
----------------------------------------------------------------------------	Avance
 	07	Procesos desde la terminal
 	08	Power Tools: Comandos poderosos de búsqueda
 	09	Power Tools: curl, zip y tar
@@ -20,8 +19,5 @@ Temario
 	11	Crontab: Una herramienta para automatizar tareas desde la terminal
 	12	Links
 	13	Usuarios y Permisos
-	14	Qué sigue después de aprender a usar la terminal15	
-
-	
----------------------------------------------------------------------------	Pendiente	*	https://
----------------------------------------------------------------------------	Visto
+	---------------------------------------------------------------------------	Avance
+	14	Qué sigue después de aprender a usar la terminal15

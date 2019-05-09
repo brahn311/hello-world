@@ -1,0 +1,29 @@
+Video_12
+Links
+
+du
+disk usage
+Muestra a partir de nuestra ubicacion cuanto espacio ocupa cada directorio
+
+Banderas:
+-h (entendible para humanos)
+-d 1 (profundidad de un nivel)
+
+links
+Links simbolicos
+Accesos directos a otros nodos (directorios)
+
+$ ln -s ruta_origen nombre_alias
+
+Banderas
+-s (crea links simbolicos donde puedo borrar sin alterar el origen)
+
+Para borrar lo puedes borrar tranquilamente usando el comando
+$ rm nombre_del_link
+No es necesario el -r usado para borrar carpetas, porque es un link
+
+NOTAS:
+Usado en windows con el terminal de git
+Funciona, aunque al parecer copio la carpeta
+y al borrarlo indica que es un directorio y se borro usando 
+$ rm -r

@@ -1,0 +1,57 @@
+Video_11
+Crontab: Una herramienta para automatizar tareas desde la terminal
+
+Una de las herramientas más potentes de los sistemas UNIX
+Nos permite programar la ejecución de diferentes scripts
+Podemos agendar todo lo que necesitemos para facilitar nuestro trabajo y automatizar tareas
+Las tareas se ejecutan "si y solo si" la computadora está encendida
+
+$ contrab 
+
+Banderas:
+-l (despliega el crontab que tenemos instalado)
+
+Las primeras 5 columnas especifican el momento exacto que se ejecuta la tarea
+La 6ta columna define la tarea que se requiere ejecutar
+
+Columnas:
+1ra	minuto		0-59
+2da	hora		0-23
+3ra	día del mes	1-31
+4ta	mes		1-12
+5ta	día de semana	0-7 (0 y 7 equivalen a domingo)
+6ta	script o comando que queremos que se ejecute
+
+___*______*______*______*______*___ 
+   min    hora   dia    mes    semana
+
+Usas TAB o SPACE para separar las columnas
+En los valores, se permiten listas (sin espacios), se permiten secuencias (1-5)
+Asterisco = TODAS
+
+Formatos de valores (por ejemplo para la 1ra columnas):
+1
+1,10,18
+1-10
+*/5 (cada 5 munutos, mientras el resultado de la division sea exacta)
+*
+
+-e (edita las tareas que tengo agendadas, pressionando la letra i podemos escribir, tipo vi)
+
+Por ejemplo:
+* * * * * php $HOME/src/git/beco/cli/scripts/ejemplos-php/3-now.php >> ~/src/git/beco/cli/output_cron 2>&1
+
+NOTA:
+Los comandos o scripting con bash, php, python o perl se pueden ejecutar con crontab
+En los minutos siempre debes poner el minuto especifico
+
+-- Para windows:
+Schtasks
+Los parametros son los siguientes:
+/Create		Crea una nueva tarea programada.
+/Delete		Elimina las tareas programadas.
+/Query		Muestra todas las tareas programadas.
+/Change		Cambia las propiedades de la tarea programada.
+/Run		Ejecuta la tarea programada a petición.
+/End		Detiene la tarea programada que se está ejecutando actualmente.
+/ShowSid	Muestra el identificador de seguridad correspondiente al nombre de una tarea programada.

@@ -2,14 +2,59 @@ Video_10
 Pipe
 
 Pronunciacion: paip
-Envia el STDOUT de un comando y la envia como STDIN al siguiente comando
+Envia el STDOUT de un comando y la envia como STDIN a otro comando
+No tiene limites para usar, el minimo son 2 comandos
 
-Similar al operador > que la salida la guarda en un archivo
+NOTA PERSONAL:
+Yo lo encuentro excelente para operar sobre ficheros y filtrar datos por consola
 
-Operador
+Operador:
 |
 
 Por ejemplo:
 $ ls -l | wc -l 
+$ comando_1 | comando_2
+(explora el contenido de la carpeta y cuenta cuandas lineas hay en esa salida
 
-No tiene limites para usar, el minimo son 2 comandos
+Ejemplos realizados
+$ grep -r airport_list.csv -e NY | wc -l
+$ cat airport_list.csv | grep USA | wc -l
+
+NOTAS:
+sed
+Busca o modifica cadenas usando condiciones de expresiones regulares
+
+SED (Stream EDitor) es un editor de flujos y ficheros de forma no interactiva
+Permite modificar el contenido de las diferentes líneas de un fichero
+en base a una serie de comandos o un fichero de comandos (-f fichero_comandos)
+
+Sed recibe por stdin (o vía fichero) una serie de líneas para manipular
+y aplica a cada una de ellas los comandos que le especifiquemos
+a todas ellas, a un rango de las mismas o a las que cumplan alguna condición
+
+El formato básico de uso de sed es:
+# sed [-ns] '[direccion] instruccion argumentos'
+Donde:
+
+[direccion]
+Es opcional, siendo estas:
+- un número de línea (N)
+- un rango de números de línea (N,M)
+- búsqueda de regexp (/cadena/) indicando el ámbito de actuación de las instrucciones
+Si no se especifica [direccion], se actúa sobre todas las líneas del flujo.
+
+Instruccion puede ser:
+i = Insertar línea antes de la línea actual.
+a = Insertar línea después de la línea actual.
+c = Cambiar línea actual.
+d = Borrar línea actual.
+p = Imprimir línea actual en stdout.
+s = Sustituir cadena en línea actual.
+r fichero = Añadir contenido de “fichero” a la línea actual.
+w fichero = Escribir salida a un fichero.
+! = Aplicar instrucción a las líneas no seleccionadas por la condición.
+q = Finalizar procesamiento del fichero.
+-n: No mostrar por stdout las líneas que están siendo procesadas.
+-s: Tratar todos los ficheros entrantes como flujos separados.
+
+FUENTE: http://www.sromero.org/wiki/linux/aplicaciones/

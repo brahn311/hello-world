@@ -16,10 +16,14 @@ Puedes especificar la salida en un archivo:
 $ curl [url] > [nombre_archivo] 
 $ curl [url] -o [nombre_archivo] igual que el anterior
 
+Ejemplo realizado:
+$ curl https://raw.githubusercontent.com/datasets/airport-codes/master/data/airport-codes.csv > airport_list.csv
+
 NOTA:
 Si el archivo descargado es binario, iqual lo muestra en consola
 
 (curl no esta instalado en debian 9 > Por favor buscar como instalar)
+(curl funciona windows. consola git)
 
 zip
 Comprime archivos
@@ -36,7 +40,7 @@ Usa el comando para extraer:
 $ unzip nombre_del_paquete_comprimido.jpg
 (no destruye el archivo original)
 
-Mostrar el contenido del *.zip
+Solo mostrar el contenido del *.zip
 $ unzip -vl respaldo_fotos.zip
 (Muestra un listado con todo el contenido)
 
@@ -45,9 +49,11 @@ No comprime, solo empaqueta un archivo que tiene varios adentro
 
 Para comprimir usas el comando
 $ tar cfz nombre_archivo_empaquetado.tar.gz archivos_a_comprimir ...
+(cfz = create file zip / zip = algorit)
 
 Para descomprimir
 $ tar xfz respaldo_fotos.tar-gz
+(xfz = extract file zip / zip = algorit)
 
 awk
 Con pipe y expresiones regurales toma diferentes columnas de un .csv
@@ -58,22 +64,31 @@ Pipe
 Operador para concatenar comandos
 
 Por ejemplo:
-$ cat archivo.csv | awk -F"::" '{printf("%s\n", $)}'
-$ cat archivo.csv | awk -F"::" '{printf("%s - %s\n",$2)}'
+// $ cat archivo.csv | awk -F"," '{printf("%s\n", $)}'
+$ cat archivo.csv | awk -F"," '{printf("%s - %s\n" ,$2, $3)}'
 
 Banderas:
--F	
-formato de separacion
+-F"," (formato de la cadena de separacion de las columnas del archivo)
+'{printf("expresiones_regualres", $columnas)}' (especifica como sera la salida)
+%s - %s\n (dos variables de datos separadas por guion con salto de linea) 
+$2, $3 (las columnas que seran usados para sustitir las variables de la expresion regular)
 
-"::"	
-Cadena de separacion
-
-'{printf(expresiones_regualres, columnas)}'
-Especifica como sera la salida)
-
-$ 
-Sin numero: todas las columnas
-Con numero: identificador de la columna
+Ejercicios realizados:
+$ grep -r airport_list.csv -e ZY | awk -F"," '{printf("%s - %s\n", $2, $3)}'
+(funciono en windows. consola git)
 
 NOTA:
 links es un navegador por consola
+
+COMENTARIOS:
+https://platzi.com/comentario/299231/
+Diferencias de curl y wget:
+
+wget
+Herramienta para descargar archivos de servidores
+Permite la descarga recursiva de archivos (curl no lo puede hacer)
+
+curl
+Herramienta que permite el intercambio de peticiones/respuestas con un servidor
+Esta basado en libcurl que es una librería con varios subcomandos 
+(wget es solo un comando del sistema)

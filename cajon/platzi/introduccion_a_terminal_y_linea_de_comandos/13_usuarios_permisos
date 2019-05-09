@@ -1,0 +1,63 @@
+Video_13
+Usuarios y Permisos
+
+whoami
+Identifica cual es el usuario
+
+Permisos
+Los puedes visualizar como la primera columna al usar el comando
+ls -l
+
+Por ejemplo:
+drwxr--r--
+
+Formato:
+-/---/---/---
+
+- (dir/link/file)
+--- (1ra terna) permisos del owner (yo)
+--- (2da terna) permisos del grupo
+--- (3ra terna) permisos de cualquiera (todo el mundo)
+421 (valores para binarios)
+
+Permisos:
+r = 4 (permiso de lectura)
+w = 2 (permiso de escritura)
+x = 1 (permiso de ejecucion)
+
+Representaciones:
+
+ls	valor
+—--	0
+–-x	1
+-w-	2
+-wx	3
+r--	4
+r-x	5
+rw-	6
+rwx	7
+
+Podemos resumir las ternas solo por el valor de cada terna
+666 == rw-rw-rw-
+750 == rwxr-x---
+777 == rwxrwxrwx
+
+Para modificar los permisos:
+$ chmod permisos archivo
+
+$ chmod 740 nombre_del_archivo.php
+
+Como especificar quien deseas que ejecute a un archivo *.php:
+Primero busca la ruta de en donde esta almacenado el comando php
+$ which php
+Copia en portapapeles el resultado
+En la primera linea añade
+#!
+Pega la respuesta del which:
+#!/usr/local/bin/php
+
+Ya desde la terminal ya no es necesario usar el comando php
+$ php nombre_del_archivo.php
+
+Ahora para ejecutar solo debes tipear:
+$ ./nombre_del_archivo.php

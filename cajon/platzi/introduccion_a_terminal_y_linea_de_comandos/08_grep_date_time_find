@@ -11,7 +11,8 @@ Banderas
 -r (recursivo)
 -e (expresion) seguido_de_la_expresion_a_buscar
 -n (numero de linea donde encuentra dicha cadena)
--i (case insensitive) (no probado)
+-i (case insensitive)
+-v (excluye)  seguido_de_la_expresion_a_buscar
 
 ---
 $ date
