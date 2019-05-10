@@ -1,0 +1,20 @@
+Video_05
+El caracter (.)
+
+Cadena de Caracteres
+Su nombre es autoconcluyente
+Son secuencias de caracteres
+No todos los caracteres son visibles, por ejemplo: el espacio, el enter
+
+En este curso se verán únicamente caracteres ASCII (el encoding ASCII)
+
+El caracter punto (.) significa CUALQUIER caracter
+
+Por ejemplo abre el archivo en la carpeta:
+regex\liners.txt
+Usando atom presiona las teclas:
+Control+f
+(Se desplegara en la parte inferios un control con varios botones)
+Realiza las busquedas:
+En las opciones activa el boton [.*] (Use Regex)
+En el input "find" presiona el punto (.)

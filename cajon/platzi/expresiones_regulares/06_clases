@@ -1,0 +1,32 @@
+Video_06
+Las clases predefinidas y construídas
+
+Del punto, nacen tres clases predefinidas por la sintaxis de Regex
+
+Clases:
+
+Digito
+\d
+(back slash + d minuscula)
+
+Palabra
+\w
+Cualquier caracter dentro de una palabra, incluido numeros y el guion bajo (_)
+
+Espacios
+\s
+Incluye el espacio simple, tabulador (caracter o doble espacio)
+
+Por ejemplo en la carpeta:
+regex\liners.txt
+Realiza las busquedas:
+\d
+\d\d\d
+\w
+\s
+
+---
+ver minuto 6:51
+
+NOTA:
+El archivo liners.txt me toma como un espacio el restante del salto de linea

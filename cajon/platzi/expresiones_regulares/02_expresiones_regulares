@@ -1,0 +1,18 @@
+Video_02
+Qué son las expresiones regulares
+
+Son tan complicadas como uno desee
+Son faciles de crear
+Es crear patrones donde se determine si cadenas de caracteres coinciden o no
+Estos patrones pueden aplicarse a lineas o inputs
+
+Un ejemplo de uso:
+Limpiar un archivo de texto plano como un *.csv
+
+Donde observando la linea caracteres del inputs
+Decides con que cosas te quieres quedar de la linea
+Identificando los elementos que seran constantes y determinantes para el patron
+
+Las expresiones regulares son importantes tanto para el Frontend o Backend
+
+Prácticamente todos los lenguajes tienen librerías o módulos para manejar expresiones regulares

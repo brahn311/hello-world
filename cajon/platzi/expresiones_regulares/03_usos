@@ -1,0 +1,19 @@
+Video_03
+Aplicaciones de las expresiones regulares
+
+Conocodas como regex (regular expresions)
+
+Identifica patrones para encontrar cadenas
+- mayusculas
+- minusculas
+- numeros
+- simbolos
+Busca dentro de un rango especifico combinaciones de todas estas
+
+Extraer datos utiles de archivos de texto inmenso (logs)
+Identificar valores
+Validar inputs
+
+BUSCAR:
+https://regex101.com
+Pagina para probar expresiones regulares

@@ -1,0 +1,45 @@
+Curso de Expresiones Regulares
+
+Fecha de Inicio: 10/05/2019
+Fecha de Finalización:
+
+TEMARIO:
+
+1. Introducción a las Expresiones Regulares
+	01	Bienvenida al curso
+	02	¿Qué son las expresiones regulares?
+	03	Aplicaciones de las expresiones regulares
+	04	Introducción al lenguaje de expresiones regulares
+2. El lenguaje: caracteres, operadores, y construcciones
+	05	El caracter (.)
+	--------------------------------------------------------------------------- Avance
+	---------------------------------------------------------------------------	Visto
+	06	Las clases predefinidas y construídas
+	07	Los delimitadores: +, *, ?
+	08	Los contadores {1,4}
+	09	El caso de (?) como delimitador
+	10	Not (^), su uso y sus peligros
+	11	Reto: Filtrando letras en números telefónicos utilizando negaciones
+	12	Principio (^) y final de linea ($)
+3. Uso práctico de Expresiones Regulares
+	13	Locaciones
+	14	Logs
+	15	Teléfonos
+	16	URLs
+	17	Mails
+	18	Nombres(?) Reto
+4. Usos avanzados en Expresiones Regulares
+	19	Búsqueda y reemplazo
+5. Expresiones Regulares en lenguajes de programación
+	20	Uso de REGEX para descomponer querys GET
+	21	Explicación del Proyecto
+	22	Perl
+	23	PHP
+	24	Utilizando PHP en la práctica
+	25	Python
+	26	Java
+	27	Java aplicado
+	28	JavaScript
+	29	`grep` y `find` desde consola
+
+--------------------------------------------------------------------------- Resolver

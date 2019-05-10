@@ -1,0 +1,24 @@
+Video_04
+Introducción al lenguaje de expresiones regulares
+
+Usaremos de ejemplo extraer numeros telefónicos
+
+Para construir los enunciados debemos:
+Primero buscamos la forma en que son presentados los datos
+Estudiamos todas las posibilidades que tendremos en los numeros de distintos paices
+
+Identificar las separaciones, el simbolo del separador y su ubicacion
+Un dígito se puede expresar con /d
+Caracter de una palabra: /w
+
+A esos caracteres les damos forma
+Especificamos cuantas repeticiones queremos
+
+RECURSOS:
+https://github.com/celismx/REGEX/
+
+PROGRAMA:
+Usaremos Atom como motor para expresiones regulares
+
+NOTA:
+No es recomendable usar la busqueda por lineas en formato JSON
