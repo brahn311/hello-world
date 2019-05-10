@@ -1,7 +1,13 @@
-Curso de Administración de Servidores Linux
+﻿Curso de Administración de Servidores Linux
+
+Fecha de Inicio: 10/05/2019
+Fecha de Finalización:
+
+TEMARIO:
 
 1. Introducción a Linux
 	01	¿Por qué se usa Linux en servidores?
+---------------------------------------------------------------------------	Visto
 	02	Configuración y guía básica usando Virtualbox
 	03	Iniciar un servidor Linux con AWS
 	04	Manejo de sesiones remotas con tmux y SSH
@@ -57,4 +63,5 @@ Curso de Administración de Servidores Linux
 	57	Cómo podemos monitorear servidores
 	58	Qué distribución elegir y otras dudas frecuentes
 
-
+--------------------------------------------------------------------------- Resolver	*	https://
+--------------------------------------------------------------------------- Avance
