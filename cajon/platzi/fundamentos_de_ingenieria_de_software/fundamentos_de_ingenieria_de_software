@@ -1,25 +1,25 @@
 Fundamentos de Ingeniería de Software
 
-Fecha de Inicio:
+Fecha de Inicio: 06/05/2019
 
 TEMARIO:
 
 1. Computación, procesadores y memoria
 	01	Qué es un system on a chip
 	02	Cómo funcionan las computadoras y los teléfonos móviles
---------------------------------------------------------------------------- Avance
 	03	Qué son Bits y Bytes
 	04	Cómo funcionan los circuitos electrónicos
----------------------------------------------------------------------------	Visto
 	05	Procesadores y arquitecturas de CPU
 	06	Qué es la memoria RAM y cómo funcionan los discos duros
 	07	GPUs, tarjetas de video y sonido
 	08	Periféricos y sistemas de entrada de información
 	09	Arquitectura de la computación
+--------------------------------------------------------------------------- Avance
 2. Cómo funciona Internet
 	10	Introducción a las redes, protocolos e Internet
 	11	Puertos y protocolos de red
 	12	Qué es una dirección IP y el protocolo de Internet
+---------------------------------------------------------------------------	Visto
 	13	Cables submarinos, antenas y satelites en Internet
 	14	Qué es un dominio, DNS o Domain Name System
 	15	Cómo los ISP hacen Quality of Service o QoS

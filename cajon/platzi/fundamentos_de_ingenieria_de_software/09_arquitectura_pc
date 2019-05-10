@@ -1,0 +1,43 @@
+Video_09
+Arquitectura de la computaciÃ³n
+
+Video resumen del origen de los computadores
+La estandarizacion
+La evolucion
+Y llegada de los computadores actuales
+Laptos, tablets, smartphones
+
+Todo este camino es llamado la arquitectura del computador
+
+En conjunto de todos los procesos de transformacion de la electricidad
+Hasta el procesamiento de datos binarios
+
+---
+En el inicio de la computación no existía un procesador y una memoria aparte
+Las computadoras estaban más cerca de ser una máquina de escribir que una de las computadoras actuales
+Las PC eran máquinas grandes y pesadas y requerían ser trasladadas en aviones o camiones
+El código se escribía en tarjetas perforadas que representaban los 1 y 0
+
+Hoy en día tenemos computadoras en nuestros propios bolsillos y las cargamos a todos lados
+tenemos laptops cuyos monitores se pueden desacoplar y funcionan como tablets
+tenemos microchips que sirven como una computadora común y corriente
+
+Ese salto evolutivo en la computación ocurre gracias a
+La estandarización de la arquitectura de las computadoras
+
+Decidimos que:
+8 bits son 1 Byte 
+1024 Bytes son un KiloByte
+1024 KB son 1 MB
+1024 MB son 1 GB
+1024 GB son 1 TB
+la CPU es la encargada de procesar
+la GPU representa datos visualmente
+Y existe un puerto común como el USB que nos permite conectar otros dispositivos externos
+
+Estandarizamos la transferencia de datos y los protocolos de comunicación
+Hay un formato definido para cada tipo de imágenes
+Hay una forma de transmitir el texto HTML para que el navegador lo interprete 
+Y finalmente pueda mostrarnos elementos visuales en la pantalla
+
+Definimos una forma para comprimir un archivo.

@@ -1,0 +1,31 @@
+Video_08
+Periféricos y sistemas de entrada de informacion
+
+Se puede graficar el funcionamiento del sistema operativo como anillos
+
+Anillo 0: Kernel
+El nucleo central del sistema (del anillo) se le conoce como Kernel
+Este se carga en la memoria RAM
+El kernel del OS tiene acceso a todo en nuestra computadora: 
+- nuestros archivos
+- nuestros periféricos
+- los datos de las aplicaciones
+
+Permisos de aplicaciones
+La administracion de permisos se encuentran entre el kernel y la siguiente capa, los driver
+
+Anillo 1: Drivers
+Pequeñas piezas de software que permiten interpretar las señales eléctricas del hardware
+Para que el sistema operativo pueda comunicarse con ellos
+
+Anillo 2: Drivers especializados
+Otro set de drivers que pueden ser los controladores de arranque (driver de aplicacion)
+Estos deben pedirle permisos a los drivers anteriores para poder acceder al hardware
+
+NOTA:
+Cuanto más nos alejamos del kernel, menos privilegios poseen 
+
+Anillo 3: Aplicaciones
+La última capa la representan las aplicaciones
+Las aplicaciones no deberían poder acceder al hardware directamente
+Esta es la capa que menos permisos tiene

@@ -1,0 +1,27 @@
+Video_07
+GPUs, tarjetas de video y sonido
+
+La imagen en el computador no es estatica
+Son impulsos electricos se actualizan linea a linea en la matriz de la pantalla
+La frecuencia de actualizacion es medida en Hrz, diseñada para ser imperseptible al ojo humano
+
+Estos calculos lo puede realizar, pero en la arquitectura decidieron des-centralizar esa tarea
+Diseñaron la tarjeta madre para que un chip aparate del CPU se dedicara a esas tareas
+
+Graphic Processing Unit
+La GPU procesa los datos para mostrar en la pantalla
+La pantalla muestra las imagenes como una gran matriz llena de diminutos leds
+Es la GPU que calcula y refresca las imagenes
+Regularmente estas GPU vienen con capacidades estandar integradas en las tarjetas madre
+Para expandir esa capacidad se añaden a la tarjeta madre otra "tarjeta de video"
+
+Tarjeta de video
+GPU especial con memorias adicionales para realizar todos los calculos matematicos especificos
+Permitiendo renderizar las imagenes, procesar el 3D, y trasladarlo a la salida del monitor
+Estas tarjetas se conectan por medio de los slots PCI Express
+
+Estos procesadores tambien se le agregan los codex
+Para que entiendan como operar cada formato sin hacer uso del CPU 
+Y logren saber como entender los datos binarios y convertirlos en imagenes
+
+Los GPU poseen mas cores que un CPU pero tienen menos frecuencia (Ghz)

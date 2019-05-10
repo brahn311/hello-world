@@ -1,10 +1,6 @@
 Video_06
 Que es la memoria RAM y como funcionan los disco duros
 
-RAM
----Ver minuto 10:20
-
-
 Discoduros
 Disco de rotacion con cabezal lector
 Secuencial (se lee desde el inicio)
@@ -27,6 +23,30 @@ cuales son esas estructuras no indexadas
 
 La CPU usa su memoria cache guarda lo fundamental de uso inmediato
 
+Los bus de datos historicamente se llaman ATA
+Actualmente los buses de datos son mucho mas rapidos y son llamados SATA
+
 Lo menos importante pero activo lo guarda en la RAM
 SSD
 Discos estado solido (chips flash)
+
+RAM
+Random Access Memory
+Memoria de acceso Aleatorio
+
+Alli se encuentran cargados los archivos que el CPU necesita tener activos en 2do plano
+
+Posee un indice compartido con el CPU que almacena la direccion de memoria
+
+Los programadores llaman eso como nombres de variables
+
+Las variables son los indices compartidos, solo que en memoria usa el sistema hexadecimal
+El contenido de la variables se almacenan en formato binario
+
+La tansmision de datos del CPU con la tarjeta madre se realiza por medio de "bus de datos"
+Anteriormente estos bus de datos eran cables muy anchos y delgados de muchos hilos
+En la actualidad esos bus son sustituidos por circuitos dentro de la misma tarjeta madre
+
+La conexion se realiza por medio de los "bridges" (puentes)
+Los puentes se conectan con las ranuras de expansion que pueden ser sockets DDR, DDR2, DDR3
+Los sockets depenten del modelo y diseño de la tarjeta madre
