@@ -3,7 +3,7 @@ Las clases predefinidas y construídas
 
 Del punto, nacen tres clases predefinidas por la sintaxis de Regex
 
-Clases:
+Clases predefinidas:
 
 Digito
 \d
@@ -25,8 +25,28 @@ Realiza las busquedas:
 \w
 \s
 
----
-ver minuto 6:51
+Clases construídas:
+Permite hacer busquedas mas potentes y mas especificas
+[]
+[0-9] Identico a \d
+[a-z] Solo letras minusculas (excluye letras acentuadas y con tildes)
+[a-zA-Z] Solo letras mayusculas y minusculas (excluye letras acentuadas y con tildes)
+[a-zA-Z0-9_] Identico a \w
+
+Gracias a ello, inferimos que:
+[0-2]
+El guion (-) es usado para especificar rangos y extiende la expresion
+[a-zA-Z0-9_]
+Pueden contener varias expresiones una tras otra (sin separadores)
+
+Operador para escapar un wildcard (usar como caracter y no como operador)
+\
+En caso de querer incluir el punto (.) no como wildcard, sino como caracter
+[a-zA-Z0-9_\.]
+Esto explica porque \d\w\s no son reconocidos como letras
+
+RETO:
+Construir una clase para identificar "hexadecimales"
 
 NOTA:
 El archivo liners.txt me toma como un espacio el restante del salto de linea

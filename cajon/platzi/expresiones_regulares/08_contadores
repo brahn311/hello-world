@@ -1,0 +1,24 @@
+Video_08
+Los contadores {1,4}
+
+Aplicando a un carácter o clase que lo preceda
+Indica que busque la cantidad deseada de caracteres
+
+{minimo, maximo}
+
+Por ejemplo:
+\d{2}   -> 2 dígitos
+\d{2,2} -> 2 dígitos
+\d{2,}  -> 2 o más dígitos
+\d{2,4} -> 2, 3, y hasta 4 dígitos
+\d{0,2} -> 0, 1, y hasta 2 dígitos
+
+Usando Atom dio errores cuando:
+- Invertir los valores {maximo, minimo}
+- Dejar vacio el minimo {,2}
+
+Agrupar expresiones
+()
+
+Ejemplos realizados:
+(\d{2}[ \.\-]?){5}

@@ -1,0 +1,25 @@
+## wildcard
+. (cualquier caracter)
+- (rangos: desde/hasta segun codificacion ASCII)
+
+## clases predefinidas
+\d  (digito)
+\w  (palabra)
+\s  (espacios, caracteres invisibles: tabulador y/o doble espacio)
+
+## clases construídas
+[]
+
+## simbolos escapados
+\. (punto como simbolo)
+
+## delimitadores
+? (cero o una sola vez)
+* (cero o más veces)
++ (una o más veces)
+
+## contadores
+{minimo, maximo}
+
+## agrupaciones
+()

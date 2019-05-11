@@ -1,0 +1,28 @@
+Video_07
+Delimitadores
+
+Existe dos stipos basicos de conteos:
+- Que "exista"
+- Que "no exista"
+
+?
+Cero o una sola vez
+
+*
+Cero o más veces
+
++
+Una o más veces
+
+Por ejemplo:
+. -> Todos los caracteres (individualmente)
+.* -> Todo caracter desde ninguno o mas (termina agrupandolos totalmente)
+
+Siempre se aplican al carácter o sentencia que los preceden
+
+[a-z]? -> Una letra minuscula entre a-z que puede "no estar" o "estar una sola vez"
+
+\d* -> Un digito que puede "no estar" o "estar muchas veces"
+greedy: avaricioso (Termina agrupando todos)
+
+\d+ -> Un digito que puede "estar una sola vez" o "estar muchas veces"
