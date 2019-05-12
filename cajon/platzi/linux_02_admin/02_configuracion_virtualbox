@@ -1,62 +1,127 @@
 Video_02
 Configuración y guía básica usando Virtualbox
 
-Comandos utilizados en el vídeo:
+Configuraremos la maquina virtual con VirtualBox
+Ubuntu server 16.04
 
-ifconfig: Permite ver las network interfaces
+NO SE MOSTRARA COMO SE INSTALA
+Porque los administradores no instalan
+Los servidores o servicios (AWS, Google) usan maquinas virtuales
+Estas ya vienen listas y configuradas para usar
+Ademas que depende del equipo VirtualBox puede correr sin problemas
 
-ifdown [network interface]: Desactiva dicha interface
+Primero debes descargar la imagen del curso:
+https://i.platzi.com/Linux/ubuntu_server.ova
+Recuerda debes tener instalado VirtualBox
 
-ifup [network interface]: Activa dicha interface
-Los binarios se encuentran en: /sbin/if…
+Ya dentro del programa virtualbox:
+En la opcion de File > Import
+Aparecela la ventana:
+Import Virtual Appliance > Appliance to import
+Introducimos la ruta del archivo *.ova > Siguiente
+Nos mostrara las especificaciones de la maquina virtual > Import
 
-ping [ip address]: Permite realizar ping a dicha IP
-
-ssh [ip address] o ssh [username]@[ip address]: Permite conectarse por medio de SSH a un servidor (ubicado en dicha IP)
-
-ssh-keygen -t rsa -b 4096 -C [your_email@example.com]: Permite generar una llave ssh tipo rsa
-
-ssh-copy-id -i [ssh-key address].pub [username]@[ip address]: Envia una copia de la llave ssh “pública” a un servidor (ubicado en dicha IP)
-En el servidor se crea una carpeta en el home (.ssh/authorized_keys); donde almacena la llave ssh “pública”.
-
-sudo vim /etc/ssh/sshd_config: En este archivo de configuración se debe editar la opción para que la única forma de conectarse al servidor sea por medio de ssh y no por medio de username y password.
-La opción a editar es: PasswordAuthentication [no], colocar no; para evitar la autenticación por medio de username y password
-
-sudo /etc/init.d/ssh restart: Reinicia el servicio ssh; y aplica los cambios
-
-
-Vamos a configurar nuestra maquina virtual con virtualbox, utilizaremos la versión 16.04 de Ubuntu.
-
-Recuerda debes tener instalado VirtualBox y dentro del programa debes darle la opción file/import y seleccionar la imagen de Ubuntu que descargaste.
-
-Los datos para iniciar sesión son:
-
+Al terminar ya podremos iniciar la maquina > Start
+Veremos el grub y el sector de arranque
+Pedira los datos del usuario para iniciar sesion:
 Usuario: ubuntu
 Password: ubuntu123
-Configurando las interfaces de red
-Para poder conectarnos a la maquina virtual, dentro de los settings en la sección de network debes seleccionar bridge adapter y la interface de red que vas a usar.
 
-Podemos primero crear una nueva interface en preferencias/network y creamos una red vboxnet0
+NO TIENE INTERFAZ GRAFICA
+Es para servidor, no debemos:
+Instalar una interfaz grafica
+Conectarse al servidor por acceso remoto o escritorio compartido
 
-Una vez tengas conexión entre las dos máquinas, podemos configurar para poder conectarnos con ssh
+La unica manera de conexion es por ssh
 
-Autenticarse
-Una opción es iniciar con el usuario ubuntu usando el comando ssh ubuntu@192.168.56.101 recuerda que debes usar la ip que se le asigne al server.
+$ sudo su
+# ifconfig
 
-Pero usar usuario y contraseña no es una forma correcta de conectarse a un servidor.
+ifconfig
+Permite ver las network interfaces
 
-Crear llaves
-Dentro del host debemos crear una llave para podernos conectar, lo hacemos con el comando ssh-keygen -b 4096
+Irenos al VirtualBox:
+En File > Preferences > Network > Host-Only Networks
+Añadimos una Red: vboxnet0
+Aceptamos la configuracion
+Luego hacemos Click con el boton derecho del mouse en la maquina virtual
+Seleccionamos Settings > Network > Adapter 1
+Modificamos:
+Attached to: Host-Only Adpater
+Name: vboxnet0
 
-Al crear esto se crean dos imágenes, una pública y una privada, nunca compartas la privada.
+En nuestra maquina virtual:
+# ifdown enp0s3
+# ifup enp0s3
 
-Ahora debemos subir la imagen publica al servidor, esto lo podemos hacer con ssh-copy-id -i .ssh/id_rsa.pub ubuntu@192.168.56.101
+ifdown [network interface]
+Desactiva dicha interface
 
-Es hora de volver a conectarte al servidor.
+ifup [network interface]
+Activa dicha interface
 
-Desactivar opción con contraseña
-Para poder desactivar el entrar el sistema remoto con contraseña debemos abrir el archivo /etc/ssh/sshd_config, recuerda que requieres permisos de super usuario.
+Podemos probar la conexion en la maquina virtual a nuestro host:
+# ping 192.168.56.1
+Podemos probar la conexion en nuestra maquina a la maquina virtual:
+# ping 192.168.56.101
 
-Buscamos la opción PasswordAuthentication y le configuramos el valor no.
+ping [ip address]
+Permite realizar ping a dicha IP
 
-Reiniciamos el servicio de ssh con sudo /etc/init.d/ssh restart
+Una vez tengamos conexión entre las dos máquinas
+Podemos configurar para poder conectarnos y autenticarnos por ssh
+# ssh 192.168.56.101
+Se conectara pero no tendremos permisos
+
+Una opción es iniciar con el usuario ubuntu
+# ssh ubuntu@192.168.56.101
+Recuerda que debes usar la ip que se le asigne al server
+Aunque "esta no es la manera correcta"
+La "forma correcta" es generar una llave SSH publica y colocarla en el servidor
+
+ssh [ip address]
+ssh [username]@[ip address]
+Permite conectarse por medio de SSH a un servidor ubicado en dicha IP
+
+Como crear llaves SSH:
+Dentro del host (nuestra maquina real) debemos crear una llave para podernos conectar y lo hacemos con:
+# ssh-keygen -b 4096
+Le debemos dar enter a todo para que quede por defecto
+Esto generara dentro de una carpeta .ssh dos archivos, rsa publica y privada
+
+ssh-keygen -t rsa -b 4096 -C [your_email@example.com]
+Permite generar una llave ssh tipo rsa  de 4096 Bytes
+
+La llave publica se llama: id_rsa.pub
+
+La llave privada (nuestra llave privada) no podemos publicarla por ninguna razon
+Debemos subir la imagen publica al servidor, esto lo podemos hacer con:
+ssh-copy-id -i .ssh/id_rsa.pub ubuntu@192.168.56.101
+Se crea una carpeta en el home del servidor .ssh/authorized_keys
+Donde almacena la llave ssh publica del host
+
+ssh-copy-id -i [ssh-key address].pub [username]@[ip address]
+Envia una copia de la llave ssh publica a un servidor ubicado en dicha IP
+
+Con estoy ya tenemos configurado nuestro acceso ssh al servidor
+Y podremos entrar nuevamente por ssh y no pedira contraseña
+# ssh ubuntu@192.168.56.101
+
+Para poder desactivar el entrar el sistema remoto con contraseña
+Solo queda desde nuestra maquina virtual editar el archivo:
+$ sudo nano /etc/ssh/sshd_config
+En este archivo de configuración se edita la conexion por SSH
+Dejando que la única forma de conectarse al servidor sea:
+Por medio de ssh y no por medio de username y password
+
+Verificamos que este desactivado el acceso Root por ssh en la linea:
+PermitRootLogin [prohibit-password]
+Buscamos la opción PasswordAuthentication y le configuramos el valor a no
+PasswordAuthentication [no]
+Colocar "no" para evitar la autenticación por medio de username y password
+
+Reiniciamos el servicio de ssh:
+$ sudo /etc/init.d/ssh restart
+
+sudo /etc/init.d/ssh restart
+Reinicia el servicio ssh; y aplica los cambios

@@ -1,28 +1,30 @@
 Video_09
 El caso de (?) como delimitador
 
+Un delimitador greedy (avaricioso) + o *
+Siempre selecciona todo, y en su mayor cantidad
+Independientemente que existan otros patrones que coincidan con en menor cantidad
+
+Al usar ? despues de un + o *
 ?
-Indica al patrón que encuentre las coincidencias de manera rápida (o greedy)
+Indica al patrón que encuentre las coincidencias de manera rápida
 Es decir, devolviendo el resultado más pequeño que haga match hasta donde se encuentra el delimitador
 Y que lo haga tantas veces como sea posible dentro de la cadena
 
 Por ejemplo:
+El inconveniente esta en expresiones como esta:
+csv1,csv2,csv3,csv4,csv5
 .   Encuentra todos los caracteres individualmente
 .,  Encuentra solo un caracter, seguido de coma (,)
 .*, Encuentra todos los caracteres cuales quiera, y que terminen en coma (,)
 .+, Igual resultado que el anteriores
-
-El inconveniente esta en expresiones como esta:
-csv1,csv2,csv3,csv4,csv5
 En ese caso, retorna un solo resultado, omitiendo las comas anteriores
-Nosotros buscamos que encuentre las 5 concurrencias
-
-Al usar ? como delimitador de .* o .+
-Toma la menor cantidad de caracteres antes de la coma
-
-Por ejemplo:
+Para eso usamos:
 .*?,
 .+?,
+Que encuentra las 4 concurrencias
 
----
-Ver minuto 3:20
+Para incluir los ultimos 3 digitos
+.+?[,\n]{1,1}
+NOTA:
+Atom no me reconocio el \n como el "enter"

@@ -1,0 +1,22 @@
+Video_12
+Principio (^) y final de linea ($)
+
+Estos dos caracteres
+^
+$
+Indican en qué posición de la línea debe hacerse la búsqueda
+
+^ Indica el principio de línea
+$ Indica final de línea
+
+Usados juntos indica que Selecciona el inicio y fin de la linea
+
+^\d$
+Esto selecciona una line completa con un solo digito
+
+^\d{6}$
+Esto selecciona una linea de solo 6 digitos
+
+Ejercicios realizados:
+^\d{3,5}$
+^\w+,\w+,\w+,\w+$

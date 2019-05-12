@@ -23,3 +23,9 @@
 
 ## agrupaciones
 ()
+
+## negaciones de clases
+\D
+\W
+\S
+[^.]

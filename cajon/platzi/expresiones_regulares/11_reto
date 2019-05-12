@@ -1,0 +1,16 @@
+Video_11
+Reto: Filtrando letras en números telefónicos utilizando negaciones
+
+En el texto siguiente:
+555658
+56-58-11
+56.58.11
+56.78-98
+65 09 87
+76y87r98
+
+Definir un patrón que haga match a todas las líneas
+Excepto: a la la última la que tiene letras.
+
+Resultado:
+(\d{2}[\W]?){3}

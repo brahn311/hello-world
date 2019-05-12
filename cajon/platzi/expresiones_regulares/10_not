@@ -1,0 +1,24 @@
+Video_10
+Not (^), su uso y sus peligros
+
+Repasando:
+\d -> captura cada digito
+
+Ahora usando Mayuscula
+\D -> captura lo que no son digitos
+
+Tambien funciona con el resto de clases predefinidas:
+\W
+\S
+
+En el caso de clases construídas:
+[^.]
+Esa negacion aplica a todos los elementos de la clase
+[^0-9a-d ]
+
+NOTA:
+El simbolo de negacion se comporta distinto cuando
+- Esta antes de un caracter o antes de una clases
+
+Un mal regex que use negacion puede hacer que un servidor se cuelge
+FUENTE: https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS

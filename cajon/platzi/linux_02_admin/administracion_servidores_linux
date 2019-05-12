@@ -7,10 +7,11 @@ TEMARIO:
 
 1. Introducción a Linux
 	01	¿Por qué se usa Linux en servidores?
----------------------------------------------------------------------------	Visto
 	02	Configuración y guía básica usando Virtualbox
+--------------------------------------------------------------------------- Avance
 	03	Iniciar un servidor Linux con AWS
 	04	Manejo de sesiones remotas con tmux y SSH
+---------------------------------------------------------------------------	Visto
 	05	Editores de texto en Linux
 	06	Editar archivos con VIM
 2. Instalación y configuración de programas
@@ -63,5 +64,4 @@ TEMARIO:
 	57	Cómo podemos monitorear servidores
 	58	Qué distribución elegir y otras dudas frecuentes
 
---------------------------------------------------------------------------- Avance
 --------------------------------------------------------------------------- Resolver

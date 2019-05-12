@@ -15,15 +15,15 @@ TEMARIO:
 	06	Las clases predefinidas y construídas
 	07	Los delimitadores: +, *, ?
 	08	Los contadores {1,4}
-	--------------------------------------------------------------------------- Avance
 	09	El caso de (?) como delimitador
-	---------------------------------------------------------------------------	Visto
 	10	Not (^), su uso y sus peligros
 	11	Reto: Filtrando letras en números telefónicos utilizando negaciones
 	12	Principio (^) y final de linea ($)
 3. Uso práctico de Expresiones Regulares
 	13	Locaciones
+	--------------------------------------------------------------------------- Avance
 	14	Logs
+	---------------------------------------------------------------------------	Visto
 	15	Teléfonos
 	16	URLs
 	17	Mails

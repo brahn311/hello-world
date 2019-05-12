@@ -26,3 +26,7 @@ Siempre se aplican al carácter o sentencia que los preceden
 greedy: avaricioso (Termina agrupando todos)
 
 \d+ -> Un digito que puede "estar una sola vez" o "estar muchas veces"
+
+BUSCAR:
+https://www.debuggex.com
+Grafica expresiones regulares

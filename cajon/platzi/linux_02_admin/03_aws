@@ -1,0 +1,38 @@
+Video_03
+Iniciar un servidor Linux con AWS
+
+Usando plataformas como AWS podemos tener servidores de forma fácil, permitiendo iniciar un servidor en cuestión de minutos.
+
+Para iniciar con Amazon debes entrar a su sitio web y realizar el proceso de registro.
+
+Iniciar una instancia
+Una vez dentro del dashboard, encontrarás en el menú izquierdo una sección llamada Instances, al ingresar en esta opción seleccionamos Crear una nueva instancia
+
+Seleccionamos el sistema operativo, en este caso Ubuntu Server 16.04
+
+Dejamos seleccionada la instancia por defecto, igual que la configuración de los detalles.
+
+El disco duro lo dejamos de 8GB, usando un disco SSD.
+
+Al configurar el security group, debes crear un nuevo grupo, seleccionando los puertos que vas a utilizar, en este caso serán el puerto 22, 80, 443, 8080.
+
+Al tener definida toda la configuración, lanzamos la instancia.
+
+Conectarse a la instancia
+Las llaves nos permiten conectarnos al servidor, al lanzar la isntancia nos da la opción de crear una nueva llave y descargarla al computador.
+
+Es muy mala practica compartir la misma llave en varias instancias.
+
+Para conectarnos al servidor podemos utilizar el comando:
+
+// ssh -i [Nombre de la llave] [usuario]@[ip del servidor]
+
+ssh -i woakas.pem ubuntu@54.196.172.97
+Recuerda que en el dashboard de AWS puedes ver la dirección IP asignada a la instancia que acabas de crear.
+
+Al conectarte por primera vez te va a pedir aceptar una verificación y mostrará una alerta de seguridad relacionada con los permisos de la llave.
+
+Para solucionar la alerta debemos buscar la llave y cambiar sus permisos con el archivo.
+
+chmod 600 woakas.pem
+Intenta conectarte de nuevo y vas a estar dentro de tu nuevo servidor.

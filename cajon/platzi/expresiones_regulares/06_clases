@@ -50,3 +50,21 @@ Construir una clase para identificar "hexadecimales"
 
 NOTA:
 El archivo liners.txt me toma como un espacio el restante del salto de linea
+
+TESTEAR:
+Otras clases:
+\t -> "tabulador"
+\r -> "retorno de carro" o "regreso al inicio" (el lugar en que la línea vuelve a iniciar)
+\n -> "nueva línea" (donde una línea da inicio) en sistemas Unix
+\r -> "nueva línea" en Mac_OS clásico
+\r\n -> "nueva línea" combinación necesaria en Windows
+\a -> "campana" o "beep" se produce al imprimir este carácter
+\e -> "Esc" o "Escape"
+\f -> salto de página
+\v -> tabulador vertical
+\A -> Marca la posición inicio de la cadena
+\Z -> Marca la posición final de la cadena
+\b -> Marca la posición de una palabra limitada por: espacios en blanco, puntuación o el inicio/final de una cadena
+\B -> Marca la posición entre dos caracteres alfanuméricos o dos no-alfanuméricos
+\x -> Para representar caracteres ASCII o ANSI con su código si se busca el símbolo de derechos de autor y la fuente en la que se busca utiliza el conjunto de caracteres Latin-1 es posible encontrarlo utilizando "\xA9"
+\u -> Para representar caracteres Unicode si se conoce su código "\u00A2" representa el símbolo de centavos No todos los motores de Expresiones Regulares soportan Unicode El Net Framework lo hace, pero el EditPad Pro no, por ejemplo
