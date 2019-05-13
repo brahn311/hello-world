@@ -21,25 +21,25 @@ TEMARIO:
 	12	Principio (^) y final de linea ($)
 3. Uso práctico de Expresiones Regulares
 	13	Locaciones
-	--------------------------------------------------------------------------- Avance
-	14	Logs
-	---------------------------------------------------------------------------	Visto
-	15	Teléfonos
-	16	URLs
-	17	Mails
-	18	Nombres(?) Reto
+	14	Logs ---------------------------------------------------------------- Resolver
+	15	Teléfonos ----------------------------------------------------------- Resolver
+	16	URLs ---------------------------------------------------------------- Resolver
+	17	Mails --------------------------------------------------------------- Resolver
+	18	Nombres(?) Reto ----------------------------------------------------- Resolver
 4. Usos avanzados en Expresiones Regulares
 	19	Búsqueda y reemplazo
+--------------------------------------------------------------------------- Avance
 5. Expresiones Regulares en lenguajes de programación
 	20	Uso de REGEX para descomponer querys GET
 	21	Explicación del Proyecto
 	22	Perl
+--------------------------------------------------------------------------- Visto
 	23	PHP
 	24	Utilizando PHP en la práctica
 	25	Python
 	26	Java
 	27	Java aplicado
 	28	JavaScript
-	29	`grep` y `find` desde consola
+	29	'grep' y 'find' desde consola
 
 --------------------------------------------------------------------------- Resolver

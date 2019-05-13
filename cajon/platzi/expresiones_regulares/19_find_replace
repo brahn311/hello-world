@@ -1,0 +1,58 @@
+Video_19
+Busqueda y reemplazo
+
+En un archivo .csv
+Tenemos 3884 lineas
+Compuesto por un listado de peliculas
+Con la siguiente estructura
+
+1::Digimon: The Movie (2000)::Adventure|Animation|Children's
+23::Requiem's for a Dream (2000)::Drama
+456::Jumanji (1995)::Adventure|Children's|Fantasy
+7890::Golden-Eye (1995)::Action|Adventure|Thriller
+
+Teniendo en cuenta que la separacion es
+::
+Crearemos el patron para bloque linea
+^\d{1,}+::
+[\w\s:,'&!\.\-\/\(\)]+\s
+\(\d\d\d\d\)::
+.*$
+
+La expresion seria:
+^\d{1,}+::[\w\s:,'&!\.\-\/\(\)]+\s\((\d\d\d\d)\)::.*$
+
+Crearemos los grupos con los parentesis
+Recordemos que los parentesis nos ayudan a separar y a crear grupos
+
+Los grupos seran:
+El texto del nombre la pelicula -UNICAMENTE- 
+El año de la pelicula -SIN LOS PARENTESIS-
+
+Ubicamos las posiciones correctas donde insertaremos los parentesis:
+          (----------------------)    (--------) 
+^\d{1,}+:: [\w\s:,'&!\.\-\/\(\)]+ \s\( \d\d\d\d \)::.*$
+
+La expresion final seria:
+^\d{1,}+::([\w\s:,'&!\.\-\/\(\)]+)\s\((\d\d\d\d)\)::.*$
+
+Ahora la seccion del nombre de la pelicula y la fecha ambas estan agrupadas
+Al momento de reemplazar podremos operar esos grupos que podemos extraer con el simbolo
+$[identificador] 
+Estos se identificaran en orden segun aparecen en la expresion
+          |--------Grupo1--------|    |-Grupo2-|
+^\d{1,}+::([\w\s:,'&!\.\-\/\(\)]+)\s\((\d\d\d\d)\)::.*$
+          |----------$1----------|    |---$2---|
+
+Al momento de reemplazar solo escribimos
+$1,$2
+Y ahora la informacion quedaria como:
+
+Digimon: The Movie,2000
+Requiem's for a Dream,2000
+Jumanji,1995
+Golden-Eye,1995
+
+Esto nos permitira modificar extracciones de datos para:
+Generar sentencias SQL
+Crear archivos JSON
