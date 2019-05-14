@@ -1,0 +1,17 @@
+Video_22
+Perl
+
+Practica de expresiones regulares usando perl
+
+Se realizaron 2 ejercicios ambos usando perl
+
+Donde se consulta un archivo externo:
+.\regex\results.csv
+
+Ejecutar desde Linux:
+$ ./01_perl.pl
+$ ./02_perl.pl
+
+Para ejecutar en windows con xampp solo desde consola ejecutas el archivo:
+# perl .\01_perl.pl
+# perl .\02_perl.pl
