@@ -77,78 +77,25 @@ $table->addColumn('title', 'string')
 	->create();
 	
 Ahora cuando ejecutemos con el comando:
-# vendor\bin\phinx migrate
+$ vendor\bin\phinx migrate
 Tendremos nuestras tablas en nuestro servidor
 
-Tambien creara tablas adicionales:
-...
-...
-...
+Tambien crea una tabla adicional:
+phinxlog
+  version bigint NOT NULL,
+  migration_name character varying(100),
+  start_time timestamp without time zone,
+  end_time timestamp without time zone,
+  breakpoint boolean NOT NULL DEFAULT false,
 
----
-Ver minuto: 13:41
+El cual gestiona el control de las versiones de las migraciones
+Permitiendo actualizar tu version de base de datos comparando las migraciones
 
-:::::ERROR:::::::
+Puedes deshacer Usando el comando:
+$ vendor\bin\phinx rollback
+Para regresar las migraciones
 
-aomana03@A000940241 d:\Users\aomana03\Personal\repositories\hello-world\cajon\pl
-atzi\php_03_avanzado\portafolio
-# vendor\bin\phinx migrate
-Phinx by CakePHP - https://phinx.org. 0.10.7
+RETO:
+Crear las migraciones para la tabla de usuario
 
-using config file .\phinx.yml
-using config parser yaml
-using migration paths
- - D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avanz
-ado\portafolio\db\migrations
-using seed paths
-warning no environment specified, defaulting to: development
-using adapter postgresql
-using database test
-RuntimeException: Adapter "postgresql" has not been registered in D:\Users\aoman
-a03\Personal\repositories\hello-world\cajon\platzi\php_03_avanzado\portafolio\ve
-ndor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterFactory.php:113
-Stack trace:
-#0 D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avanz
-ado\portafolio\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterFactory.php(13
-1): Phinx\Db\Adapter\AdapterFactory->getClass('postgresql')
-#1 D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avanz
-ado\portafolio\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.ph
-p(380): Phinx\Db\Adapter\AdapterFactory->getAdapter('postgresql', Array)
-#2 D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avanz
-ado\portafolio\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.ph
-p(292): Phinx\Migration\Manager\Environment->getAdapter()
-#3 D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avanz
-ado\portafolio\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(317): Phin
-x\Migration\Manager\Environment->getVersions()
-#4 D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avanz
-ado\portafolio\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(122)
-: Phinx\Migration\Manager->migrate('development', NULL, false)
-#5 D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avanz
-ado\portafolio\vendor\symfony\console\Command\Command.php(255): Phinx\Console\Co
-mmand\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object
-(Symfony\Component\Console\Output\ConsoleOutput))
-#6 D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avanz
-ado\portafolio\vendor\symfony\console\Application.php(908): Symfony\Component\Co
-nsole\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Ob
-ject(Symfony\Component\Console\Output\ConsoleOutput))
-#7 D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avanz
-ado\portafolio\vendor\symfony\console\Application.php(269): Symfony\Component\Co
-nsole\Application->doRunCommand(Object(Phinx\Console\Command\Migrate), Object(Sy
-mfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Outpu
-t\ConsoleOutput))
-#8 D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avanz
-ado\portafolio\vendor\robmorgan\phinx\src\Phinx\Console\PhinxApplication.php(88)
-: Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\
-Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#9 D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avanz
-ado\portafolio\vendor\symfony\console\Application.php(145): Phinx\Console\PhinxA
-pplication->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symf
-ony\Component\Console\Output\ConsoleOutput))
-#10 D:\Users\aomana03\Personal\repositories\hello-world\cajon\platzi\php_03_avan
-zado\portafolio\vendor\robmorgan\phinx\bin\phinx(28): Symfony\Component\Console\
-Application->run()
-#11 {main}
 
-aomana03@A000940241 d:\Users\aomana03\Personal\repositories\hello-world\cajon\pl
-atzi\php_03_avanzado\portafolio
-#

@@ -34,9 +34,9 @@ TEMARIO:
 	22	Xdebug ------------------------------------------------------------ Resolver
 	23	Logs
 	24	Trabajando con Monolog
---------------------------------------------------------------------------- Avance
 6. Databases
 	25	Migraciones de bases de datos
+--------------------------------------------------------------------------- Avance
 7. Comandos y Tareas asíncronas
 	26	Comandos
 	27	Formulario para contacto

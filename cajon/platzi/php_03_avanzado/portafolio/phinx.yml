@@ -15,7 +15,7 @@ environments:
         charset: utf8
 
     development:
-        adapter: postgresql
+        adapter: pgsql
         host: 161.196.29.232
         name: test
         user: admreq

@@ -1,0 +1,17 @@
+Phinx adaptadores
+
+Supported Adapters
+Phinx currently supports the following database adapters natively:
+
+MySQL: specify the mysql adapter.
+PostgreSQL: specify the pgsql adapter.
+SQLite: specify the sqlite adapter.
+SQL Server: specify the sqlsrv adapter.
+
+FUENTE:
+http://docs.phinx.org/en/latest/configuration.html
+
+Probado migrar en postgrest
+Verificar que la extensiones esten habilitadas en ini.php
+
+extension=pdo_pgsql
