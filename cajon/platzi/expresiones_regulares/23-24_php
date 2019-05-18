@@ -1,0 +1,36 @@
+Video_23
+PHP
+
+Una de las funciones de php para usar expresiones regulares es:
+preg_match
+Su sintaxis es:
+preg_match('/regex/',$cadena,$result_match);
+regex => expresion regular
+$cadena => texto donde se buscara el match
+$result_match => El texto que coincide luego del match
+Retorna un boolean
+Asi que puedes usar la funcion dentro de un
+if(){}
+Por ejemplo:
+if(preg_match('/^2018\-01\-(\d\d),.*$/', $line, $m)) { ... }
+
+Como lo podemos usar:
+Leyendo linea a linea un arcchivo de texto y comparando si cada linea tiene matches
+
+Ver ejercicio:
+./regex/php_01.php
+Buscando todos los juegos de Enero 2018 en results.csv
+
+Video_24
+Utilizando PHP en la práctica
+
+Ver ejercicio:
+./regex/php_02.php
+Buscando todos empates de la historia en selecciones nacionales en results.csv
+
+NOTA:
+Para usar la bandera:
+i => case insensitive
+Podemos añadirla al final de la expresion (despues de la ultima /):
+'/^(\d{4}-\d\d-\d\d),(\w+),(\w+),(\d+),(\d+).*$/i'
+

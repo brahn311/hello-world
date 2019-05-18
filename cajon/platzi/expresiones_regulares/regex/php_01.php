@@ -1,5 +1,8 @@
 <?php
-$file = fopen(".\regex\results.csv", "r");
+// echo `ls -l`;
+
+
+$file = fopen("./results.csv", "r");
 
 $match = 0;
 $nomatch = 0;
@@ -26,6 +29,9 @@ while(!feof($file))
 	{
 		$nomatch++;
 	}
+	// die;
+	# detiene la ejecucion en la primera vuelta 
+	# como la primera linea no concuerda, no da salida
 }
 printf("\nmatch: %d\nnomatch: %d\n",$match,$nomatch);
 
