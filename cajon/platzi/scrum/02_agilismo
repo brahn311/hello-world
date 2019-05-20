@@ -1,0 +1,57 @@
+Video_02
+Conozcamos el agilismo, las metodologías ágiles y SCRUM
+
+Agilismo (Agilidad)
+- Doctrina
+- Facultad de transladarse de un lugar a otro instantaneamente sin importar lo grande de la distancia
+- Cualidad asociada a aquello: lijero, pronto, expedito (Que carece de obstáculos, estorbos o inconvenientes)
+Cualidades y doctrinas para realizar movimientos ligeros, prontos y rapidos
+
+Metodos agiles
+Se acuñó el término “Métodos Ágiles” para definir a los métodos alternativos a las:
+metodologías formales (CMMI, SPICE) que consideraban excesivamente “pesadas” y rígidas
+por su carácter normativo y fuerte dependencia de planificaciones detalladas previas al desarrollo
+
+Poseen un ciclo de vida iterativo e incremental (la entrega se segmenta en partes, y en cada ciclo entregamos mas)
+Entrega de prototipos evolutivos (sujetos a ajustes)
+Incrementos de producto con valor
+Base en la retroalimentacion del clientes (entregas aceptadas por el cliente)
+Manejo de tiempos aceptables
+
+Metodologías agiles
+SCRUM: Marco agil de trabajo enfocado al valor para proyectos
+Xtreme Programming: Metodología para desarrollo agil de software
+KanBan: Hacer unicamente el trabajo planeado
+ScrumBan: Combinación de un ScrumBut y Kanban
+
+KANBAN:
+Basado en una idea simple "El trabajo en curso (WIP / work in progress) deberia limitarse
+Y solo deberiamos empezar con algo nuevo cuando el bloque de trabajo anterior haya sido entregado
+
+Xtreme Programming:
+Liderizado por la sinergia del grupo.
+
+SCRUM
+Que es?:
+Marco de trabajo para realizar proyectos
+Es la metodología mas popular para el desarrollo (no necesariamente para el software)
+Proporciona una serie de herramientas y roles para ver resultados de forma temprana
+
+Todo el equipo apunta a un solo objetivo.
+
+Caracteristicas SCRUM:
+Framawork para la gestion de proyectos.
+Adaptable
+Iterativo
+Rapido
+Flexible
+Eficaz
+
+Utilidad:
+Generar valor de forma rapida (mas trabajo, mas rapido, cada vez en menor tiempo)
+Garantiza la Transparencia en la comunicacion
+Crea un ambiente de responsabilidad y trabajo en equipo (Responsabilidad colectiva)
+
+El framework de SCRUM se define en la guía SBOK, te recomendamos leerlo en detalle
+Para bajarlo de manera gratuita (Debes registrarte para descargarlo)
+https://www.scrumstudy.com/
