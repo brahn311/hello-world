@@ -1,71 +1,69 @@
 Introduccion a PHP
 
-Fecha de Inicio: 28/03/2019
-Fecha de Finalización: 14/04/2019
+Fecha de 3/2019
+Fecha de 4/2019
 
-TEMARIO:
-
-1. Introducción a PHP
-	01	1:00 min	Presentación del curso
-	02	4:00 min	¿Qué es PHP?
-	03	11:00 min	Setup y Herramientas
+ Introducción a PHP
+	01	Presentación del curso
+	02	¿Qué es PHP?
+	03	Setup y Herramientas
 2. Conceptos Básicos de PHP
-	04	2:00 min	Revisando el template que usaremos
-	05	5:00 min	Sintaxis de PHP
-	06	9:00 min	Variables tipos de datos y cadenas
-	07	Articulo	Tipos de Datos en PHP
-	08	10:00 min	Arreglos
-	09	Articulo	Ejercicios Arreglos -----------------------------------	Resolver
-	10	13:00 min	Condicionales y Ciclos
-	11	Articulo	While vs. Do While
-	12	14:00 min	Operadores, Condicionales, Continue y Break
-	13	Articulo	Operadores
-	14	Articulo	Ejercicios Operadores ---------------------------------	Resolver
-	15	13:00 min	Funciones
-	16	8:00 min	Agregando archivos externos
+	04	Revisando el template que usaremos
+	05	Sintaxis de PHP
+	06	Variables tipos de datos y cadenas
+	07	Tipos de Datos en PHP
+	08	Arreglos
+	09	Ejercicios Arreglos -----------------------------------	Resolver
+	10	Condicionales y Ciclos
+	11	While vs. Do While
+	12	Operadores, Condicionales, Continue y Break
+	13	Operadores
+	14	Ejercicios Operadores ---------------------------------	Resolver
+	15	Funciones
+	16	Agregando archivos externos
 3. Programación Orientada a Objetos
-	17	13:00 min	Programación Orientada a Objetos
-	18	10:00 min	Constructor y Métodos ---------------------------------	Investigar
-	19	17:00 min	Herencia
-	20	2:00 min	Herencia y polimorfismo
-	21	8:00 min	Interfaces
-	22	9:00 min	Namespaces
-4. Herramientas para Proyectos PHP	23	2:00 min	PSR y PHPFIG
-	24	9:00 min	Composer
+	17	Programación Orientada a Objetos
+	18	Constructor y Métodos ---------------------------------	Investigar
+	19	Herencia
+	20	Herencia y polimorfismo
+	21	Interfaces
+	22	Namespaces
+4. Herramientas para Proyectos PHP	23	PSR y PHPFIG
+	24	Composer
 5. Bases de Datos
-	25	3:00 min	Introducción a las Bases de Datos
-	26	3:00 min	ORM
-	27	10:00 min	Formularios
-	28	15:00 min	Eloquent
-	29	5:00 min	Listar registros de la base de datos con Eloquent
-	30	22:00 min	Insertar datos en MySql con PHP	----------------------- Resolver
+	25	Introducción a las Bases de Datos
+	26	ORM
+	27	Formularios
+	28	Eloquent
+	29	Listar registros de la base de datos con Eloquent
+	30	Insertar datos en MySql con PHP	----------------------- Resolver
 6. Estructura/Arquitectura de una applicacion web
-	31	12:00 min	Front Controller
-	32	14:00 min	PSR7
-	33	10:00 min	Router
-	34	12:00 min	MVC, Creando Controllers
-	35	10:00 min	MVC Reestructurando Vistas y Controladores
-	36	9:00 min	MVC Controller de la entidad Job
+	31	Front Controller
+	32	PSR7
+	33	Router
+	34	MVC, Creando Controllers
+	35	MVC Reestructurando Vistas y Controladores
+	36	MVC Controller de la entidad Job
 7. Template engines
-	37	4:00 min	Template engines
-	38	13:00 min	Twig
-	39	11:00 min	Templates con Twig
-	40	7:00 min	Extendiendo Templates con Twig
+	37	Template engines
+	38	Twig
+	39	Templates con Twig
+	40	Extendiendo Templates con Twig
 8. Validaciones
-	41	15:00 min	Validaciones
+	41	Validaciones
 9. Subida de archivos
-	42	13:00 min	Ejemplo de subida de archivos
-	43	Articulo	Tips de seguridad para subir archivos en PHP
+	42	Ejemplo de subida de archivos
+	43	Tips de seguridad para subir archivos en PHP
 10. Autenticación de usuarios y manejo de sesiones
-	44	2:00 min	Reto. Creación de usuarios
-	45	16:00 min	Autenticando usuarios
-	46	10:00 min	Formulario de Login
-	47	14:00 min	Manejo de sesiones
+	44	Reto. Creación de usuarios
+	45	Autenticando usuarios
+	46	Formulario de Login
+	47	Manejo de sesiones
 11. Liberación de código/release
-	48	8:00 min	Variables de entorno
+	48	Variables de entorno
 --------------------------------------------------------------------------- Avance
-	49	6:00 min	Deploy en Heroku
-	50	Articulo	Instalación de pgAdmin
-	51	6:00 min	Creando la base de datos en Heroku
-	52	1:00 min	Conclusiones del curso
+	49	Deploy en Heroku
+	50	Instalación de pgAdmin
+	51	Creando la base de datos en Heroku
+	52	Conclusiones del curso
 ---------------------------------------------------------------------------	Visto

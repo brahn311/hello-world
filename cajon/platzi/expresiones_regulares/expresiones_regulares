@@ -1,7 +1,7 @@
 Curso de Expresiones Regulares
 
 Fecha de Inicio: 10/05/2019
-Fecha de Finalización:
+Fecha de Finalización: 18/05/2019
 
 TEMARIO:
 
@@ -28,18 +28,16 @@ TEMARIO:
 	18	Nombres(?) Reto --------------------------------------------------- Resolver
 4. Usos avanzados en Expresiones Regulares
 	19	Búsqueda y reemplazo
-5. Expresiones Regulares en lenguajes de programación --------------------- Resolver
-	20	Uso de REGEX para descomponer querys GET
-	21	Explicación del Proyecto
+5. Expresiones Regulares en lenguajes de programación
+	20	Uso de REGEX para descomponer querys GET -------------------------- Resolver
+	21	Explicación del Proyecto ------------------------------------------ Resolver
 	22	Perl
---------------------------------------------------------------------------- Avance
---------------------------------------------------------------------------- Visto
 	23	PHP
 	24	Utilizando PHP en la práctica
 	25	Python
+------------------------------------------------------------------------- Avance
 	26	Java
 	27	Java aplicado
 	28	JavaScript
 	29	'grep' y 'find' desde consola
-
---------------------------------------------------------------------------- Resolver
+	------------------------------------------------------------------------- Visto

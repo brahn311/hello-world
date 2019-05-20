@@ -7,8 +7,6 @@ Ver ejercicio:
 ./regex/python_01.py
 Buscando todos partidos amistosos de la historia en results.csv
 
-
 Ver ejercicio:
 ./regex/python_02.py
 Buscando todos partidos donde hubieron mas de 8 goles en results.csv
-
