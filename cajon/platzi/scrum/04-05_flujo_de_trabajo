@@ -1,0 +1,145 @@
+Video_04
+Los principios, aspectos, fases y procesos de SCRUM
+
+Componentes de SCRUM:
+- Principios
+- Aspectos
+- Procesos
+
+Principios:
+Cimientos de  SCRUM (alma)
+Pautas principales (manual espiritual) para aplicar el marco de trabajo
+Los principios deben implementarse obligatoriamente (no se negocian)
+
+SCRUM propone 6 principios en los cuales se debe basar todo proyecto ágil
+Estos nos pueden servir como lista de verificación para monitorear continuamente
+verificando si nuestro proyecto se encuentra dentro del marco SCRUM
+
+Principio 1 - Control del proceso empírico
+Principio 2 - Auto-organización
+Principio 3 - Colaboración
+Principio 4 - Priorización basada en el valor
+Principio 5 - Time boxing
+Principio 6 - Desarrollo iterativo
+
+- Control del proceso empírico:
+Para SCRUM es más importante "tener la capacidad de adaptarse a los cambios y de mejorar de forma continua" que seguir un plan
+SCRUM se encarga de proporcionar un entorno adecuado que promueva la experimentación y la observación
+Con la finalidad de que los cambios y las mejoras necesarias sean identificadas y incluidas oportunamente en el proyecto
+
+- Auto-organización:
+SCRUM propone que un equipo que se auto-organiza es un equipo más motivado y dispuesto a aceptar más responsabilidad
+En SCRUM es más importante "ofrecer al equipo un ambiente de auto-organización y que trabaje de forma autónoma" a tener control
+
+- Colaboración:
+SCRUM que busca que el equipo trabaje de forma articulada para realizar las tareas del proyecto
+Donde que cada miembro del equipo base su trabajo en los aportes hechos por los demás
+Se busca que el equipo trabaje en un solo lugar con el fin de facilitar la comunicación, la resolución de problemas y el aprendizaje
+
+- Priorización basada en el valor:
+Es la definición del "orden en que se deben realizar las características del producto"
+basándose en el valor que puedan aportar a los interesados
+Se elabora una "lista de características" y en la cabezacera se colocan los items que por su importancia deben realizarse primero
+Si existen cambios en las características del producto la lista es actualizada y todos los items se vuelven a priorizar
+
+- Time boxing
+El time boxing es la forma como un proyecto SCRUM enfrenta las restricciones de tiempo
+Todas las actividades tienen un time box (límite de tiempo)
+Con el fin de evitar que se emplee demasiado tiempo en una actividad o por el contrario no se le dedique el tiempo necesario
+
+- Desarrollo iterativo
+El desarrollo iterativo permite realizar distintas entregas a los interesados el máximo valor en un tiempo mínimo
+Rechazando la idea de esperar largos peridos para visualizar los resultados
+
+Aspectos:
+Elementos que siempre se deben tener en cuentas
+Gestion transversal a lo largo de todo el proyecto SCRUM
+- Organización del equipos
+- Calidad
+- Riegos
+- Cambios
+
+Procesos:
+Arastrado del SCRUM
+Elementos del desarrollo (fases) del SCRUM
+Abordan actividades específicas y el flujo de un proyecto de SCRUM
+Tiene 19 procesos fundamentales agrupados en 5 Fases
+- Inicio
+- Planeación y estimación
+- Implementación
+- Revisión y retrospectiva
+- Lanzamiento
+
+Cada fase en SCRUM tiene su entrada (lo que requerimos)
+Para realizar los distintos procesos
+y al final de la fase obtener la salida que sera la entrada de otro proceso
+
+Por ejemplo:
+Cuando elaboramos "la vision del proyecto":
+
+La identificación del: ScrumMaster
+Se obtiene mediante la identificacion del: "Product Owner"
+Que participa generar una: "solucion"
+Que genera partiendo de: "la vision del proyecto"
+Lo obtenemos cuando tenemos: las "necesidades"
+Originadas en el: "Caso del negocio"
+que vienen de: la "Organizacion"
+
+Escalar SCRUM
+Existen 8 procesos adicionales de SCRUM para escalar en grandes proyectos
+Sobre todo en las empresas que requieren una coordinacion entre multiples equipos
+
+SCRUM no es solamente para proyectos pequeños
+Es muy preciso para mantenimientos menores y correctivos
+Pero se puede llevar a cualquier tipo de industrias o mercados
+
+Video_05
+Flujo de trabajo de SCRUM
+
+Caso de negocio del proyecto
+Vision del proyecto
+Backlog priorizado del productos
+  - Cronograma de Lanzamiento
+Spring Backlog
+Diariamente
+  - Sprint
+  - Crear entregables
+Entregables aceptados
+
+Caso de negocio del proyecto:
+"Inicio del proyecto SCRUM"
+Proviene de la organizacion, de alguna unidad del negocio, gestion de la demanda
+Formula un proyecto
+Describe necesidades, Beneficios, la parte financieros
+Genera la "Vision del proyecto"
+
+Vision del proyecto:
+como satisfacer esas necesidades, servicios
+Realizado un primer desgloce amplio se genera distintos trabajos (Epicas)
+
+Originado de la "creacion de la vision del proyecto"
+Generando la "Declaración de la visión del proyecto"
+
+Backlog priorizado del productos
+Generado del analisis del desglose de la vision del proyecto priorizando epicas
+Con ello, obtendremos el "Cronograma de Lanzamiento"
+
+Cronograma de Lanzamiento:
+Compromiso (como proyecto) de las entregas de valor
+
+Spring Backlog
+Se origina del diseño y organizacion del backlog priorizado del producto
+Actividad recurrente (Iteracion) unida a la entrega de valor aumentada en cada ciclo
+Se generan las historias de usuario (soluciones con prioridad al usuario) entregables
+
+Diariamente:
+Retrospectiva diaria, proceso de inspección para la mejora continua para la transparencia
+
+Sprint:
+Descomposicion de las Epicas, generando una lista de trabajo del sprint
+
+Crear entregables
+Generar valor, segmentar la engrega de manera progresiva del proyecto en cada ciclo
+
+Entregables aceptados
+Entregables de valor entregados al "product owner" aprobados para la liberacion

@@ -1,7 +1,9 @@
 Glosario del curso
 
 Acuerdo de entregables funcionales:
-Los entregables que cumplen con los criterios de aceptación, reciben el cierre formal del negocio y la aprobación formal por parte del cliente o del patrocinador
+-
+El cierre formal del negocio y la aprobación formal por parte del cliente o del patrocinador se realiza cuando
+Los entregables que cumplen con los criterios de aceptación
 
 Adaptación
 La adaptación sucede cuando el equipo principal de Scrum y el (los) socio(s) (stakeholders) aprenden por medio de la transparencia e inspección, adaptando después lo aprendido para mejorar el trabajo que realizan.
@@ -9,11 +11,14 @@ La adaptación sucede cuando el equipo principal de Scrum y el (los) socio(s) (s
 Amenazas
 Las amenazas son riesgos que pudieran afectar el proyecto en forma negativa.
 
-Análisis de brecha
+Análisis de brecha:
 El análisis de brecha es una técnica que se utiliza para comparar el estado actual con el estado deseado y determinar la forma de acortar la brecha entre ambos.
 
-Aprobación, estimación y asignación de historias de usuarios
-En este proceso, el propietario del producto aprueba las historias de usuario para un sprint. Después, el Scrum Master y el equipo Scrum calculan el esfuerzo necesario para desarrollar la funcionalidad descrita en cada historia de usuario. Por último, el equipo Scrum se aboca a entregar los requerimientos del cliente en forma de historias de usuario autorizadas, estimadas y asignadas.
+Aprobación, estimación y asignación de historias de usuarios (Proceso):
+-
+El propietario del producto aprueba las historias de usuario para un sprint
+El Scrum Master y el equipo Scrum calculan el esfuerzo necesario para desarrollar la funcionalidad en cada historia de usuario
+El equipo Scrum se aboca a entregar los requerimientos del cliente (historias de usuario) autorizadas, estimadas y asignadas
 
 Asignación de bloque de tiempo (Time-boxing)
 La asignación de bloque de tiempo es la fijación de breves periodos para realizar el trabajo. Si el trabajo
