@@ -1,11 +1,39 @@
 Video_07
  La priorización basada en valor, el time-boxing y el desarrollo iterativo
 
+Actores en constante colaboracion:
+- StakeHolders (interesados: usuarios finales)
+- Product Owner
+- Equipo Scrum
+- Scrum Master
+Los procesos del Scrum cimientan las bases de estas relaciones
+Beneficios de la colaboracion:
+- Minimizamos solicitudes de cambios
+- Mitigar los riesgos
+- Aumentar la eficiencia
+- Practicar la mejora continua
+
 Priorización basada en el valor:
+Analizar el Valor, Riesgo, Dependencias
+
 Es la definición del "orden en que se deben realizar las características del producto"
 basándose en el valor que puedan aportar a los interesados
-Se elabora una "lista de características" y en la cabezacera se colocan los items que por su importancia deben realizarse primero
-Si existen cambios en las características del producto la lista es actualizada y todos los items se vuelven a priorizar
+Tambien se puede priorizar en base a las dependencias
+
+La priorizacion es llevada a cabo por el Product Owner, este trabaja con el cliente y el patrocinador
+para entender los requerimientos del negocio que proporcionan el maximo valor
+
+Se elabora una "lista de características" y en la cabezacera se colocan los items
+que por su importancia deben realizarse primero (Backlog priorizado del producto)
+Si existen cambios en las características del producto
+la lista es actualizada y todos los items se vuelven a priorizar
+
+Los riesgos se deben tomar en cuenta para priorizar las historias de usuario
+El Product Owner debe trabajar con el equipo Scrum para entender los riesgos y mitigar incertidumbres
+El equipo Scrum debe alertar al Product Owner sobre las dependencias que surgen de la implementacion
+
+---
+Ver minuto 7:15
 
 Time boxing
 El time boxing es la forma como un proyecto SCRUM enfrenta las restricciones de tiempo
