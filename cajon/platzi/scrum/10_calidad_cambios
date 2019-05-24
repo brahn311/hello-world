@@ -1,0 +1,112 @@
+Video_10
+Calidad y cambios
+
+Calidad
+Grado de satisfaccion de la entrega basado expresada en los criterios aceptación de los interesados
+
+Capacidad del producto entregables para:
+- Cumplir con los criterios de aceptación
+- Alcanzar el valor de negocio que el cliente espera
+
+
+Criterios de aceptación:
+Son los componentes objetivos mediante los cuales se juzga la funcionalidad de una historia de usuario
+Los criterios de aceptación deben delinear explícitamente las condiciones que deben satisfacer las historias de usuario
+
+Enfoque de mejora continua:
+- Retrospectiva
+- Verificacion constante
+Para asegurar que un proyecto cumpla con los requisitos de calidad
+
+Retrospectiva:
+Donde el equipo aprende de sus experiencias y de la participación de los stakeholders para
+mantener constantemente actualizado el Backlog Priorizado del Producto con cualquier cambio en los requerimientos
+
+Dicha lista nunca está completa hasta el cierre o conclusión del proyecto
+
+Cualquier cambio en los requerimientos refleja los cambios en el entorno empresarial interno y externo y
+permite que el equipo funcione continuamente y se adapte para alcanzar esos requisitos
+
+Verificacion constante:
+Debido a los incrementos de valor durante los sprints los errores o defectos se notan con más facilidad
+mediante pruebas de calidad repetitivas y no simplemente cuando el producto final o servicio esté casi terminado
+
+Ciclo de SCRUM
+Product Backlog
+Objetivo del Sprint
+Sprint Backlog
+Sprint (2,4,6,8 semanas)
+*Revision: Reunion diaria (cada 24 horas)
+*Retrospectiva (al finalizar el sprint)
+Incremento del producto potencialmente entregable
+
+Product Backlog:
+Alimenta nuestro SCRUM determinando las operaciones a realizar en el requerimiento dividiendolo en historias de usuario
+
+Sprint / Objetivo del Sprint:
+Se extrae del Product Backlog y determina cual es el objetivo del sprint cambiando durante cada iteracion
+
+Sprint Backlog:
+Lista desglosada de las actividades durante el sprint, actualizada diaramente
+
+Revision:
+Las tareas relacionadas a la calidad (desarrollo, pruebas y documentación)
+se completan como parte del mismo sprint "por el mismo equipo"
+Esto asegura que la calidad sea inherente a cualquier entregable que se crea como parte de un sprint
+
+Feedback:
+Las discusiones constantes entre el equipo principal de Scrum y los stakeholders
+junto con incrementos reales del producto que se entregan al final de cada sprint
+aseguran que la brecha entre las expectativas de los clientes del proyecto y los verdaderos entregables se reduzca
+
+Ciclo de mejora continua
+- Planificar
+- Hacer
+- Verificar
+- Actuar
+
+Planificar:
+Crear el backlog priorizado del producto
+Crear historias de usuario
+
+Hacer:
+Crear Entregables
+Realizar Daily Standup
+
+Verificar:
+Demostrar y validar el sprint (al product owner)
+Retrospectiva del sprint
+
+Actuar:
+Enviar entregables
+Retrospectiva del proyecto (al finalizar el proyecto)
+
+Cambio
+Cada proyecto independientemente de su método o framework está expuesto al cambio
+Entender que "los procesos de desarrollo de Scrum están diseñados para aceptar el cambio"
+Maximizar los beneficios que se derivan de los cambios y disminuir los impactos negativos
+
+Cualquier  interesado puede ser un actor de cambios
+- El mercado cambia
+- La lesgislaciones cambian
+- Las tecnologías cambian
+- Los requerimientos cambian
+
+Podemos incluir los cambios en la proxima etapa de planificación de cada sprint
+
+Proceso de aprobacion de cambios:
+Se genera una un cambio
+Solicitudes de cambio no aprobadas
+¿Quien aprueba?
+- Product owner (casi todos los cambios)
+- Stakeholders y Product owner (cambios fuera del nivel de tolerancia del Product Owner)
+- Alta Gerencia (cambios significativos)
+¿Cuando se aprueba?
+- Desarrollo de espicas
+- Creacion del backlog priorizado del producto
+- Refinacion del backlog priorizado del producto
+Solicitudes de cambio aprobadas
+¿El cambio es urgente?
+- Se cancela el sprint
+- Se incorpora en el proximo sprint
+Actualizar el Backlog priorizado del producto

@@ -32,13 +32,24 @@ Los riesgos se deben tomar en cuenta para priorizar las historias de usuario
 El Product Owner debe trabajar con el equipo Scrum para entender los riesgos y mitigar incertidumbres
 El equipo Scrum debe alertar al Product Owner sobre las dependencias que surgen de la implementacion
 
---- Ver minuto 7:15
-
 Time boxing
-El time boxing es la forma como un proyecto SCRUM enfrenta las restricciones de tiempo
+Es la forma como un proyecto SCRUM fija el tiempo para los procesos (esfuerzos) y enfrenta las restricciones de tiempo
 Todas las actividades tienen un time box (límite de tiempo)
 Con el fin de evitar que se emplee demasiado tiempo en una actividad o por el contrario no se le dedique el tiempo necesario
 
 Desarrollo iterativo
-El desarrollo iterativo permite realizar distintas entregas a los interesados el máximo valor en un tiempo mínimo
+El desarrollo iterativo se desarrolla descomponiendo la entrega en fragmentos de menor volumen y de cara a la prioridad
+permite realizar distintas entregas a los interesados el máximo valor en un tiempo mínimo
 Rechazando la idea de esperar largos peridos para visualizar los resultados
+Permitiendo flexibilidad a los cambios
+
+Descomposicion:
+Luego de establecer la vision del proyecto
+descomponen las caracteristicas de los Requerimientos desde la vision del usuario final (lista de deseos)
+Estas son llamadas "historias de usuario" todas las historias se conoce como backlog del producto
+Estas historias se agurpan, verifican sus dependencias y priorizan formando epicas,
+A cada historia se le asignan tiempos medidos en horas, dias, meses que estimaran la duracion del proyecto
+Se organiza el backlog del producto creando los distintos sprints
+- Las epicas muy grandes se descomponen en historias mas pequeñas
+- Los aspectos complejos dividen en la refinancion del backlog priorizado del producto
+Al finalizar el sprint el Product Owner verifica y acepta la entrega (demostrar y validar el sprint)
