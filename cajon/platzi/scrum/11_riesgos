@@ -1,0 +1,52 @@
+Video_11
+Los riesgos
+
+Eventos inciertos que afectan los objetivos del proyecto de manera positiva o negativa
+contribuyendo al exito o al fracaso
+
+Oportunidades
+Los riesgos que tienen impacto positivo
+
+Amenazas
+Los riesgos que tienen impacto Negativo
+
+Gestion de riesgos
+Ambos se gestionan de la misma manera
+
+Procedimientos:
+-	Identificacion
+-	Evaluacion
+-	Priorizacion
+-	Mitigacion
+-	Comunicacion
+
+Identificación de riesgos:
+Utilizar diversas técnicas para identificar todos los riesgos potenciales
+
+Evaluación de riesgos:
+Evaluar y estimar los riesgos identificados basándose principalmente en dos factores:
+-	La probabilidad de ocurrencia
+-	El impacto probable en caso de que ocurra
+Estos generan un producto final es llamado valor de riesgos 
+
+Priorización de riesgos:
+Dar prioridad al riesgo por su "valor de riesgo"
+Estos deben incluirse y afectara el Backlog Priorizado del Producto
+
+Mitigación de riesgos:
+Desarrollar de una estrategia adecuada para hacer frente a un riesgo
+
+Comunicación de riesgos:
+Comunicar a los stakeholders (apropiados) de la gestión de riesgos
+y determinar su percepción al respecto
+
+Minimizar el riesgo por medio de SCRUM
+La flexibilidad -> reduce el riesgo relacionado al entorno empresarial
+La retroalimentacion constante -> reduce el riesgo relacionado a las expectativas
+La propiedad del equipo -> reduce la estimacion de riesgo
+La transparencia -> reduce el riesgo de no deteccion
+La entrega iterativa -> reduce el riesgo de inversion
+
+Proceso de priorizacion de riesgos:
+Riesgos priorizados + Riesgos identificados (para mitigar) Backlog del producto = 
+Backlog priorizado del producto (actualizado)
