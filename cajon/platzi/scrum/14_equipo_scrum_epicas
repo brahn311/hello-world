@@ -1,0 +1,34 @@
+Video_14
+Formación del equipo SCRUM y desarrollo de las épicas
+
+1.3 Formar equipos SCRUM
+1.3.1	Equipo Scrum identificado
+Se identifican a los miembros del Equipo Scrum de los recursos disponibles con base a los objetivos la vision del proyecto
+Normalmente el Product Owner es el responsable principal de seleccionar los miembros del equipo
+Tomando en cuenta que el Product Owner es el responsable del producto ante el negocio
+El Product Owner puede seleccionar al equipo con la colaboración con el Scrum Master
+
+Flujo de informacion:
+Ver imagen: ---
+
+1.4 Desarrollar épicas
+1.4.1	Épica(s)
+Son la primera descompocicion de la vision del proyecto en distintas unidades identificables por funciones o propositos
+No puedes ser entregadas en un solo ciclo sprint, son historias de usuario grandes, sin refinar en el backlog priorizado del producto
+La Declaración de la Visión del Proyecto sirve como base para el desarrollo de las Epicas
+
+Se pueden organizar User Group Meetings para discutir las Epicas que sean apropiadas
+
+1.4.2	Prototipos
+Identifican las necesidades de los usuarios por medio de la representacion de personas
+personajes ficticios desarrollados que reprensentan a la mayoria de usarios y demas Stakeholders
+que pudieran no utilizar directamente el producto final
+
+Creación de la lista priorizada de pendientes del producto—En este proceso, se refinan, se elaboran y se priorizan las Epicas para crear un Prioritized Product Backlog. En este punto también se establecen Los Criterios de Terminación
+
+Realizar el plan de lanzamiento—En este proceso, el Equipo Principal/Central de Scrum revisa las
+epicas en el Prioritized Product Backlog para desarrollar un Release Planning Schedule, que
+es esencialmente un program (programa) de implementación por fases que se compartirá con los stakeholders del projecto. La Longitud del Sprint también se determina en este proceso
+
+Flujo de informacion:
+Ver imagen: ---

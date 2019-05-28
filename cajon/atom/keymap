@@ -1,0 +1,8 @@
+Update shortcuts adding this lines into keymap.cson
+
+Split seleccion into lines
+-
+FUENTE: https://stackoverflow.com/questions/50352923/atom-editor-keyboard-shortcut-for-split-selections-into-lines
+'atom-text-editor':
+  'ctrl-shift-L': 'editor:split-selections-into-lines'
+  'ctrl-shift-J': 'grammar-selector:show'

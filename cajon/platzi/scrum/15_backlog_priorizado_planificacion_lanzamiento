@@ -1,0 +1,32 @@
+Video_15
+Creación de la lista priorizada del pendiente del producto y planificación del lanzamiento
+
+1.5 Crear el backlog priorizado del producto
+1.5.1	Backlog Priorizado del Producto
+Listado de trabajo de las epicas, tomando en cuenta las dependencias existentes entre ellas
+Debe encontrarse enfocadas a la elaboracion y entrega del Producto
+Y tomar en cuenta las indicaciones del Product Owner priorizar el listado
+Los prototipos pueden nutrir el listado
+
+Existen distintos metodos para estimar las historias de usuario
+
+1.5.2	Criterios de terminado
+Definicion de los aspectos regulatorios minimos aceptables por la organizacion o negocio para un entregable
+
+Flujo de informacion:
+Ver imagen: ---
+
+1.6 Planificar el lanzamiento
+1.6.1	Cronograma de planificación del lanzamiento
+Tomando las epicas del Backlog Priorizado del Producto, se realiza un programa de planificación de lanzamiento
+Se establece el tiempo de duracion estimado de cada epica
+Se agrupan las historias de usuario ya priorizadas en entregas
+
+1.6.2	Duración del sprint
+Se calculando el tiempo de duracion del sprint
+Se fijan las fechas de cuando se realizaran cada una de las entrega
+La fecha de duracion de cada sprint tiende a ser menor en cada iteracion
+La cantidad epicas y el tiempo tiende a bajar en cada Sprint
+
+Flujo de informacion:
+Ver imagen: ---

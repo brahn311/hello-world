@@ -1,0 +1,15 @@
+Instalar atom y colocarlo español
+https://www.linuxadictos.com/como-instalar-atom-y-ponerlo-en-castellano-en-debian.html
+
+Configurar atom
+https://www.emezeta.com/articulos/como-configurar-atom-editor-y-sus-mejores-plugins
+
+Instalar paquetes
+minimap
+emmet
+autocomplete-php (for autocomplete+)
+atom-beautify
+
+Para investigar:
+Sublime Text y PHPStorm:
+Ambos validan el codigo asociando clases y muestran tooltips y enlaces tipo ancla
