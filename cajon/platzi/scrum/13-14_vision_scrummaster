@@ -1,0 +1,64 @@
+Video_13
+Creación de la visión del proyecto e identificación del SCRUM master y los socios
+
+Iniciamos a estudiar los procesos de SCRUM.
+
+Inicio (1ra Fase):
+1.1 Crear la visión del proyecto:
+-	Enunciado de visión de proyecto
+-	Product Owner identificado
+1.2 Identificar al SCRUM Master y stakeholders
+-	Scrum Master identificado
+-	Stakeholder(s) identificado
+1.3 Formar equipos SCRUM
+-	Equipo Scrum identificado
+1.4 Desarrollar épicas
+-	Épica(s)
+-	Prototipos
+1.5 Crear el backlog priorizado del producto
+-	Backlog Priorizado del Producto
+-	Criterios de terminado
+1.6 Planificar el lanzamiento
+-	Cronograma de planificación del lanzamiento
+-	Duración del sprint
+
+Creación de la visión del proyecto
+Se revisa el Product Business Case (caso de negocio) determinando las necesidades, beneficios y la parten financiera
+Se crea el Product Vision Statement (declaración de la visión del proyecto)
+Servirá de inspiración y proporcionará un enfoque de todo el proyecto e
+Identificar el Product Owner (propietario del producto) vocero encargado de supervisar el producto, determinado por el negocio
+
+Se podria establece una "Reunion de vision del proyecto" para determinar ambos
+
+Precondiciones:
+0 Caso del negocio
+Flujo de datos:
+1 Inicio
+1.1 Crear la vision del proyecto
+1.1.1 Product Vision Statement
+1.1.2 Product Owner
+
+Identificación del Scrum Master y los Stakeholders
+Se identifican utilizando criterios de selección específicos
+A partir del Product Owner y del Product Vision Statement
+El SCRUM Master lo puede identificar la oficina de gestion de proyectos
+
+Precondiciones:
+1.1 Crear la vision del proyecto
+Flujo de datos:
+1.2 Identificación del Scrum Master y los Stakeholders
+1.2.a SCRUM Master (Guia del marco de trabajo)
+1.2.b Stakeholders (Interesados)
+
+---
+Video_14
+
+Formación del equipo de Scrum—En este proceso, se identifican a los miembros del Equipo Scrum. Normalmente, el Propietario del producto es el responsable principal de la selección de los miembros del equipo, pero a menudo lo hace en colaboración con el Scrum Master
+
+Desarrollo de las épicas—En este proceso, la Declaración de la Visión del Proyecto sirve como base para el desarrollo de las Epicas. Se pueden organizar User Group Meetings para discutir las Epicas que sean apropiadas
+
+Creación de la lista priorizada de pendientes del producto—En este proceso, se refinan, se elaboran y se priorizan las Epicas para crear un Prioritized Product Backlog. En este punto también se establecen Los Criterios de Terminación
+
+Realizar el plan de lanzamiento—En este proceso, el Equipo Principal/Central de Scrum revisa las
+Historias de Usuario en el Prioritized Product Backlog para desarrollar un Release Planning Schedule, que
+es esencialmente un program (programa) de implementación por fases que se compartirá con los stakeholders del projecto. La Longitud del Sprint también se determina en este proceso
