@@ -1,0 +1,65 @@
+Video_17
+Fase de Planificación - Crear historias de usuario, estimar historias de usuario
+
+Planificacion / Estimacion (2da fase):
+2.1   Crear historias de usuario
+2.1.1 Historias de usuarios
+2.1.2 Criterio de aceptación de historias del usuario
+2.2   Estimar historias de usuario
+2.2.1 Historias del usuario estimadas
+2.3   Comprometer historias de usuario
+2.3.1 Historias de usuario comprometidas
+2.4   Identificar tareas
+2.4.1 Lista de tareas
+2.5   Estimar tareas
+2.5.1 Lista de tareas con esfuerzo estimado
+2.6   Crear el Sprint Backlog
+2.6.1 Sprint Backlog
+2.6.2 Sprint Burndown Chart
+
+Ver figura 9-1: scrumstudy-sbok-guide-3rd-edition-spanish.pdf 214pp
+
+2.1 Crear historias de usuario
+2.1.1 Historias de usuarios
+El product owner aclara y generalmente escribe las historias de usuario con la participacion del equipo SCRUM
+
+2.1.2 Criterio de aceptación de historias del usuario
+Se crean los Criterios de aceptación de las histiorias del usuario
+Son los lineamientos con que se evaluara la entrega
+
+Tanto las historias de usuario y los criterios de terminado:
+Estan diseñadas para asegurar que los requisitos del cliente esten claramente representados
+Deben poder ser plenamente comprendidos por todos los socios
+Indican tres cosas sobre el requerimiento ¿Quien? (rol / actor / prototipo), ¿Que? (necesidad), ¿Por que? (justificación)
+Las historias de usuario se crean de una sola vez con sus respectivos Criterios de aceptación
+Una vez escritas las Historias de Usuario y los criterios de terminado se incorporan en el Prioritized Product Backlog
+
+Formato para documentar historias de usuario:
+"Como <rol/prototipo de cliente> yo deberia <requerimiento> a fin de <beneficio>"
+
+La descomposicion del backlog priorizado del producto en historias de usuario son flexibles
+Pudiendo usarse otros criterios o formatos
+
+Ver figura 9-4: scrumstudy-sbok-guide-3rd-edition-spanish.pdf 217pp
+
+Estimar historias de usuario
+El SCRUM master y el equipo SCRUM estiman el esfuerzo necesario para desarrollar a funcionalidad descrita en cada historia de usuario
+
+Aprobar, estimar y asignar historias de usuarios
+En este proceso, el Propietario del producto aprueba las Historias de Usuario para un Sprint. Posteriormente, el Scrum Master y el Equipo de Scrum estiman el esfuerzo necesario para desarrollar la funcionalidad descrita en cada historia de usuario, y el Equipo de Scrum se compromete a entregar los requisitos del cliente en forma de Historias de Usuario.
+
+Ver figura 9-6: scrumstudy-sbok-guide-3rd-edition-spanish.pdf 224pp
+
+NOTA:
+FUENTE: http://www.javiergarzas.com/2014/01/estimacion-agil-scrum.html
+Como estimamos proyectos Scrum o en general ágiles
+
+FUENTE: https://platzi.com/comentario/317992/
+Como estimar las historias de usuario
+
+Se pueden utilizar numerosos métodos de estimación para estimar historias de usuario.
+Algunas herramientas importantes son:
+Wideband Delphi
+Planning Poker
+Fist of Five
+Affinity Estimation

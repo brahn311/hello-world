@@ -16,19 +16,19 @@ TEMARIO:
   06  Los principios de SCRUM
   07  La priorización basada en valor, el time-boxing y el desarrollo iterativo
   08  La organización y los diferente roles de SCRUM
-  09  La comunicación del equipo central de SCRUM y justificación de negocio ----------------------- (faltan rutas de imagenes)
+  09  La comunicación del equipo central de SCRUM y justificación de negocio
   10  Calidad y cambios
   11  Los Riesgos
   12  Fases y Procesos de SCRUM
 4. Fase de Inicio
-  13  Creación de la visión del proyecto e identificación del SCRUM master y los socios  ----------- (faltan rutas de imagenes)
-  14  Formación del equipo SCRUM y desarrollo de las épicas  --------------------------------------- (faltan rutas de imagenes)
-  15  Creación de la lista priorizada del pendiente del producto y planificación del lanzamiento  -- (faltan rutas de imagenes)
-  ------------------------------------------------------------------------- Avance
+  13  Creación de la visión del proyecto e identificación del SCRUM master y los socios
+  14  Formación del equipo SCRUM y desarrollo de las épicas
+  15  Creación de la lista priorizada del pendiente del producto y planificación del lanzamiento
   16  Nuestro proyecto - Construir una ciudad
-  -------------------------------------------------------------------------	Visto
 5. Fase de planificación y estimación
   17  Crear historias de usuario, estimar historias de usuario
+  ------------------------------------------------------------------------- Avance
+  -------------------------------------------------------------------------	Visto
   18  Comprometer historias de usuario, Identificar tareas, estimar tareas, crear el sprint backlog
 6. Fase de implementación
   19  Creación de entregables, realizar el daily standup y refinar el backlog priorizado del producto
