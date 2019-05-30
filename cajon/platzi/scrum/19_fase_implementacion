@@ -1,0 +1,83 @@
+Video_19
+Fase de Implementación - Creación de entregables, realizar el daily standup y refinar el backlog priorizado del producto
+
+Implementación (3ra fase):
+3.1   Creación de entregables
+3.1.1 Entregables del sprint
+3.1.2 Scrumboard actualizado
+3.2   Realizar reunión diaria de pies
+3.2.1 Sprint Burndown Chart actualizado
+3.2.2 Lista de impedimentos actualizado
+3.3   Mantenimiento de la lista priorizada del pendiente del producto
+3.3.1 Backlog Priorizado del Producto actualizado
+
+3.1   Creación de entregables
+3.1.1 Entregables del sprint
+El Equipo Scrum trabaja en las tareas del Sprint Backlog para crear los entregables del sprint
+
+3.1.2 Scrumboard actualizado
+Es importante tener la visión completa de todo el ámbito del proyecto
+
+Podemos usar otros metodos para mantener actualizado la lista de pendiente, kanban, entre otros
+Generalmente se usa un Scrumboard para dar seguimiento al trabajo y a las actividades que se están llevando a cabo
+
+Es mas practico tomar en cuenta el trabajo que tenemos pendiente que el trabajo que tenemos terminado
+
+El Sprint Burndown Chart es una gráfica que muestra la cantidad de trabajo pendiente en el sprint en curso
+El Sprint Burndown Chart inicial va a compañado de un Planned Burndown
+El Sprint Burndown Chart puede ser actualizado al final de cada día a medida que se completan los trabajos
+(3.2.1 Sprint Burndown Chart actualizado)
+
+Los problemas que enfrente el equipo Scrum se pueden actualizar en un Impediment Log
+Id del impedimento
+Descripcion del impedimentos
+Actividad afectada
+Estatus del impedimento (Solucionado / en proceso / sin solucionar)
+
+Ejemplo de control:
+Id de la historia de usuarios
+Tareas por hacer
+Tareas en progreso
+Tareas en prueba
+Tareas terminado
+
+Ver figura 10-5: scrumstudy-sbok-guide-3rd-edition-spanish.pdf 256pp
+
+3.2   Realizar reunión diaria de pies
+Realizar el daily standup
+
+Restrospectiva del scrum focalizada con el fin de conocer lo que está sucediendo.
+Diariamente se lleva acabo una reunion altamente focalizada y con limite de tiempo (no debería demorar más de 15 minutos)
+Es un foro donde el equipo SCRUM se pone al dia sobre su avance y los impedimentos, puede estar o no el Product Owner
+
+¿Que he hecho desde la ultima reunion?
+¿Que tengo planeado hacer antes de la siguiente reunion?
+¿Que impedimentos u obstaculos (si los hubiera) estoy enfrentando en la actualidad?
+
+3.2.1 Sprint Burndown Chart actualizado
+3.2.2 Lista de impedimentos actualizado
+Se puede llevar a cabo en la reunión diaria identificando qué debe entrar o salir del producto
+Actualizar la lista de pendientes y de impedimentos
+
+3.3   Mantenimiento de la lista priorizada del pendiente del producto
+3.3.1 Backlog Priorizado del Producto actualizado
+Refinar el backlog priorizado del producto
+El backlog priorizado del producto se actualiza constantemente
+Se puede llevar a cabo una reunion de revision del backlog priorizado del producto
+Cualquier cambio o actulizacion al backlog se discute y se incluye en el backlog priorizado del producto
+
+Ver figura 10-10: scrumstudy-sbok-guide-3rd-edition-spanish.pdf 273pp
+
+"Para recordar"
+Objetivos de la fase:
+- Construir el producto a entregar
+- Realizar seguimiento, indicar lo hecho, por hacer e impedimentos
+- Priorizar las actividades de mayor valor
+
+NOTA:
+https://platzi.com/comentario/484078/
+Para implementar el método Kanban utilizo Archmule. De momento no tiene costo en sus principales funcionalidades: https://archmule.com/
+
+https://platzi.com/comentario/558658/
+Practica que se suele utilizar en equipos de Scrum para estimar las tareas
+https://www.scrummanager.net/bok/index.php?title=Estimación_de_póquer

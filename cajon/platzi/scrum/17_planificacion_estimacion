@@ -43,10 +43,9 @@ Pudiendo usarse otros criterios o formatos
 Ver figura 9-4: scrumstudy-sbok-guide-3rd-edition-spanish.pdf 217pp
 
 Estimar historias de usuario
-El SCRUM master y el equipo SCRUM estiman el esfuerzo necesario para desarrollar a funcionalidad descrita en cada historia de usuario
-
-Aprobar, estimar y asignar historias de usuarios
-En este proceso, el Propietario del producto aprueba las Historias de Usuario para un Sprint. Posteriormente, el Scrum Master y el Equipo de Scrum estiman el esfuerzo necesario para desarrollar la funcionalidad descrita en cada historia de usuario, y el Equipo de Scrum se compromete a entregar los requisitos del cliente en forma de Historias de Usuario.
+El SCRUM master y el equipo SCRUM aprueba las Historias de Usuario y su priorización
+se calcula o estima el esfuerzo necesario para desarrollar a funcionalidad descrita en cada historia de usuario
+y el Equipo de Scrum se compromete a entregar los requisitos del cliente en ya expresados en forma de Historias de Usuario
 
 Ver figura 9-6: scrumstudy-sbok-guide-3rd-edition-spanish.pdf 224pp
 
@@ -57,9 +56,12 @@ Como estimamos proyectos Scrum o en general ágiles
 FUENTE: https://platzi.com/comentario/317992/
 Como estimar las historias de usuario
 
-Se pueden utilizar numerosos métodos de estimación para estimar historias de usuario.
+Se pueden utilizar numerosos métodos de estimación para estimar historias de usuario
 Algunas herramientas importantes son:
-Wideband Delphi
-Planning Poker
-Fist of Five
-Affinity Estimation
+- Wideband Delphi
+- Planning Poker
+- Fist of Five
+- Affinity Estimation
+
+FUENTE: https://platzi.com/comentario/454014/
+Las Historias de usuario se pueden crear en plataformas de manejo de kanban como Trello

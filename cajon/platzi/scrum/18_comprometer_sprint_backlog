@@ -1,0 +1,73 @@
+Video_18
+Comprometer historias de usuario, Identificar tareas, estimar tareas, crear el sprint backlog
+
+2.3   Comprometer historias de usuario
+2.3.1 Historias de usuario comprometidas
+Se asignan o agrupan las historias de usuario ya aprobadas y estimadas por el Product Owner a Sprints
+Se genera y aprueba el compromiso del Equipo SCRUM en que se debe construir dentro de cada Sprint
+
+Cada Sprint tendria una duracion maxima de 4 semanas y en estas, se agrupan las historias de usuario para entregar
+en base a la prioridad y esfuerzo requerido por cada Historia de Usuario y la capacidad de trabajo del SCRUM Team
+medidas en: horas / dias / semanas
+
+Ejemplo:
+*	Historia De Usuario #1: Esfuerzo = 140 Horas
+*	5 desarrolladores * 6 Horas Productivas Diarias * 5 días de la Semana = 150 Horas / Semana
+*	SPRINT #1 = Historia de usuario 1, Duración = 1 semana, pendiente desglose de tareas para el Sprint
+
+2.4   Identificar tareas
+Viendo los procesos, ya con todos las historias de usuario comprometidas, y determinados los sprints a realizar
+Se Inician las iteraciones (inicio del sprint)
+Comienza el sprint identificando las tareas de ese sprint
+
+2.4.1 Lista de tareas
+Se crea el Sprint backlog
+
+Actividades:
+Provienen de la descomposicion de las historias de usuario del sprint para compilarse en una lista de tareas
+Estas actividades seran las que componen el Sprint backlog y seran asignadas y construidas para su entrega por los miembros del Equipo SCRUM
+
+Recordemos los niveles de descomposicion previos:
+Vision de proyecto
+[Se descomponen en]
+Epicas
+[Se descomponen en]
+Historias de Usuario
+[Se descomponen en]
+Actividades
+
+2.5   Estimar tareas
+2.5.1 Lista de tareas con esfuerzo estimado
+Estimación de los recursos y esfuerzo necesario para realizar cada elemento de la Lista de Tareas: Personal, tiempo
+Este proceso de "Estimación" lo realiza el Equipo Principal de Scrum durante los Task Estimation Meetings (Reuniones de Estimación de las Tareas)
+
+2.6   Crear el Sprint Backlog
+El Equipo Principal de Scrum crea un Sprint Backlog que contiene todas las tareas que deben completarse en el Sprint
+Este proceso se puede llevar a cabo en una reunion llamada Sprint Planning Meeting (Reuniones de planificación del Sprint)
+
+2.6.1 Sprint Backlog
+Listado de tareas del Sprint
+
+2.6.2 Sprint Burndown Chart
+Listado de tareas pendientes
+
+Se recomienda elaborar una herramienta en la que se pueda ver, detallar y realizar seguimiento a cada una de las tareas que componen el PRODUCT BACKLOG y el SPRINT BACKLOG
+
+Id Historia de usuario o Actividad
+Enunciado corto
+Prioridad
+Alias resumen
+Estado (Pendiente / Desarrollo / Terminado)
+Esfuerzo (Horas) Planeado
+Esfuerzo (Horas) real
+Iteracción Nro (Sprint)
+Area solicitante
+Encargado
+y esfuerzo avance por semana
+Comentarios
+
+"Para recordar"
+Objetivos de la fase de Planificación / Estimacion:
+- Realizar una descomposición mayor del trabajo a realizar en unidades funcionales
+- Determinar la cantidad de trabajo necesario para desarrollar la implementación
+- Determinar el trabajo que se desarrollará en la unidad de trabajo para obtener el incremento de producto
