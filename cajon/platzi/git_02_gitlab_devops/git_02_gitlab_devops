@@ -1,0 +1,72 @@
+Curso de DevOps con GitLab
+
+Fecha de Inicio:
+Fecha de Finalizacion:
+
+TEMARIO:
+1. Introducción
+	01	Introducción al curso
+	02	¿Qué es Devops?
+	03	El ciclo de vida del Devops
+	04	Introducción a Gitlab
+	05	Gitlab vs Github
+2. Administración
+	06	Autenticación
+	07	Grupos
+	08	Autorización
+	09	Auditoría
+	10	Proyectos
+3. Planificación en Gitlab
+	11	Tipos de desarrollo
+	12	Issues
+	13	Etiquetas
+	14	Pesos
+	15	Milestones
+	16	Boards
+	17	Service Desk
+	18	Quick actions
+4. Verificación
+	19	Inicialización del repositorio
+	20	Merge requests
+	21	Profundizando en Merge requests
+	22	Continuous Integration-CI
+	23	Gitlab CI
+	24	Automatizacion con GitLab Cl
+	25	Validacion de la configuracion con GitLab Cl
+	26	gitlab-ci.yml
+	27	Gitlab pages
+	28	Implementando Gitlab pages
+	29	¿Qué es el Desarrollo Ágil?
+	30	Gitlab autodevops
+	31	Implementando GitLab autodevops
+	32	Habilitando autodevops
+5. Empaquetación
+	33	Introducción a contenedores
+	34	Gitlab container registry
+6. Seguridad
+	35	Introducción a DevSecOps
+	36	Firmas de seguridad
+	37	Pruebas estáticas de seguridad
+	38	Escaneo de contenedores
+	39	Escaneo de dependencias
+	40	Pruebas dinámicas de seguridad
+	41	Gitlab security dashboard
+7. Distribución
+	42	Continuous Delivery (CD)
+	43	Ambientes
+	44	Review apps
+	45	Estrategias de Distribución
+	46	Feature Flags
+	47	Rollback
+8. Monitoreo
+	48	¿Por qué monitorear?
+	49	Métricas de desempeño (performance metrics)
+	50	Métricas de salud (health metrics)
+	51	Metricas de equipo
+	52	Rastreo de errores
+9. Conclusiones
+	53	¿Por qué desarrollar con Gitlab?
+
+------------------------------------------------------------------------- Resolver
+------------------------------------------------------------------------- Avance
+------------------------------------------------------------------------- Visto

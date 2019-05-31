@@ -1,0 +1,77 @@
+Fundamentos de Bases de Datos
+
+Fecha de Inicio: 30/05/2019
+Fecha de Finalizacion:
+
+TEMARIO:
+1. Bienvenida
+	01	Conceptos básicos y contexto histórico de las Bases de Datos
+2. Introducción a la bases de datos relacionales
+	02	Historia de las RDB
+	03	Entidades y atributos
+------------------------------------------------------------------------- Visto
+	04	Entidades de Platzi Blog
+	05	Relaciones
+	06	Múltiples muchos
+	07	Diagrama ER
+	08	Diagrama Físico: tipos de datos y constraints
+	09	Diagrama Físico: normalización
+	10	Diagrama Físico: normalizando Platziblog
+	11	Formas normales en DB relacionales
+3. RDBMS (MySQL) o cómo hacer lo anterior de manera práctica
+	12	RDB ¿Qué?
+	13	Instalación local de un RDBMS (Windows)
+	14	Instalación local de un RDBMS (Mac)
+	15	Instalación local de un RDBMS (Ubuntu)
+	16	Clientes gráficos
+	17	Servicios administrados
+4. SQL hasta en la sopa
+	18	Historia de SQL
+	19	DDL create
+	20	DDL alter
+	21	DDL drop
+	22	DML
+	23	¿Qué tan estandard es SQL?
+	24	Creando Platziblog: tablas independientes
+	25	Creando Platziblog: tablas dependientes
+	26	Creando Platziblog: tablas transitivas
+5. Consultas a una base de datos
+	27	¿Por qué las consultas son tan importantes?
+	28	Estructura básica de un Query
+	29	SELECT
+	30	FROM
+	31	Utilizando la sentencia FROM
+	32	WHERE
+	33	Utilizando la sentencia WHERE nulo y no nulo
+	34	GROUP BY
+	35	ORDER BY y HAVING
+	36	El interminable agujero de conejo (Nested queries)
+	37	¿Cómo convertir una pregunta en un query SQL?
+	38	Preguntándole a la base de datos
+	39	Consultando PlatziBlog
+6. Introducción a la bases de datos NO relacionales
+	40	¿Qué son y cuáles son los tipos de bases de datos no relacionales?
+	41	Servicios administrados y jerarquía de datos
+7. Manejo de modelos de datos en bases de datos no relacionales
+	42	Top level collection con firebase
+	43	Creando y borrando documentos en firestore
+	44	Colecciones vs subcolecciones
+	45	Recreando Platziblog
+	46	Construyendo Platziblog en firestore
+	47	Proyecto final transformando tu proyecto en una db no relacional
+8. Bases de datos en la vida real
+	48	Bases de datos en la vida real
+	49	Big Data
+	50	Data warehouse
+	51	Data mining
+	52	ETL
+	53	Business intelligence
+	54	Machine Learning
+	55	Data Science
+	56	¿Por qué aprender bases de datos hoy?
+9. Bonus
+	57	Bases de datos relacionales vs no relacionales
+
+------------------------------------------------------------------------- Resolver
+------------------------------------------------------------------------- Avance
+------------------------------------------------------------------------- Visto

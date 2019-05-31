@@ -1,7 +1,6 @@
 Glosario del curso
 
 Acuerdo de entregables funcionales:
--
 El cierre formal del negocio y la aprobación formal por parte del cliente o del patrocinador se realiza cuando
 Los entregables que cumplen con los criterios de aceptación
 
@@ -11,11 +10,10 @@ La adaptación sucede cuando el equipo principal de Scrum y el (los) socio(s) (s
 Amenazas
 Las amenazas son riesgos que pudieran afectar el proyecto en forma negativa.
 
-Análisis de brecha:
+Análisis de brecha
 El análisis de brecha es una técnica que se utiliza para comparar el estado actual con el estado deseado y determinar la forma de acortar la brecha entre ambos.
 
 Aprobación, estimación y asignación de historias de usuarios (Proceso):
--
 El propietario del producto aprueba las historias de usuario para un sprint
 El Scrum Master y el equipo Scrum calculan el esfuerzo necesario para desarrollar la funcionalidad en cada historia de usuario
 El equipo Scrum se aboca a entregar los requerimientos del cliente (historias de usuario) autorizadas, estimadas y asignadas
@@ -349,50 +347,63 @@ en tareas. Las historias de usuario de la lista priorizada de pendientes del pro
 suficientemente segmentadas a un nivel que le brinde al equipo Scrum la información adecuada para crear
 entregables a partir de las tareas mencionadas en la lista de tareas.
 
-Solicitudes de cambio aprobadas
-Las solicitudes de cambios aprobadas son los cambios que han sido aprobados para incluirse en la lista priorizada de pendientes del producto. En ocasiones, las solicitudes de cambio aprobadas pueden presentarlos los gerentes del programa o de la cartera, y serían entradas que se añadirán a la lista de cambios autorizados del proyecto para su implementación en futuros sprints.
+---
+Solicitudes de cambio aprobadas:
+Son los cambios que han sido aprobados para incluirse en la lista priorizada de pendientes del producto
+En ocasiones, las solicitudes de cambio aprobadas pueden presentarlos los gerentes del programa o de la cartera
+y serían entradas que se añadirán a la lista de cambios autorizados del proyecto para su implementación en futuros sprints
 
-Solicitud de cambio
-Las peticiones para realizar cambios generalmente se presentan como solicitudes de cambio. Dichas solicitudes permanecen como no aprobadas has que se autorizan formalmente.
+Solicitud de cambio:
+Las peticiones para realizar cambios generalmente se presentan como solicitudes de cambio
+Dichas solicitudes permanecen como no aprobadas has que se autorizan formalmente
 
-Solicitudes de cambio no aprobadas
-Las peticiones de cambio se presentan por lo general como solicitudes de cambio. Estas permanecen no
-aprobadas hasta que se autorizan formalmente.
+Solicitudes de cambio no aprobadas:
+Las peticiones de cambio se presentan por lo general como solicitudes de cambio
+Estas permanecen no aprobadas hasta que se autorizan formalmente
 
-Scrum Master
-El Scrum Master es uno de los roles en el equipo principal de Scrum. Él o ella facilitan la creación de
-entregables del proyecto, gestiona riesgos, cambios e impedimentos durante el proceso de llevar a cabo la reunión diaria de pie, retrospectiva del sprint y demás procesos de Scrum.
+Scrum Master:
+El Scrum Master es uno de los roles en el equipo principal de Scrum
+Llevar a cabo la reunión diaria de pie, retrospectiva del sprint y demás procesos de Scrum
+Facilitan la creación de entregables del proyecto, gestiona riesgos, cambios e impedimentos durante los sprints
 
-Tablero de Scrum (Scrumboard)
-El tablero de Scrum es una herramienta utilizada por el equipo Scrum para planificar y dar seguimiento al
-proceso durante cada sprint. El tablero de Scrum contiene cuatro columnas para indicar el progreso de las tareas estimadas para el sprint: una columna ―por hacer‖ (To Do) para las tareas que aún no inician; una columna ―en progreso‖ (In Progress) para las tareas iniciadas, pero que no se han terminado; una columna de ―prueba‖ (Testing) para tareas terminadas pero que están en proceso de prueba; y la columna de ―terminado‖ (Done) para las tareas que se han terminado y examinado satisfactoriamente.
+Tablero de Scrum (Scrumboard):
+Herramienta utilizada por el equipo Scrum para planificar y dar seguimiento al proceso durante cada sprint
+El tablero de Scrum contiene cuatro columnas para indicar el progreso de las tareas estimadas para el sprint:
+- Por hacer (To Do) para las tareas que aún no inician; una columna
+- En progreso (In Progress) para las tareas iniciadas, pero que no se han terminado
+- Prueba (Testing) para tareas terminadas pero que están en proceso de prueba
+- Terminado (Done) para las tareas que se han terminado y examinado satisfactoriamente
 
-Sprint
-Un sprint es una iteración con un bloque de tiempo asignado de una a seis semanas de duración durante el cual el equipo Scrum crea y trabaja en los entregables del sprint.
+Sprint:
+Un sprint es una iteración con un bloque de tiempo asignado de una a seis semanas de duración
+durante el cual el equipo Scrum crea y trabaja en los entregables del sprint
 
-Socio(s) (Stakeholder[s])
-Socio (del inglés: stakeholder) es un término colectivo que incluye a clientes, usuarios y patrocinadores que interactúan frecuentemente con el propietario del producto, con el Scrum Master y con el equipo Scrum para brindar opiniones y facilitar la creación del producto del proyecto, servicio u otros resultados.
+Socio(s) (Stakeholders):
+Socio (stakeholder) es un término colectivo que incluye a clientes, usuarios y patrocinadores que interactúan frecuentemente con
+el propietario del producto, con el Scrum Master y con el equipo Scrum
+para brindar opiniones y facilitar la creación del producto del proyecto, servicio u otros resultados
 
-Tres preguntas diarias
-Las tres preguntas diarias se utilizan en las reuniones diarias de pie, organizadas por el Scrum Master,
-donde cada miembro del equipo Scrum brinda información en forma de respuesta a tres preguntas
-específicas:
+Tres preguntas diarias:
+Las tres preguntas diarias se utilizan en las reuniones diarias de pie organizadas por el Scrum Master
+donde cada miembro del equipo Scrum brinda información en forma de respuesta a tres preguntas específicas:
+- ¿Qué terminé ayer?
+- ¿Qué terminaré hoy?
+- ¿Qué impedimentos u obstáculos (si los hubiera) estoy enfrentando en la actualidad?
 
-¿Qué terminé ayer?
-¿Qué terminaré hoy?
-¿Qué impedimentos u obstáculos (si los hubiera) estoy enfrentando en la actualidad?
-Transparencia
-La transparencia permite que todas las facetas de cualquier proceso de Scrum puedan ser observadas por cualquiera. Compartir toda la información conduce a un ambiente de alta confianza.
+Transparencia:
+La transparencia permite que todas las facetas de cualquier proceso de Scrum puedan ser observadas por cualquiera
+Compartir toda la información conduce a un ambiente de alta confianza
 
-Usuario
-Los usuarios son los individuos o la organización que utiliza directamente el producto del proyecto, el
-servicio u otros resultados. Al igual que los clientes, para cualquier organización, puede haber tanto
-usuarios internos y como externos. En algunos casos, los clientes y los usuarios pueden ser los mismos.
+Usuario:
+Los usuarios son los individuos o organización que utiliza directamente el producto del proyecto el servicio u otros resultados
+Al igual que los clientes, para cualquier organización, puede haber tanto usuarios internos y como externos
+En algunos casos, los clientes y los usuarios pueden ser los mismos
 
-Vendedor
-Los vendedores son individuos externos u organizaciones que ofrecen productos y servicios que no están dentro de las competencias básicas de la organización del proyecto.
+Vendedor:
+Los vendedores son individuos externos u organizaciones que ofrecen productos y servicios que
+no están dentro de las competencias básicas de la organización del proyecto
 
-Voz del cliente (Voice of the Customer)
-A la voz del cliente se le puede conocer como los requerimientos explícitos e implícitos del cliente que se
-deben entender antes de diseñar un producto o servicio. El propietario del producto representa la voz del
-cliente.
+Voz del cliente (Voice of the Customer):
+A la voz del cliente se refiere a los requerimientos explícitos e implícitos del cliente
+que se deben entender antes de diseñar un producto o servicio
+El propietario del producto representa la voz del cliente
