@@ -1,0 +1,32 @@
+Video_23
+Taller de SCRUM
+
+Resumen del curso y demostracion practica creando una ciudad con legos
+
+Apuntes importantes del taller:
+
+Planeacion y tiempo:
+"Paralisis por analisis"
+El analisis es inicial, todo depende del nivel de profundidad
+
+Planificacion del sprints
+Creando historias de usuario
+los adjetivos no se miden! "Deben tener verbos medibles"
+
+NOTA:
+https://platzi.com/comentario/562383/
+Metodologias agiles en proyectos personales
+Usar github / github workflow / github projects y monta todo en un marco Agil
+SCRUM y metodologías similares funcionan mejor mientras más personas son
+por ende a menor cantidad de personas, pierde su valor
+El esfuerzo por montar la metodología no compensa
+Con github puedes:
+- Codear, mantener control de versiones
+- Crear un flujo simple de CI/CD con tecnologías como:
+    now, docker, kubernetes, digitalOcean, heroku, etc...
+- Puedes mostrar progreso de tu trabajo mediante los “github projects”
+    creando milestones (equivalen a sprints de scrum)
+
+Integración Contínua y Despliegue (CI/CD): 
+https://www.taringa.net/+ebooks_tutoriales/aprende-ci-cd-con-heroku-github-travisci-y-taringa-api_yrx1k
+Integrar CI/CD a un proyecto web para automatizar y mejorar el flujo de trabajo
