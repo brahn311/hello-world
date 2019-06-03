@@ -1,0 +1,85 @@
+Video_05
+Relaciones
+
+Relaciones
+Las relaciones nos permiten ligar o unir nuestras diferentes entidades
+Se representan con rombos
+Por convención se definen a través de verbos
+
+Como se grafica:
+rectangulo  linea  rombo  linea  rectangulo
+automoviles       -tiene-        dueño
+jugadores       -pertenece-      equipo
+laptops           -tiene-        discos duros
+
+Cuando tenemos atributos multivaluados por lo general los convertimos en entidades
+Porque tienen vida propia
+
+Propiedad de Cardinalidad:
+Las relaciones tienen una propiedad llamada cardinalidad
+Usada para definir el comportamiento o tipo de relacion entre las entidades
+Esa cardinalidad depende del enunciado
+
+Cuántos de un lado pertenecen a cuántos del otro lado:
+- Cardinalidad 1 a 1 uno a uno
+- Cardinalidad 0 a 1 cero a uno
+- Cardinalidad 1 a N uno a muchos
+- Cardinalidad 0 a N cero a muchos
+
+Cardinalidad 1 a 1:
+1:1
+uno a uno
+
+Enunciado = Una persona tiene unos datos de contacto
+      1 --------> 1
+persona  -tiene-  datos_contactos
+      1 <-------- 1
+
+Tomas el numero mayor de cada lado, quedando
+
+Para graficar en diagrama fisico:
+-|------------------------|-
+(linea recta con una barra en el extremo)
+uno y solo uno:
+-|-----------------------||-
+(linea recta con doble barra en el extremo)
+
+Cardinalidad 0 a 1
+0:1
+cero a uno
+uno a uno opcional
+
+Enunciado = usuario puede o no tener una sesion actual
+            0 <-------- 1
+sesion_actual  -tiene-  usuario
+            1 --------> 1
+
+Para graficar en diagrama fisico:
+-|- -- -- -- -- -- -- -- -|-
+(linea punteada con una barra en el extremo)
+
+Cardinalidad 1 a N
+1:N
+uno a muchos
+
+Enunciado = una persona tiene muchos automoviles
+      1 <-------- N
+persona  -tiene-  automoviles
+      1 --------> 1
+
+Para graficar en diagrama fisico:
+-|------------------------<-
+(linea recta con una barra en un extremo y el otro extremo salen 3 rallas)
+Uno y muchos opcional:
+-|-----------------------o<-
+(linea recta con una barra en un extremo y el otro extremo salen 3 rallas)
+Solo uno y siempre muchos:
+-||---------------------|-<-
+(linea recta con una barra en un extremo y el otro extremo salen 3 rallas)
+
+Cardinalidad 0 a N
+0:N
+cero a muchos
+Para graficar en diagrama fisico:
+-|o----------------------|<-
+-|- -- -- -- -- -- -- -- |<-

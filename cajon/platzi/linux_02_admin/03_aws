@@ -1,38 +1,77 @@
 Video_03
 Iniciar un servidor Linux con AWS
 
-Usando plataformas como AWS podemos tener servidores de forma fácil, permitiendo iniciar un servidor en cuestión de minutos.
+Nota:
+Notas copiadas, pero por no tener amanzon acount no usare este metodo
 
-Para iniciar con Amazon debes entrar a su sitio web y realizar el proceso de registro.
+Guia para realizar los mismos pasos realizados en el video_02 (con virtualbox y ubuntu server)
+Usando pero ahora usando como ejemplo practico plataformas como AWS
+Tambien podremos tener servidores de forma fácil, permitiendo iniciar un servidor en pocos minutos
+
+Para iniciar con Amazon debes entrar a su sitio web y realizar el proceso de registro
+https://aws.amazon.com/es/
+Tambien puedes iniciar secion con tu cuenta de amazon
+
+En la pagina de inicio de AWS debes de ir al servicio
+Computer > EC2
+Donde esta la parte de servidores virtualizados
+En la que accederemos a configurar instancias (ubicadas fisicamente en virginia)
+Running Instances
 
 Iniciar una instancia
-Una vez dentro del dashboard, encontrarás en el menú izquierdo una sección llamada Instances, al ingresar en esta opción seleccionamos Crear una nueva instancia
+Una vez dentro del dashboard, encontrarás en el menú izquierdo una sección llamada Instances
+Al ingresar en esta opción seleccionamos:
+Launch Instance (crear una nueva instancia)
 
-Seleccionamos el sistema operativo, en este caso Ubuntu Server 16.04
+Seleccionamos el sistema operativo:
+Ubuntu Server 16.04 LTS (HVM,SSD Volume Type) 64-bit (en este caso para el curso)
 
-Dejamos seleccionada la instancia por defecto, igual que la configuración de los detalles.
+Dejamos seleccionada la instancia por defecto, igual que la configuración de los detalles
+Type Instance: > Next: Configure Instance
+- Family = General Purpose
+- Type = t2.micro
+- vCPUs = 1
+- Memory = 1GB
+- Storage = EBS only
+- Network = Low to Moderate
+- IPv6 = Yes
+Configure Instance: (Dejar todo por defecto) > Next: Add Storage
+Add Storage: (disco duro lo dejamos de 8GB, SSD General purpose) > Next: Add Tags
+Add Tags: (no es necesario para este momento) > Next: Configure Security Group
+Configure Security Group: (crear un nuevo grupo, seleccionar los puertos) > Review and Launch
+- Assign a security group = Create a new Security Group
+- Security group name = platzi
+- Description = Mi maquina virtual
+- Ports:
+Type	/ Protocol	/ Port	/ Source
+SSH		/ TCP		/ 22	/ 0.0.0.0/0
+HTTP	/ TCP		/ 80	/ 0.0.0.0/0, ::/0
+HTTPS	/ TCP		/ 443	/ 0.0.0.0/0, ::/0
+Custom	/ TCP		/ 8080	/ 0.0.0.0/0, ::/0
 
-El disco duro lo dejamos de 8GB, usando un disco SSD.
-
-Al configurar el security group, debes crear un nuevo grupo, seleccionando los puertos que vas a utilizar, en este caso serán el puerto 22, 80, 443, 8080.
-
-Al tener definida toda la configuración, lanzamos la instancia.
+Revisamos todo el contenido solicitado
+Ya al tener definida toda la configuración, lanzamos la instancia:
+Launch
+La instancia tardara entre 1 a 2 minutos en estar disponible
 
 Conectarse a la instancia
-Las llaves nos permiten conectarnos al servidor, al lanzar la isntancia nos da la opción de crear una nueva llave y descargarla al computador.
+Las llaves nos permiten conectarnos al servidor
+Justo al hacer el lanzamiento, amanzon nos da la opción de crear una nueva llave y descargarla al computador
+Atencion "Esta llave no se puede recuperar" y perderiamos el acceso al servidor y posiblemente todo su contenido
+Es muy mala practica compartir la misma llave en varias instancias
 
-Es muy mala practica compartir la misma llave en varias instancias.
+Recuerda que en el dashboard de AWS puedes ver la dirección IP asignada a la instancia que acabas de crear
 
 Para conectarnos al servidor podemos utilizar el comando:
+$ ssh -i [ruta_de_la_llave] [usuario]@[ip del servidor]
+Por ejemplo:
+$ ssh -i woakas.pem ubuntu@54.196.172.97
 
-// ssh -i [Nombre de la llave] [usuario]@[ip del servidor]
-
-ssh -i woakas.pem ubuntu@54.196.172.97
-Recuerda que en el dashboard de AWS puedes ver la dirección IP asignada a la instancia que acabas de crear.
-
-Al conectarte por primera vez te va a pedir aceptar una verificación y mostrará una alerta de seguridad relacionada con los permisos de la llave.
-
-Para solucionar la alerta debemos buscar la llave y cambiar sus permisos con el archivo.
-
-chmod 600 woakas.pem
-Intenta conectarte de nuevo y vas a estar dentro de tu nuevo servidor.
+Conectarte por primera vez:
+Al hacerelo te va a pedir aceptar una verificación que deberas aceptar
+Tambien mostrará una alerta de seguridad relacionada con los permisos de la llave
+"Los permisos 644 de la llave estan muy abiertos"
+Para solucionar la alerta debemos buscar la llave y cambiar sus permisos con el comando
+$ chmod [permiso] [ruta_de_la_llave]
+$ chmod 600 woakas.pem
+Intenta conectarte de nuevo y vas a estar dentro de tu nuevo servidor

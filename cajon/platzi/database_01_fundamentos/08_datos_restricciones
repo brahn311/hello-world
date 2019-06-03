@@ -1,0 +1,25 @@
+Video_08
+Diagrama Físico: tipos de datos y constraints
+
+Diagramas fisicos:
+Modo grafico para visualizar y conceptualizar todos los actores que intervienen
+Donde tendran los datos de entrada necesarios especificar para construir la bases de datos
+
+Cada entidad posee distintos atributos, ellos se configuran de a cuerdo a su contenido
+Todo esto es para optimizar los espacios de memoria y buscar eficiencia en la base de datos
+
+Tipos de dato:
+-	Texto: CHAR(n), VARCHAR(n), TEXT
+-	Números: INTEGER, BIGINT, SMALLINT, DECIMAL(n,s), NUMERIC(n,s) [n = entero s = decimales]
+-	Fecha/hora: DATE, TIME, DATETIME, TIMESTAMP
+-	Lógicos: BOOLEAN
+
+Constraints (Restricciones):
+Reglas que poseen las tablas en atributos para controlar los comportamientos de los datos almacenados
+-	NOT NULL: Se asegura que la columna no tenga valores nulos
+-	UNIQUE: Se asegura que cada valor en la columna no se repita
+-	PRIMARY KEY: Es una combinación de NOT NULL y UNIQUE e INDEX y facilita la relacion
+-	FOREIGN KEY: Identifica una tupla en otra tabla (del mismo tipo de dato Y UNIQUE, NOT NULL) 
+-	CHECK: Se asegura que el valor en la columna cumpla una condición dada
+-	DEFAULT: Coloca un valor por defecto cuando no hay un valor especificado
+-	INDEX: Se crea por columna para permitir búsquedas más rápidas

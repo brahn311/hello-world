@@ -1,0 +1,33 @@
+Video_06
+Multiples muchos
+
+Cardinalidad N:N
+muchos a muchos
+(esta cardinalidad es muy especial)
+     1 ------------> N
+alumno  -pertenece-  clases
+     N <------------ 1
+	 
+Para graficar en diagrama fisico:
+->------------------------<-
+->-|--------------------|-<-
+
+---
+Video_07
+Diagrama ER
+
+Diagrama entidad relacion del proyecto blog
+
+Ver imagen: ./files/diagrama_er.jpg
+
+NOTA:
+Notación y símbolos de diagramas entidad-relación
+https://www.lucidchart.com/pages/es/simbolos-de-diagramas-entidad-relacion
+https://es.wikipedia.org/wiki/Modelo_entidad-relación
+
+Otros programas o sitios para diagramas:
+https://www.lucidchart.com/ (puede limitar la cantidad de Entidades)
+https://www.gliffy.com/ (limitado pero de prueba indefinida)
+https://www.vertabelo.com/
+https://products.office.com/es-ar/visio/flowchart-software (Windows)
+https://www.dbschema.com/

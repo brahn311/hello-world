@@ -1,0 +1,40 @@
+Video_04
+Entidades de Platzi Blog
+
+Proyecto: manejador de blogspots
+
+Diagrama ER: blog
+
+Primer paso: Identificar las identidades
+posts
+usuarios
+comentarios
+categorias
+
+Segundo paso: Pensar en los atributos
+posts
+  titulo
+  fecha_publicacion
+  contenido
+  estatus (publicado / no publicado, activo / inactivo)
+  etiquetas (varias)
+  id
+
+usuarios
+  login
+  password
+  alias / username / nickname
+  email
+  id
+  *bio
+
+RETO:
+comentarios
+  id
+  contenido
+  fecha_publicacion
+
+categorias
+  id
+  nombre
+  descripcion

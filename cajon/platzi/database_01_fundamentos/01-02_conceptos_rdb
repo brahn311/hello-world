@@ -1,0 +1,46 @@
+(... Cont)
+Ver: minuto 05:30
+
+Que son las bases de datos
+
+Entran en el periodo entre: discoduro y nube
+Complementa la arquitectura del computacion basica creada por Von Neumann (pronunciacion: Von Noiman)
+https://es.wikipedia.org/wiki/Arquitectura_de_Von_Neumann
+
+Tipos:
+  Relacionales
+  No relacionales
+
+DB Relacionales:
+  MS SQL Server
+  MySQL
+  ORACLE (Fork del creador de Mysql)
+  MariaDB
+  PostgreSQL
+
+DB No Relacionales:
+  Menbase
+  cassandra (facebook)
+  DynamoDB (aws)
+  elasticsearch
+  *Neo4j (graphos)
+  *MongoDB
+  *FireBase
+
+Servicios:
+  Auto-administrados
+  Administrados
+
+Auto-administrados: instaladas en el computador
+Administrados: Servicios ofrecidos de nubes
+
+---
+Video_02
+Historia de las RDB
+
+Antecedentes
+Bases de datos basadas en archivos:
+Eran datos guardados en texto plano, fáciles de guardar pero muy difíciles de consultar
+
+Edgar Codd, Creador de la RDB y del algebra relacional
+12 mandamientos de Codd: https://es.wikipedia.org/wiki/12_reglas_de_Codd

@@ -1,0 +1,53 @@
+Video_03
+Entidades y atributos
+
+Entidad
+Similar a un objeto (programación orientada a objetos)
+Representa algo en el mundo real, incluso algo abstracto
+Tienen atributos (las caracteristicas que los hacen ser una entidad)
+Por convención se ponen en plural (porque contienen varios objetos)
+Cualquier objeto puede ser una entidad
+Graficado con un regtangulo
+
+Atributos
+Caracteristicas que posee el objeto
+Graficados con un ovalo
+Unidos a la entidad por medio de una linea
+
+Los atributos llave son aquellos que identifican a la entidad y no pueden ser repetidos
+Graficado con un ovalo con nombre subrayado
+
+Tipos atributos llave:
+Natural: viene inseparable del propio objeto
+Artificial: asignados arbitrariamente
+
+los atributos multivaluados son aquellos que tienen multiples valores
+Los atributos compuestos son aquellos que tienen atributos que lo componen
+
+Entidades Debiles
+Dependen o no existen por si solas, dependen de otra entidad fuerte para existir
+
+Identidades débiles por identidad:
+No se diferencian entre sí más que por la clave de su identidad fuerte
+
+Identidades débiles por existencia:
+Se les asigna una clave propia
+
+Entidades Fuertes
+No dependen de ninguna otra entidad para existir
+Graficado con un cuadrado de doble linea
+
+Los atributos especiales pueden ser calculos en base a otros atributos (la edad se calcula con el año)
+Graficado con un ovalo punteadas
+
+NOTA:
+Notacion de Chen
+Ver imagen: ./files/chen_notation.jpg
+
+Programa para diagramar uml
+http://staruml.io/ (windows)
+http://www.nomnoml.com/ (web)
+https://www.draw.io/ (web: googledrive/Onedrive/device)
+
+Programa manejador de DB de MySQL
+https://www.mysql.com/products/workbench/

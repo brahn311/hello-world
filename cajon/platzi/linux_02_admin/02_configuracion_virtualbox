@@ -27,9 +27,8 @@ Pedira los datos del usuario para iniciar sesion:
 Usuario: ubuntu
 Password: ubuntu123
 
-NO TIENE INTERFAZ GRAFICA
-Es para servidor, no debemos:
-Instalar una interfaz grafica
+Atencion: "NO TIENE INTERFAZ GRAFICA"
+Es para servidor, no debemos Instalar una interfaz grafica
 Conectarse al servidor por acceso remoto o escritorio compartido
 
 La unica manera de conexion es por ssh
@@ -44,13 +43,21 @@ Irenos al VirtualBox:
 En File > Preferences > Network > Host-Only Networks
 Añadimos una Red: vboxnet0
 Aceptamos la configuracion
+
+Nota:
+No aparecen las redes Host-Only en las preferencias de VirtualBox
+Solo aparecen Redes NAT y agrege por default una NatNetwork
+
 Luego hacemos Click con el boton derecho del mouse en la maquina virtual
 Seleccionamos Settings > Network > Adapter 1
 Modificamos:
 Attached to: Host-Only Adpater
 Name: vboxnet0
 
-En nuestra maquina virtual:
+Nota:
+En mi caso no fue necesario agregar el name pues no aparecia en las opciones
+
+En nuestra maquina virtual usamos los comandos:
 # ifdown enp0s3
 # ifup enp0s3
 
@@ -68,6 +75,9 @@ Podemos probar la conexion en nuestra maquina a la maquina virtual:
 ping [ip address]
 Permite realizar ping a dicha IP
 
+--- Minuto 6:40
+
+SSH
 Una vez tengamos conexión entre las dos máquinas
 Podemos configurar para poder conectarnos y autenticarnos por ssh
 # ssh 192.168.56.101
@@ -78,6 +88,8 @@ Una opción es iniciar con el usuario ubuntu
 Recuerda que debes usar la ip que se le asigne al server
 Aunque "esta no es la manera correcta"
 La "forma correcta" es generar una llave SSH publica y colocarla en el servidor
+
+Nota: buscar como conectarse por ssh desde windows
 
 ssh [ip address]
 ssh [username]@[ip address]

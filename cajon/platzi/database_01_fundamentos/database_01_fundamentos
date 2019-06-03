@@ -9,11 +9,12 @@ TEMARIO:
 2. Introducción a la bases de datos relacionales
 	02	Historia de las RDB
 	03	Entidades y atributos
-------------------------------------------------------------------------- Visto
 	04	Entidades de Platzi Blog
 	05	Relaciones
 	06	Múltiples muchos
 	07	Diagrama ER
+------------------------------------------------------------------------- Avance
+------------------------------------------------------------------------- Visto
 	08	Diagrama Físico: tipos de datos y constraints
 	09	Diagrama Físico: normalización
 	10	Diagrama Físico: normalizando Platziblog
@@ -73,5 +74,3 @@ TEMARIO:
 	57	Bases de datos relacionales vs no relacionales
 
 ------------------------------------------------------------------------- Resolver
-------------------------------------------------------------------------- Avance
-------------------------------------------------------------------------- Visto

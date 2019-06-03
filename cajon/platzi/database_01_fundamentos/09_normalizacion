@@ -1,0 +1,102 @@
+Video_10
+Diagrama Físico: normalización
+
+La normalización
+Nos ayuda a dejar todo de una forma normal
+Esto obedece a las 12 reglas de Codd y nos permiten separar componentes en la base de datos:
+
+Normas formales:
+Primera forma normal (1FN
+Segunda forma normal (2FN
+Tercera forma normal (3FN)
+Cuarta forma normal (4FN)
+
+Primera forma normal (1FN):
+Atributos atómicos (Sin campos repetidos)
+
+Segunda forma normal (2FN):
+Cumple 1FN y cada campo de la tabla debe depender de una clave única
+
+Tercera forma normal (3FN):
+Cumple 1FN y 2FN y los campos que NO son clave, NO deben tener pendencias
+
+Cuarta forma normal (4FN):
+Cumple 1FN, 2FN, 3FN y los campos multivaluados se identifican por una clave única
+
+Por ejemplo:
+
+Sin normalizar:
+alumno	|nivel_curso	|nombre_curso		|materia_1	|materia_2
+--------|---------------|-------------------|-----------|---------
+Juanito	|Maestria		|Data engineering	|MySQL		|Python
+Pepito	|Licenciatura	|Programacion		|MySQL		|Python
+
+1FN:
+id	|alumno	|nivel_curso	|nombre_curso		|materia
+----|-------|---------------|-------------------|-------
+1	|Juanito|Maestria		|Data engineering	|MySQL
+1	|Juanito|Maestria		|Data engineering	|Python
+2	|Pepito	|Licenciatura	|Programacion		|MySQL
+2	|Pepito	|Licenciatura	|Programacion		|Python
+
+2FN:
+alumno_id	|alumno	|nivel_curso	|nombre_curso
+------------|-------|---------------|----------------
+1			|Juanito|Maestria		|Data engineering
+2			|Pepito	|Licenciatura	|Programacion
+
+materia_id	|alumno_id	|materia
+------------|-----------|-------
+1			|1			|MySQL
+2			|1			|Python
+3			|2			|MySQL
+4			|2			|Python
+
+3FN:
+id	|alumno	|curso_id
+----|-------|--------
+1	|Juanito|1
+2	|Pepito	|2
+
+curso_id	|nivel_curso	|nombre_curso		
+------------|---------------|----------------
+1			|Maestria		|Data engineering
+2			|Licenciatura	|Programacion
+
+materia_id	|alumno_id	|materia
+------------|-----------|-------
+1			|1			|MySQL
+2			|1			|Python
+3			|2			|MySQL
+4			|2			|Python
+
+4FN:
+alumnos
+---------------------
+id	|alumno	|curso_id
+----|-------|--------
+1	|Juanito|1
+2	|Pepito	|2
+
+cursos
+---------------------------------------------
+curso_id	|nivel_curso	|nombre_curso		
+------------|---------------|----------------
+1			|Maestria		|Data engineering
+2			|Licenciatura	|Programacion
+
+materias
+--------------------
+materia_id	|materia
+------------|-------
+1			|MySQL
+2			|Python
+
+alumnos_por_materias
+-------------------------------
+apm_id	|alumno_id	|materia_id
+------------|-----------|------
+1			|1			|1
+2			|1			|2
+3			|2			|1
+4			|2			|2

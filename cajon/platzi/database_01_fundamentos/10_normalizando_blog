@@ -1,0 +1,16 @@
+Video_10
+Diagrama Físico: normalizando Platziblog
+
+Hacemos el diagrama fisico del blog
+Normalizamos las tablas del blog
+
+N:N
+Recuerda que muchos a muchos es un caso especial
+Se crea una tercera tabla intermedia, por convencion el nombre es unido de ambas tablas
+La tabla intermedia sera la relacion y contiene las claves de sus relaciones
+En este caso esta tabla tendra una clave principal compartida y no tiene una clave artificial
+
+Ver imagen: ./files/normalizacion_blog.jpg ---
+
+RETO:
+Hacer estos pasos para nuestros otros proyectos personales
