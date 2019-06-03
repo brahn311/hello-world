@@ -13,8 +13,6 @@ TEMARIO:
 	05	Relaciones
 	06	Múltiples muchos
 	07	Diagrama ER
-------------------------------------------------------------------------- Avance
-------------------------------------------------------------------------- Visto
 	08	Diagrama Físico: tipos de datos y constraints
 	09	Diagrama Físico: normalización
 	10	Diagrama Físico: normalizando Platziblog
@@ -22,6 +20,8 @@ TEMARIO:
 3. RDBMS (MySQL) o cómo hacer lo anterior de manera práctica
 	12	RDB ¿Qué?
 	13	Instalación local de un RDBMS (Windows)
+------------------------------------------------------------------------- Avance
+------------------------------------------------------------------------- Visto
 	14	Instalación local de un RDBMS (Mac)
 	15	Instalación local de un RDBMS (Ubuntu)
 	16	Clientes gráficos

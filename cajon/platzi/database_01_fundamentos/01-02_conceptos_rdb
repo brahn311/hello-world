@@ -1,10 +1,21 @@
-(... Cont)
-Ver: minuto 05:30
+Video_01
+Conceptos básicos y contexto histórico de las Bases de Datos
 
-Que son las bases de datos
+Profesor: Israel Vasquez
 
+Historia de la persistencia de la informacion
+- arcilla -> romper
+- papiro o pergamino -> hongos / degradables
+- microfilm -> maquinas costodas
+
+Actuales
+- medios digitales (discos duros, discos solidos, cds)
+- nube -> medio descentralizado de acceso a la informacion desde cualquier parte del mundo
+
+Que son las bases de datos:
 Entran en el periodo entre: discoduro y nube
-Complementa la arquitectura del computacion basica creada por Von Neumann (pronunciacion: Von Noiman)
+Complementa el almacenado de informacion digital de la arquitectura del computacion basica
+creada por Von Neumann (pronunciacion: Von Noiman)
 https://es.wikipedia.org/wiki/Arquitectura_de_Von_Neumann
 
 Tipos:

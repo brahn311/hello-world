@@ -1,0 +1,45 @@
+Video_11
+RDB ¿Que?
+
+Management System
+
+RDBMS:
+Relational
+Database
+Management
+System
+Sistema manejador de bases de datos relacionales
+
+Es un programa que se encarga de seguir las reglas de Codd y se puede utilizar de manera programática
+
+Por ejemplo:
+MySQL (Era de SUN Micro System, pero fue adquirida por ORACLE)
+MariaDB (Es el fork de MySQL realizado por su creador original)
+PostgreSQL (Es software libre)
+ORACLE
+
+---
+Video_12
+Instalación local de un RDBMS (Windows)
+
+Hay dos maneras de acceder a manejadores de bases de datos:
+- Instalar en máquina local un administrador de bases relacional
+- Tener ambientes de desarrollo especiales o servicios cloud
+
+En este curso usaremos:
+MySQL
+Tiene un impacto histórico siendo muy utilizado y además es software libre y gratuito
+La versión usada en el curso es la 5.6.43 (compatible con la mayoría de aplicaciones y frameworks)
+
+Nota:
+Intente instalar varias versiones y no pude, me rindo por el momento
+La version: 8.0.16 es la ultima version si tienes un equipo con 64-bytes
+La version: 5.7.26 no me instalo tampoco
+
+Posee 2 instaladores:
+- Version pequeña (se conecta a internet para descargar complementos)
+- Version completa (en el curso se usara la completa)
+No es necesario crearte una cuenta para descargar, puedes usar el enlace "solo quiero empezar mi descargar"
+
+Root es el usuario principal que tendrá todos los permisos
+por lo tanto en ambientes de producción hay que tener mucho cuidado al configurarlo
