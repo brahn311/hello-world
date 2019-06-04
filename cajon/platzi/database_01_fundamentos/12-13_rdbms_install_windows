@@ -35,6 +35,7 @@ Nota:
 Intente instalar varias versiones y no pude, me rindo por el momento
 La version: 8.0.16 es la ultima version si tienes un equipo con 64-bytes
 La version: 5.7.26 no me instalo tampoco
+Use MariaDB que viene incluida en XAMPP en conjunto con MySQL Workbench (aunque aparecio un mensaje de que no eran totalmente compatibles)
 
 Posee 2 instaladores:
 - Version pequeña (se conecta a internet para descargar complementos)

@@ -1,0 +1,35 @@
+Video_17
+Servicios administrados
+
+Servicios administrados cloud
+Alternativa para no instalar en maquinas locales los servidores
+Consta de contratar servicios especializados (en la nube) que te ofrecen mantener y administrar DB
+Ademas proveen todos los procesos de mantenimiento y actuaciozacion de los sistemas donde se encuentren las DB
+
+Algunos de ellos ofrecen pruebas gratituas que tienden a ser limitadas dependiendo del uso
+Si los utilizas de manera personal no generara cobros ni facturas
+Aunque al momento de aumentar la cantidad de transacciones, como para APPS en produccion, aplicaran tarifas
+
+Para fines practicos se crea una DB en
+Google Cloud Platform
+
+Puedes crear un nuevo proyecto en
+Dashboard
+Luego eliges el nombre del proyecto
+Una vez creado lo seleccionas para operar sobre el
+Ahora en el menu de Google, debes acceder a:
+SQL
+Debes crear una nueva instancia SQL o migrar Datos
+Puedes elegir entre MySQL o PostgreSQL
+
+Debes especificar:
+Nombre identificador de la instancia (nombre del servidor)
+Password root (puedes no configurarla, no recomendado para produccion)
+La ubicacion fisica depende de tu ubicacion (escoje la mas cercana)
+Esto puede afectar el tiempo de respuestas en las transacciones
+Cuando todo este listo puedes entrar a tu servidor y observar las bases de datos
+Debes de crear la DB
+
+Este servicio posee un acceso al servidor llamado
+Cloud Shell
+Permite la connecion a la base de datos modo consola desde la base de datos

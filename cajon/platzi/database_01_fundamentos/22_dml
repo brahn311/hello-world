@@ -1,0 +1,28 @@
+Video_22
+DML
+
+Data Manipulation Language
+Trata del contenido en la base de datos
+
+Sus comandos son:
+Insert: Inserta o agrega nuevos registros a la tabla
+Update: Actualiza o modifica los datos que ya existen
+Delete: Esta sentencia es riesgosa porque puede borrar el contenido de una tabla
+Select: Trae información de la base de datos
+
+INSERT
+Inserta fila de datos en la tabla
+
+INSERT INTO people (`last_name`, `first_name`, `address`, `city`)
+VALUES (`Omana`,`Abrahan`, `Palo verde`, `Miranda`);
+
+---
+minuto: 6:20
+UPDATE
+Actualiza valores dentro de la tabla
+
+DELETE
+Elimina filas de una tabla
+
+SELECT
+Realiza consultas

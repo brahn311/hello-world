@@ -20,11 +20,9 @@ TEMARIO:
 3. RDBMS (MySQL) o cómo hacer lo anterior de manera práctica
 	12	RDB ¿Qué?
 	13	Instalación local de un RDBMS (Windows)
-------------------------------------------------------------------------- Avance
 	14	Instalación local de un RDBMS (Mac)
 	15	Instalación local de un RDBMS (Ubuntu)
 	16	Clientes gráficos
-	------------------------------------------------------------------------- Visto
 	17	Servicios administrados
 4. SQL hasta en la sopa
 	18	Historia de SQL
@@ -32,6 +30,8 @@ TEMARIO:
 	20	DDL alter
 	21	DDL drop
 	22	DML
+	------------------------------------------------------------------------- Avance
+	------------------------------------------------------------------------- Visto
 	23	¿Qué tan estandard es SQL?
 	24	Creando Platziblog: tablas independientes
 	25	Creando Platziblog: tablas dependientes

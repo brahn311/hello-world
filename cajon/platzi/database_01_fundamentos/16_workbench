@@ -10,10 +10,11 @@ Puedes operar las tablas como si fueran hojas de calculo
 Contiene funciones adicionales para construir visualmente la base de datos
 
 Debes conectar el MySQL Workbench con el servidor de base de datos
-127.0.0.1
-3306
-root
-password
+El servidor usado para ello es MariaDB del paquete XAMPP
+Servidor = 127.0.0.1
+Puerto = 3306
+Usuario = root
+Password = (ninguno)
 
 La version usada en el curso maneja las bases de datos llamandolas Schema (esquemas)
 Character set: UTF8

@@ -1,0 +1,73 @@
+Video_18
+Historia del SQL
+
+SQL
+Structure Query Language
+Lenguaje de Consulta Estructurado
+
+Creado para unir o estandarizar el manejo de bases de datos
+Posee una estructura clara y definida
+
+NoSQL
+Not
+Only
+SQL
+Extension del lenguaje SQL aplicado no solamente a bases relacionales
+Casandra usa CQL, basado en SQL
+
+---
+Video_19
+DDL create
+
+El SQL posee dos grandes sub-lenguajes:
+DDL Data Definition Language
+DML Data Modeling Lenguage
+
+Comandos DDL:
+Create  Crear
+Alter   Modificar / Alterar
+Drop    Borrar
+
+Objetos manipulados con DDL:
+Database
+Table
+View
+
+CREATE
+Por ejemplo:
+CREATE DATABASE test_db;
+USE DATABASE test_db;
+
+---
+Video_20
+DDL alter
+
+CREATE VIEW
+Toman consultas y la convierten en datos para acceder de manera recurrente como si fuera una tabla
+
+Por ejemplo:
+CREATE VIEW v_brasil_customers AS
+  SELECT customer_name, contact_name
+  FROM customers
+  WHERE country = "Brasil";
+
+ALTER
+Modifica la estructura de una tabla
+
+Por ejemplo:
+ALTER TABLE `platziblog`.`people`
+ADD COLUMN `date_of_birth` DATETIME NULL AFTER `city`;
+
+ALTER TABLE `platziblog`.`people`
+DROP COLUMN `date_of_birth`;
+
+---
+Video_21
+DLL drop
+
+DROP
+Borrar la tabla o la base de datos
+
+Por ejemplo:
+DROP TABLE people;
+DROP DATABASE test_db;

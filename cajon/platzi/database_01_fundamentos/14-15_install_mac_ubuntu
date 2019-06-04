@@ -1,6 +1,8 @@
 Video_14
 Instalación local de un RDBMS (Mac)
 
+No realice estos pasos de instalacion, use MariaDB con MySQL Workbech
+
 Pasos para instalar en MacOS:
 MySQL server
 MySQL workbech
@@ -8,6 +10,8 @@ MySQL workbech
 ---
 Video_15
 Instalación local de un RDBMS (Ubuntu)
+
+No realice estos pasos de instalacion, use MariaDB con MySQL Workbech
 
 Visita la dirección de descarga de la versión de comunidad de MySql
 https://dev.mysql.com/downloads/mysql/5.7.html#downloads
