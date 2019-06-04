@@ -1,0 +1,46 @@
+Video_14
+Instalación local de un RDBMS (Mac)
+
+Pasos para instalar en MacOS:
+MySQL server
+MySQL workbech
+
+---
+Video_15
+Instalación local de un RDBMS (Ubuntu)
+
+Visita la dirección de descarga de la versión de comunidad de MySql
+https://dev.mysql.com/downloads/mysql/5.7.html#downloads
+
+Dirígete a la sección de selección de descargas
+Selecciona tu distribución de Linux: En nuestro caso Ubuntu
+Selecciona posteriormente la versión que estás utilizando actualmente
+
+Más abajo encontrarás las diferentes opciones de descarga
+Existen diversos paquetes dependiendo tus necesidades
+En el caso del ejemplo usaremos la versión deb bundle
+Da click en el botón Download seleccionado
+
+En la siguiente pantalla nos piden que nos registremos o iniciemos sesión
+Ya que solo queremos la descarga daremos click en la parte de abajo
+
+Espera a que la descarga concluya
+Al terminar abre el archivo .tar con el desempaquetador de tu preferencia
+
+Extrae el contenido en la carpeta de tu preferencia
+
+Selecciona el archivo de servidor de comunidad
+Abrelo con tu manejador de paquetes instalado
+
+Da click en instalar
+Finalmente puedes ir a la consola o terminal de Ubuntu y escribir el comando:
+$ sudo mysql
+
+A continuación deberá aparecer una ventana con el prompt de mysql
+Donde ya puedes comenzar a ejecutar los comandos de las lecciones
+
+Nota:
+Recuerda estar seguro que las dependencias esten instaladas
+Muchas veces las distribuciones ya cuentan con paquetes en su repositorio
+En ese caso también puedes ejecutar el comando:
+$ sudo apt-get install mysql-serve

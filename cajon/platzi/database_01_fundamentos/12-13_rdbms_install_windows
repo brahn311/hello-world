@@ -1,4 +1,4 @@
-Video_11
+Video_12
 RDB ¿Que?
 
 Management System
@@ -19,7 +19,7 @@ PostgreSQL (Es software libre)
 ORACLE
 
 ---
-Video_12
+Video_13
 Instalación local de un RDBMS (Windows)
 
 Hay dos maneras de acceder a manejadores de bases de datos:
@@ -40,6 +40,14 @@ Posee 2 instaladores:
 - Version pequeña (se conecta a internet para descargar complementos)
 - Version completa (en el curso se usara la completa)
 No es necesario crearte una cuenta para descargar, puedes usar el enlace "solo quiero empezar mi descargar"
+
+El instalador ya incluye el manejador MySQL Workbench el cual deberiamos instalar
+
+Configuracion:
+Luego de instalar pasas a la pantalla de Configuracion
+Debes escojer el tipo de configuracion: desarrollo / servidor / DB dedicada
+Debes tomar nota del puerto donde se escucharan las transacciones
+Debes escoger la clave del usuario Root
 
 Root es el usuario principal que tendrá todos los permisos
 por lo tanto en ambientes de producción hay que tener mucho cuidado al configurarlo

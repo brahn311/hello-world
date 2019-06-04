@@ -1,0 +1,24 @@
+Video_16
+Clientes gráficos
+
+Existen muchos sabores para usar MySQL
+
+Contamos de manera oficial con
+MySQL Workbench
+
+Puedes operar las tablas como si fueran hojas de calculo
+Contiene funciones adicionales para construir visualmente la base de datos
+
+Debes conectar el MySQL Workbench con el servidor de base de datos
+127.0.0.1
+3306
+root
+password
+
+La version usada en el curso maneja las bases de datos llamandolas Schema (esquemas)
+Character set: UTF8
+Default collection
+
+Este programa muestra el codigo SQL
+
+Crea tu Schema del blog
