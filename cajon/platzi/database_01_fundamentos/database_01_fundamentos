@@ -30,12 +30,12 @@ TEMARIO:
 	20	DDL alter
 	21	DDL drop
 	22	DML
-	------------------------------------------------------------------------- Avance
-	------------------------------------------------------------------------- Visto
 	23	¿Qué tan estandard es SQL?
+------------------------------------------------------------------------- Avance
 	24	Creando Platziblog: tablas independientes
 	25	Creando Platziblog: tablas dependientes
 	26	Creando Platziblog: tablas transitivas
+------------------------------------------------------------------------- Visto
 5. Consultas a una base de datos
 	27	¿Por qué las consultas son tan importantes?
 	28	Estructura básica de un Query

@@ -13,16 +13,40 @@ Select: Trae información de la base de datos
 INSERT
 Inserta fila de datos en la tabla
 
+Por ejemplo:
 INSERT INTO people (`last_name`, `first_name`, `address`, `city`)
 VALUES (`Omana`,`Abrahan`, `Palo verde`, `Miranda`);
 
----
-minuto: 6:20
 UPDATE
-Actualiza valores dentro de la tabla
+Actualiza registros de una tabla
+Cambia valores especificos a registros que cumplan con un criterio de busquedaww
+
+Por ejemplo:
+UPDATE people
+SET last_name ='Chavez', city = 'mexico'
+WHERE person_id = 1;
+
+UPDATE people
+SET first_name = 'Juan'
+WHERE city = 'Merida';
+(MySQL Workbench no deja ejecutar ese update por seguridad, dado a que no ser especifico)
+
+UPDATE people
+SET first_name = 'Juan';
 
 DELETE
-Elimina filas de una tabla
+Elimina filas de una tabla o registro de manera irrecuperable
+
+Por ejemplo:
+DELETE FROM people
+WHERE person_id = 1;
+
+DELETE FROM people;
+(MySQL Workbench no deja ejecutar ese delete por seguridad, dado a que no ser especifico)
 
 SELECT
 Realiza consultas
+
+Por ejemplo:
+SELECT first_name, last_name
+FROM people;

@@ -1,0 +1,21 @@
+Video_23
+¿Qué tan estandard es SQL?
+
+Compararemos sentencias SQL en
+MySQL Workbench vs Google Cloud Platform PostgreSQL
+
+Se copio y pego y ejecuto el siguiente codigo SQL en ambos RDBMS
+CREATE TABLE people (
+	person_id int,
+	last_name varchar(255),
+	first_name varchar(255),
+	address varchar(255),
+	city varchar(255)
+);
+
+INSERT INTO people (last_name, first_name, address, city)
+VALUES ('Hernández', 'Laura', 'Calle 21', 'Monterrey');
+
+DROP TABLE people;
+
+En ambos RDBMS se ejecutaron las consultas correctamente
