@@ -31,11 +31,10 @@ TEMARIO:
 	21	DDL drop
 	22	DML
 	23	¿Qué tan estandard es SQL?
-------------------------------------------------------------------------- Avance
 	24	Creando Platziblog: tablas independientes
 	25	Creando Platziblog: tablas dependientes
 	26	Creando Platziblog: tablas transitivas
-------------------------------------------------------------------------- Visto
+	------------------------------------------------------------------------- Avance
 5. Consultas a una base de datos
 	27	¿Por qué las consultas son tan importantes?
 	28	Estructura básica de un Query
@@ -43,6 +42,7 @@ TEMARIO:
 	30	FROM
 	31	Utilizando la sentencia FROM
 	32	WHERE
+	------------------------------------------------------------------------- Visto
 	33	Utilizando la sentencia WHERE nulo y no nulo
 	34	GROUP BY
 	35	ORDER BY y HAVING
