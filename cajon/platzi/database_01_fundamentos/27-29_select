@@ -1,0 +1,55 @@
+Video_27
+¿Por qué las consultas son tan importantes?
+
+Luego de almacenar los datos en una DB, es de gran importancia acceder a los mismos
+Los datos procesados y ordenados son los insumos para la toma de decisiones en una empresa
+
+Existen varias diciplinas giradas en este entorno
+ETL = Transformacion de datos
+Businesss intelligence = Extraccion y utilizacion de datos para toma de decisiones
+Machine learning = Extraer datos y darle sentido de forma coherente
+
+---
+Video_28
+Estructura básica de un Query
+
+El query tiene básicamente 2 partes (minimas necesarias):
+SELECT (muestra los campos de los registros que se prentende mostrar)
+FROM (tabla donde se realizara la busqueda)
+
+Opcional:
+WHERE (condiciones especificas de la busqueda)
+
+Por ejemplo:
+SELECT city, count(*) AS total
+FROM people
+WHERE active = true
+GROUP BY city
+ORDER BY total DESC
+HAVING total >= 2;
+
+---
+Video_29
+SELECT
+
+Para hacer registros debemos tener datos almacenados en las tablas
+Puedes usar el archivo con las instrucciones SQL para llenar las tablas
+Ver archivo: ./file/database_blog_backup.sql
+
+Sentencia para consultar datos en las tablas y mostrar los registros
+Podemos ser desde muy generales (*) hasta muy especificos con las columnas y tambien usar condiciones
+
+Por ejemplo:
+SELECT * FROM posts;
+SELECT COUNT(*) AS total FROM posts;
+SELECT titulo, fecha_publicacion, estatus FROM posts;
+SELECT titulo AS encabezado, fecha_publicacion AS publicado, estatus AS estado FROM posts;
+
+* Usado cuando queremos seleccionar todas los campos sin filtrar
+COUNT() Funcion para conar la cantidad de registros encontrados
+AS Modifica el nombre de una columna por un nuevo nombre que especifiquemos
+
+NOTA:
+Todos los contenidos de los posts tienen "Lorem Ipsum"
+Es una herramaienta para rellenar texto
+https://www.lipsum.com

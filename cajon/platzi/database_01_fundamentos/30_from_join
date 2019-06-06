@@ -1,0 +1,62 @@
+Video_30
+FROM
+
+Indica de dónde se deben traer los datos
+Puede ayudar a hacer sentencias y filtros complejos
+
+JOIN
+Sentencia compañera que nos ayuda con el proceso de unir distintas tablas
+
+Los diagramas de Venn
+Dos conjuntos (círculos o rombos) que se tocan en algún punto
+Usados para ejemplificar dónde está la intersección de conjuntos
+Dependiendo del query, ayudan mucho para formular la sentencia JOIN de la manera adecuada
+
+LEFT JOIN
+RIGHT JOIN
+Diferencia: lo que esta en una tabla pero no tenemos en la otra tabla
+
+INNER JOIN
+Interseccion: Lo que esta en la parte central
+
+OUTER JOIN
+Union: Trae todo, lo que se une y no se une de ambas tablas
+Diferencia asimetrica: Trae lo que no tiene relacion
+
+---
+Video_31
+Utilizando la sentencia FROM
+
+LEFT JOIN:
+
+Por ejemplo:
+SELECT *
+FROM <tabla_a>
+LEFT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
+Muestra todos los registros de la tabla_a tengan o no tengan relacion con la tabla_b
+
+SELECT *
+FROM <tabla_a>
+LEFT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>
+WHERE <tabla_a.key> IS NULL;
+Muestra todos los registros de la tabla_a que no tengan registros en la tabla_b
+
+RIGHT JOIN:
+SELECT *
+FROM <tabla_a>
+RIGHT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
+Muestra todos los registros de la tabla_b tengan o no tengan relacion con la tabla_a
+
+SELECT *
+FROM <tabla_a>
+RIGHT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>
+WHERE <tabla_b.key> IS NULL;
+Muestra todos los registros de la tabla_b que no tengan registros en la tabla_a
+
+INNER JOIN:
+SELECT *
+FROM <tabla_a>
+RIGHT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
+Muestra solo registros relacionados en ambas tablas
+
+--- minuto: 8:31
