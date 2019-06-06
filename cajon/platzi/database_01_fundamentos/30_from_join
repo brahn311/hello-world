@@ -27,36 +27,82 @@ Diferencia asimetrica: Trae lo que no tiene relacion
 Video_31
 Utilizando la sentencia FROM
 
-LEFT JOIN:
+LEFT JOIN
+Con interseccion:
+Muestra todo el contenido de la "tabla_a" sin importar que tengan o no registros asociados en la "tabla_b"
+SELECT * FROM <tabla_a> LEFT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
 
-Por ejemplo:
+Muestra todos los usuarios y todos sus posts
+(si el usuario tiene varios posts los datos del usuario se duplicaran es posible obtener usuarios sin posts)
+SELECT * FROM usuarios LEFT JOIN posts ON usuarios.id = posts.usuarios_id;
+
+Sin interseccion:
+Muestra todos los registros de "tabla_a" que no tengan registros en la "tabla_b"
 SELECT *
-FROM <tabla_a>
-LEFT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
-Muestra todos los registros de la tabla_a tengan o no tengan relacion con la tabla_b
+FROM <tabla_a> LEFT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>
+WHERE <tabla_b.key> IS NULL; ---DUDA???
 
-SELECT *
-FROM <tabla_a>
-LEFT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>
-WHERE <tabla_a.key> IS NULL;
-Muestra todos los registros de la tabla_a que no tengan registros en la tabla_b
+Muestra todos los registros de la usuarios que no tengan ningun post
+SELECT * FROM usuarios LEFT JOIN posts ON usuarios.id = posts.usuario_id WHERE posts.usuario_id IS NULL;
 
-RIGHT JOIN:
+RIGHT JOIN
+Con interseccion:
+Muestra todos los registros de tabla_b tengan o no tengan relacion con la tabla_a
 SELECT *
 FROM <tabla_a>
 RIGHT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
-Muestra todos los registros de la tabla_b tengan o no tengan relacion con la tabla_a
 
+Muestra todos los posts aunque no tengan ningun usuario
+SELECT * FROM usuarios RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
+
+Sin interseccion:
+Muestra todos los registros de la tabla_b que no tengan registros en la tabla_a
 SELECT *
 FROM <tabla_a>
 RIGHT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>
-WHERE <tabla_b.key> IS NULL;
-Muestra todos los registros de la tabla_b que no tengan registros en la tabla_a
+WHERE <tabla_b.key> IS NULL; ---DUDA???
 
-INNER JOIN:
+Muestra solo los posts que no tengan usuario
+SELECT * FROM usuarios RIGHT JOIN posts ON usuarios.id = posts.usuario_id WHERE posts.usuario_id IS NULL;
+
+INNER JOIN
+Muestra interseccion de ambas tablas
+SELECT *
+FROM <tabla_a>
+INNER JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
+
+Muestra solo usuarios que si posean posts
+SELECT * FROM <tabla_a> INNER JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
+
+OUTER JOIN
+Union:
+Muestra todos de ambas tablas
+(no esta disponible en algunos manejadores de base de datos)
+SELECT *
+FROM <tabla_a>
+FULL OUTER JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
+
+Solucion para simular FULL OUTER JOIN:
+SELECT *
+FROM <tabla_a>
+LEFT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>
+UNION
 SELECT *
 FROM <tabla_a>
 RIGHT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
-Muestra solo registros relacionados en ambas tablas
 
---- minuto: 8:31
+SELECT * FROM usuarios LEFT JOIN posts ON usuarios.id = posts.usuario_id
+UNION
+SELECT * FROM usuarios RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
+
+Diferencia asimetrica:
+Muestra el resultado de ambas tablas pero sin mostrar los registros que estan intersectados
+SELECT *
+FROM <tabla_a>
+LEFT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>
+WHERE <tabla_b.key> IS NULL
+UNION
+SELECT *
+FROM <tabla_a>
+RIGHT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>
+WHERE <tabla_b.key> IS NULL

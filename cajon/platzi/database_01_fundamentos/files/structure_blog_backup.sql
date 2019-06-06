@@ -1,17 +1,14 @@
-Video_24
-Creando Platziblog: tablas independientes
+-- database
+-- debes crear y seleccionar la DB antes de ejecutar este script
 
-En estas clases trabajaremos con las tablas del proyecto blog
-Crearemos las tablas independientes, que no tienen datos foraneos
-La creacion de estas tablas se realizo en modo grafico con MySQL Workbench
-
-CREATE TABLE `blog`.`categorias` (
+-- table categorias
+CREATE TABLE  `categorias` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nombre_categoria` VARCHAR(30) NULL,
-  PRIMARY KEY (`id`)
-)
-COMMENT = 'Blog categories';
+  PRIMARY KEY (`id`))
+  COMMENT = 'Blogs categorias';
 
+-- table usuarios
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `login` varchar(30) NOT NULL,
@@ -21,24 +18,17 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
 )
-COMMENT = 'Blog usuarios';
+COMMENT = 'Blogs usuarios';
 
+-- table etiquetas
 CREATE TABLE `etiquetas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_etiqueta` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
 )
-COMMENT = 'Blog etiquetas';
+COMMENT = 'Blogs etiquetas';
 
----
-Video_25
-Creando Platziblog: tablas dependientes
-
-Continuamos con las tablas que tienen dependencias
-Aunque estas dependencias ya estan solucionadas
-
-Nota: estos codigos sql son sacados de la la propia interfaz grafica
-
+-- table posts
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(130) NOT NULL,
@@ -49,11 +39,12 @@ CREATE TABLE `posts` (
   `categoria_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 )
-COMMENT = 'Blog posts';
+COMMENT = 'Blogs posts';
 
+-- fk usuarios_id table posts
 ALTER TABLE `posts`
 ADD INDEX `posts_usuarios_idx` (`usuario_id` ASC);
-;
+
 ALTER TABLE `posts`
   ADD CONSTRAINT `posts_usuarios`
   FOREIGN KEY (`usuario_id`)
@@ -61,6 +52,7 @@ ALTER TABLE `posts`
   ON DELETE NO ACTION
   ON UPDATE CASCADE;
 
+  -- fk categorias_id table posts
 ALTER TABLE `posts`
 ADD INDEX `posts_categorias_idx` (`categoria_id` ASC);
 ;
@@ -71,14 +63,7 @@ ALTER TABLE `posts`
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
 
----
-Video_26
-Creando Platziblog: tablas transitivas
-
-Continuamos con las tablas que tienen dependencias
-
-Nota: estos codigos son sacados del backup de MySQL Workbench
-
+-- table comentarios
 CREATE TABLE `comentarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cuerpo_comentario` text NOT NULL,
@@ -92,8 +77,7 @@ CREATE TABLE `comentarios` (
 )
 COMMENT = 'Blogs comentarios';
 
-Crearemos por ultimo la tabla intermedia de la relacion muchos a muchos
-
+-- table posts_etiquetas
 CREATE TABLE `posts_etiquetas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `post_id` int(11) NOT NULL,
@@ -105,10 +89,3 @@ CREATE TABLE `posts_etiquetas` (
   CONSTRAINT `postsetiquetas_post` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 )
 COMMENT = 'Blogs posts_etiquetas';
-
-Para visualizar diagrama de la DB luego de ya creada
-Tenemos una herramienta de ingenieria inversa
-La podemos ubicar en el menu del programa:
-Database > Reverse Engineer
-Tenemos que configurar el servidor para conectarnos
-Seleccionamos la base de datos para exportar
