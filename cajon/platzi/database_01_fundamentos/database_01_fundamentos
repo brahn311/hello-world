@@ -40,15 +40,15 @@ TEMARIO:
 	29	SELECT
 	30	FROM
 	31	Utilizando la sentencia FROM
-	------------------------------------------------------------------------- Avance
 	32	WHERE
-	------------------------------------------------------------------------- Visto
 	33	Utilizando la sentencia WHERE nulo y no nulo
 	34	GROUP BY
 	35	ORDER BY y HAVING
 	36	El interminable agujero de conejo (Nested queries)
 	37	¿Cómo convertir una pregunta en un query SQL?
+------------------------------------------------------------------------- Avance
 	38	Preguntándole a la base de datos
+------------------------------------------------------------------------- Visto
 	39	Consultando PlatziBlog
 6. Introducción a la bases de datos NO relacionales
 	40	¿Qué son y cuáles son los tipos de bases de datos no relacionales?

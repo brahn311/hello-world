@@ -1,0 +1,49 @@
+Video_32
+WHERE
+
+Sentencia que ayuda a filtrar tuplas o registros dependiendo de las características que elegimos
+
+SELECT *
+FROM posts
+WHERE
+-- id < 50
+-- id > 50
+/* < y > excluyen el valor */
+-- id = 50
+-- estatus = 'inactivo'
+-- estatus != 'inactivo'
+-- titulo LIKE '%escandalo%'
+/* caps insensitive */
+/* % significa cualquier caracter */
+-- fecha_publicacion > '2029-01-01'
+-- fecha_publicacion BETWEEN '2025-01-01' AND '2029-01-01'
+-- id BETWEEN 50 AND 60
+/* si incluye el valor en el rango completo */
+-- YEAR(fecha_publicacion) BETWEEN '2023' AND '2024'
+-- MONTH(fecha_publicacion) = '04'
+;
+
+---
+Video_33
+Utilizando la sentencia WHERE nulo y no nulo
+
+NULL
+Nulo es un valor vacio, inexistente
+
+SELECT *
+FROM posts
+WHERE <column> IS NULL
+;
+
+SELECT *
+FROM posts
+WHERE <column> IS NOT NULL
+;
+
+AND
+Ayuda a acumular criterios para filtar
+
+Por ejemplo:
+SELECT * FROM posts WHERE usuarios_id IS NULL;
+SELECT * FROM posts WHERE usuarios_id IS NOT NULL;
+SELECT * FROM posts WHERE usuarios_id IS NOT NULL AND estatus = 'activo' AND id < 50 AND YEAR(fecha_publicacion) = '2025';

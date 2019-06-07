@@ -30,17 +30,19 @@ Utilizando la sentencia FROM
 LEFT JOIN
 Con interseccion:
 Muestra todo el contenido de la "tabla_a" sin importar que tengan o no registros asociados en la "tabla_b"
-SELECT * FROM <tabla_a> LEFT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
+SELECT *
+FROM <tabla_a> LEFT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>;
 
 Muestra todos los usuarios y todos sus posts
 (si el usuario tiene varios posts los datos del usuario se duplicaran es posible obtener usuarios sin posts)
-SELECT * FROM usuarios LEFT JOIN posts ON usuarios.id = posts.usuarios_id;
+SELECT *
+FROM usuarios LEFT JOIN posts ON usuarios.id = posts.usuarios_id;
 
 Sin interseccion:
 Muestra todos los registros de "tabla_a" que no tengan registros en la "tabla_b"
 SELECT *
 FROM <tabla_a> LEFT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>
-WHERE <tabla_b.key> IS NULL; ---DUDA???
+WHERE <tabla_b.key> IS NULL;
 
 Muestra todos los registros de la usuarios que no tengan ningun post
 SELECT * FROM usuarios LEFT JOIN posts ON usuarios.id = posts.usuario_id WHERE posts.usuario_id IS NULL;
@@ -60,10 +62,15 @@ Muestra todos los registros de la tabla_b que no tengan registros en la tabla_a
 SELECT *
 FROM <tabla_a>
 RIGHT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>
-WHERE <tabla_b.key> IS NULL; ---DUDA???
+WHERE <tabla_b.key> IS NULL;
 
 Muestra solo los posts que no tengan usuario
 SELECT * FROM usuarios RIGHT JOIN posts ON usuarios.id = posts.usuario_id WHERE posts.usuario_id IS NULL;
+
+Nota:
+Probe el ejercicio modificando la tabla_b por la tabla_a
+WHERE <tabla_a.key> IS NULL
+El resultado es el mismo
 
 INNER JOIN
 Muestra interseccion de ambas tablas
@@ -106,3 +113,12 @@ SELECT *
 FROM <tabla_a>
 RIGHT JOIN <tabla_b> ON <tabla_a.key> = <tabla_b.key>
 WHERE <tabla_b.key> IS NULL
+
+Muestra los registros de usuarios que no tengan posts y los posts que no tienen usuario
+SELECT *
+FROM usuarios LEFT JOIN posts ON usuarios.id = posts.usuario_id
+WHERE posts.usuario_id IS NULL
+UNION
+SELECT *
+FROM usuarios RIGHT JOIN posts ON usuarios.id = posts.usuario_id
+WHERE posts.usuario_id IS NULL

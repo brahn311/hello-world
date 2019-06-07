@@ -1,0 +1,29 @@
+Video_36
+El interminable agujero de conejo (Nested queries)
+
+Nested queries
+Significan que dentro de un query podemos hacer otro query
+Esto sirve para hacer joint de tablas, estando una en memoria
+También teniendo un query como condicional del otro
+
+Precaucion
+Este proceso puede ser tan profundo como quieras, teniendo infinitos queries anidados
+Se le conoce como un producto cartesiano ya que se multiplican todos los registros de una tabla con todos los del nuevo query
+Esto provoca que el query sea difícil de procesar por lo pesado que puede resultar
+
+Por ejemplo:
+SELECT new_table_projection.date, COUNT(*) AS posts_count
+FROM (
+    SELECT DATE(MIN(fecha_publicacion)) AS date, YEAR(fecha_publicacion) AS post_year
+    FROM posts
+    GROUP BY post_year
+) AS new_table_projection
+GROUP BY new_table_projection.date
+ORDER BY new_table_projection.date;
+
+SELECT *
+FROM posts
+WHERE fecha_publicacion = (
+	SELECT MAX(fecha_publicacion)
+	FROM posts
+);

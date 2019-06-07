@@ -1,0 +1,50 @@
+Video_34
+GROUP BY
+
+Filtro para agrupar los resultados a mostrar
+
+Por ejemplo:
+SELECT estatus, COUNT(*) post_quantity FROM posts GROUP BY estatus;
+SELECT YEAR(fecha_publicacion) AS post_year, COUNT(*) post_quantity FROM posts GROUP BY post_year;
+SELECT MONTHNAME(fecha_publicacion) AS post_month, COUNT(*) post_quantity FROM posts GROUP BY post_month;
+SELECT estatus, MONTHNAME(fecha_publicacion) AS post_month, COUNT(*) post_quantity FROM posts GROUP BY estatus, post_month;
+
+Nota:
+NUEVAS FUNCIONES
+SUM(<columna>) AS <title_function_result>
+MONTHNAME(<columna>) AS <title_function_result>
+
+---
+Video_35
+ORDER BY y HAVING
+
+Los resultados de un query se muestran segun se introduzcan los datos a la DB
+
+ORDER BY
+Ordenamiento de los datos dependiendo de los criterios que quieras usar
+ORDER BY <columna> <criterio_adicional>
+
+Criterios adicionales:
+ASC sirve para ordenar (por numeros o letras) de forma ascendente
+DESC sirve para ordenar (por numeros o letras) de forma descendente
+LIMIT <cantidad> se usa para limitar la cantidad de resultados que arroja el query
+
+Por ejemplo:
+SELECT * FROM posts ORDER BY fecha_publicacion ASC;
+SELECT * FROM posts ORDER BY fecha_publicacion DES;
+SELECT * FROM posts ORDER BY fecha_publicacion ASC LIMIT 5;
+
+HAVING
+Tiene una similitud muy grade con WHERE, sin embargo el uso de ellos depende del orden
+Se usa WHERE para filtrar antes de hacer la agrupacion
+Usamos HAVING cuando se quiere seleccionar condiciones ya agrupadas únicamente
+HAVING se escribe despues del GROUP BY
+
+Por ejemplo:
+SELECT estatus, MONTHNAME(fecha_publicacion) AS post_month, COUNT(*) post_quantity FROM posts
+GROUP BY estatus, post_month HAVING post_quantity > 1
+ORDER BY post_month
+;
+
+NOTA:
+SELECT login, email FROM usuarios -- LIMIT 2,3 (Investigar)

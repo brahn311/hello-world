@@ -1,8 +1,8 @@
 -- data usuarios
-INSERT INTO `usuarios` (`id`,`login`,`password`,`nickname`,`email`) VALUES (1,'israel','jc8209*(^GCHN_(hcLA','Israel','israels@platziblog.com'),
-INSERT INTO `usuarios` (`id`,`login`,`password`,`nickname`,`email`) VALUES (2,'monica','(*&^LKJDHC_(*#YDLKJHODG','Moni','monicas@platziblog.com'),
-INSERT INTO `usuarios` (`id`,`login`,`password`,`nickname`,`email`) VALUES (3,'laura','LKDJ)_*(-c.M:[pOwHDˆ','Lau','lauras@platziblog.com'),
-INSERT INTO `usuarios` (`id`,`login`,`password`,`nickname`,`email`) VALUES (4,'edgar','LLiy)CX*Y:M<A<SC_(*N>O','Ed','edgars@platziblog.com'),
+INSERT INTO `usuarios` (`id`,`login`,`password`,`nickname`,`email`) VALUES (1,'israel','jc8209*(^GCHN_(hcLA','Israel','israels@platziblog.com');
+INSERT INTO `usuarios` (`id`,`login`,`password`,`nickname`,`email`) VALUES (2,'monica','(*&^LKJDHC_(*#YDLKJHODG','Moni','monicas@platziblog.com');
+INSERT INTO `usuarios` (`id`,`login`,`password`,`nickname`,`email`) VALUES (3,'laura','LKDJ)_*(-c.M:[pOwHDˆ','Lau','lauras@platziblog.com');
+INSERT INTO `usuarios` (`id`,`login`,`password`,`nickname`,`email`) VALUES (4,'edgar','LLiy)CX*Y:M<A<SC_(*N>O','Ed','edgars@platziblog.com');
 INSERT INTO `usuarios` (`id`,`login`,`password`,`nickname`,`email`) VALUES (5,'perezoso','&N_*JS)_Y)*(&TGOKS','Oso Pérez','perezosos@platziblog.com');
 
 -- data categorias
