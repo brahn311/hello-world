@@ -1,0 +1,105 @@
+Video_48
+Bases de datos en la vida relacional
+
+En la vida real no existe una solucion unica para todo
+
+Las RDB empezaron a presentar inconvenientes al tener que procesar millones o billones de datos
+En este orden empezaron a surgir las NoSQLDB
+
+Ahora tenemos diversos tipos de DB dependiendo el uso que queramos darle
+Las diversas DB se pueden combinar para provechar las distintas ventajas que posee acada una
+
+---
+Video_49
+Big Data
+
+Big Data es un concepto que nace de la necesidad de manejar grandes cantidades de datos
+La tendencia comenzó con compañías como YouTube
+Gracias al tener la necesidad de guardar y consultar mucha información de manera rápida
+Es un gran movimiento que consiste en el uso de diferentes tipos de bases de datos
+
+Big Data no es Business intelligence
+
+---
+Video_50
+Data warehouse
+
+Data warehouse se refiere a un "gran almacen de datos"
+Almacena todo dato igualmente importantes para el negocio (historicos, archivo muerto)
+Datos ya no tan prioritarios para tenerlos arriba en una app, pero valiosos para el historico
+
+Fuente para aplicar "Advanced Analytics" y "Business intelligence" en toma de deciciones
+
+Ejemplos:
+Bigtable (google: search, gmail) basadon en datos almacenados en una "unica tabla"
+BigQuery (permite consultas completas, similar a tecnicas de Machine learning)
+
+NOTA:
+https://platzi.com/comentario/593142/
+La información ingresada al Data Warehouse debe pasar por el proceso ETL
+Extract, Transform and Load
+Este proceso realiza la union entre: Sistemas operacionales, ERP, CRM, FlatFiles
+Los datos ingresados al Data Warehouse deben ser tratados (ETL) logrando datos integrales y limpios
+El DW los discrimina entre: Metadata, Summary Data, Raw Data
+Informacion que procesanda y analizada genera valor al negocio: Olap Analysis, Reporting, Data Mining
+
+---
+Video_51
+Data mining
+
+Data Mining
+Diciplina que se dedica a minar datos (picar piedra) buscar datos de archivos anteriores
+Extraerlos de donde sea que estén: archivos muertos, base de datos, etc
+Haciendo de ellos de un sentido para darles uso
+
+---
+Video_52
+ETL
+
+ETL son las siglas de Extract, Transform, Load (extraer, transformar y cargar)
+tecnicas para convertir datos y convertirlos en algo que sea de utilidad para el negocio
+
+ETL puede tomar distinta fuentes:
+Datos muertos y desordenarlos para ordenarlos y darle importancia
+Datos vivos de la aplicación para depositarlo en un data warehouse periódicamente
+
+Data Pipe Lines: softwares para ver el flujo de datos y procesos de estos
+
+---
+Video_53
+Business intelligence
+
+Business Intelligence (BI) es una parte muy importante de las carreras de datos
+Es el punto final del manejo de estos
+
+Tener la información lista, clara y que tenga todos los elementos para tomar decisiones en una empresa
+
+Al momento de realizar business intelligence es necesario tener una buena sensibilidad
+Saber entender el negocio, sus necesidades y la información
+Claves para que se pueda llevar a cabo la toma decisiones en el momento adecuado
+
+---
+Video_54
+Machine Learning
+
+Termino aplicado a diferentes contextos donde su significado varían
+Serie de técnicas que involucran inteligencia artificial y detección de patrones en distintos ambitos
+
+Machine learning para datos:
+Tiene un gran campo de acción y es un paso más allá del business intelligence
+Nos ayuda a hacer modelos que encuentran patrones fortuitos encontrando correlaciones inesperadas
+
+Herramientas "entrenado con modelos de datos" de lenguaje natural para reconocer patrones
+Basados en estadistica o matematica o algebra lineal
+
+Tiene dos casos de uso particulares:
+  Clasificación
+  Predicción
+
+---
+Video_55
+Data Science
+
+Data Science es aplicar todas las técnicas de procesamiento de datos
+Engloba muchas actividades de Data Engine (SQL, NoSQL, ETL, Data Mining, BI)
+En su manera más pura tiene que ver con gente con un background de estadísticas y ciencias duras

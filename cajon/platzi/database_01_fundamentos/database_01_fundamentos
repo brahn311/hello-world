@@ -1,7 +1,7 @@
 Fundamentos de Bases de Datos
 
 Fecha de Inicio: 30/05/2019
-Fecha de Finalizacion:
+Fecha de Finalizacion: 09/06/2019
 
 TEMARIO:
 1. Bienvenida
@@ -46,10 +46,8 @@ TEMARIO:
 	35	ORDER BY y HAVING
 	36	El interminable agujero de conejo (Nested queries)
 	37	¿Cómo convertir una pregunta en un query SQL?
-------------------------------------------------------------------------- Avance
 	38	Preguntándole a la base de datos
-------------------------------------------------------------------------- Visto
-	39	Consultando PlatziBlog
+	39	Consultando PlaziBlog
 6. Introducción a la bases de datos NO relacionales
 	40	¿Qué son y cuáles son los tipos de bases de datos no relacionales?
 	41	Servicios administrados y jerarquía de datos
@@ -72,5 +70,3 @@ TEMARIO:
 	56	¿Por qué aprender bases de datos hoy?
 9. Bonus
 	57	Bases de datos relacionales vs no relacionales
-
-------------------------------------------------------------------------- Resolver

@@ -1,0 +1,104 @@
+Video_41
+Servicios administrados y jerarquía de datos
+
+Firebase
+Servicio de Google donde puedes tercerizar muchos elementos en la nube
+Utilizada para aplicaciones web o app android (Ideal para conectar a servidores API Rest?)
+
+Metodos de acceso:
+CLI
+Conectores de datos Javascript, Java, PHP, etc
+Interfaz visual web
+
+Jerarquía de datos:
+Firestore (NoSQL)   RDB
+- Base de datos     - Base de datos
+- Colección         - Tablas
+- Documento         - Registros
+
+Maneja o almacena documentos (no se refiere a archivos)
+Poseen una estructura similar a los documentos JSON
+El documento posee una estructura flexible en cuanto al contenido
+Igual mente se puede establecer relaciones entre collecciones
+
+---
+Video_42
+Top level collection con firebase
+
+Pagina de Firebase: https://console.firebase.google.com/
+Como es de Google, solo debes tener la sesion iniciada
+(el servicio basico para pruebas es gratuito, los cobros dependen del la cantidad de uso)
+
+Debes crear un proyecto (darle nombre)
+El nombre (id) debe ser unico!
+Especificas la zona geografica y sitio de almacenaje (latencia)
+Configuraciones basicas de Google
+Aceptas las condiciones
+Entramos a la pagina del proyecto!
+
+Usaremos el servicio Database
+Click en "Crear la base de datos"
+Estructura de datos: "Empezar con el metodo de bloqueo"
+Click en "Habilitar"
+(establece reglas de seguridad)
+Ya tienes la base de datos creada!
+
+Las colecciones se almacenan en la raiz
+Ruta principal: /
+
+Top level collection
+(coleciones directas) documentos agrupados, tambien pueden contener sub-colecciones
+
+Los documentos no poseen una estructura (tabla) que debas crear antes de almacenar
+Para crear la primera colecion debes almacenar el primer documento
+(La coleccion se crea cuando almacenas un primer documento)
+En una misma coleccion se puede almacenar documentos totalmente distintos unos de otros
+
+---
+Video_43
+Creando y borrando documentos en firestore
+
+Al crear el documento, el id se genera por el firebase, aunque puedes usar id naturales
+El documento posee contenido, ese contenido es:
+Campo (nombre del elemento)
+Tipo (string, number, boolean, map [documento], array, null, timestamp, geopoint, reference [id] )
+Valor (contenido, validado segun el tipo de dato)
+
+Los documentos y sus datos se pueden modificar y eliminar
+Te pide confirmacion para eliminar las colecciones
+
+---
+Video_44
+Colecciones vs subcolecciones
+
+A parte de las Top level collection tenemos:
+
+Sub-collection
+sub-colecciones que viven dentro de un documento unicamete y no aplicables a otros documentos
+Los criterios del desarrollador son los que determinan cuando usar sub-colecciones
+
+---
+Video_45
+Recreando Platziblog
+
+Pasando la estructura del diagrama fisico del blog a firestore
+
+usuarios = top level collection o top level collection
+posts = top level collection
+comentarios = posts subcollection
+etiquetas = posts subcollection
+categorias = posts subcollection o top level collection
+
+---
+Video_46
+Construyendo Platziblog en firestore
+
+categorias = top level collection
+usuarios = top level collection
+posts = top level collection
+comentarios = posts subcollection
+etiquetas = posts subcollection
+
+Usaremos los datos de cada tabla como contenido de cada documento de cada colleccion
+posts tiene relaciones con: usuarios y categorias
+comentarios tienen relacion con: usuarios

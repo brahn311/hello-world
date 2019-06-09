@@ -1,0 +1,41 @@
+Video_40
+¿Qué son y cuáles son los tipos de bases de datos no relacionales?
+
+Respecto a las bases de datos no relacionales
+no existe un solo tipo aunque se engloben en una sola categoría
+
+Tipos de bases de datos no relacionales:
+  Clave - valor
+  Basadas en documentos
+  Basadas en grafos
+  En memoria
+  Optimizadas para búsquedas
+
+Clave - valor:
+Son ideales para almacenar y extraer datos con una clave única
+Manejan los diccionarios de manera excepcional
+Ejemplo: DynamoDB (AWS), Cassandra (Facebook)
+
+Basadas en documentos:
+Son una implementación de clave valor que varía en la forma semiestructurada que se trata la información
+Ideal para almacenar datos JSON y XML
+Tiene una estructura abiertas y flexible, ideal para apps
+Ejemplos: MongoDB, Firestore > Firebase (Google)
+
+Basadas en grafos:
+Basadas en teoría de grafos, nodos o entidades interconectadas por múltiples relaciones
+Ideales para almacenar relaciones complejas (redes neuronales)
+Ejemplos: neo4j, TITAN DB
+
+En memoria:
+Pueden ser de estructura variada, pero su ventaja radica en la velocidad
+ya que al vivir en memoria la extracción de datos es casi inmediata
+Desventajas:
+- Los datos son volatiles al estar en memoria
+- Debes implementar un almacenamiento fisico para preservar datos (implica manteniento al sincronizar ambos)
+Ejemplos: Memcached, Redis
+
+Optimizadas para búsquedas:
+Pueden ser de diversas estructuras
+Su ventaja radica en que se pueden hacer queries y búsquedas complejas de manera sencilla
+Ejemplos: BigQuery, Elasticsearch

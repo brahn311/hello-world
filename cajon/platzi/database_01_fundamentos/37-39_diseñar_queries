@@ -1,0 +1,79 @@
+Video_37
+¿Cómo convertir una pregunta en un query SQL?
+
+De pregunta a Query
+SELECT: Lo que quieres mostrar
+FROM: De dónde voy a tomar los datos
+WHERE: Los filtros de los datos que quieres mostrar
+GROUP BY: Los rubros por los que me interesa agrupar la información
+HAVING: Los filtros que quiero que mis datos agrupados tengan
+ORDER BY: El orden en que quiero presentar mi información
+
+---
+Video_38
+Preguntándole a la base de datos
+
+En esta clase crearemos nuevas consultas preguntandonos:
+
+Cuantas etiquetas posee cada posts?:
+SELECT posts.id, posts.titulo, COUNT(*) num_etiquetas
+FROM posts
+  INNER JOIN posts_etiquetas ON posts.id = posts_etiquetas.post_id
+  INNER JOIN etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
+GROUP BY posts.id
+ORDER BY num_etiquetas DESC;
+
+Cuales son las etiquetas que tiene cada posts?:
+SELECT posts.id, posts.titulo, GROUP_CONCAT(nombre_etiqueta)
+FROM posts
+  INNER JOIN posts_etiquetas ON posts.id = posts_etiquetas.post_id
+  INNER JOIN etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
+GROUP BY posts.id;
+
+Cuales son las etiquetas que no tienen ningun posts?:
+SELECT *
+FROM etiquetas
+  LEFT JOIN posts_etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
+WHERE posts_etiquetas.etiqueta_id IS NULL;
+
+GROUP_CONCAT
+Toma los resultados del query y concatena los resultados separandolos por coma
+La concatenacion puede traer registros duplicados
+
+Por probar:
+Cuales son las categorias en donde los usuarios han escrito?:
+La misma consulta anterior cambiando la funcion GROUP_CONCAT() por
+GROUP_CONCAT(DISTINCT nombre_categoria)
+
+---
+Video_39
+Consultando PlatziBlog
+
+Cuantos posts tienen cada categoria?:
+SELECT c.nombre_categoria, COUNT(*) AS cant_posts
+FROM categorias AS c
+  INNER JOIN posts AS p on c.id = p.categoria_id
+GROUP BY c.id
+ORDER BY cant_posts DESC
+-- ;
+-- Para mostrar solo la categoria con mas posts:
+LIMIT 1
+;
+
+Cual usuario ha creado mas posts?:
+SELECT u.nickname, COUNT(*) AS cant_posts
+FROM usuarios AS u
+  INNER JOIN posts AS p on u.id = p.usuario_id
+GROUP BY u.id
+ORDER BY cant_posts DESC;
+
+Cuales son las categorias de los posts que los usuarios han escrito?:
+SELECT
+  u.nickname,
+  COUNT(*) AS cant_posts,
+  GROUP_CONCAT(nombre_categoria)
+FROM usuarios AS u
+  INNER JOIN posts AS p on u.id = p.usuario_id
+  INNER JOIN categorias AS c on c.id = p.categoria_id
+GROUP BY u.id
+ORDER BY cant_posts DESC;
