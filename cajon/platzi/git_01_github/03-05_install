@@ -1,0 +1,57 @@
+Video_03
+Instalando Git y GitBash en Windows
+
+Puedes descargar Git aquí: https://git-scm.com
+
+Cuando instales Git Bash en Windows debes elegir si prefieres trabajar con la forma de Windows o la forma de UNIX
+Windows y Linux poseen muchas diferencias
+
+El proceso de instalacion te guiara realizandote varias preguntas:
+1. Choosing the default editor used by Git
+  (elegir el editor visual por defecto)
+  Vim esta seleccionado por defecto
+  Nota: yo prefiero instalar mil veces notepad++ que usar vim
+
+2. Adjusting your PATH environment
+  (decidir entre usar terminal de comandos solo de git, solo de windows, o ambas todas inclusive)
+  [ ] Use Git from Bash Only
+  [x] Git from command line and also from 3rd-party software
+  [ ] Use Git and optional Unix tools from the Command Prompt
+
+3. Choosing HTTPS transport backend
+  (definir los protocolos de seguridad al enviar paquetes http, los OpenSSL son UNIX, windows usa otros)
+  [x] Use the OpenSSL library
+  [ ] Use the native Windows Secure Channel library
+
+4. Configuring the line ending conversions
+  (Definir la manera en que graban el "enter", estilo Windows, estilo UNIX, o como caiga)
+  [x] Checkout Windows-style, commit Unix-style line endings
+  [ ] Checkout as-is, commit Unix-style line endings
+  [ ] Checkout as-is, commit as-is
+
+5. Configuring the terminal emulator to use with Git Bash
+  [ ] Use MinTTY (the default terminal of MSYS2)
+  [ ] Use Windows' default console windows
+
+Lo demas puedes dejarlo default
+Puedes verificar que Git fue instalado correctamente con el comando
+$ git
+Muestra los comandos
+
+$ git --version
+Muestra la version
+
+---
+Video_04
+Instalando Git en OSX
+
+La instalación de GIT en Mac es un poco más sencilla
+No debemos instalar GitBash porque Mac ya trae por defecto una consola de comandos (Terminal)
+Tampoco debemos configurar OpenSSL porque viene listo por defecto
+
+OSX está basado en un Kernel de UNIX llamado BSD
+Estos significa que hay algunas diferencias entre las consolas de Mac y Linux
+Ambas consolas funcionan muy parecido y comparten los comandos que vamos a ver durante el curso
+
+---
+Video_05

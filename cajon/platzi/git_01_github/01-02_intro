@@ -1,0 +1,51 @@
+Video_01
+¿Qué es Git?
+
+Sistema de control de versiones
+Funciona instalado en tu computadora
+
+Puedes aprovechar todo su potencial combinando lo con
+GitHub
+
+GitHub
+Red social y portafolio de programadores
+Respaldo para repositorios git
+
+---
+Video_02
+¿Por qué usar un sistema de control de versiones como Git?
+
+Un sistema de control de versiones como Git nos ayuda a guardar el historial de cambios
+Ademas de mantener organizado el crecimiento de los archivos de nuestro proyecto
+
+En realidad, los cambios y diferencias entre las versiones de nuestros proyecto pueden tener similitudes
+Algunas veces los cambios pueden ser solo una palabra o una parte específica de un archivo específico
+Git está optimizado para guardar todos estos cambios de forma atómica e incremental
+Aplicando cambios sobre los últimos cambios, estos sobre los cambios anteriores y así hasta el inicio de nuestro proyecto
+
+Git se usa por medio de comandos
+
+$ git init
+Comando para indicarle a Git que queremos usar su sistema de control de versiones en nuestro proyecto
+Es usado dentro de una carpeta que para iniciar nuestro repositorio de archivos que sera supervisada por git
+
+$ git add
+Comando para que nuestro repositorio sepa de la existencia de un archivo o sus últimos cambios
+No almacena las actualizaciones de forma definitiva
+Solo las guarda en algo que conocemos como “Staging Area”
+
+$ git commit
+Comando para almacenar definitivamente todos los cambios que por ahora viven en el staging area
+Podemos/debemos guardar un mensaje para identificar bien qué cambios hicimos en el commit, añadiendo el argumento -m "Mensaje"
+
+$ git push
+Comando para mandar nuestros commits a un servidor remoto, un lugar donde todos podamos conectar nuestros proyectos
+
+$ git status
+Comando para visualizar el estado del repositorio (cuales archivos han cambiado o cuales estan añadidos al staging area)
+
+$ git show
+Comando para mostrar los historial de cambios en es repositorio en el ultimo commit realizado
+
+$ git log
+Comando para mostrar el historial de commits con sus ids hash del repositorio o de un archivo especifico
