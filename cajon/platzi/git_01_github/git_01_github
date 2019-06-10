@@ -1,13 +1,15 @@
 Curso profesional de Git y GitHub
 
-Fecha de Inicio:
+Fecha de Inicio: 09/06/2019
 Fecha de Finalizacion:
 
 TEMARIO:
 1. Introducción a Git
 	01	¿Qué es Git?
+------------------------------------------------------------------------- Avance
 	02	¿Por qué usar un sistema de control de versiones como Git?
-	03	Instalando Git y GitBash en Windows ----------------------------- Visto
+	03	Instalando Git y GitBash en Windows
+------------------------------------------------------------------------- Visto
 	04	Instalando Git en OSX
 	05	Instalando Git en Linux
 	06	Editores de código, archivos binarios y de texto plano
