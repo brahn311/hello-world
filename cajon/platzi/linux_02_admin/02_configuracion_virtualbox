@@ -75,8 +75,6 @@ Podemos probar la conexion en nuestra maquina a la maquina virtual:
 ping [ip address]
 Permite realizar ping a dicha IP
 
---- Minuto 6:40
-
 SSH
 Una vez tengamos conexión entre las dos máquinas
 Podemos configurar para poder conectarnos y autenticarnos por ssh
@@ -89,7 +87,10 @@ Recuerda que debes usar la ip que se le asigne al server
 Aunque "esta no es la manera correcta"
 La "forma correcta" es generar una llave SSH publica y colocarla en el servidor
 
-Nota: buscar como conectarse por ssh desde windows
+Nota:
+Buscar como conectarse por ssh desde windows
+Si tienes instalado Git
+Usando la consola de Git Bash puedes conectarte por sshd_config
 
 ssh [ip address]
 ssh [username]@[ip address]
@@ -106,18 +107,37 @@ Permite generar una llave ssh tipo rsa  de 4096 Bytes
 
 La llave publica se llama: id_rsa.pub
 
+Nota:
+Yo ya tenia mi key en windows7, creada con puttykeygen.exe
+
 La llave privada (nuestra llave privada) no podemos publicarla por ninguna razon
 Debemos subir la imagen publica al servidor, esto lo podemos hacer con:
 ssh-copy-id -i .ssh/id_rsa.pub ubuntu@192.168.56.101
 Se crea una carpeta en el home del servidor .ssh/authorized_keys
 Donde almacena la llave ssh publica del host
+Pedira confirmacion pidiendo que introduzcas la clave del servidor
 
 ssh-copy-id -i [ssh-key address].pub [username]@[ip address]
 Envia una copia de la llave ssh publica a un servidor ubicado en dicha IP
 
+Para probar que la clave fue copiada ejecuta en el servidor el comando:
+$ less .ssh/authorized_keys
+Y debera aparecer la llave copiada
+
 Con estoy ya tenemos configurado nuestro acceso ssh al servidor
-Y podremos entrar nuevamente por ssh y no pedira contraseña
+Y podremos entrar nuevamente por ssh
 # ssh ubuntu@192.168.56.101
+y no pedira contraseña nuevamente
+
+Nota:
+En windows7, el comando dio error
+El comando que corrio bien fue:
+ssh-copy-id -f -i .ssh/id_rsa.pub ubuntu@192.168.56.101
+Pero no funciono
+Cree una nueva key desde el GitBash desde windows7
+Segui los pasos tal cual estan en la guia
+$ ssh-copy-id -i /c/Users/Abrahan/.ssh/id_rsa.pub ubuntu@192.168.56.101
+Si funciono!!! <3
 
 Para poder desactivar el entrar el sistema remoto con contraseña
 Solo queda desde nuestra maquina virtual editar el archivo:

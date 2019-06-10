@@ -1,0 +1,53 @@
+Video_04
+Manejo de sesiones remotas con tmux y SSH
+
+Llaves SSH
+Son lo más importante para un administrador de servidores
+Estas nos permiten conectarnos a un servidor para poder ejecutar procesos de forma remota
+
+Dónde guardar las llaves SSH?
+Existe una carpeta en el sistema llamada .ssh/ donde debemos guardar todas las llaves que tengamos
+En Linux todas las carpetas que inician con . son carpetas ocultas
+
+Recuerda colocarle un nombre al archivo de la llave que sea representativo
+
+Crear archivo de configuración
+Un administrador de sevidores maneja entre 20 a 50 servidores
+Podemos crear un archivo para no tener que recordar todos los datos de ingreso al servidor
+para esto debemos crear un archivo .ssh/config y colocar el contenido:
+Host platzi
+  HostName 54.196.172.97
+  Port 22
+  User ubuntu
+  IdentityFile ~/.ssh/platzi.pem
+
+Ahora podras acceder al servidor con solo usar el comando:
+$ ssh platzi
+
+Nota:
+Para el archivo config, la key que se usa es key la privada
+IdentityFile ~/.ssh/id_rsa
+
+Manejar conexiones con tmux
+tmux es un multiplexador de terminales, podremos tener varias terminales bajo la misma conexión ssh
+Podremos tener muchas opciones, dividir pantallas en vistas, etc
+Podemos ver sus opciones con:
+$ man tmux
+
+Debemos instalarlo dentro del servidor con el comando:
+$ sudo apt-get install tmux
+Para iniciarlo, desde la maquina virtual usamos el comando:
+$ tmux
+
+Una vez iniciado podemos usar el comando CTRL + B y la opción que queramos
+CTRL + B y luego c abre una nueva terminal
+CTRL + B y luego n avanza a la siguiente terminal
+CTRL + B y luego d desconecta la sesión
+tmux attach Conectarse a la sesión de tmux (tal cual como quedo en la ultima sesion)
+
+Nota:
+En el servidor de ubuntu ya esta instalado tmux
+
+NOTA:
+Tutorial de tmux
+http://www.sromero.org/wiki/linux/aplicaciones/tmux
