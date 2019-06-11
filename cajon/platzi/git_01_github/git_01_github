@@ -6,16 +6,16 @@ Fecha de Finalizacion:
 TEMARIO:
 1. Introducción a Git
 	01	¿Qué es Git?
-------------------------------------------------------------------------- Avance
 	02	¿Por qué usar un sistema de control de versiones como Git?
 	03	Instalando Git y GitBash en Windows
-------------------------------------------------------------------------- Visto
 	04	Instalando Git en OSX
 	05	Instalando Git en Linux
+------------------------------------------------------------------------- Avance
 	06	Editores de código, archivos binarios y de texto plano
 	07	Introducción a la terminal y línea de comandos
 2. Comandos básicos en Git
 	08	¿Qué es staging, repositorios y cuál es el ciclo básico de trabajo en GitHub?
+------------------------------------------------------------------------- Visto
 	09	¿Qué es un Branch (rama) y cómo funciona un Merge en Git?
 	10	Crea un repositorio de Git y haz tu primer commit
 	11	Analizar cambios en los archivos de tu proyecto con Git

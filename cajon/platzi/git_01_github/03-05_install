@@ -55,3 +55,21 @@ Ambas consolas funcionan muy parecido y comparten los comandos que vamos a ver d
 
 ---
 Video_05
+Instalando Git en Linux
+
+Cada distribución de Linux tiene un comando especial para instalar herramientas y actualizar el sistema
+Cada distribución tiene su comando especial y debes averiguar cómo funciona para poder instalar Git
+En Debian y sus distribuciones derivadas (como Ubuntu) el comando es: apt-get
+En Red Hat es: yum
+En ArchLinux es pacman
+
+Antes de hacer la instalación, debemos hacer una actualización del sistema
+En nuestro caso, los comandos para hacerlo son
+$ sudo apt-get update
+$ sudo apt-get upgrade
+
+Con el sistema actualizado, ahora sí podemos instalar Git
+En este caso, el comando para hacerlo es:
+$ sudo apt-get install git
+También puedes verificar que Git fue instalado correctamente con el comando:
+$ git --version
