@@ -1,0 +1,79 @@
+Video_0
+Añadir y administrar repositorios
+
+Los repositorios son una lista de paquetes oficiales de la distribución
+
+/etc/apt/sources.list
+Archivo que guarda las fuentes de los repositorios que va a consultar el sistema
+Cada fuente contienen una URL, versión y la configuración del paquete
+
+Editar el repositorio
+Podemos editar el sources.list manualmente por un editor o por medio del terminal-bash
+Agregar al repositorio fuentes de repositorios de terceros
+Cada vez que modificamos la lista, debemos actualizar la lista de paquetes
+
+Otro metodo es crear la carpeta:
+/etc/apt/sources.list.d
+En esta carpeta agrega un archivo con la fuente del repositorio
+El nombre del archivo con la fuente lo identificas con el nombre del origen del paquete
+
+Actualizar la lista de paquetes
+Usando el comando:
+$ sudo apt-get update
+# apt-get update
+Actualizamos la información del listados de fuentes de:
+/etc/apt/source.list
+/etc/apt/source.list.d/
+Verificando si nuestros paquetes instalados estan actualizados con respecto al repositorio
+
+Debemos manener actualizada la lista de repositorios de paquetes periodicamente
+
+Dependiendo de la distribucion, existen paquetes propios para cada distribucion
+En caso de no tener el paquete disponible, se puede obtener paquetes de terceros
+
+Recomendaciones al añadir al repositorio programas de otras fuentes
+Es nuestra responsabilidad confiar en la fuente que nos provee ese repositorios
+
+Para cada uno de esos repositorios existe una llave
+Las llaves añaden una capa de seguridad a los repositorios
+Para entender que es una llave realizaremos un ejercicio:
+Agergar "mongoDB" a la lista de repositorios
+
+mongoDB
+Para instalar mongoDB lo podemos hacer decargando el paquete desde su pagina web
+Utilizaremos el metodo de instalacion añadiendo el repositorio
+Usando las instrucciones de la pagina:
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+En el terminal agregamos el comando:
+$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+# echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+Ese comando realiza los siguientes pasos:
+Añade una archivo a /etc/apt/sources.list.d/ con la fuente del repositorio y el nombre del paquete
+Como añadimos una fuente a la lista de repositorios debemos actualizar la lista de paquetes:
+$ sudo apt-get update
+Pero, nos mostrara un error similar a:
+- No se puede verificar el paquete porque no esta firmado
+- No se logro autenticar el repositorio y los paquetes pueden ser potenciamente peligrosos
+En resumen, no tenemos la clave publica del servidor que garantiza la seguridad de la fuente y el paquete
+Esta Verificacion se realiza al momento sincronizar los repositorios
+Validando si una fuente o paquete es seguro y no ha sido alterado por terceros
+Esto implica que cada repositorio posee una llave GPG que permite determinar si es confiable
+Debemos agregar la llave a nuestro sistema, esa llave la publica
+Esa llave publica es publicada por los mismos dueños del paquete
+Como confiamos en ellos, agregamos esa llave GPG
+Usando el comando:
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
+Ahora ya podemos actualizar la lista de repositorios
+
+Existe dentro de la distribucion unos anillos de seguridad
+$ apt-cache search keyring
+Permite ver los repositorios de paquetes que tienen esos anillos de seguridad (debian / ubuntu)
+
+Nota:
+Debemos procurar instalar repositorios de fuentes para nuestra distribución de versiones estables
+Los paquetes de distribuciones estables ya vienen con los parches de seguridad
+En caso de tener fallas de seguridad, y los paquetes son vulnerables
+Al poco tiempo tendremos disponibles los parches de seguridad para nuestra distribución
+Debemos actualizar la lista de paquetes
+$ sudo apt-get update
+Y podremos ver los paquetes que se encuentran con actualizciones disponibles

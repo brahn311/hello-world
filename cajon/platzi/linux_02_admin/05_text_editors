@@ -1,0 +1,60 @@
+Articulo_05
+Editores de texto en Linux
+
+GNU/Linux se caracteriza por tener muchas alternativas para hacer ciertas tareas
+En el caso de edición de texto hay muchas opciones tanto gráficas como a nivel de consola
+Las más famosas: VI y Nano
+
+VI / VIM
+Es un editor de texto desarrollado por Bill Joy (co-fundador de Sun Microsystem) en 1976
+VI está en casi todos los sistemas operativos *NIX y funciona a través de la consola
+
+Nota:
+VIM esta instalado por defecto en GitBash para Windows
+
+Por su gran aceptación tiene un fork (un software derivado) llamado VIM (Vi IMProved)
+VIM mejora sustancialmente sus características, por ejemplo, en VIM se agrega:
+- Soporte de coloreado de sintaxis
+- Plugins
+- Soporte a múltiples lenguajes
+- Multi ventana
+- editor gráfico (gV:im o kVim)
+
+Ambos editores (se distribuyen por separado) están disponibles en la mayoría de los repositorios de GNU/Linux
+VI viene pre-instalado e instalar VIM es super fácil desde los repositorios
+
+Modos de VI / VIM
+Tanto VI como VIM tienen dos modos que funcionan para interactuar con el editor sin el uso del ratón
+El primer modo, el “modo de comandos”, permite al usuario insertar un comando
+Sea para: guardar el archivo, abrir otro archivo, cerrar el programa,
+El segundo es el “modo de insertar” y permite al usuario ingresar contenido al archivo que está editando actualmente
+
+VIM tiene cuatro modos de trabajo adicionales en comparación a VI:
+- Modo de línea de órdenes
+- Modo visual
+- Modo selección
+- Modo ex
+
+Nano
+Es un editor de texto más sencillo de usar en comparación a VI/VIM pero con menos características
+No viene incorporado a ningún sistema operativo *NIX, pero su instalación es muy sencilla
+Nota: en Debian si esta instalado por defecto
+
+Nano es un clon de Pico (editor de texto para UNIX, con licencia propietaria)
+en su web oficial puede verse cómo es su interfaz
+
+Instalación de VIM y de Nano
+Los dos editores pueden estar instalados al tiempo
+Con el gestor de paquetes podemos instalarlos con un solo comando:
+
+Fedora / CentOS
+$ yum install vim nano -y
+
+Debian / Ubuntu
+# apt-get install vim nano
+
+Usar el editor:
+Y para abrir VIM o Nano basta ejecutar (Fedora / CentOS / Debian / Ubuntu):
+$ vi <nombre_archivo>
+$ vim <nombre_archivo>
+$ nano <nombre_archivo>

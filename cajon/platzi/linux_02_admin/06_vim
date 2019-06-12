@@ -1,0 +1,58 @@
+Video_06
+Editar archivos con VIM
+
+Como usar VI / VIM:
+Al ingresar a VI / VIM entras directo al modo normal
+
+Al texto puedes:
+Seleccionar texto con el mouse, copiar el texto seleccionado
+Puedes pegar el texto seleccion en la posicion del indicador de texto
+Puedes hacer lo mismo en el modo -- insertar --
+
+En el modo normal puedes presionar:
+
+hjkl
+Desplazamiento: izquierda, abajo, arriba y derecha (respectivamente)
+
+SUPR
+Elimina texto del lado derecho del indicador de texto
+
+i
+Entras en el modo -- INSERTAR -- texto
+El indicador de texlo lo mueves con las flechas del teclado
+Puedes seleccionar texto con el mouse, copiar el texto seleccionado
+Puedes pegar el texto seleccion en la posicion del indicador de texto
+Puedes entrar al modo -- REEMPLAZAR -- con la tecla "Insert"
+
+v
+Entras en el modo -- VISUAL --
+Puedes usar comandos para manipular el cursor
+Puedes entrar al modo -- SELECCIONAR -- textos con CTRL + g
+        Selecciona el texto desde su posicion actual y sustituye la seleccion por texto nuevo
+        Cambia automaticamente al modo -- INSERTAR --
+
+u
+Regresar al cambio anterior "UNDO", similar a CTRL + Z
+
+ESC
+Sales del modo donde te encuentras
+
+:
+Entras al Modo de comandos
+
+Comandos:
+:w
+Guardas los cambios en el archivo
+
+:q
+Salir de VI / VIM si no hay cambios, si hay cambios da error
+
+:q!
+Sales de VI / VIM sin guardar cambios
+
+:qw
+Sales de VI / VIM y Guardas los cambios en el archivo
+
+NOTA:
+Aprende a usar Vim desde cero: 1 – Introducción a Vim
+https://hipertextual.com/archivo/2014/09/editores-codigo-mas-versatiles/

@@ -10,13 +10,13 @@ TEMARIO:
 	02	Configuración y guía básica usando Virtualbox
 	03	Iniciar un servidor Linux con AWS
 	04	Manejo de sesiones remotas con tmux y SSH
---------------------------------------------------------------------------- Avance
----------------------------------------------------------------------------	Visto
 	05	Editores de texto en Linux
 	06	Editar archivos con VIM
 2. Instalación y configuración de programas
 	07	Añadir y administrar repositorios
+--------------------------------------------------------------------------- Avance
 	08	Instalar, actualizar y remover programas en Linux
+---------------------------------------------------------------------------	Visto
 	09	Empaquetar y comprimir archivos en Linux
 	10	Compilar un programa en Linux
 	11	Dónde encontrar la documentación de los programas

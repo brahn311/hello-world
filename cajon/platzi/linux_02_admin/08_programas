@@ -1,0 +1,13 @@
+Video_08
+Instalar, actualizar y remover programas en Linux
+
+Instalar un programa
+aptitude es un programa que nos permite administrar e instalar componentes en Linux
+
++ marcar paquete para instalar
+- marcar para no instalar/desinstalar
+g para instalar paquetes marcados
+
+Desinstalar
+apt-get remove [nombre]
+Este comando desinstalara el paquete
