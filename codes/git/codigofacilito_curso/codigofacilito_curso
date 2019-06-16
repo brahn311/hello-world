@@ -3,15 +3,15 @@ Filiberto Santillan
 
 filisantillan.com
 
-1	Introducción a Git
-2	Primeros pasos
-3	Nuestro primer proyecto
-4	Ramas y Fusiones
-5	Empezando con Github
-6	Tags
-7	Workflows
-8	Github Pages
-9	Deployment con git
+01	Introducción a Git
+02	Primeros pasos
+03	Nuestro primer proyecto
+04	Ramas y Fusiones
+05	Empezando con Github
+06	Tags
+07	Workflows
+08	Github Pages
+09	Deployment con git
 10	Git Hooks (final)
 
 ...
