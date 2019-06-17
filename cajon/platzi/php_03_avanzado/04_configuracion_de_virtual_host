@@ -1,31 +1,49 @@
 Video_04
 Configuración de virtual host
 
-Proceso para configurar nuestro ordenador para que cierta url esta relacionada con cierta ip
+Modificar el archivo host
+Para acceder que tu maquina local responda a una url especifica del servidor debemos configurar los host de nuestro ordenador
+Este archivo otorga permisos a cierta ip relacionada a cierta url (similar a un dns?)
 
-Para linux/mac debes ir a /etc/host y añadir la ip en el archivo Homestead.yaml con el nombre de la url
-192.168.10.20	portafolio.test
-(Esta direccion es la que aparece en homestead/Homestead.yaml)
+Para Windows 7 (y Vista):
+- Right-click Notepad and select Run as administrator.
+- Click Continue on the Windows needs your permission UAC window.
+- When Notepad opens, find and open `C:\Windows\System32\Drivers\etc\hosts` folder
 
-Para este paso debes hacerlo con la Maquina virtual apagada... o reiniciarla luego de modificar la ip
+Para linux  / mac:
+- Debes ir a la ruta `/etc`
+- Editar el archivo `/etc/host`
 
-Ya con la VM (Virtual-Machine) encendida de nuevo puedes usar a la url
-portafolio.test
+Modificar el archivo:
+- Añadir la ip y el nombre de la url (siguiendo la estructura previa)
+  - 192.168.10.20	direccion_url.test (Debe ser la misma direccion ip que esta en homestead/Homestead.yaml)
+- Salvar los cambios
 
--En mi caso la primera vez dio error, pero me respondio ngnix
--Luego de reiniciar logre entrar por primera vez!
+Para que aplique los cambios debes hacerlos con la VM (Virtual-Machine) apagada
+Si no la apagamos la VM luego de modificar el archivo, debemos reiniciarla,
+
+Ya con la VM encendida de nuevo puedes usar a la url
+direccio_nurl.test
+
+Nota:
+- En mi caso la primera vez dio error, pero me respondio ngnix
+- Luego de reiniciar logre entrar por primera vez!
 
 Tendremos que ir levantando la aplicacion en nuestro servidor virtual
+Como este curso es una continuacion del proyecto del curso `php_01_intro` debemos adecuar el entorno
 
-Lo primero fue que aparece error por no encontrar vendor
+Al acceder al portal, lo primero fue que aparece error por no encontrar vendor
 Debemos instalarla, el metodo es por ssh, para entrar en la VM de vagrant usas el comando
 $ vagrant ssh
-Como Homestead ya tiene composer, ubicado en la carpeta del proyecto, (donde esta composer.json) tipea el comando
+Como Homestead ya tiene composer, estando ubicado en la carpeta del proyecto, (donde esta composer.json) tipea el comando
 $ composer install
 (instalara todas las librerias y dependecias requeridas ya previamente)
 
-Si actualizamos, ahora solo tendremos error el la base de datos donde no tendremos las tablas aun
-En el video usaron Sequel Pro, 
+Si actualizamos tendremos un error con la base de datos `no tendremos las tablas`
+En el video usaron Sequel Pro (manejador de DB en mac) para configurar una conexion al servidor
+
+Parametros:
+
 host: localhost
 username: homestead
 password: secret
@@ -33,6 +51,8 @@ database: portafolio
 ssh host: 192.168.10.20
 ssh username: vagrant
 ssh password: vagrant
+
+Nota:
 (en el video, Sequel Pro modificó el host a 127.0.01)
 Esto lo anoto por si deseo configurar PHPMyAdmin
 
@@ -52,4 +72,3 @@ DB_NAME='portafolio'
 DB_USER='root'
 DB_PASS='secret'
 (logro conectar en el navegador y me mostro el index)
-

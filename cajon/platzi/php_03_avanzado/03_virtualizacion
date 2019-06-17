@@ -12,7 +12,7 @@ Maquinas virtuales completas (usado para el curso)
 Docker
 Ofrece distintos contenedores para solo una maquina virtual
 
-Instalar Vagrant:
+Instalar Vagrant (Linux):
 - Descarga desde la pagina oficial
 - instalar desde terminal como root:
 	# dpkg -i vagrant*.deb
@@ -20,12 +20,12 @@ Instalar Vagrant:
 	$ vagrant
 	// Debe aparecerte el los comandos e informacion de ayuda
 
-Virtualbox:
+Virtualbox (Linux):
 Debes tener virtualbox instalado para usar homestead
 FUENTE: https://www.virtualbox.org/wiki/Linux_Downloads
 Añades la pagina de virtualbox al la lista de fuentes
 $ nano /etc/apt/sources.list
-Dentro añade la fuente 
+Dentro añade la fuente
 deb https://download.virtualbox.org/virtualbox/debian stretch contrib
 Descargas la clave de apt desde:
 https://www.virtualbox.org/download/oracle_vbox_2016.asc
