@@ -2,12 +2,12 @@
 - Fecha de Inicio: 27/04/2019
 - Fecha de Finalización: 03/05/2019
 
-#### TEMARIO:
+#### [TEMARIO]():
 1. Introducción
    - [x]	1. Intro y caracteristicas de Laravel
 1. Fundamentos
-   - [x]	2.	[Instalación de Laravel]()
-   - [x]	3.	[Primer ruta en laravel]()
+   - [x]	2.	Instalación de Laravel
+   - [x]	3.	Primer route en laravel
    - [x]	4.	Cómo funciona Blade
    - [x]	5.	Controladores en Laravel
    - [x]	6.	Request
