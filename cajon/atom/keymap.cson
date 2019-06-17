@@ -1,7 +1,10 @@
-# Copy shortcuts adding this lines into Atom keymap.cson
+# Copy shortcuts adding this lines into your Atom config file keymap.cson
 
-# Split seleccion into lines
-# https://stackoverflow.com/questions/50352923/atom-editor-keyboard-shortcut-for-split-selections-into-lines
+# Split selection into lines
 'atom-text-editor':
   'ctrl-shift-L': 'editor:split-selections-into-lines'
   'ctrl-shift-J': 'grammar-selector:show'
+
+# Fixing emmet conflict ctrl+shift+M doesn't show markdown preview toggle
+'.editor:not(.mini)':
+  'ctrl-alt-m': 'markdown-preview:toggle'
