@@ -55,7 +55,7 @@ Para escapar su contenido usa llaves dobles
 - `{{ $saludo }}`
 
 Por ejemplo:
-```
+```php
 @isset($saludo)
 {{ $saludo }}
 @else
