@@ -28,7 +28,7 @@ Como practiva crearemos 2 controladores:
 - DashboardController: tablero del control del portal
 
 Luego configuramos `/routes/web.php` añadiendo las rutas para llamar a los metodos del controlador
-```
+```php
 Route::get('/','HomeController@index')
 Route::get('/dashboard','DashboardController@index')
 ```
