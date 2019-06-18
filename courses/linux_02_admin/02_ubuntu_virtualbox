@@ -1,8 +1,6 @@
-Video_02
-Configuración y guía básica usando Virtualbox
+# Configuración y guía básica usando Virtualbox
 
-Configuraremos la maquina virtual con VirtualBox
-Ubuntu server 16.04
+Configuraremos una maquina virtual Ubuntu server 16.04 con VirtualBox
 
 NO SE MOSTRARA COMO SE INSTALA
 Porque los administradores no instalan
@@ -33,8 +31,8 @@ Conectarse al servidor por acceso remoto o escritorio compartido
 
 La unica manera de conexion es por ssh
 
-$ sudo su
-# ifconfig
+`$ sudo su`
+`# ifconfig`
 
 ifconfig
 Permite ver las network interfaces
@@ -58,8 +56,8 @@ Nota:
 En mi caso no fue necesario agregar el name pues no aparecia en las opciones
 
 En nuestra maquina virtual usamos los comandos:
-# ifdown enp0s3
-# ifup enp0s3
+`# ifdown enp0s3`
+`# ifup enp0s3`
 
 ifdown [network interface]
 Desactiva dicha interface
@@ -68,9 +66,9 @@ ifup [network interface]
 Activa dicha interface
 
 Podemos probar la conexion en la maquina virtual a nuestro host:
-# ping 192.168.56.1
+`# ping 192.168.56.1`
 Podemos probar la conexion en nuestra maquina a la maquina virtual:
-# ping 192.168.56.101
+`# ping 192.168.56.101`
 
 ping [ip address]
 Permite realizar ping a dicha IP
@@ -78,11 +76,11 @@ Permite realizar ping a dicha IP
 SSH
 Una vez tengamos conexión entre las dos máquinas
 Podemos configurar para poder conectarnos y autenticarnos por ssh
-# ssh 192.168.56.101
+`# ssh 192.168.56.101`
 Se conectara pero no tendremos permisos
 
 Una opción es iniciar con el usuario ubuntu
-# ssh ubuntu@192.168.56.101
+`# ssh ubuntu@192.168.56.101`
 Recuerda que debes usar la ip que se le asigne al server
 Aunque "esta no es la manera correcta"
 La "forma correcta" es generar una llave SSH publica y colocarla en el servidor
@@ -98,17 +96,16 @@ Permite conectarse por medio de SSH a un servidor ubicado en dicha IP
 
 Como crear llaves SSH:
 Dentro del host (nuestra maquina real) debemos crear una llave para podernos conectar y lo hacemos con:
-# ssh-keygen -b 4096
+`# ssh-keygen -b 4096`
 Le debemos dar enter a todo para que quede por defecto
 Esto generara dentro de una carpeta .ssh dos archivos, rsa publica y privada
 
-ssh-keygen -t rsa -b 4096 -C [your_email@example.com]
+`# ssh-keygen -t rsa -b 4096 -C [your_email@example.com]`
 Permite generar una llave ssh tipo rsa  de 4096 Bytes
 
 La llave publica se llama: id_rsa.pub
 
-Nota:
-Yo ya tenia mi key en windows7, creada con puttykeygen.exe
+> **Nota!** Yo ya tenia mi key en windows7, creada con puttykeygen.exe
 
 La llave privada (nuestra llave privada) no podemos publicarla por ninguna razon
 Debemos subir la imagen publica al servidor, esto lo podemos hacer con:
@@ -121,12 +118,12 @@ ssh-copy-id -i [ssh-key address].pub [username]@[ip address]
 Envia una copia de la llave ssh publica a un servidor ubicado en dicha IP
 
 Para probar que la clave fue copiada ejecuta en el servidor el comando:
-$ less .ssh/authorized_keys
+`$ less .ssh/authorized_keys`
 Y debera aparecer la llave copiada
 
 Con estoy ya tenemos configurado nuestro acceso ssh al servidor
 Y podremos entrar nuevamente por ssh
-# ssh ubuntu@192.168.56.101
+`# ssh ubuntu@192.168.56.101`
 y no pedira contraseña nuevamente
 
 Nota:
@@ -136,12 +133,12 @@ ssh-copy-id -f -i .ssh/id_rsa.pub ubuntu@192.168.56.101
 Pero no funciono
 Cree una nueva key desde el GitBash desde windows7
 Segui los pasos tal cual estan en la guia
-$ ssh-copy-id -i /c/Users/Abrahan/.ssh/id_rsa.pub ubuntu@192.168.56.101
+`$ ssh-copy-id -i /c/Users/Abrahan/.ssh/id_rsa.pub ubuntu@192.168.56.101`
 Si funciono!!! <3
 
 Para poder desactivar el entrar el sistema remoto con contraseña
 Solo queda desde nuestra maquina virtual editar el archivo:
-$ sudo nano /etc/ssh/sshd_config
+`$ sudo nano /etc/ssh/sshd_config`
 En este archivo de configuración se edita la conexion por SSH
 Dejando que la única forma de conectarse al servidor sea:
 Por medio de ssh y no por medio de username y password
@@ -153,7 +150,7 @@ PasswordAuthentication [no]
 Colocar "no" para evitar la autenticación por medio de username y password
 
 Reiniciamos el servicio de ssh:
-$ sudo /etc/init.d/ssh restart
+`$ sudo /etc/init.d/ssh restart`
 
 sudo /etc/init.d/ssh restart
 Reinicia el servicio ssh; y aplica los cambios

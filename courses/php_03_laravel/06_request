@@ -1,29 +1,50 @@
-Video_06
-Request
+# Request
 
-Es el espacio de la memoria que contiene la informacion (parametros)
-que llegan al servidor cuando se realiza alguna peticion al mismo 
+Es el espacio de la memoria que contiene la información
+que llegan al servidor cuando se realiza alguna petición al mismo
 
-Por ejemplo, cuando llega parametros en la url
-http://localhost/dashboard?title=abrahan
+Puede contener datos recibidos datos de la URL y por formularios GET, POST
 
-Puede contener datos recibidos por formularios GET, POST y datos de la URL
+Podemos hacer pruebas en el `DashboardController.php`
 
-No olvides que para usar el recuest debes declarar su uso
+Por ejemplo:
+`http://localhost/dashboard?parametro=abrahan`
+
+
+#### Capturar el request
+Para usar `request` debes declarar su uso,
+
+```php
 use Illuminate\Http\Request;
+```
 
-Podemos hacer pruebas en el DashboardController.php
+> **Nota!** si no declaras el `use` no reconocera a que libreria pertenecer el `Request`
+
+Dentro de la `class DashboardController` agregamos la funcionalidad:
+```php
 public function index(Request $request)
 {
 	$parametro = $request->query('parametro', 'default');
-	// extraemos los valores recibidos de la url
-	//var_dump($parametro);die;
 	dd($parametro);
-	// dd() es un helper de laravel similar a var_dump();die; y da formato a la salida
 	return $parametro;
 }
+```
+- El metodo `index` recibe unos parametros de entrada `(Request $request)`
+Implica que la variable `$request` tiene casting y debe pertenercer a la case `Request`
+- `dd` es un helper de laravel, genera una salida por pantalla
+le da formato a esta y detiene la ejecucion del script
+una funcion similar a:
+```php
+var_dump($parametro);
+die;
+```
 
-Igual mente toda esa funcion index la podemos escribir
-return $request->query('parametro', 'default');
+Todo el metodo index con el request lo podriamos simplificar:
+```php
+public function index(Request $request)
+{
+	return $request->query('parametro', 'default');
+}
+```
 
-Los request seran usados durante todo el desarrollo del proyecto
+> **Nota!** Los request seran usados durante todo el desarrollo del proyecto
