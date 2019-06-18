@@ -8,7 +8,7 @@
 1. Fundamentos
    - [x]	2.	Instalación de Laravel
    - [x]	3.	Primer route en laravel
-   - [x]	4.	Cómo funciona Blade
+   - [x]	4.	[Cómo funciona Blade](https://github.com/brahn311/hello-world/blob/master/courses/php_03_laravel/04_blade.md)
    - [x]	5.	Controladores en Laravel
    - [x]	6.	Request
    - [ ]	7.	Configuración de laravel
