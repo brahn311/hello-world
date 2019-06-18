@@ -1,41 +1,64 @@
-Video_04
-Como funciona Blade
+# Como funciona Blade
 
-Blade es un motor de render html
+Blade es un motor de render HTML para php usado por Laravel
 
+Tenemos que recordar que el rendereo es necesario al usar el patron MVC
+(Modelo Vista Controlador).
+Permitiendo tener por separado los componentes de la pagina web:
+- La estructura (Modelo)
+- Las plantillas o template (Vistas)
+- Las acciones (Controladores)
 
-Primero que nada, puedes observar que las views de blade son archivos PHP
+> **Nota!** Profundizamos ese tema en `php_01_intro/34_mvc_creando_controllers`
 
-Es decir que dentro,puedes escribir scripts de PHP pero no es un buen uso
+Las plantillas de blade se reconocen por su extension
+`template_name.blade.php` justo cuando se realiza el `view`
 
-Aunque de igual manera plade posee sus propias estructuras de control de blade
-llamadas helpers y se reconocen 
-@
+Primero que nada dedes observar que las templates de blade
+son archivos PHP, y "en teoria" dentro de estos templates
+puedes escribir scripts PHP. Aunque blade _lo permite_ no es una buen practica hacerlo
 
-como:
-@if
-@elseif
-@endif
-@auth
-(Ver la documentacion para ver todos)
+> **Nota!** No todas las librerias para render admiten scripts PHP.
+Por ejemplo `Twig` _escapa_ los script por seguridad
 
+#### Helpers
+Los `helpers` son las _estructuras de control_ especificas de blade.
+Estas se reconocen porque empiezan con el simbolo `@`
 
-Puedes mandar variables al template de blade al momento de hacer el rendereo,
+Ejemplo:
+- `@if`
+- `@elseif`
+- `@endif`
+- `@auth`
+
+> **Nota!** Revisa la [documentacion de blade](https://laravel.com/docs/5.8/blade) para ver todos helpers
+
+#### Variables
+Puedes mandar variables al template al momento de hacer el rendereo
+```php
 Route::get('/text',function () {
 	return view('welcome',[
 		'saludo' => 'hola';
 	]);
 });
-Luego del nombre, separado con coma, escribe el arreglo con las variables
+```
+> **Nota!** Recuerda que los _Route_ los encuentras en `/routes/web.php`
 
-Para usarlas dentro del template
-Solo colocas el indice recibido como si fuera una variable de php
-Para escaparla usa dobles llaves
-{{ $saludo }}
+Luego del _'template_name'_ y separado por  coma `,` agrega un arreglo con las variables que necesites
 
-ejemplo:
+#### Renderear variables
+Dentro del template para usar, mostrar e operar variables
+solo debes colocar el simbolo `$` al _indice_ del arreglo recibido
+`$saludo` (como si fuera una variable PHP)
+
+Para escapar su contenido usa llaves dobles
+- `{{ $saludo }}`
+
+Por ejemplo:
+```
 @isset($saludo)
 {{ $saludo }}
 @else
 {{ 'No saludo' }}
 @endisset
+```

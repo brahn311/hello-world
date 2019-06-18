@@ -1,37 +1,39 @@
-Video_05
-Controladores en Laravel
+# Controladores en Laravel
 
-En la carpeta de web,la idea no es mandar a hacer los render alli mismo
+En el archivo `/routes/web.php` se define el comportamiento del portal
 
-Siguiendo con el patron de trabajo MVC, la idea es llamar a los controladores
+Entre estos comportamientos esta las configuracion de las `Routes` (rutas url)
 
-Primero debemos crear el controladores
-lo hacemos con un comando de artisan
+> **Nota!** La idea no es hacer los render `return view()` desde `/routes/web.php`
 
-Recordemos que para ver todos los comandos usamos
-$ php artisan
+Siguiendo con el patron de trabajo MVC, la funcion de los routes es llamar a los controladores.
+Estos seran los encargados de hacer los procesos y enviarlos a rendear
+
+> **Nota!** Recuerda que para ver todos los comandos usamos
+`$ php artisan`
 
 Para ver la ayuda especifica de un comando usamos
-$ php artisan comando --help
+`$ php artisan comando --help`
 
-El comando para crear un controller es
-$ php artisan make:controller nombre_del_controlador
+#### make:controller
+Primero debemos crear el controladores con un comando de artisan `make:controller`
 
-Creara nuevo archivo php (practicamente vacio) con el nombre_del_controlador en una carpeta ubicada en
-app\Http\Controllers
+El comando `$ php artisan make:controller controller_name` para crear un controller,
+creara nuevo archivo _practicamente vacio_ con el nombre especificando de controlador usado en el comando
 
-Crearemos 2 controladores:
-HomeController
-DashboardController
+El ruta del archivo creado sera `/app/Http/Controllers/controller_name.php`
 
+Como practiva crearemos 2 controladores:
+- HomeController: pagina de inicio
+- DashboardController: tablero del control del portal
 
-Ahora configuramos el mapa de rutas para llamar al controlador desde
-routes\web.php
-
-Modificamos
+Luego configuramos `/routes/web.php` añadiendo las rutas para llamar a los metodos del controlador
+```
 Route::get('/','HomeController@index')
 Route::get('/dashboard','DashboardController@index')
-/				es el url
-HomeController	es el controlador
-@				es el separador e indica donde el metodo a usar
-index 			es el metodo
+```
+
+- `/` es la url
+- `HomeController` es el controlador
+- `@` es el separador e indica donde el metodo a usar
+- `index` es el metodo o accion a ejecutar
