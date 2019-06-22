@@ -18,10 +18,10 @@ Para ver la ayuda especifica de un comando usamos
 #### make:controller
 Primero debemos crear el controladores con un comando de artisan `make:controller`
 
-El comando `$ php artisan make:controller controller_name` para crear un controller,
+El comando `$ php artisan make:controller NameController` para crear un controller,
 creara nuevo archivo _practicamente vacio_ con el nombre especificando de controlador usado en el comando
 
-El ruta del archivo creado sera `/app/Http/Controllers/controller_name.php`
+El ruta del archivo creado sera `/app/Http/Controllers/NameController.php`
 
 Como practiva crearemos 2 controladores:
 - HomeController: pagina de inicio
@@ -35,5 +35,5 @@ Route::get('/dashboard','DashboardController@index')
 
 - `/` es la url
 - `HomeController` es el controlador
-- `@` es el separador e indica donde el metodo a usar
+- `@` es el separador e indica que metodo usar
 - `index` es el metodo o accion a ejecutar

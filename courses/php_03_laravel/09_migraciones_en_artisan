@@ -1,6 +1,4 @@
-Video_09
-https://www.youtube.com/watch?v=NW71C3mHWIU
-Migraciones en Artisan
+# Migraciones en Artisan
 
 Por el momento solo cuentas con las tablas al momento de hacer la primera migracion
 - Crea la tabla de usuarios
@@ -8,32 +6,47 @@ Por el momento solo cuentas con las tablas al momento de hacer la primera migrac
 
 Crearemos la tabla de los reportes de gastos
 
-En la consola usa el comando:
-php artisan
-Utilizaremos el comando:
-make:migration
-Para ver las ayudas del comando:
-php artisan make:migration --help
-Usaremos el metodo donde nos crea la magracion ya con la tabla
-php artisan make:migration create_table_expense_report --create=expense_reports
+Utilizaremos el comando de artisan:
+`artisan make:migration`
 
-Para tomar notas la estructura del comando es:
-php artisan <comando> [nombre] <--opcion>[=nombre_de_la_tabla]
+> **Nota!** desde homestead (usando ssh)
+puedes usar solo `artisan` en vez de escribir `php artisan`
+
+Para ver las ayudas del comando:
+`artisan make:migration --help`
+
+Para crear una migracion:
+`artisan make:migration description_migration_name`
+
+Usaremos la opcion de crear la migracion
+`--create=[table_name]`
+para crear una tabla nueva
+
+El comando completo sera:
+`artisan make:migration create_table_expense_report --create=expense_reports`
+
+La estructura general de los comandos es:
+`artisan <comando:comando> [description_name] <--opcion>[=table_name]`
 
 Creara el archivo de la migracion y estara lleno con lo basico para crear una tabla
 
-Dentro del metodo 
-up
-Tendras dentro las llamadas a metodos para:
-- increment('id'); // para el primary key
-- timestamps(); // para el create_at, update_at
+Dentro del metodo
+`up`
+tendras dentro las llamadas a metodos para:
+```
+$table->bigIncrements('id');
+$table->timestamps();
+```
+- `bigIncrement('id')` el primary key autoincrementado
+- `timestamps()` añade el `create_at`, `update_at` de Elloquent
 
 Dentro del metodo
-down
-Tendras el metodo para elimiar la tabla
+`down`
+tendras el metodo para elimiar la tabla
+
 Este metodo aplica cuando usas el comando:
-php artisan migrate:rollback
-Y con ello eliminaria los pasos (los pasos las ves en la tabla de migraciones como bash)
+`php artisan migrate:rollback`
+y con ello eliminaria los pasos (los pasos las ves en la tabla de migraciones como bash)
 
 Para aplicar las migraciones y actualizar tu base de datos usas el comando:
-php artisan migrate
+`php artisan migrate`

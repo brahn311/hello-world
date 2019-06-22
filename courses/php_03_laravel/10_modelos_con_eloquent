@@ -1,40 +1,48 @@
-Video_10
-Modelos con Eloquent
+# Modelos con Eloquent
 
-Revisando los comandos de artisan nos encontramos con el comando
-make:model
+Entre las opciones de artisan nos encontramos con el comando
+`make:model`
 
-Sirve para crear una nueva classe de de eloquent
-$ php artisan make:model ExpenseReport
+Sirve para crear una nueva classe de eloquent
+`$ php artisan make:model ExpenseReport`
 
-Recomendaciones
-- Hacer el codigo en ingles
-- Cuando creamos la base de datos usamos plurar
+Recomendaciones:
+- Hacer el codigo del proyecto en ingles
+- Cuando creamos las tablas en la base de datos usamos plurar
 - Cuando creamos modelos en la app usamos singular
 
-Los modelos Laravel los ubica dentro de la carpeta de app
-Se comentan que model o entidies son palabras con muchos significados y por eso no hay una carpeta model
+Como los terminos _models_ o _entity_ son asociados a muchos significados
+no hay una carpeta model
 
-Para usar el modelo usamos el comando
-$ php artisan tinker
-Tinker es una ayuda para realizar pruebas:
+Laravel ubica los modelos dentro de la carpeta de `/app`
+
+Puedieramos crear una carpeta models y modificar los `namespaces`
+
+> **Nota!** No olvides que deberias crear la migration de la tabla primero
+
+#### Tinker
+`$ php artisan tinker` es usado para realizar pruebas
+utilizando el modelo y la base de datos
 - Permite usar nuestros modelos
-- Incluye eloquent 
+- Incluye eloquent
 - No es necesario usar interfaz gui, solo por consola
 
-Por ejemplo para consultar cuantos registros tenemos usamos:
->>> App\expenseReport::all();
+El prompt de tinker lo identificamos con `>>>`
+
+Por ejemplo:
+Para consultar cuantos registros tenemos usamos
+`>>> App\expenseReport::all();`
 Nos dara cero resultados
 
 Crear un espacio de memoria para un objeto
->>> $report = new App\expenseReport();
+`>>> $report = new App\expenseReport();`
 
 Guardar la instancia en la base de datos
->>> $report->save();
+`>>> $report->save();`
 
 Si volvemos a consultar los resultados
->>> App\expenseReport::all();
+`>>> App\expenseReport::all();`
 Nos mostrara 1 resultado
 
-Para salir de tinker usa:
-exit
+Para salir de tinker usa
+`>>> exit`
