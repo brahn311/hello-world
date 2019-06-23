@@ -3,16 +3,19 @@
 Mejoraremos el modelo y las migraciones
 
 Primero debemos crear una nueva migracion para modificar la tablas
-con los datos que añadiremos añadir
+con los datos que queremos añadir
 
 Las migraciones se almacenan y se comparan con la base de datos,
-al ejecutar el comando se actualizan las migraciones faltantes
+y al ejecutar el comando se actualizan las migraciones faltantes
 
-Generaras incongruencias si modificas alguna migracion y trabajas con varios usuarios:
-Faltaran cambios, pero indicara que estas actualizado
+No debes modificar directamente un archivo de migracion,
+podras generar incongruencias si modificas alguna migracion si trabajas con varios colaboradores
 
-> **Nota!** la buena practica es no modificar migraciones, es crea nuevas migraciones
+A algunos participantes les podria faltar cambios, pero indicara que estan actualizado
 
+> **Nota!** Es buena practica "_No modificar_ las migraciones, _crea_ nuevas migraciones"_
+
+#### Actualizando la tabla
 Usaremos artisan para crear la migracion
 
 Recuerda que necesitas un nombre para la migracion, en este caso sera
@@ -26,11 +29,13 @@ El comando completo seria el siguiente:
 
 Vamos a la carpeta para trabajar el archivo de migracion creado
 
-En el metodo `up` añadimos:
+En el metodo `public function up()` añadimos:
 `$table->text('title');`
 
-En el metodo `down` añadimos:
+En el metodo `public function down()` añadimos:
 `$table->dropColumn('title');`
 
 Puedes usar el comando para borrar la tabla vieja y crear todo desde cero
 `$php artisan migrate:fresh`
+
+Puedes ver la [documentacion de migraciones](https://laravel.com/docs/5.8/migrations) para conocer mas comandos
