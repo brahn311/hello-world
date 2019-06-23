@@ -1,5 +1,8 @@
 # Copy shortcuts adding this lines into your Atom config file keymap.cson
 
+# Windows7 & Ubuntu
+# -----------------
+
 # Split selection into lines
 'atom-text-editor':
   'ctrl-shift-L': 'editor:split-selections-into-lines'
