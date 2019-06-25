@@ -1,66 +1,87 @@
-Video_16
-Fake PUT/PATCH
+# Fake PUT/PATCH
 
-HTTP define un conjunto de métodos de petición para indicar la acción que se desea realizar
-para un recurso determinado.
+HTTP define un conjunto de métodos para peticiones
+Usados para identificar o definir la acción que se desea realizar
+para un recurso determinado
 
-PUT
-El modo PUT reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.
+- PUT
+- PATCH
 
-PATCH
-El método PATCH  es utilizado para aplicar modificaciones parciales a un recurso.
+#### PUT
+El método _PUT_ reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.
 
-En Laravel cuando usamos recursos nos pone Put y Patch
+#### PATCH
+El método _PATCH_ es utilizado para aplicar modificaciones parciales a un recurso.
+
+En Laravel cuando usamos `resourse` nos pone _Put_ y _Patch_
 como una opción para modificar nuestros recursos
 
-El problema de esto es que en un form no se puede especificar directamente y solo nos deja hacer GET o POST
+El problema de esto es que en un `form` no se puede especificar
+directamente y solo nos deja hacer _GET/POST_
 
-Como nos sugieren hacer un Put o un Patch para el recourse
-Laravel tambien nos ofrece un mecanismo para hacerlo llamado ”Fake PUT/PATCH”
+#### Fake PUT/PATCH
+Laravel nos sugiere hacer un _Put/Patch_ para el manejo de `recourse`
+y tambien nos ofrece un mecanismo para hacerlo, llamado _Fake PUT/PATCH_
 
 Es necesario poner dentro del form de manera auxiliar:
-@method(‘tipo de método usado’)
+`@method('metodo')`
 
-Para comenzar editamos el template:
-resourse\views\expenseReport\index.blade.php
-Luego del titulo
+Para comenzar editamos el template
+`resourse\views\expenseReport\index.blade.php`
+
+Luego del titulo, agregamos una nueva columna:
+```html
 <td>{{ $expenseReport->title }}</td>
-Agregamos una nueva columna
 <td><a href="/expense_reports/{{ $expenseReport->id }}/edit">Edit</a></td>
+```
 
-Hacemos una copia del template de:
-resourse\views\expenseReport\index.blade.php
-Lo llamamos:
-edit.blade.php
-Cambiamos el titulo <h1> a:
-Edit Report
-Modificamos la accion:
-action="/expenseReports/{id}"
+#### Modificando el controller
+- En el metodo `edit` del controlador añadimos:
+```php
+public function edit($id)
+{
+	$report = ExpenseReport::findOrFail($id);
+	return view('expenseReport.edit', [
+		'report' => $report
+	]);
+}
+```
 
-En el metodo edit del controlador añadimos:
-$report = ExpenseReport::findOrFail($id); 
-return view('expenseReport.edit', [
-	'report' => $report
-]);
+#### Formulario de edicion
+- Hacemos una copia del template de:
+`resourse\views\expenseReport\index.blade.php`
 
-Ahora de regreso a: 
-resourse\views\expenseReport\edit.blade.php
-Ya podemos agregarle al titulo de antes
-Edit Report {{ $report->id }}
-Y en el formulario, modificamos el action:
-action="/expense_reports/{id}"
-Ahora luego del helper:
-@csrf
-Añadimos el fake PUT/PATCH:
+- Lo guardamos en la misma carpeta con el nombre
+`edit.blade.php`
+
+- Cambiamos el titulo `<h1>` del titulo:
+```html
+<h1>Edit Report {{ $report->id }}</h1>
+```
+Esto añade el numero de la cuenta a editar en el título
+
+- Modificamos la accion:
+```html
+<form action="/expenseReports/{{ $report->id }}" method="POST">
+```
+- Ahora luego del helper:
+`@csrf`
+añadimos el _fake PUT/PATCH_:
+```
 @method('put')
-Esto hace que al momento de enviarlo, laravel detecte como PUT 
+```
+Esto hace que laravel, al momento de recibir lo detecte como _PUT_
 
-De regreso al controlador ahora modificamos el metodo:
-update
-Añadiendo como contenido
-$report = ExpenseReport::find($id);
-$report->title = $request->get('title');
-$report->save();
-return redirect('/expense_reports');
 
-        
+#### Guardando los cambios en DB
+De regreso al controlador ahora modificamos el metodo `update`
+añadimos como contenido:
+```php
+public function update()
+{
+	$report = ExpenseReport::find($id);
+	$report->title = $request->get('title');
+	$report->save();
+	return redirect('/expense_reports');
+}
+```
