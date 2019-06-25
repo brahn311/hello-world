@@ -1,14 +1,14 @@
 # Laravel .env DB PostgreSQL
 
 ```
-DB_CONNECTION=psql
-DB_HOST=192.168.10.20
-DB_PORT=54320
-DB_DATABASE=
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=[DATABASE_NAME]
 DB_USERNAME=homestead
 DB_PASSWORD=secret
 ```
 
 > **Nota!**  
-El valor para `DB_HOST` es la IP del `Homestead.yaml`  
-El valor para `DB_DATABASE` es el nombre de la DB del proyecto  
+El valor para `DB_HOST` es la IP de localhost
+Sustituir el valor `[DATABASE_NAME]` por el nombre de la DB del proyecto  
