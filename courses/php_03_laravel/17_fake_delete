@@ -1,16 +1,22 @@
-Video_17
-Borrando reportes
+# Borrando reportes
 
-Crearemos una pagina de confirmacion que nos permita confirmar si deseamos borrar un elemento
+Crearemos una pagina de confirmacion para eliminar registros
+que nos permita confirmar si deseamos borrar un elemento
 
-Usaremos Http DELETE pero como no lo permite el formulario usaremos el helper de fake Delete
+Usaremos el metodo _Http DELETE_
+pero como el formulario _HTML_ no lo permite
+usaremos el helper de Laravel _fake Delete_
 
-DELETE
-El método DELETE borra un recurso en específico.
+#### DELETE
+El método _DELETE_ borra un recurso en específico
 
-En el resources\views\expenseReport\index.blade.php 
+En el `resources\views\expenseReport\index.blade.php`
 Debemos añadir una nueva columna que nos envie a la pagina de confirmacion
-<td><a href="/expense_reports/{{ $expenseReport->id }}/confirmDelete">Delete</a></td>
+```html
+<td>
+	<a href="/expense_reports/{{ $expenseReport->id }}/confirmDelete">Delete</a>
+</td>
+```
 Debes recordar que esta ruta no esta creada realmente
 
 En routes\web.php
@@ -38,26 +44,34 @@ Dejamos el boton y cambiamos el nombre por Delete
 
 Ahora podemos probarlo.
 
-De nuevo en el controlador: 
+De nuevo en el controlador:
 app\Http\Controllers\ExpenseReportController
 Ubicamos el metodo
-confirmDelete 
+`public function confirmDelete()`
 Comentamos el dd
-Mandamos renderizar la vista 
-$report = ExpenseReport::findOrFail($id);
-return view('expenseReport.confirmDelete', [
-	'report'=> $report
-]);
-
+Mandamos renderizar la vista
+```php
+public function confirmDelete($id)
+{
+	// dd('confirmDelete'. $id)
+	$report = ExpenseReport::findOrFail($id);
+	return view('expenseReport.confirmDelete', [
+		'report' => $report
+	]);
+}
+```
 Como ultimo paso configuraremos el borrado
 En el metodo
-destroy($id)
+`public function destroy($id)`
 Copiamos los pasos del comfirmDelete como base
-$report = ExpenseReport::findOrFail($id);
-Añadimos la funcion de eliminar
-$report->delete();
-Haremos un redirec para index:
-return redirect('/expense_reports');
+```php
+public function destroy($id)
+{
+	$report = ExpenseReport::findOrFail($id);
+	$report->delete();
+	return redirect('/expense_reports');
+}
+```
 
 Con esto ya terminamos todas las funcionalidades del CRUD
 
