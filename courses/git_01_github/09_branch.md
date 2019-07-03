@@ -9,12 +9,16 @@ Esos commits son almacenados en ramas, estas amplifican mucho más el potencial 
 > **Nota!** para entender el concepto de ramas, imaginate a git como un arbol
 donde la carpeta donde esta el `.git` es la carpeta raiz y esta sera tu rama principal
 
-Siempre empezamos en la rama master (pero puedes cambiarle el nombre si no te gusta) y creamos nuevas ramas, a partir de esta, para crear flujos de trabajo independientes
+Puedes cambiarle el nombre a rama master, tambien puedes crear nuevas ramas
+y a partir de esta crear flujos de trabajo independientes
 
-_A lo largo del proyecto se originan distintas ramas y el arbol empieza a ramificarse_
+Crear una nueva rama se trata de copiar un commit y pasarlo a otro lado (a otra rama)
+y continuar el trabajo de una parte específica de nuestro proyecto sin afectar el flujo de trabajo principal
 
-Al crear una nueva rama se trata de copiar un commit (de cualquier rama), pasarlo a otro lado (a otra rama) y continuar el trabajo de una parte específica de nuestro proyecto sin afectar el flujo de trabajo principal (que continúa en la rama master o la rama principal).
+> **Nota!** a lo largo del proyecto se originan distintas ramas y el arbol comenzara a ramificarse  
+Mientas que la rama nueva sera distinta, la rama master continuará sin cambios
 
+#### Ventajas de usar ramas
 - Podemos crear todas las ramas y commits que queramos
 - Podemos aprovechar el registro de cambios de Git para crear ramas
 - Traer versiones viejas del código, arreglarlas y combinarlas de nuevo
@@ -30,7 +34,7 @@ Acciones entre las ramas:
 - _merge_ une dos ramas
 
 #### merge
-Solo ten en cuenta que hacer `merge` entre ramas puede generar conflictos
+Solo ten en cuenta que hacer `merge` entre ramas puede generar _conflictos_
 y algunos archivos pueden ser diferentes en ambas ramas
-- Git puede intentar unir estos cambios automáticamente (pero no siempre funciona)
-- En algunos casos somos nosotros los que debemos resolver estos conflictos “a mano”
+- Git puede intentar unir estos cambios automáticamente pero no siempre funciona
+- En algunos casos somos nosotros los que debemos resolver estos conflictos de forma manual
