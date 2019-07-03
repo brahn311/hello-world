@@ -10,16 +10,16 @@ TEMARIO:
 	03	Instalando Git y GitBash en Windows
 	04	Instalando Git en OSX
 	05	Instalando Git en Linux
-------------------------------------------------------------------------- Avance
-	06	Editores de código, archivos binarios y de texto plano
-	07	Introducción a la terminal y línea de comandos
+	06	Editores de código, archivos binarios y de texto plano -------------- Visto
+	07	Introducción a la terminal y línea de comandos ---------------------- Visto
 2. Comandos básicos en Git
 	08	¿Qué es staging, repositorios y cuál es el ciclo básico de trabajo en GitHub?
-------------------------------------------------------------------------- Visto
 	09	¿Qué es un Branch (rama) y cómo funciona un Merge en Git?
 	10	Crea un repositorio de Git y haz tu primer commit
 	11	Analizar cambios en los archivos de tu proyecto con Git
+	------------------------------------------------------------------------- Avance
 	12	Volver en el tiempo en nuestro repositorio utilizando branches y checkout
+	------------------------------------------------------------------------- Visto
 3. Flujo de trabajo básico en Git
 	13	Flujo de trabajo básico con un repositorio remoto
 	14	Introducción a las ramas o branches de Git

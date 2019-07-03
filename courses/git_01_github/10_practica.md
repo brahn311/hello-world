@@ -1,5 +1,18 @@
 # Crea un repositorio de Git y haz tu primer commit
 
+#### Configuracion obligatoria de git
+- `$git  config --global user.name "nombre del usuario"` (configurar tu nombre)
+- `$git  config --global user.email correo_del_usuario` (configurar tu correo)
+
+> **Nota!** cuando usas consola, las opciones es identifican con guiones:  
+`-` Un guion indica que usaras (uno o varios) comandos abreviados (de una letra cada uno)  
+`--` Dos guiones indica que el comando sera una palabra completa
+
+#### Verificando la configuracion de git
+- `$git config` (lista de comandos y opciones de git)
+- `$git config --list` (lista de configuraciones de git por defecto)
+- `$git config --list --show-origin` (listado de configuraciones y su ubicacion fisica)
+
 #### Practicando
 - Crea una carpeta vacia y muevete a ella
 - `$ git init` (iniciar el repositorio)
@@ -17,19 +30,6 @@ Es decir, esta siendo controlado por git y contituara en el staging area
 
 > **Nota!** el `$ git commit -m` lo debes hacer ya estando configurado tu usuario  
 Si no tienes tu usuario registrado, dara error
-
-#### Verificando la configuracion de git
-- `$git config` (lista de comandos y opciones de git)
-- `$git config --list` (lista de configuraciones de git por defecto)
-- `$git config --list --show-origin` (listado de configuraciones y su ubicacion fisica)
-
-#### Configuracion obligatoria de git
-- `$git  config --global user.name "nombre del usuario"` (configurar tu nombre)
-- `$git  config --global user.email correo_del_usuario` (configurar tu correo)
-
-> **Nota!** cuando usas las opciones, estas se identifican con guiones:  
-`-` Un guion indica que usaras comandos abreviados (de una sola letra)  
-`--` Dos guiones indica que el comando sera una palabra completa
 
 #### Ver historial
 - `$git log` (listado detallado de los commit, desde el mas reciente hacia atras)
