@@ -1,19 +1,20 @@
 # hello-world
 Un lugar para almacena ideas, recursos, configuraciones y tutoriales personales
 
-#### Estructura
+## Estructura del repositorio
 
-| Carpeta     | Descripcion                                       |
-|:-----------:|:--------------------------------------------------|
-| **Drawer**  | Archivos varios (notas interesantes / personales) |
-| **Codes**   | Notas relacionadas a lenguajes de programacion    |
-| **Courses** | Anotaciones relacionadas a cursos realizados      |
+|Carpeta|Descripcion|
+|:-:|:-|
+|**Drawer**|Archivos varios (notas interesantes / personales)|
+|**Codes** |Notas relacionadas a lenguajes de programacion|
+|**Courses**|Anotaciones relacionadas a cursos realizados|
 
-#### Cursos
+## Courses
 
-|Carreras / Cursos|Status|
+### Desarrollo Backend con PHP ((80%))
+
+|Cursos|Status|
 |:-|:-:|
-|**Desarrollo Backend con PHP**|**80%**|
 |Curso profesional de Git y GitHub|Terminado|
 |Fundamentos de Bases de Datos|Terminado|
 |Curso de Introducción a PHP|Terminado|
@@ -21,15 +22,21 @@ Un lugar para almacena ideas, recursos, configuraciones y tutoriales personales
 |Curso de PHP con Laravel|Terminado|
 |Curso de Administración de Servidores Linux  |En curso|
 |Curso de Buenas Prácticas Para la Escritura de Código|25/07/19|
-|||
-|**Desarrollo con WordPress**|**60%**|
+
+### Desarrollo con WordPress (60%)
+
+|Cursos|Status|
+|:-|:-:|
 |Curso de Introducción a PHP|Listo|
 |Curso de Temas y Plugins en WordPress||
 |Curso de Creación y Optimización de Sitios Web con WordPress||
 |Curso profesional de Git y GitHub|Listo|
 |Fundamentos de Bases de Datos|Listo|
-|||
-|**Fundamentos de Programacion**|**26%**|
+
+### Fundamentos de Programacion (26%)
+
+|Cursos|Status|
+|:-|:-:|
 |Curso Gratis de Programación Básica|Terminado|
 |Fundamentos de Ingeniería de Software|En curso|
 |Introducción a Terminal y Línea de Comandos|Terminado|
@@ -49,19 +56,28 @@ Un lugar para almacena ideas, recursos, configuraciones y tutoriales personales
 |Curso profesional de Git y GitHub|Listo|
 |Fundamentos de Bases de Datos|Listo|
 |Curso de API REST|Próximamente|
-|||
-|**Gestión de Proyectos**|**33%**|
+
+### Gestión de Proyectos (33%)
+
+|Cursos|Status|
+|:-|:-:|
 |Fundamentos de la Gestión de Proyectos||
 |Curso de Certificación PMP||
 |Curso de SCRUM|Terminado|
-|||
-|**Bases de Datos**|**25%**|
-Curso de SQL y MySQL||
-Curso de PostgreSQL||
-Curso Básico de MongoDB||
-Fundamentos de Bases de Datos|Listo|
-|||
-|**Desarrollo Backend con Ruby**|**50%**|
+
+### Bases de Datos (25%)
+
+|Cursos|Status|
+|:-|:-:|
+|Curso de SQL y MySQL||
+|Curso de PostgreSQL||
+|Curso Básico de MongoDB||
+|Fundamentos de Bases de Datos|Listo|
+
+### Desarrollo Backend con Ruby (50%)
+
+|Cursos|Status|
+|:-|:-:|
 |Curso de Ruby||
 |Curso de Creación de APIs con Ruby on Rails||
 |Curso profesional de Git y GitHub|Listo|
