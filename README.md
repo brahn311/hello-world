@@ -2,6 +2,7 @@
 Un lugar para almacena ideas, recursos, configuraciones y tutoriales personales
 
 #### Estructura
+
 | Carpeta     | Descripcion                                       |
 |:-----------:|:--------------------------------------------------|
 | **Drawer**  | Archivos varios (notas interesantes / personales) |
@@ -9,6 +10,7 @@ Un lugar para almacena ideas, recursos, configuraciones y tutoriales personales
 | **Courses** | Anotaciones relacionadas a cursos realizados      |
 
 #### Cursos
+
 |Carreras / Cursos|Status|
 |:-|:-:|
 |**Desarrollo Backend con PHP**|**80%**|
