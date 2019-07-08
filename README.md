@@ -2,11 +2,11 @@
 Un lugar para almacena ideas, recursos, configuraciones y tutoriales personales
 
 #### Estructura
-| Carpeta | Descripcion |
-|:-------:|:------------|
-| **Drawer** | Archivos varios (notas interesantes / personales) |
-| **Codes** | Notas relacionadas a lenguajes de programacion |
-| **Courses** | Anotaciones relacionadas a cursos realizados |
+| Carpeta     | Descripcion                                       |
+|:-----------:|:--------------------------------------------------|
+| **Drawer**  | Archivos varios (notas interesantes / personales) |
+| **Codes**   | Notas relacionadas a lenguajes de programacion    |
+| **Courses** | Anotaciones relacionadas a cursos realizados      |
 
 #### Cursos
 |Carreras / Cursos|Status|
