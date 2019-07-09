@@ -4,9 +4,9 @@
 
 [Regresar](../../)
 
-- ### Introducción
+1. ### Introducción
    01. Intro y caracteristicas de Laravel
-- ### Fundamentos
+2. ### Fundamentos
    02. [Instalación de Laravel](./02_instalando_laravel.md)
    03. [Primer route en laravel](./03_prime_route_laravel.md)
    04. [Cómo funciona Blade](./04_blade.md)
