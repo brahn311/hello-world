@@ -1,3 +1,5 @@
+[Inicio](../../) > [PHP con Laravel](./)
+
 # Blade layout
 
 Usaremos el concepto de diseños para organizar los templates de blade

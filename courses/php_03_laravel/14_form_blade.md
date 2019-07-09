@@ -1,3 +1,5 @@
+[Inicio](../../) > [PHP con Laravel](./)
+
 # Form para agregar reportes
 Recapitulando, nosotros ya hicimos el index para mostrar lo almacenado,
 pero almacenamos usando `artisan tinker`

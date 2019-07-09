@@ -1,3 +1,5 @@
+[Inicio](../../) > [PHP con Laravel](./)
+
 # Controladores en Laravel
 
 En el archivo `/routes/web.php` se define el comportamiento del portal

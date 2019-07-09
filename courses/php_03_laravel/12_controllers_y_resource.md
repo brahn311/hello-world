@@ -1,3 +1,5 @@
+[Inicio](../../) > [PHP con Laravel](./)
+
 # Controladores y recursos
 
 Comenzaremos a darle las acciones de CRUD a nuestros reportes

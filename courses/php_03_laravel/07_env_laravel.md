@@ -1,3 +1,5 @@
+[Inicio](../../) > [PHP con Laravel](./)
+
 # Configuración de Laravel
 
 Revisaremos la configuracion de laravel
