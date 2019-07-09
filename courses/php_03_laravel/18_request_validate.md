@@ -1,4 +1,4 @@
-[Inicio](../) > [PHP con Laravel]()
+[Inicio](../../) > [PHP con Laravel](./)
 
 # Validaciones
 
