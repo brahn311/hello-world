@@ -12,14 +12,14 @@ Un lugar para almacena ideas, recursos, configuraciones y tutoriales personales
 ### Courses
 
 - [Curso profesional de Git y GitHub](./courses/git_01_github/)
-- [Fundamentos de Bases de Datos]()
-- [Curso de Introducción a PHP]()
-- [Curso Avanzado de PHP]()
+- Fundamentos de Bases de Datos
+- Curso de Introducción a PHP
+- Curso Avanzado de PHP
 - [Curso de PHP con Laravel](./courses/php_03_laravel/)
-- [Curso Gratis de Programación Básica]()
-- [Introducción a Terminal y Línea de Comandos]()
-- [Curso de Expresiones Regulares]()
-- [Curso de SCRUM]()
+- Curso Gratis de Programación Básica
+- Introducción a Terminal y Línea de Comandos
+- Curso de Expresiones Regulares
+- Curso de SCRUM
 
 ### Pending tasks
 
