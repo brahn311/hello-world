@@ -1,3 +1,5 @@
+[Inicio](../../) > [PHP con Laravel](./)
+
 # Primera ruta en laravel
 
 Ya teniendo:
@@ -7,6 +9,7 @@ Ya teniendo:
 
 Ahora podemos activar mas rutas
 
+### Route
 En la carpeta raiz del proyecto encontramos la carpeta `\routes`
 
 Dentro se encuentra un archivo llamado `web.php`
@@ -28,7 +31,7 @@ se buscara cual de las reglas coinciden y enviara el resulado correspondiente
 
 ``return view`` realiza el la union entre una plantilla y los datos requeridos
 
-#### Views
+### Views
 Las plantillas estan ubicadas en la ruta `\resources\views`
 
 En este caso la plantilla tiene el nombre `welcome.blade.php`
