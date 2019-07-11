@@ -7,6 +7,7 @@ Puedes en [GitHub](https://github.com) crear tu cuenta gratuita
 
 Luego de ingresar, entre otras cosas podras:
 - Crear o importar repositorios
+- Compartir fragmentos de codigos
 - Crear organizaciones y proyectos de trabajo
 - Descubrir repositorios de otras personas
 - Contribuir a esos proyectos, dar estrellas
@@ -31,7 +32,7 @@ y contribuir en ellos
 Si queremos conectar nuestro repositorio local (que creamos con git init)
 debemos ejecutar las siguientes instrucciones:
 1. Guardar la _URL_ del repositorio de _GitHub_ (con el nombre: origin)
-`$ git remote add [name] [URL]`
+`$ git remote add [rama] [URL]`
 1. Verificar que la _URL_ se haya guardado correctamente
    - `$ git remote`
    - `$ git remote -v`

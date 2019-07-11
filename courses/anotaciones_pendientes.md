@@ -39,9 +39,6 @@
 - [ ]	29	'grep' y 'find' desde consola *
 
 #### Curso profesional de Git y GitHub
-- [x]	17	Uso de GitHub
-- [ ]	18	Cómo funcionan las llaves públicas y privadas
-- [ ]	19	Configura tus llaves SSH en local
 - [ ]	20	Conexión a GitHub con SSH
 - [ ]	21	Tags y versiones en Git y GitHub
 - [ ]	22	Manejo de ramas en GitHub
