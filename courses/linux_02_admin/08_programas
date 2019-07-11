@@ -1,13 +1,57 @@
-Video_08
-Instalar, actualizar y remover programas en Linux
+# Instalar, actualizar y remover programas en Linux
 
-Instalar un programa
+Los paquetes en _Debian, Ubuntu, Fedora_ y Centos_ ya vienen compilados,
+Uno lo que hace es solamente descargar esos paquetes
+
+### Instalar un programa
 aptitude es un programa que nos permite administrar e instalar componentes en Linux
 
-+ marcar paquete para instalar
-- marcar para no instalar/desinstalar
-g para instalar paquetes marcados
+- Para instalar paquetes debemos ser super usuarios
+`$ sudo su`
+- Ahora instalaremos un paquete de uso obligatorio:
+`$ apt-get install aptitude`
 
-Desinstalar
-apt-get remove [nombre]
-Este comando desinstalara el paquete
+### Manejador de paquetes
+- `apt-get` Programa que administra el manejador de paquetes de _Debian_ o _Ubuntu_
+- `install` Opcion que indica al manejador que instalara uno o varios paquetes
+- `aptitude` administrador o instalador grafico de componentes
+
+> **Nota!** cada distribucion puede poseer su propio gestor de paquetes
+
+### Aptitude
+Paquete o programa que permite instalar paquetes modo grafico en consola
+aunque puedes usar el mouse tambien
+
+Para iniciarlo solo basta con usar el comando
+`$ aptitude`
+ 
+- Buscar un paquete `/` muestra un cuadro de texto para introducir el nombre del paquete
+- Poverte en el listado de paquetes `Flecha up` y `Flecha donw`
+- Marcar paquete para instalar usamos `+`
+
+> **Nota!** al darle `+` para instalar, se seleccionan automaticamente todas las dependecias del paquete para instalar tambien
+
+- Marcar para no instalar o desinstalar un paquete ya instalado `-`
+- Entrar y ver la informacion del paquete, versiones, dependencias y conflictos
+
+> **Nota!** en la informacion del paquete podras seleccionar la version para instalar
+
+- Actualiza los cambios con `u` luego de modificar las selecciones
+- Salir de la pantalla actual y regresar a la anterior `q`
+- Dejar igual el paquete `i` para instalar
+
+> **Nota!** al seleccionar paquetes pueden marcar dependencias _broken_
+(con el fondo de color rojo)  
+_aptitude_ no nos dejara seguir adelante hasta resolver esos conflictos
+Para solucionar esas depenencias rotas debemos instalarlas tambien
+
+- Instalar paquetes marcados `g`
+
+### Desinstalar por comandos
+- Desinstalara el paquete con seguridad
+`apt-get remove [paquete]`
+dejara todo la informacion del usuario y bases de datos intactas
+- Borrar todo (hasta configuraciones) `dpkg -P [paquete]` solo borrara el paquete tipeado
+- Purgar paquetes sin uso `_` usando _aptitude_ y borrando dependencias 
+
+> **Nota!** _aptitude_ mostrara los paquetes para eliminar en morado

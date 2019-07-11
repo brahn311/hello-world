@@ -1,21 +1,25 @@
-Video_0
+Video_07
 Añadir y administrar repositorios
 
 Los repositorios son una lista de paquetes oficiales de la distribución
 
 /etc/apt/sources.list
 Archivo que guarda las fuentes de los repositorios que va a consultar el sistema
-Cada fuente contienen una URL, versión y la configuración del paquete
+Cada fuente contienen:
+- URL
+- Versión del OS
+- Diferentes configuraciones del repositorio (perminten empaquetar y categorizar paquetes)
 
 Editar el repositorio
 Podemos editar el sources.list manualmente por un editor o por medio del terminal-bash
 Agregar al repositorio fuentes de repositorios de terceros
-Cada vez que modificamos la lista, debemos actualizar la lista de paquetes
 
 Otro metodo es crear la carpeta:
 /etc/apt/sources.list.d
 En esta carpeta agrega un archivo con la fuente del repositorio
 El nombre del archivo con la fuente lo identificas con el nombre del origen del paquete
+
+Cada vez que modificamos la lista, debemos actualizar la lista de paquetes
 
 Actualizar la lista de paquetes
 Usando el comando:
@@ -32,8 +36,9 @@ Dependiendo de la distribucion, existen paquetes propios para cada distribucion
 En caso de no tener el paquete disponible, se puede obtener paquetes de terceros
 
 Recomendaciones al añadir al repositorio programas de otras fuentes
-Es nuestra responsabilidad confiar en la fuente que nos provee ese repositorios
+- Es nuestra responsabilidad confiar en la fuente que nos provee ese repositorios
 
+Llaves de seguridad
 Para cada uno de esos repositorios existe una llave
 Las llaves añaden una capa de seguridad a los repositorios
 Para entender que es una llave realizaremos un ejercicio:
@@ -68,6 +73,11 @@ Ahora ya podemos actualizar la lista de repositorios
 Existe dentro de la distribucion unos anillos de seguridad
 $ apt-cache search keyring
 Permite ver los repositorios de paquetes que tienen esos anillos de seguridad (debian / ubuntu)
+
+Paquetes de anillos de seguridad
+Deberiamos instalar los paquetes anillos de seguridad para ubuntu y debian,
+estos traen todas las llaves de seguridad que requiere la distribucion
+`ubuntu-keyring` y `emdebian-archive-keyring`
 
 Nota:
 Debemos procurar instalar repositorios de fuentes para nuestra distribución de versiones estables
