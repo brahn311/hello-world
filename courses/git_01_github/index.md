@@ -20,13 +20,13 @@
 1. Flujo de trabajo básico en Git
    - [x]	13	Flujo de trabajo básico con un repositorio remoto
    - [x]	14	Introducción a las ramas o branches de Git
-   - [x]	15	Fusión de ramas con Git merge
-   - [x]	16	Solución de conflictos al hacer un merge
+   - [ ]	15	Fusión de ramas con Git merge
+   - [ ]	16	Solución de conflictos al hacer un merge
 1. Trabajando con repositorios remotos en Github
-   - [ ]	17	Uso de GitHub
-   - [ ]	18	Cómo funcionan las llaves públicas y privadas
-   - [ ]	19	Configura tus llaves SSH en local
-   - [ ]	20	Conexión a GitHub con SSH
+   - [x]	17	Uso de GitHub
+   - [x]	18	Cómo funcionan las llaves públicas y privadas
+   - [x]	19	Configura tus llaves SSH en local
+   - [x]	20	Conexión a GitHub con SSH
    - [ ]	21	Tags y versiones en Git y GitHub
    - [ ]	22	Manejo de ramas en GitHub
    - [ ]	23	Configurar múltiples colaboradores en un repositorio de GitHub

@@ -33,14 +33,14 @@
 - [ ]	18	Nombres(?) Reto
 - [ ]	20	Uso de REGEX para descomponer querys GET
 - [ ]	21	Explicación del Proyecto
-- [ ]	26	Java *
-- [ ]	27	Java aplicado *
-- [ ]	28	JavaScript *
-- [ ]	29	'grep' y 'find' desde consola *
+- [ ]	26	Java
+- [ ]	27	Java aplicado
+- [ ]	28	JavaScript
+- [ ]	29	'grep' y 'find' desde consola
 
 #### Curso profesional de Git y GitHub
-- [ ]	20	Conexión a GitHub con SSH
-- [ ]	21	Tags y versiones en Git y GitHub
+- [ ]	14	Introducción a las ramas o branches de Git
+- [ ]	15	Fusión de ramas con Git merge
 - [ ]	22	Manejo de ramas en GitHub
 - [ ]	23	Configurar múltiples colaboradores en un repositorio de GitHub
 - [ ]	27	Creando un Fork, contribuyendo a un repositorio
