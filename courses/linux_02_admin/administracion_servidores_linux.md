@@ -12,8 +12,8 @@
    - [x]	06	Editar archivos con VIM
 1. Instalación y configuración de programas
    - [x]	07	Añadir y administrar repositorios
-   - [ ]	08	Instalar, actualizar y remover programas en Linux
-   - [ ]	09	Empaquetar y comprimir archivos en Linux
+   - [x]	08	Instalar, actualizar y remover programas en Linux
+   - [x]	09	Empaquetar y comprimir archivos en Linux
    - [ ]	10	Compilar un programa en Linux
    - [ ]	11	Dónde encontrar la documentación de los programas
    - [ ]	12	Gestores de paquetes en Linux
