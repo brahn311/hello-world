@@ -1,0 +1,38 @@
+# Gestores de paquetes en Linux
+
+La instalación de software en cualquier sistema operativo es una necesidad inherente al OS, sin software de terceros muchas tareas serían muy difíciles de hacer a nivel de computadoras y servidores.
+
+En GNU/Linux instalar software es algo muy fácil siempre y cuando se haga uso del sistema de gestión de paquetes.
+
+Sistema de gestión de paquetes
+Es un conjunto de herramientas que permite la automatización de los procesos de instalación, configuración, actualización y eliminación de paquetes de software. El término gestor de paquetes es comúnmente utilizado en los sistemas *NIX, especialmente en GNU/Linux, en el que la mayoría de las distribuciones tienen un sistema gestor.
+
+Para entenderlo un poco mejor puede hacerse una analogía con un marketplace de algún sistema operativo móvil como Android, en el que a través de PlayStore es posible buscar, instalar, actualizar y eliminar nuevas aplicaciones con mucha facilidad y sin tanta intervención humana: un marketplace como Play Store es un sistema gestor de paquetes para Android.
+
+Sistema de repositorios de software
+El sistema de gestor de paquetes por sí solo no puede funcionar, debe tener algún sitio de donde obtener la información necesaria para descargar el paquete de software, para eso están los repositorios, que son sitios centralizados en donde está  toda la metadata, el código fuente y los binarios del software disponible para instalar a través de los sistemas de gestión de paquetes.
+
+YUM (Yellowdog Updater, Modified) - Fedora / CentOS
+Es una herramienta de código abierto desarrollada en Python utilizada para hacer la instalación de paquetes de software en distribuciones que usan RPM (RPM Package Manager) como formato de empaquetamiento, como Red Hat Enterprise Linux, Fedora, CentOS, SuSe y Mandriva.
+Algunos comandos de YUM son:
+
+Para instalar un software:
+yum install
+2. Para desinstalar un software:
+yum remove
+Para actualizar un software:
+yum update
+4. Para actualizar todo el sistema:
+yum update
+APT (Advanced Packaging Tool) - Debian, Ubuntu y más derivados de Debian
+APT no es en sí un sistema gestor de paquetes directo al usuario sino un conjunto de librerías C++ que utilizan otros programas para la distribución de paquetes de software como apt-get, apt-cache y aptitude. APT se utiliza más que todo para la gestión de software que viene empaquetado en formato deb, utilizada en sistemas Debian y derivados.
+Algunos comandos de apt-get y aptitude son:
+
+Para instalar un software:
+aptitude | apt-get install
+Para desinstalar un software:
+aptitude | apt-get remove
+Para actualizar un software:
+aptitude install "" paquete="">| apt-get  --only-upgrade install
+Para actualizar todo el sistema:
+aptitude safe-upgrade | apt-get upgrade
