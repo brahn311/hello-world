@@ -72,13 +72,17 @@ Conjunto cuya cantidad de elemento no se puede contar; es decir, es aquel conjun
 #### Operaciones con Conjuntos
 
 - **Unión**  
-La unión de dos conjuntos A y B es el conjunto A ∪ B que contiene cada elemento que está por lo menos en uno de ellos
+`∪`  
+La unión de dos conjuntos A y B es el conjunto `A ∪ B` que contiene cada elemento que está por lo menos en uno de ellos
 
 - **Intersección**  
-La intersección de dos conjuntos A y B es el conjunto A ∩ B que contiene todos los elementos comunes de A y B
+`∩`  
+La intersección de dos conjuntos A y B es el conjunto `A ∩ B` que contiene todos los elementos comunes de A y B
 
 - **Diferencia**  
-La diferencia entre dos conjuntos A y B es el conjunto A \ B que contiene todos los elementos de A que no pertenecen a B
+`\`  
+La diferencia entre dos conjuntos A y B es el conjunto `A \ B` que contiene todos los elementos de A que no pertenecen a B
 
 - **Complemento**  
-El complemento de un conjunto A es el conjunto AC que contiene todos los elementos (respecto de algún conjunto referencial) que no pertenecen a A
+`∁`  
+El complemento de un conjunto A es el conjunto `A∁` que contiene todos los elementos (respecto de algún conjunto referencial) que no pertenecen a A
