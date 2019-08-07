@@ -14,7 +14,7 @@ Por ejemplo:
 - `a` (antecedente)
 - `b` (consecuente)
 
-# Proporciones
+#### Proporciones
 Es la igualdad entre razones
 ```
 a:b
@@ -44,3 +44,15 @@ Si sabemos que al día se vende 255 dulces nacionales
 - `(255 *2)/3 = x`
 
 > **Nota!** Este es el origen de la regla de tres
+
+#### Teorema de Thales
+
+El Teorema de Thales dice que:
+> Si dos rectas, son cortadas por un sistema de rectas paralelas,
+entonces los segmentos que resultan sobre una de las dos rectas
+son proporcionales a los correspondientes segmentos obtenidos sobre la otra
+
+```
+__   ____   __   ____
+AB : A'B' = AC : A'C'
+```
