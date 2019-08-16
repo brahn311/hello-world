@@ -49,10 +49,12 @@ como _Red Hat Enterprise Linux, Fedora, CentOS, SuSe y Mandriva_
 
 #### APT (Advanced Packaging Tool) Debian, Ubuntu y más derivados
 
-No es en sí un sistema gestor de paquetes directo al usuario sino un conjunto de librerías _C++_
-que utilizan _otros programas para la distribución de paquetes_ como `apt-get` `apt-cache` y `aptitude`
+No es en sí un sistema gestor de paquetes directo al usuario
+sino un conjunto de librerías _C++_ que utilizan _otros programas
+para la distribución de paquetes_ como `apt-get` `apt-cache` y `aptitude`
 
-Utiliza más que todo para la gestión de software que viene empaquetado en formato deb, utilizada en sistemas Debian y derivados.
+Utiliza más que todo para la gestión de software que viene empaquetado en formato deb,
+utilizada en sistemas Debian y derivados.
 
 - Para instalar un software `aptitude | apt-get install`
 - Para desinstalar un software `aptitude | apt-get remove`
