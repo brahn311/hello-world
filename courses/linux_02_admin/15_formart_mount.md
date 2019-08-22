@@ -49,8 +49,10 @@ Debemos añadir:
 /dev/xvdf3    /var_new    ext4    defaults,discard    0 0
 ```
 
-- `defaults,discard` son opciones para la particion
+- `/dev/xvdf3` nombre del disco y su numero de particion o _UUID_
 - `/var_new` nombre de la carpeta donde estara montada la particion
+- `ext4` formato de la particion
+- `defaults,discard` son opciones para la particion
 
 > **Nota!** Cada tipo formato tiene distintas opciones y formas de  _buscar en google_
 ---
