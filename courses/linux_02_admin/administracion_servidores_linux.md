@@ -4,29 +4,29 @@
 
 ##### Temario:
 1. Introducción a Linux
-   - [x]	01	¿Por qué se usa Linux en servidores?
-   - [x]	02	Configuración y guía básica usando Virtualbox
-   - [x]	03	Iniciar un servidor Linux con AWS
-   - [x]	04	Manejo de sesiones remotas con tmux y SSH
-   - [x]	05	Editores de texto en Linux
-   - [x]	06	Editar archivos con VIM
+	1.	¿Por qué se usa Linux en servidores?
+	1.	Configuración y guía básica usando Virtualbox
+	1.	Iniciar un servidor Linux con AWS
+	1.	Manejo de sesiones remotas con tmux y SSH
+	1.	Editores de texto en Linux
+	1.	Editar archivos con VIM
 1. Instalación y configuración de programas
-   - [x]	07	Añadir y administrar repositorios
-   - [x]	08	Instalar, actualizar y remover programas en Linux
-   - [x]	09	Empaquetar y comprimir archivos en Linux
-   - [ ]	10	Compilar un programa en Linux
-   - [ ]	11	Dónde encontrar la documentación de los programas
-   - [ ]	12	Gestores de paquetes en Linux
+	7.	Añadir y administrar repositorios
+	1.	Instalar, actualizar y remover programas en Linux
+	1.	Empaquetar y comprimir archivos en Linux
+	1.	Compilar un programa en Linux
+	1.	Dónde encontrar la documentación de los programas
+	1.	Gestores de paquetes en Linux
 1. Administración de particiones y arranque
-   - [ ]	13	Estructura de archivos en Linux
-   - [ ]	14	Administrar discos y particiones en Linux
-   - [ ]	15	Formateo y montaje de particiones en Linux
-   - [ ]	16	Administración swap en Linux
-   - [ ]	17	Generar imágenes de discos duros
-   - [ ]	18	Administrar particiones GPT
-   - [ ]	19	Administrar el arraque del sistema GRUB
-   - [ ]	20	Administrar discos duros con LVM
-   - [ ]	21	Apagar servidores de forma remota
+	13.	Estructura de archivos en Linux
+	1.	Administrar discos y particiones en Linux
+	1.	Formateo y montaje de particiones en Linux
+	1.	Administración swap en Linux
+	1.	Generar imágenes de discos duros
+	1.	Administrar discos duros con LVM
+	1.	Administrar particiones GPT
+	1.	Administrar el arraque del sistema GRUB
+	1.	Apagar servidores de forma remota
 1. El sistema y lo que hay que hacer
    - [ ]	32	Arrancando el sistema runlevels, systemd
    - [ ]	33	Uso de variables de entorno, bashrc, profile

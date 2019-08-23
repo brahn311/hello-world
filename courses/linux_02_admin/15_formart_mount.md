@@ -53,8 +53,11 @@ Debemos añadir:
 - `/var_new` nombre de la carpeta donde estara montada la particion
 - `ext4` formato de la particion
 - `defaults,discard` son opciones para la particion
+- `0 0`
 
-> **Nota!** Cada tipo formato tiene distintas opciones y formas de  _buscar en google_
----
+> **Nota!** Cada tipo formato tiene distintas opciones y formas _(investigar)_  
+Para detener el montaje automatico comenta la linea usando `#`
+
 **Reto:**
+
 Montar la particion _xvdf6_ de formato _xfs_ ubicada en `/var/base_de_datos`
