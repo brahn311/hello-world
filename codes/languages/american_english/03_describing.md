@@ -163,4 +163,65 @@ ______ my bedroom there ______ a bed, a carpet and a desk. ______ the living roo
 
 #### Prepositions of place
 
-(24)
+#### Places in the city
+Bar
+Theater
+Shop
+Copy place
+Pet store
+Drug store
+Hospital
+Restaurant
+
+#### Is there? Are there?
+
+For singular nouns, We use `Is there` = `Is there` a drugstore in this neighborhood?
+For plural nouns, we use `Are there` =  `Are there` any restaurants in this street?
+
+Exercises:
+`______` a theater in this street.
+`______` any good movies in the theater right now.
+I’m very hungry, but `______` any food in the refrigerator.
+`______` cookies in the cupboard?
+`______` a pet store in this area?
+`______` any tickets? We really want to go to the concert.
+
+Answers:
+- There is a theater in this street
+- There are not any good movies in the theater right now
+- I’m very hungry, but there are not any food in the refrigerator
+- Are there cookies in the cupboard?
+- Is there a pet store in this area?
+- Are there any tickets? We really want to go to the concert
+
+Let’s organize these sentences:
+
+are / my / there / In / children. / neighborhood / some
+account? / money / Is / any / there / in the bank
+there / sugar / I / some / to / the / cake. / Is / need / bake / any?
+in the sky / many / It’s / there / clouds. rainy / today, / are
+are / today. / There / letters / for / some / you
+
+Exercises:
+Write affirmative, negative, interrogative, plural or negative sentences with the following words:
+
+Key
+Notebook
+Drugstore
+Umbrella
+Bars
+Restaurant
+Bedroom
+Living room
+
+#### This, these, that, those
+- For singular nouns we use This/That.
+  - Use This if it is close you and That if it is far from you
+- For plural nouns we use These/Those.
+  - Use These if it is close you and Those if it is far from you
+
+Examples:
+This is a chair.
+That is a chair.
+These are chairs.
+Those are chairs.
