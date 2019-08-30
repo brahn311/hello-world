@@ -83,7 +83,6 @@ Mouse / Mice
 |one laptop|three laptops|
 |one paper|lots of papers|
 
-
 There are _________ __________ (dog)
 There is ______ __________ (car)
 It’s an ___________ (umbrella)
@@ -105,4 +104,63 @@ fourd tuenti faiv ei em
 six tori ai em
 eig fifti in the evening
 
-(18...)
+#### Vocabulary: Parts of the house and furniture
+
+- Bedroom
+   Closet
+   Mirror
+   TV
+   Picture
+   Lamp
+   Pillows
+   Bed
+   Night table
+   Dresser
+   Carpet
+
+- Living Room
+   Books
+   Fireplace
+   Curtains
+   Armchair
+   Table
+   Sofa
+   Cushions
+
+- Bathroom
+   Cabinet
+   Toilet
+   Sink
+   Towels
+   Shower
+   Bathtub
+
+- Kitchen
+   Refrigerator
+   Cupboards
+   Microwave
+   Stove
+   Oven
+
+#### There is and there are
+In this class we will talk about objects that are in a specific place
+
+|Expressions|Use|
+|:-:|:-:|
+|there is|singular nouns|
+|there are|plural nouns|
+
+There ______ a bed in the bedroom. (affirmative)
+There ______ some drawers in the living room. (negative)
+There ______ is a stove in the kitchen. (affirmative)
+There ______ three armchairs in the living room. (negative)
+There ______ two cupboards above the sink. (affirmative)
+`is` `aren’t` `is` `aren’t` `are`
+
+In my house we have three bedrooms, one kitchen, ______ bathrooms and one living room
+______ my bedroom there ______ a bed, a carpet and a desk. ______ the living room there ______ a sofa, some cushions and a lamp ______ the kitchen there ______ some cupboards, a stove and a microwave ______ the refrigerator
+`there is` `there are`
+
+#### Prepositions of place
+
+(24)
