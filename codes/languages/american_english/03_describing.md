@@ -10,11 +10,11 @@
 |We are |We are  not|Are we |
 |It is|It is not|Is it|
 
-- He _______ a teacher and he _______ smart
-- She _______ a nurse and she _______ nice
-- They _______ producers and they _______ talented
-- We _______ friends and we _______ sports fans
-- It _______ big and it _______ cozy
+- He `______` a teacher and he `______` smart
+- She `______` a nurse and she `______` nice
+- They `______` producers and they `______` talented
+- We `______` friends and we `______` sports fans
+- It `______` big and it `______` cozy
 
 `is` `are`
 
@@ -83,11 +83,11 @@ Mouse / Mice
 |one laptop|three laptops|
 |one paper|lots of papers|
 
-There are _________ __________ (dog)
-There is ______ __________ (car)
-It’s an ___________ (umbrella)
-There is ______ __________ in the backpack (laptop)
-There are _________ __________ on the desk (cellphone)
+There are `______` `______`(dog)
+There is `______` `______`(car)
+It’s an `______` (umbrella)
+There is `______` `______` in the backpack (laptop)
+There are `______` `______` on the desk (cellphone)
 
 There are `many dogs`
 There is `a car`
@@ -95,7 +95,7 @@ It’s `an umbrella`
 There is `a laptop` in the backpack
 There are `two cellphones` on the desk
 
-Listening exercise: Telling the time
+##### Telling the time
 
 uan pi em
 tu ou faiv ei em
@@ -150,28 +150,30 @@ In this class we will talk about objects that are in a specific place
 |there is|singular nouns|
 |there are|plural nouns|
 
-There ______ a bed in the bedroom. (affirmative)
-There ______ some drawers in the living room. (negative)
-There ______ is a stove in the kitchen. (affirmative)
-There ______ three armchairs in the living room. (negative)
-There ______ two cupboards above the sink. (affirmative)
+- There `______` a bed in the bedroom. (affirmative)
+- There `______` some drawers in the living room. (negative)
+- There `______` is a stove in the kitchen. (affirmative)
+- There `______` three armchairs in the living room. (negative)
+- There `______` two cupboards above the sink. (affirmative)
+
 `is` `aren’t` `is` `aren’t` `are`
 
-In my house we have three bedrooms, one kitchen, ______ bathrooms and one living room
-______ my bedroom there ______ a bed, a carpet and a desk. ______ the living room there ______ a sofa, some cushions and a lamp ______ the kitchen there ______ some cupboards, a stove and a microwave ______ the refrigerator
+- In my house we have three bedrooms, one kitchen, `______` bathrooms and one living room
+`______` my bedroom there `______` a bed, a carpet and a desk.
+`______` the living room there `______` a sofa, some cushions and a lamp `______` the kitchen there `______` some cupboards, a stove and a microwave `______` the refrigerator
 `there is` `there are`
 
 #### Prepositions of place
 
 #### Places in the city
-Bar
-Theater
-Shop
-Copy place
-Pet store
-Drug store
-Hospital
-Restaurant
+- Bar
+- Theater
+- Shop
+- Copy place
+- Pet store
+- Drug store
+- Hospital
+- Restaurant
 
 #### Is there? Are there?
 
