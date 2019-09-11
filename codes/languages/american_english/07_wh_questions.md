@@ -39,3 +39,31 @@ Complete the sentences:
 - `______` do you do on Fridays? (Activity)
 - `______` do you make cakes? (Process)
 - `______` is the event? (Time)
+
+#### Frequency adverbs
+Useful expressions to talk about routines
+
+|Expressions|Frequency|Example|
+|:-|:-:|:-|
+|Always|100%|I **always** work late|
+|Almost always|90%|She **almost always** cooks at home|
+|Sometimes|50%|They **sometimes** eat fish|
+|Seldom|30%|We **seldom** go to the movies|
+|Almost never|10%|I **almost never** watch TV|
+|Never|0%|You **never** visit the doctor|
+
+#### Adjectives
+
+- Tall
+- Short
+- Heavy
+- Thin
+- Blonde
+- Brunette (_morena_)
+- Nice
+- Talkative (_hablador_)
+- Annoying (_molesto/fastidioso_)
+- Outgoing (_extrovertido_)
+- Shy
+- Mean (_malo_)
+- Famous
