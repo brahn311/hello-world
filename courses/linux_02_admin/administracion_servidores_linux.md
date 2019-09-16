@@ -26,9 +26,9 @@
 	1.	Administrar discos duros con LVM
 	1.	Administrar particiones GPT
 	1.	Administrar el arraque del sistema GRUB
-	1.	Apagar servidores de forma remota
 1. El sistema y lo que hay que hacer
-   - [ ]	32	Arrancando el sistema runlevels, systemd
+	21.	Apagar servidores de forma remota
+	1.	Arrancando el sistema runlevels, systemd
    - [ ]	33	Uso de variables de entorno, bashrc, profile
    - [ ]	34	Uso de redireccionamineto y pipes para logs
    - [ ]	35	Monitorear, eliminar y establecer prioridades en procesos
