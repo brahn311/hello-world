@@ -84,7 +84,7 @@ Como _nginx_ posee 2 procesos
 Al matar al ultimo proceso del arbol este no cierra, debido a que el padre puede iniciarlo nuevamente  
 Al matar el proceso padre, ya si deja de ejecutarse el hijo y no se inicia nuevamente
 
-#### `# kill [-señal] [PID]``
+#### `# kill [-señal] [PID]`
 Para matar un proceso enviamos la señal
 - `-9` Matar sin importar lo que el proceso diga
 

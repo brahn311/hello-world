@@ -29,11 +29,11 @@
 1. El sistema y lo que hay que hacer
 	21.	Apagar servidores de forma remota
 	1.	Arrancando el sistema runlevels, systemd
-  1.	Uso de variables de entorno, bashrc, profile
-  1.	Uso de redireccionamineto y pipes para logs
-  1.	Monitorear, eliminar y establecer prioridades en procesos
-  1.	Enlaces duros, simbólicos y sistemas de backups
-  1.	Manejo de usuarios y grupos
+	1.	Uso de variables de entorno, bashrc, profile
+	1.	Uso de redireccionamineto y pipes para logs
+	1.	Monitorear, eliminar y establecer prioridades en procesos
+	1.	Enlaces duros, simbólicos y sistemas de backups
+	1.	Manejo de usuarios y grupos
    - [ ]	38	Generar backup de Base de datos
    - [ ]	39	Uso de socat y manejo de redireccionamiento de puertos
    - [ ]	40	Tareas programadas y cómo monitorearlas
