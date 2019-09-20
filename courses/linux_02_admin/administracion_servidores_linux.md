@@ -34,9 +34,9 @@
 	1.	Monitorear, eliminar y establecer prioridades en procesos
 	1.	Enlaces duros, simbólicos y sistemas de backups
 	1.	Manejo de usuarios y grupos
-   - [ ]	38	Generar backup de Base de datos
-   - [ ]	39	Uso de socat y manejo de redireccionamiento de puertos
-   - [ ]	40	Tareas programadas y cómo monitorearlas
+	1.	Generar backup de Base de datos
+	1.	Uso de socat y manejo de redireccionamiento de puertos
+	1.	Tareas programadas y cómo monitorearlas
 1. Administración
    - [ ]	41	Seguridad del kernel
    - [ ]	42	Permisos de archivos
