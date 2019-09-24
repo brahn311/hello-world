@@ -1,10 +1,10 @@
-# Verb pattenrs
+# Verb patterns
 Verb + Verb patterns
 
 When a verb is followed by another verb, the second verb form depends on the first verb
 - Infinitive (to go)
 - Bare infinitive (go)
-- Gerund form `verb+ing` (going)
+- Gerund form `verb + ing` (going)
 
 #### Infinitive
 - `Want`
@@ -45,7 +45,7 @@ When a verb is followed by another verb, the second verb form depends on the fir
    - He doesn't _love **to** play_ the guitar
    - Does he _love **to** play_ the guitar?
 
-#### Bare infinitive
+#### Bare infinitive (modal + verb)
 - `Can`
 - `Could`
 - `Should`
