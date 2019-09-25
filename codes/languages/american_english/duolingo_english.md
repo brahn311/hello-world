@@ -13,6 +13,7 @@ Rutinas
 Emociones
 Comida
 Tiempo
+---
 Parientes
 En Casa
 Compras
