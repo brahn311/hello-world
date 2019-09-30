@@ -24,14 +24,26 @@ DATA: MiEntero03 TYPE I VALUE 12. " Le colocamos 12
 WRITE: / 'EL NUMERO 3: ' , MiEnterio03.
 ```
 
-##### Ejemplo
+##### Asignacion simple o directa
 ```
 REPORT z_enteros_01.
 * Declaramos los datos en ABAP con DATA
-DATA: MiVar01 TYPE I,
+DATA: variable TYPE I,
       cadena TYPE STRING VALUE 'Hola mundo = '
-* Asignamos valor a variable
-Mivar01 = 32.
+* Asignamos valor a variable metodo simple o directo
+variable = 32. "
 * Ahora imprimiremos
 WRITE: / cadena , 'VARIABLE Mivar01 = ' , MiVar01.
+```
+
+##### Asignacion `MOVE`
+```
+REPORT Z_ASIGNACION_MOVE.
+* Declaramos la variable
+DATA: MiEntero01 TYPE I VALUE 123,
+      MiEntero02 TYPE I.
+* Le asignamos un valor
+MOVE MiEntero01 TO MiEntero02.
+* Imprimimos el valor
+WRITE: MiEntero02.
 ```
