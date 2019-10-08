@@ -43,7 +43,6 @@ ENDDO.
 ```
 
 ##### SY-SUBRC
-
 Indica que la sentencia anterior a la llamada de esta variable se ejecuto o no
 ```
 REPORT z_constantes_sys02.
