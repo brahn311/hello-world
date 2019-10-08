@@ -69,7 +69,7 @@ DATA: var11 TYPE I,
       var14 TYPE I,
       var15 TYPE I.
 SPLIT var AT ',' INTO var11, var12, var13, var14, var15.
-WRITE : / 'Split: '
+WRITE : / 'Split: ',
         / 'var11: ' , var11,
         / 'var12: ' , var12,
         / 'var13: ' , var13,

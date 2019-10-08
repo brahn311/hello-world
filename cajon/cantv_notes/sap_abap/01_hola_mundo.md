@@ -101,6 +101,8 @@ WRITE 'Hola Mundo'.
    - Linea divisoria
    - contenido
 
+> **Nota!** Al activar un programa la ejecucion es mucho mas rapida
+
 #### Salir del editor
 1. Click en el boton Atras
 

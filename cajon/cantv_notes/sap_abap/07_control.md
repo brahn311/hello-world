@@ -19,7 +19,7 @@ DATA myvar TYPE I.
 myvar = 12.
 
 CHECK myvar EQ 12.
-   WRITE 'myvar = 12'.
+   WRITE: 'myvar = ' , myvar.
 
 ```
 > **Nota!** Al parecer el `WRITE` se ejecuta solo si es verdadero  
@@ -46,9 +46,16 @@ ENDIF.
 ```
 REPORT Z_CASE.
 
+DATA: entero TYPE I VALUE 1.
 
+CASE entero.
+   WHEN 1.
+      WRITE: 'Es 1'.
+   WHEN 2.
+      WRITE: 'Es 2'.
+ENDCASE.
 ```
-> Minuto: 7:35
+> **Nota!** Investigar donde colocar el default
 
 #### Operadores logicos
 
@@ -60,8 +67,19 @@ REPORT Z_CASE.
 |>=|GE|Mayor o igual que|
 |<=|LE|Menor o igual que|
 |<>|NE|Diferente|
-|BETWEEN v1 and v2||Entre|
+|BETWEEN _var1_ AND _var2_||Entre|
 |IS INITIAL||Contenido ha cambiado|
 |IS NOT INITIAL||Contenido no a cambiado|
 
 > **Nota!** Operadores _ABAP_ suelen usar mas los operadores en letras
+
+#### BETWEEN
+```
+REPORT Z_CASE.
+
+DATA: entero TYPE I VALUE 1.
+
+IF entero BETWEEN 0 AND 9.
+   WRITE 'El valor esta entre 0 y 9'.
+ENDIF.
+```
