@@ -66,3 +66,17 @@ FORM my_subrutina.
    SKIP.
 ENDFORM.
 ```
+
+##### subrutina con pase de parametros
+```
+REPORT Z_SUBRUTINAS_E19 .
+
+DATA: Entero TYPE I VALUE 1.
+
+* Implementación de la subrutina.
+PERFORM MSUBRUTINA2 USING ENTERO.
+
+FORM MSUBRUTINA2 USING ENTERO.
+  WRITE: 'Imprimira el Entero:', ENTERO.
+ENDFORM.
+```
