@@ -83,3 +83,4 @@ IF entero BETWEEN 0 AND 9.
    WRITE 'El valor esta entre 0 y 9'.
 ENDIF.
 ```
+> **Nota!** En la clase 14 _debugging_ puedes acceder a ejemplos de operaciones
