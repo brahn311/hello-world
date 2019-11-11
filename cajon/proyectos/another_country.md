@@ -1,0 +1,6 @@
+- [X] Legalizar partida de nacimiento
+- Apostillar
+  - [] Legalizar titulo de bachiller > notas certificadas + sobre + fotocopias de cedula (altamira)
+  - [] Partida de nacimiento
+  - [] Licencia de conducir
+  - [] Antecedentes penales
