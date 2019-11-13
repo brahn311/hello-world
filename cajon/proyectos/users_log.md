@@ -1,0 +1,12 @@
+Registro de mensajes dependiendo del tipo de suceso:
+- Inicio correcto:
+  - IP
+  - Fecha y hora
+  - usuario
+- Inicio incorrecto:
+  - Sobrepasa el numero maximo de errores de ingreso en un tiempo determinado
+    - Accion: status-usuario = bloqueado
+  - Usuario con estatus eliminado
+    - Accion: no permitir acceso a sistemas, aplicativos
+  - Usuario no existe
+  - Clave invalida
