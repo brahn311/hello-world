@@ -31,8 +31,9 @@ Al comando lo podemos extender para convertirlo en un script para tener un plan 
 > **Nota!** Cuando usamos el comando sleep, no podemos ejecutar mas nada por dicho tiempo  
 Si el INPUT queda en DROP la unica manera de volver a entrar es **reiniciando** _(reboot)_ esa instancia
 
-##### Script firewall `firewall-block`
-Script para cn
+#### Ejemplo de politicas de firewall
+Script firewall `firewall-block`
+
 ```
 #!/bin/sh
 
@@ -69,11 +70,18 @@ iptables -N block
 iptables -A block -m state --state ESTABLISHED,RELATED -j ACCEPT
 
 # Allow all packets from internal networks
-#
+# ----------------------------------------
+# In this example, 192.168.0.0/24 is the internal network and $INTIF its
+# corresponding interface. You coult add multiple similar lines if you
 # have many "internal" networks.
 
 iptables -A block -i lo -j ACCEPT
-iptables -A block -i $INTIF --destination $INTOP -j ACCEPT
+iptables -A block -i $INTIF --destination $INTIP -j ACCEPT
+
+# Allow new connections for a few "safe" ports
+# Para quitar entrada desde afuera comentar las dos siguientes lineas
+iptables -A block -m multiport -p tcp --dports $OPENINPUTTCPPORTS -j ACCEPT
+iptables -A block -m multiport -p udp --dports $OPENINPUTUDPPORTS -j ACCEPT
 
 # Allow external ping
 #iptables -A block -p icmp --icmp-type 0 -j ACCEPT
@@ -84,6 +92,34 @@ iptables -A block -j Log
 
 # Reject everything else
 iptables -A block -j REJECT
+
+# Add the block chain to both the INPUT and OUTPUT chains
+iptables -A INPUT   -j block
+iptables -A FORWARD -j block
+
+# Allow output of local packets; use the following rules for all your
+# network addresses. Note that if at least one of your interfaces uses a
+# dynamically assigned address, you might want to drop the --source parameter.
+# Or, if you know the network, specify the network rather than the IP
+# address (as in 192.168.0.0/24)
+
+iptables -A OUTPUT -o $INTIF --source $INTIP -j ACCEPT
+
+# Reglas si no se permite todos los puertos de salida.
+iptables -A OUTPUT -o $EXTIF -p udp --dport 53 -j ACCEPT
+
+# Para sincronizar hora con servidores internacionales
+iptables -A OUTPUT -o $EXTIF -p udp --dport 123 -j ACCEPT
+iptables -A INPUT  -i $EXTIF -p udp --sport 123 -j ACCEPT
+
+# Para resolver DNS realizar PING
+iptables -A OUTPUT -o $EXTIF -p udp --dport 53 -j ACCEPT
+iptables -A INPUT  -i $EXTIF -p udp --sport 53 -j ACCEPT
+iptables -A OUTPUT -p icmp --icmp-type 0 -j ACCEPT
+iptables -A OUTPUT -p icmp --icmp-type 8 -j ACCEPT
+
+# Regla para permitir conexiones SSH
+iptables -A INPUT -I $extif
 
 # ...falta mas texto
 
