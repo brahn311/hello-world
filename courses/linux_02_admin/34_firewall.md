@@ -10,7 +10,7 @@ Las distintas tablas estan compuestas por multiples reglas ordenadas
 El orden de las reglas es de arriba hacia abajo con comportamiento en cascada,
 donde unas reglas modifican otras inferiores
 
-- `iptables -L` Listar información del firewall
+- `iptables -L` Listar información de reglas del firewall
   - **INPUT**: los paquetes que entran de hacia la entrada de la interfaz
   - **OUTPUT**: paquetes que salen de mi equipo a otro
   - **FORWARD**: paquetes que llegan y se redireccionan (para enmascarar para NAT)
@@ -119,22 +119,57 @@ iptables -A OUTPUT -p icmp --icmp-type 0 -j ACCEPT
 iptables -A OUTPUT -p icmp --icmp-type 8 -j ACCEPT
 
 # Regla para permitir conexiones SSH
-iptables -A INPUT -I $extif
+iptables -A INPUT -i $EXTIF -p tcp --dport 22 -j ACCEPT
 
-# ...falta mas texto
+# Reglas necesarias para FTP pasivo y activo. Se permiten las conexiones entrantes ya establecidas, el puerto 20 y 21 deben estar abiertos de salida
+iptables -A INPUT -i $EXTIF -p tcp -m tcp --sport 20:21 -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A INPUT -i $EXTIF -p tcp -m tcp --sport 1024:65535 --dport 1024:65535 -m state --state ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -o $EXTIF -p tcp -m tcp --dport 1024:65535 -m state --state NEW,RELATED,ESTABLISHED -j ACCEPT
 
+# -Allow  output of any packets on the loopback interface
+iptables -A OUTPUT -o lo -j ACCEPT
 ```
-Observaciones:
- - Es una buena politica bloquearlo todo sobre todo si:
+
+##### Observaciones:
+ - Es una buena politica bloquear o cerrar todo sobre todo si:
    - Un programa se instala y abre puertos igual se bloquearan
    - Si olvidas cerrar algun otro puerto
  - Flush: borra cualquier tabla o registro que aparezca en algun momento
  - -N block: crea nueva tabla para agregar registros
+ - Nosotros deberiamos permitir siempre las conexiones SSH
+ - -dport: puerto de destino
+ - -sport: puerto de origen (source) _el origen de la conexion_
 
-> minuto 8:51
+> **Nota**: La instancia de Amazon no tiene previamente ninguna politica en firewall
 
+##### Practicas
+Aceptar conexiones SSH de un puerto especifico
 - `iptables -A INPUT -i eth0 -p tcp --dport 22 -j ACCEPT`
-Aceptar conexiones de un puerto especifico
+  - En la tabla de INPUT (entradas) agregamos un nuevo registro
+  - Reemplazamos `$EXTIF` por la interfaz usada, que es la `eth0`
+  - Destino: es el puerto 22
+- Reiniciamos `iptables -P INPUT DROP; sleep 10; iptables -P INPUT ACCEPT`
+  - Ya con el `sleep` evitamos tener que reiniciar la instancia
+- Comprobamos las politicas `iptables -L`
+  - Nos debe mostrar la siguiente información
+  ```
+target     prot opt source      destination
+ACCEPT     tcp  --  anywhere    anywhere     tcp spt:ssh
+ACCEPT     tcp  --  anywhere    anywhere     tcp dpt:ssh
+ACCEPT     tcp  --  anywhere    anywhere     tcp dpt:ssh
+  ```
 
-Guardar las reglas
-iptables-save > /etc/iptables.rules
+#### Diferencias entre DROP y REJECTED
+Es necesario para evitar darle informacion a atacantes
+de cuales puertos estan abiertos y cuales no lo estan   
+`iptables -P INPUT REJECTED ; sleep 3 ; iptables -P INPUT ACCEPT` _(Este codigo da error)_
+- `REJECTED` manda un mensaje informando que el puerto esta cerrado
+- `DROP` no informa nada
+
+> **Nota!** `REJECTED` no es una politica general, debe ser especificada dentro de las reglas que van por dentro
+
+#### Guardar las reglas
+- Guardar tablas en archivo de texto  
+`iptables-save > /etc/iptables.rules`
+- Guardar tablas en archivo de texto  
+`iptables-restore < /etc/iptables.rules`
