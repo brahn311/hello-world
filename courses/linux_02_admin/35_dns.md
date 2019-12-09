@@ -59,12 +59,16 @@ solo queda decirle a nuestra instancia que escuche esas direcciones
 Programa que realiza querys al DNS
 - Instalar: `# apt-get install dnsutils`  
 _(el DNS esta en el puerto 53 por UDP)_
-
-1. Con el comando `# dig [dominio]` Veremos a donde esta apuntando ese dominio  
+- Con el comando `# dig [dominio]` Veremos a donde esta apuntando ese dominio  
 Probaremos con _linux.platzi.com_ y dira que no apunta a nada
-1. y
+- Y usando el comando `# dig linux.platzi.com @[servidor_dns]`  
+Debera moestras la IP resuelta en el registro del Route 53
+```
+[Servidor]   [Tiempo de vida en cache]   IN    A   [IP]
+```
 
-> minuto 7:58
+##### Practica
+1. Crear un nuevo registro para platzi.platzi.com con direccion a localhost 127.0.0.1
+1. Verificar la direccion en `dig`
 
-dig linux.platzi.com a dns oficiales
-dig linux.platzi.com @[servidor dns] a un servidor especifico
+> minuto 9:19
