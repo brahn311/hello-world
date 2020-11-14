@@ -47,8 +47,8 @@
 - Welcome to `______`, I'm `______`.
 - How can I help you?
 - Hello, I'm `______`. Im a `______` Student
-- Great `______`. Whats is your email address?
-- It's `______`
+- Great `______`. What is your email address?
+- It's `______` (name1.name2@domain.com / name1'dot'name2'at'domain'dot'com)  
 - OK, that's `______`, is that correct? (spell)
 - Yes, thank you.
 
