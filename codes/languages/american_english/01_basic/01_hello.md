@@ -55,8 +55,8 @@
 
 - I’m from `______` and I live in `______`.  
 - I’m `______` years old.  
-- I study - `______` at `______`.  
-- My email accress is `______` and my ohine number is `______`  
+- I study `______` at `______`.  
+- My email address is `______` and my phone number is `______`  
 
 #### Meeting and Greeting
 - Nice to meet you.
