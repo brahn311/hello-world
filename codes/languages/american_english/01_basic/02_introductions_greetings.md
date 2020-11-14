@@ -7,7 +7,7 @@ Source: [youtube](https://www.youtube.com/watch?v=m9Cda9xyMr0)
   - Hello. My name is ...
 - Formal
   - Hello.  
-    I dont't think we've met.  
+    I don't think we've met.  
 	Let me introduce myself.  
 	My name is ...
   - Good morning / afternoon / evening.  
@@ -65,7 +65,7 @@ Julie: Hi Kate, I'm Julie.
 K: Nice to meet you, Julie.  
 J: Nice to meet you, too.  
 K: This is my friend, Sue.  
-J: Yes, I know. We've alredy met. How are you, Sue?  
+J: Yes, I know. We've already met. How are you, Sue?  
 Sue: Fine, thanks. And you?  
 J: Great, thanks.  
 K: We must go now. Speak to you later, julie.
