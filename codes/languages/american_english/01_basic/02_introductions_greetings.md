@@ -83,4 +83,4 @@ J: And you?
 K: We must be on our way.  
 It has been a pleasure meeting you, Ms Bates.  
 I hope to see you again soon.  
-J: Likewise. I look forward yo seeing you both again.
+J: Likewise. I look forward to seeing you both again.
