@@ -2,6 +2,19 @@
 - Numbers
 
 #### Numbers
+|#|1-10|
+|:-:|:-|
+|0|Zero|
+|1|One|
+|2|Two|
+|3|Three|
+|4|Four|
+|5|Five|
+|6|Six|
+|7|Seven|
+|8|Eight|
+|9|Nine|
+|10|Ten|
 
 |#|11-20|
 |:-:|-|
@@ -38,3 +51,14 @@
 |80|Eighty|
 |90|Ninety|
 |100|One hundred|
+
+|#|99-999.999.999|
+|:-:|:-|
+|99|Ninety-nine|
+|100|One hundred|
+|999|Nine hundred ninety-nine|
+|1.000|One thousand|
+|9.999|Nine thousand nine hundred ninety-nine|
+|999.999|Nine hundred ninety-nine thousand nine hundred ninety-nine|
+|1.000.000|One million|
+|999.999.999|Nine hundred ninety-nine million Nine hundred ninety-nine thousand nine hundred ninety-nine|
