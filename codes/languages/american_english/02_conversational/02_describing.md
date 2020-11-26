@@ -26,51 +26,68 @@
 
 #### Grammar: Plurals
 
-Ends in
-`s` `ss` `ch` `sh` `x`
-Add `es`
-bus
-match
-dish
-kiss
-box
+Ends in `s` `ss` `ch` `sh` `x` Add `es`
+- bus `es` buses
+- match `es` matches
+- dish `es` dishes
+- kiss `es` kisses
+- box `es` boxes
+- Fish (pez) `es` fishes (peces)
 
+Ends `z` Add `zes`
+- quiz 'zes' quizzes
 
-`z`
-Add `zes`
-quiz
+Ends in `f` or `fe` remove `f` or `fe` and add `ves`
+- leaf `f` leaves
+- wolf `f` wolves
+- dwarf `f` dwarves (or dwarfs)
+- knife `fe` knives
 
-Ends in
-`f` `fe`
-leaf
-wolf
+Ends in `vowel` + `y` Add `s`
+- day `s` days
+- key `s` keys
+- boy `s` boys
 
-Ends in
-`vowel` + `y`
-Add `s`
-day
-key
-boy
+Ends in `consonants` + `y` remove `y` and add `ies`
+- city `ies` cities
+- baby `ies` babies
 
-Ends in
-`consonants` + `y`
-Add `ies`
-city
-baby
+Regular nouns: Ends in `consonants` except the previous ones Add `s`
+- car `s` cars
+- dog `s` dogs
+- book `s` books
 
-Regular nouns
-Ends in `consonants` except the previous ones
-Add `s`
-car
-dog
-book
+Ends in `consonants` + `o` add `es`
+- Domino `es` dominoes
+- Potato `es` potatoes
+- Tomato `es` tomatoes
+- Hero `es` heroes
+- Zero `es` zeroes
+
+Ends in `e` add `s` 
+
+No change
+- Means
+- Sheep
+- Fish (pescado / carne de pescado)
+- Deer (cordero)
+- Series
+- Species
 
 Irregular nouns
-Man / Men
-Woman / Women
-Child / Children
-Foot / Feet
-Mouse / Mice
+- Man / Men
+- Woman / Women
+- Child / Children
+- Foot / Feet
+- Person / People
+- Tooth / Teeth
+- Mouse / Mice
+- Goose / Geese
+- ox / oxen (buey)
+- crisis / crises
+- Parenthesis / parentheses
+- Hypothesis /	hypotheses
+- Die / dice
 
 |Plurals|Singular|
 |:-:|:-:|
