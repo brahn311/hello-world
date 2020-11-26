@@ -18,12 +18,6 @@
 
 `is` `are`
 
-#### Describing people
-
-##### Vocabulary: Things in your Backpack
-`pen` `notebook` `cellphone` `pencil` `umbrella` `book` `laptop` `paper`
-
-
 #### Grammar: Plurals
 
 Ends in `s` `ss` `ch` `sh` `x` Add `es`
@@ -89,6 +83,9 @@ Irregular nouns
 - Hypothesis /	hypotheses
 - Die / dice
 
+##### Vocabulary: Things in your Backpack
+`pen` `notebook` `cellphone` `pencil` `umbrella` `book` `laptop` `paper`
+
 |Plurals|Singular|
 |:-:|:-:|
 |one pen|three pens|
@@ -100,17 +97,13 @@ Irregular nouns
 |one laptop|three laptops|
 |one paper|lots of papers|
 
-There are `______` `______`(dog)
-There is `______` `______`(car)
-It’s an `______` (umbrella)
-There is `______` `______` in the backpack (laptop)
-There are `______` `______` on the desk (cellphone)
-
-There are `many dogs`
-There is `a car`
-It’s `an umbrella`
-There is `a laptop` in the backpack
-There are `two cellphones` on the desk
+|Excersice|Answere|
+|:-|:-|
+|There are `______` `______`(dog)|`many dogs`|
+|There is `______` `______`(car)|`a car`|
+|It’s an `______` (umbrella)|`umbrella`|
+|There is `______` `______` in the backpack (laptop)|`a laptop`|
+|There are `______` `______` on the desk (cellphone)|`two cellphones`|
 
 ##### Telling the time
 
@@ -121,43 +114,42 @@ fourd tuenti faiv ei em
 six tori ai em
 eig fifti in the evening
 
-#### Vocabulary: Parts of the house and furniture
+### Vocabulary: Parts of the house and furniture
+#### Bedroom
+- Closet
+- Mirror
+- TV
+- Picture
+- Lamp
+- Pillows
+- Bed
+- Night table
+- Dresser
+- Carpet
 
-- Bedroom
-   Closet
-   Mirror
-   TV
-   Picture
-   Lamp
-   Pillows
-   Bed
-   Night table
-   Dresser
-   Carpet
+#### Living Room
+- Books
+- Fireplace
+- Curtains
+- Armchair
+- Table
+- Sofa
+- Cushions
 
-- Living Room
-   Books
-   Fireplace
-   Curtains
-   Armchair
-   Table
-   Sofa
-   Cushions
+#### Bathroom
+- Cabinet
+- Toilet
+- Sink
+- Towels
+- Shower
+- Bathtub
 
-- Bathroom
-   Cabinet
-   Toilet
-   Sink
-   Towels
-   Shower
-   Bathtub
-
-- Kitchen
-   Refrigerator
-   Cupboards
-   Microwave
-   Stove
-   Oven
+#### Kitchen
+- Refrigerator
+- Cupboards
+- Microwave
+- Stove
+- Oven
 
 #### There is and there are
 In this class we will talk about objects that are in a specific place
@@ -167,22 +159,26 @@ In this class we will talk about objects that are in a specific place
 |there is|singular nouns|
 |there are|plural nouns|
 
+Negative form:
+- is not = isn't
+- are not = aren't
+
 - There `______` a bed in the bedroom. (affirmative)
 - There `______` some drawers in the living room. (negative)
-- There `______` is a stove in the kitchen. (affirmative)
+- There `______` a stove in the kitchen. (affirmative)
 - There `______` three armchairs in the living room. (negative)
 - There `______` two cupboards above the sink. (affirmative)
 
 `is` `aren’t` `is` `aren’t` `are`
 
-- In my house we have three bedrooms, one kitchen, `______` bathrooms and one living room
-`______` my bedroom there `______` a bed, a carpet and a desk.
-`______` the living room there `______` a sofa, some cushions and a lamp `______` the kitchen there `______` some cupboards, a stove and a microwave `______` the refrigerator
+- In my house we have three bedrooms, one kitchen, `______` bathrooms and one living room `______` my bedroom there `______` a bed, a carpet and a desk.
+`______` the living room there `______` a sofa, some cushions and a lamp.
+`______` the kitchen there `______` some cupboards, a stove and a microwave `______` the refrigerator
 `there is` `there are`
 
 #### Prepositions of place
 
-#### Places in the city
+Places in the city
 - Bar
 - Theater
 - Shop
@@ -192,9 +188,9 @@ In this class we will talk about objects that are in a specific place
 - Hospital
 - Restaurant
 
-#### Is there? Are there?
+#### Is there? Are there? Questions
 
-For singular nouns, We use `Is there` = `Is there` a drugstore in this neighborhood?
+For singular nouns, We use `Is there` = `Is there` a drugstore in this neighborhood?  
 For plural nouns, we use `Are there` =  `Are there` any restaurants in this street?
 
 Exercises:
@@ -235,9 +231,9 @@ Living room
 
 #### This, these, that, those
 - For singular nouns we use This/That.
-  - Use This if it is close you and That if it is far from you
+  - Use `This` if it is close you and `That` if it is far from you
 - For plural nouns we use These/Those.
-  - Use These if it is close you and Those if it is far from you
+  - Use `These` if it is close you and `Those` if it is far from you
 
 Examples:
 This is a chair.
