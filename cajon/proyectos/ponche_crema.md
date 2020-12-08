@@ -1,4 +1,4 @@
-# Ponche Crema
+# Ponche Crema (Miyiraide Emperatriz)
 
 ### Ingredientes:
 - 6 yemas de huevo
@@ -8,7 +8,7 @@
 - Pizca de canela molida (opcional)
 - Pizca ralladura de nuez moscada
 - 2 cucharadas de vainilla
-- 1 taza/lata de ron (aproximadamente media botella)
+- 1 taza de ron
 
 ### Preparación:
 1. Batir o licuar las 6 yemas de huevo hasta quedar lo más blancas posibles.
@@ -21,3 +21,13 @@
 1. Almacenar en botella y reservar en el refrigerador.
 
 Servir bien frio.
+
+### Notas:
+
+####: 1ra preparacion (07/12/20)
+- Una taza equivale a 255 ml.
+- En esta oportunidad utilice una lata de ron. lo cual fue mucho.
+- Evitar que el ponchecrema se congele en el freezer.
+- Verificar la cantidad de leche de la receta.
+- Esta receta rinde para un litro aproximadamente (1.100 ml).
+- Pendiente: verificar cuanto tiempo tarda en espesar la mezcla.
