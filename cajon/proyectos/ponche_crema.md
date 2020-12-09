@@ -24,10 +24,14 @@ Servir bien frio.
 
 ### Notas:
 
-####: 1ra preparacion (07/12/20)
-- Una taza equivale a 255 ml.
-- En esta oportunidad utilice una lata de ron. lo cual fue mucho.
-- Evitar que el ponchecrema se congele en el freezer.
-- Verificar la cantidad de leche de la receta.
-- Esta receta rinde para un litro aproximadamente (1.100 ml).
-- Pendiente: verificar cuanto tiempo tarda en espesar la mezcla.
+**1ra. preparación (07/12/20)**
+ - Una taza equivale a 255 ml.
+ - En esta oportunidad utilice una lata de ron. lo cual fue mucho.
+ - Evitar que el ponchecrema se congele en el freezer.
+ - Verificar la cantidad de leche de la receta.
+ - Esta receta rinde para un litro aproximadamente (1.100 ml).
+ - Pendiente: verificar cuanto tiempo tarda en espesar la mezcla.
+
+### Otras preparaciones:
+https://enrilemoine.com/2016/12/09/como-hacer-ponche-crema-bien-espeso/
+https://www.bizcochosysancochos.com/2016/11/como-hacer-ponche-crema-venezolano.html
