@@ -58,7 +58,7 @@ Ends in `consonants` + `o` add `es`
 - Hero `es` heroes
 - Zero `es` zeroes
 
-Ends in `e` add `s` 
+Ends in `e` add `s`
 
 No change
 - Means
@@ -83,7 +83,7 @@ Irregular nouns
 - Hypothesis /	hypotheses
 - Die / dice
 
-##### Vocabulary: Things in your Backpack
+#### Vocabulary: Things in your Backpack
 `pen` `notebook` `cellphone` `pencil` `umbrella` `book` `laptop` `paper`
 
 |Plurals|Singular|
@@ -105,54 +105,31 @@ Irregular nouns
 |There is `______` `______` in the backpack (laptop)|`a laptop`|
 |There are `______` `______` on the desk (cellphone)|`two cellphones`|
 
-##### Telling the time
-
-uan pi em
-tu ou faiv ei em
-tri ten pi em
-fourd tuenti faiv ei em
-six tori ai em
-eig fifti in the evening
+#### Telling the time
+- uan pi em
+- tu ou faiv ei em
+- tri ten pi em
+- fourd tuenti faiv ei em
+- six tori ai em
+- eig fifti in the evening
 
 ### Vocabulary: Parts of the house and furniture
-#### Bedroom
-- Closet
-- Mirror
-- TV
-- Picture
-- Lamp
-- Pillows
-- Bed
-- Night table
-- Dresser
-- Carpet
 
-#### Living Room
-- Books
-- Fireplace
-- Curtains
-- Armchair
-- Table
-- Sofa
-- Cushions
-
-#### Bathroom
-- Cabinet
-- Toilet
-- Sink
-- Towels
-- Shower
-- Bathtub
-
-#### Kitchen
-- Refrigerator
-- Cupboards
-- Microwave
-- Stove
-- Oven
+|Bedroom|Living Room|Bathroom|Kitchen|
+|-|-|-|-|
+|Closet|Books|Cabinet|Refrigerator|
+|Mirror|Fireplace|Toilet|Cupboards|
+|TV|Curtains|Sink|Microwave|
+|Picture|Armchair|Towels|Stove|
+|Lamp|Table|Shower|Oven|
+|Pillows|Sofa|Bathtub|
+|Bed|Cushions|
+|Night table|
+|Dresser|
+|Carpet|
 
 #### There is and there are
-In this class we will talk about objects that are in a specific place
+Objects that are in a specific place
 
 |Expressions|Use|
 |:-:|:-:|
@@ -163,6 +140,7 @@ Negative form:
 - is not = isn't
 - are not = aren't
 
+#### Excersices
 - There `______` a bed in the bedroom. (affirmative)
 - There `______` some drawers in the living room. (negative)
 - There `______` a stove in the kitchen. (affirmative)
@@ -171,8 +149,8 @@ Negative form:
 
 `is` `aren’t` `is` `aren’t` `are`
 
-- In my house we have three bedrooms, one kitchen, `______` bathrooms and one living room `______` my bedroom there `______` a bed, a carpet and a desk.
-`______` the living room there `______` a sofa, some cushions and a lamp.
+In my house we have three bedrooms, one kitchen, `______` bathrooms and one living room `______` my bedroom there `______` a bed, a carpet and a desk.  
+`______` the living room there `______` a sofa, some cushions and a lamp.  
 `______` the kitchen there `______` some cupboards, a stove and a microwave `______` the refrigerator
 `there is` `there are`
 
@@ -210,24 +188,28 @@ Answers:
 - Are there any tickets? We really want to go to the concert
 
 Let’s organize these sentences:
+- `are` `my` `there` `In` `children.` `neighborhood` `some`
+   - In my neighborhood there are some children.
+- `account?` `money` `Is` `any` `there` `in the bank`
+   - Is there any money in the bank account?
+- `there` `sugar` `I` `some` `to` `the` `cake.` `Is` `need` `bake` `any?`
+   - I need some sugar to bake the cake. Is there any?
+- `in the sky` `many` `It’s` `there` `clouds.` `rainy` `today,` `are`
+   - It's rainy today, there are many clouds.  `in the sky(x)` **Doubts**
+- `are` `today.` `There` `letters` `for` `some` `you`
+   - There are some letters for you today.
 
-are / my / there / In / children. / neighborhood / some
-account? / money / Is / any / there / in the bank
-there / sugar / I / some / to / the / cake. / Is / need / bake / any?
-in the sky / many / It’s / there / clouds. rainy / today, / are
-are / today. / There / letters / for / some / you
+#### Exercises
+Write affirmative, negative, interrogative, plural sentences with the following words: `Key` `Notebook` `Drugstore` `Umbrella` `Bars` `Restaurant` `Bedroom` `Living room`
 
-Exercises:
-Write affirmative, negative, interrogative, plural or negative sentences with the following words:
-
-Key
-Notebook
-Drugstore
-Umbrella
-Bars
-Restaurant
-Bedroom
-Living room
+- `Key`: There is a _key_ **in** the table
+- `Notebook`: The _notebook_ is **in** my backpack
+- `Drugstore`: I need to go to the _drugstore_ **next to** the mall.
+- `Umbrella`: Leave your _umbrella_ **behind** the door
+- `Bars`: There are two _bars_ **between** my house and my work.
+- `Restaurant`: At the mall there's no _restaurant_ **below** the theater
+- `Bedroom`: I found my cell phone **under** the night table of my _bedroom_.
+- `Living room`: There are two Curtains **in front of** the fireplace in the _living room_.
 
 #### This, these, that, those
 - For singular nouns we use This/That.
@@ -236,7 +218,7 @@ Living room
   - Use `These` if it is close you and `Those` if it is far from you
 
 Examples:
-This is a chair.
-That is a chair.
-These are chairs.
-Those are chairs.
+`This` is a chair. (esta)
+`That` is a chair. (esa)
+`These` are chairs. (estas)
+`Those` are chairs. (aquellas)

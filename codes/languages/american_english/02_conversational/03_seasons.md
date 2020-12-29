@@ -8,7 +8,7 @@
 - Wooly hat (gorro tejido)
 
 #### Spring
-- Tee (franela) / T-shirt
+- Tee (franelilla) / T-shirt
 - Dress
 - Denim jacket (chaqueda de jean)
 - Flats (zapatillas)
@@ -44,3 +44,5 @@ You can use `can` and `can’t` to talk about abilities and possibilities
 - I `______` wear t-shirts in the summer
 - We`______` wear sneakers in the fall
 - You `______` wear a wooly hat in the summer
+
+`can` `can't` `can` `can` `can't`

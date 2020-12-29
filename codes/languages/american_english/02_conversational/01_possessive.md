@@ -1,11 +1,11 @@
 #### Colors
-Blue
-pink
-green
-orange
-red
-yellow
-black
+- Blue
+- pink
+- green
+- orange
+- red
+- yellow
+- black
 
 ```
 What color is the _______?
@@ -13,17 +13,17 @@ The _______ is _______
 ```
 
 #### Family
-Grandmother
-Grandfather
-Father
-Mother
-Aunt
-Uncle
-Son
-Daughter
-Cousin
-Brother
-Sister
+- Grandmother
+- Grandfather
+- Father
+- Mother
+- Aunt
+- Uncle
+- Son
+- Daughter
+- Cousin
+- Brother
+- Sister
 
 #### Possessive pronouns
 | Subject | Possessive|
@@ -36,10 +36,10 @@ Sister
 |We|Our|
 |They|Their|
 
-- Daniela has a sister. _______ name is Carolina.
-- John lives with _______ wife.
-- Berta is a teacher. _______ husband is Francisco.
-- This is _______ book. (Nicole)
+- Daniela has a sister. `_______` name is Carolina.
+- John lives with `_______` wife.
+- Berta is a teacher. `_______` husband is Francisco.
+- This is `_______` book. (Nicole)
 
 `Her` `his` `Her` `her`
 
