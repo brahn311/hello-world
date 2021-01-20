@@ -54,12 +54,12 @@ while($balance > 0)
 	// si el dia de la fecha coincide con un dia del intervalo
 	if (in_array(date($d,$day),$intervalo))
 	{
-		// contador de tomas
-		$i++;
-		// actualizar el balance de pastillas
-		$balance = $balance - $cantidad;
-		// imprimir la fecha y el balance restante
-		echo "Toma $i: ". date($dma, $day) . " Restan: " .$balance. "\n";
+|// contador de tomas
+|$i++;
+|// actualizar el balance de pastillas
+|$balance = $balance - $cantidad;
+|// imprimir la fecha y el balance restante
+|echo "Toma $i: ". date($dma, $day) . " Restan: " .$balance. "\n";
 	}
 	// redifinir la fecha al dia siguiente
 	$day = strtotime("1 days",$day);

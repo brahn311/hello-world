@@ -2,19 +2,19 @@ FUENTE: https://maslinux.es/debianitas-y-ubunteros-apt-get-o-apt/
 
 Veamos que comando apt reemplaza las opciones de comando apt-get y apt-cache:
 
-apt command			the command it replaces		function of the command
+apt command|	the command it replaces|function of the command
 -----------------------------------------------------------------------
-apt install			apt-get install				Instala un paquete
-apt remove			apt-get remove				Elimina un paquete
-apt purge			apt-get purge				Elimina paquete y configuración
-apt update			apt-get update				Refresca repositorios
-apt upgrade			apt-get upgrade				Actualiza todos los paquetes actualizables
-apt autoremove		apt-get autoremove			Elimina paquetes no soportados
-apt full-upgrade	apt-get dist-upgrade		Actualiza los paquetes con auto-manejo de dependencias
-apt search			apt-cache search			Busca un programa
-apt show			apt-cache show				Muestra detalles de un paquete
+apt install|	apt-get install||Instala un paquete
+apt remove|	apt-get remove||Elimina un paquete
+apt purge|	apt-get purge||Elimina paquete y configuración
+apt update|	apt-get update||Refresca repositorios
+apt upgrade|	apt-get upgrade||Actualiza todos los paquetes actualizables
+apt autoremove|apt-get autoremove|	Elimina paquetes no soportados
+apt full-upgrade	apt-get dist-upgrade|Actualiza los paquetes con auto-manejo de dependencias
+apt search|	apt-cache search|	Busca un programa
+apt show|	apt-cache show||Muestra detalles de un paquete
 
-new apt command		Función del comando
+new apt command|Función del comando
 ---------------------------------------
-apt list			Lists paquetes con criterio
+apt list|	Lists paquetes con criterio
 apt edit-sources	Edita .sources list

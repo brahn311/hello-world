@@ -11,11 +11,13 @@
 ##### Markdown Preview
 - Settings
   - [x] Use GitHub Style
-- Keyboard
+- Keyboard (only when it emmet issues)
   - [ ] Enable
 
 #### Themes
+	- UI Theme: One Dark
+	- Sintax Theme: Base16 Tomorrow Dark
 ##### UI Themes
-  - Font size: 10
+  - Font size: 11
   - Tab Sizing: Minimum
   - [x] Make tree-view project headers sticky

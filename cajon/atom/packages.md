@@ -3,7 +3,7 @@
 - https://atom.io/packages/emmet
 - https://atom.io/packages/autocomplete-php
 - https://atom.io/packages/file-icons
-- https://atom.io/packages/markdown-preview
+- https://atom.io/packages/markdown-preview (included with installation)
 - https://atom.io/packages/php-twig
 - https://atom.io/packages/svg-preview
 - https://atom.io/packages/language-blade
