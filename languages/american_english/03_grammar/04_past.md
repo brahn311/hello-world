@@ -13,8 +13,9 @@ To talk about the past using verb to be
 |They **were** sales representatives|They **weren't** sales representatives|**Were** they sales representatives|
 |We **were** friends in high school|We **weren't** friends in high school|**Were** we friends in high school?|
 
-> **Note!** We use `was` with `I`, `he`, `she` and `it`  
-We use `were` with `you`, `we` and `they`
+> **Note!**
+- We use `was` with `I`, `he`, `she` and `it`  
+- We use `were` with `you`, `we` and `they`
 
 ##### Exercises
 Read the paragraph and answer the questions:

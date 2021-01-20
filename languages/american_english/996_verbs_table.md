@@ -1,11 +1,13 @@
 # Verb List
 
 ### A
-abandon
-abolish
-accelerate
-accept
-access
+|English|Spanish|
+|-|-|
+abandon|abandonar
+abolish|abolir
+accelerate|acelerar
+accept|aceptar
+access|acceso
 accommodate
 accompany
 achieve
@@ -76,6 +78,8 @@ awake
 award
 
 ### B
+|English|Spanish|
+|-|-|
 backup
 balance
 ban
@@ -125,6 +129,8 @@ buy
 bypass
 
 ### C
+|English|Spanish|
+|-|-|
 calculate
 call
 calm
@@ -227,6 +233,8 @@ custom
 cut
 
 ### D
+|English|Spanish|
+|-|-|
 damage
 dance
 dare
@@ -311,6 +319,8 @@ duplicate
 dye
 
 ### E
+|English|Spanish|
+|-|-|
 earn
 ease
 eat
@@ -375,6 +385,8 @@ extend
 extract
 
 ### F
+|English|Spanish|
+|-|-|
 face
 fail
 fake
@@ -424,6 +436,8 @@ function
 fund
 
 ### G
+|English|Spanish|
+|-|-|
 gain
 gather
 gauge
@@ -445,6 +459,8 @@ guess
 guide
 
 ### H
+|English|Spanish|
+|-|-|
 halt
 hand
 handle
@@ -475,6 +491,8 @@ hunt
 hurt
 
 ### I
+|English|Spanish|
+|-|-|
 ignore
 illustrate
 imagine
@@ -516,6 +534,8 @@ involve
 isolate
 
 ### J
+|English|Spanish|
+|-|-|
 jeopardize
 joke
 judge
@@ -523,6 +543,8 @@ jump
 justify
 
 ### K
+|English|Spanish|
+|-|-|
 keep
 kill
 kiss
@@ -530,6 +552,8 @@ knock
 know
 
 ### L
+|English|Spanish|
+|-|-|
 label
 labour
 land
@@ -568,6 +592,8 @@ love
 lower
 
 ### M
+|English|Spanish|
+|-|-|
 maintain
 make
 manage
@@ -607,6 +633,8 @@ move
 must
 
 ### N
+|English|Spanish|
+|-|-|
 name
 narrow
 need
@@ -619,6 +647,8 @@ notice
 notify
 
 ### O
+|English|Spanish|
+|-|-|
 obey
 object
 observe
@@ -645,6 +675,8 @@ overview
 owe
 
 ### P
+|English|Spanish|
+|-|-|
 package
 paint
 park
@@ -714,12 +746,16 @@ put
 puzzle
 
 ### Q
+|English|Spanish|
+|-|-|
 qualify
 question
 quit
 quote
 
 ### R
+|English|Spanish|
+|-|-|
 race
 rain
 raise
@@ -817,6 +853,8 @@ run
 rush
 
 ### S
+|English|Spanish|
+|-|-|
 sacrifice
 safeguard
 sail
@@ -942,6 +980,8 @@ switch
 symbol
 
 ### T
+|English|Spanish|
+|-|-|
 tackle
 tag
 tail
@@ -990,6 +1030,8 @@ twist
 type
 
 ### U
+|English|Spanish|
+|-|-|
 undergo
 underline
 undermine
@@ -1006,6 +1048,8 @@ urge
 use
 
 ### V
+|English|Spanish|
+|-|-|
 validate
 value
 vary
@@ -1016,6 +1060,8 @@ volunteer
 vote
 
 ### W
+|English|Spanish|
+|-|-|
 wait
 walk
 want
@@ -1042,4 +1088,6 @@ wrap
 write
 
 ### Y
+|English|Spanish|
+|-|-|
 yield

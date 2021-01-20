@@ -1,10 +1,4 @@
-#### Questions
-- Where are you from?
-- What do you do?
-- What do you like to do in your free time?
-- What´s your phone number?
-
-#### Where is
+### Wh questions
 - Where is `______`  from? (Juliana)
 - Where does `______`  live? (Juliana)
 - How old is `______` ? (Juliana)
@@ -21,15 +15,6 @@
 - What is the meaning of `______` ?
 - Thank you very much
 
-#### Jobs
-- Teacher
-- Producer
-- Engineer
-- Businessman
-- Designer
-- Accountant
-- Journalist
-
 |Affirmative|Negative|Question|
 |:-:|:-:|:-:|
 |I'm an engineer|I'm not an engineer|Am I an engineer?|
@@ -45,8 +30,9 @@
 - I live with `______` (quantity) `______` (nouns)
 - We are all `______` (sports fans / enjoy cooking)
 
-#### Where I live
-- My flat (vocabulary):
+### Where I live
+
+#### Vocabulary: My flat
 - Apartment
 - House
 - Bedroom
@@ -54,7 +40,7 @@
 - Stores
 - Restaurants
 
-##### Adjetives:
+#### Adjetives:
 - Small / Smaller
 - Cozy
 - Beautiful

@@ -60,27 +60,27 @@ Source: [youtube](https://www.youtube.com/watch?v=m9Cda9xyMr0)
     _Likewise. I look forward to seeing you again soon._
 
 #### Conversation (informal)
-Kate: Hello. My name's Kate.  
-Julie: Hi Kate, I'm Julie.  
-K: Nice to meet you, Julie.  
-J: Nice to meet you, too.  
-K: This is my friend, Sue.  
-J: Yes, I know. We've already met. How are you, Sue?  
-Sue: Fine, thanks. And you?  
-J: Great, thanks.  
-K: We must go now. Speak to you later, julie.
-J: OK. See you both later.
+**Kate**: Hello. My name's Kate.  
+**Julie**: Hi Kate, I'm Julie.  
+**K**: Nice to meet you, Julie.  
+**J**: Nice to meet you, too.  
+**K**: This is my friend, Sue.  
+**J**: Yes, I know. We've already met. How are you, Sue?  
+**Sue**: Fine, thanks. And you?  
+**J**: Great, thanks.  
+**K**: We must go now. Speak to you later, julie.
+**J**: OK. See you both later.
 
 #### Conversation (formal)
-Kate: Good morning. I don't think we've met.  
+**Kate**: Good morning. I don't think we've met.  
 Let me introduce my myself. My name's Kate Russel.  
-Julie: How do you do. My name is Julie Bates.  
-K: How do you do, Ms Halen.  
+**Julie**: How do you do. My name is Julie Bates.  
+**K**: How do you do, Ms Halen.  
 Allow me to introduce my colleague, Sue Halen.  
-J: Well, actually, we've already met. Hello Ms Halen. How are you?  
-Sue: Very well, thank you. It's nice to see you again  
-J: And you?  
-K: We must be on our way.  
+**J**: Well, actually, we've already met. Hello Ms Halen. How are you?  
+**Sue**: Very well, thank you. It's nice to see you again  
+**J**: And you?  
+**K**: We must be on our way.  
 It has been a pleasure meeting you, Ms Bates.  
 I hope to see you again soon.  
-J: Likewise. I look forward to seeing you both again.
+**J**: Likewise. I look forward to seeing you both again.

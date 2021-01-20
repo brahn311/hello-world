@@ -3,8 +3,8 @@ Verb + Verb patterns
 
 When a verb is followed by another verb, the second verb form depends on the first verb
 - Infinitive (to go)
-- Bare infinitive (go)
 - Gerund form `verb + ing` (going)
+- Bare infinitive (go)
 
 #### Infinitive
 - `Want`
@@ -46,11 +46,38 @@ When a verb is followed by another verb, the second verb form depends on the fir
    - Does he _love **to** play_ the guitar?
 
 #### Bare infinitive (modal + verb)
+Cuando los verbos no utilizan el `to` del `infinitive`
 - `Can`
+   - I _can play_ football
+- `Might`
+   - He _might be_ home
 - `Could`
 - `Should`
 - `Must`
-- `Might`
+
+Otros casos:
+- Con el verbo `let`
+   - Let me go _(deja que me vaya)_
+- Con el verbo `make`
+   - He made me laugh _(me hizo reír)_
+- Con el verbo `help`
+   - He _helped me carry_ the bags _(él me ayudó a llevar las bolsas)_
+- Con el verbo `would rather`
+   - I _would rather_ go to the cinema than stay at home _(preferiría ir al cine que quedarme en casa)_
+    - I'd rather go to the cinema than stay at home _(abreviada)_
+    - I _would rather_ not go out tonight _(preferiría no salir esta noche)_
+   - Cuando implicamos a otra persona:
+    - _Sujeto 1_ **+** `would rather` **+** _sujeto 2_ **+** verbo en pasado (se traduce por un subjuntivo)
+    - I _would rather_ she came tomorrow _(preferiría que ella viniera mañana)_
+    - I _would rather_ you didn't smoke in here _(preferiría que no fumaras aquí dentro)_
+
+> Para expresar que se prefiere una cosa a otra utilizamos la partícula "than".  
+
+- Con el verbo `had better`
+Para dar consejos más serios, implica  un tono de amenza o advertencia.
+   - You `had better` be quiet. _(más vale que te calles_)
+   - You'd better be quiet. _(abreviada)_
+   - He `had better` not tell her secret or she will get angry. _(más vale que no cuente su secreto o se enfadará) (negativa)_
 
 ##### Exercises:
 1. Complete the sentences using the correct conjugation of the verb in brackets:
