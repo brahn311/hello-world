@@ -21,3 +21,15 @@ I have the P.E.P. (permission to stay and work)
 - Why would i like to work here.
 - My skills.
 - Why they should hire me?
+
+### Talking about my self:
+
+Nombre
+Donde vivo
+de donde vengo
+que estudie
+que me gusta hacer en mi tiempo libre
+mis habilidades
+mis trabajos anteriores
+
+que puedo ofrecer
