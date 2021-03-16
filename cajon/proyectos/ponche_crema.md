@@ -1,4 +1,5 @@
-# Ponche Crema (Miyiraide Emperatriz)
+# Ponche Crema
+Por: Miyiraide Emperatriz
 
 ### Ingredientes:
 - 1 Lata de leche condensada
@@ -31,22 +32,20 @@
 1. Reservar en el refrigerador y no dejar que se congele.
 1. Servir bien frio.
 
-### Notas:
-**1ra. preparación (07/12/20)**
- - Una taza equivale a 255 ml.
- - En esta oportunidad utilice una lata de ron. lo cual fue mucho.
- - Evitar que el ponchecrema se congele en el freezer.
- - Verificar la cantidad de leche de la receta.
- - Esta receta rinde para un litro aproximadamente (1.100 ml).
- - Pendiente: verificar cuanto tiempo tarda en espesar la mezcla.
-
-**2da. preparación (26/12/20)**
-- Unifique la receta usando los consejos de [esta](https://enrilemoine.com/2016/12/09/como-hacer-ponche-crema-bien-espeso/) pagina.
-- Espere hasta el momento que justo empezaba a hervir y apague.
-- Quedo Muy espeso.
-
-**3ra. preparación (30/12/20)**
-- se realizo con todos los ingredientes, excepto la rayadura de limon.
+> **¡Notas!**: (Abrahan)
+- **1ra. preparación (07/12/20)**
+  - Una taza equivale a 255 ml.
+  - En esta oportunidad utilice una lata de ron. lo cual fue mucho.
+  - Evitar que el ponchecrema se congele en el freezer.
+  - Verificar la cantidad de leche de la receta.
+  - Esta receta rinde para un litro aproximadamente (1.100 ml).
+  - Pendiente: verificar cuanto tiempo tarda en espesar la mezcla.
+- **2da. preparación (26/12/20)**
+  - Unifique la receta usando los consejos de [esta](https://enrilemoine.com/2016/12/09/como-hacer-ponche-crema-bien-espeso/) pagina.
+  - Espere hasta el momento que justo empezaba a hervir y apague.
+  - Quedo Muy espeso.
+- **3ra. preparación (30/12/20)**
+  - se realizo con todos los ingredientes, excepto la rayadura de limon.
 
 ### Otras preparaciones:
 https://www.bizcochosysancochos.com/2016/11/como-hacer-ponche-crema-venezolano.html
