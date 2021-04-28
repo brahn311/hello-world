@@ -60,7 +60,17 @@
 
 ### Propagar Cactus y suculentas
 [Reproduccion de cactus 2](https://www.youtube.com/watch?v=BXYiQ6WMHJw&ab_channel=Siempreverde)
-Metodo de corte: Cortar, dejar secar por 8 dias antes de sembrar, sembrar usando sustrato.
+
+[COMO RECUPERAR CACTUS PODRIDO](https://www.youtube.com/watch?v=aubPpDUNtIM&ab_channel=ViveroPlant-Craft)
+Metodo de corte: 
+- Cortar y dejar secar (cicatrizar) en sombra (para no quemar) durante 8 dias antes de sembrar (dependiendo del clima) 
+- Sembrar en sustrato humedo.
+- Riego mantener el sustrato humedo para propiciar el crecimiento de la raiz, luego que ya posean raiz, suspender el riego constante.
+
+Cicatrizantes: 
+- Canela en polvo
+- Ceniza
+- Azufre
 
 ### Notas al transplantar
 - Precionar el sustrato al rededor de la planta para asegurar. 
