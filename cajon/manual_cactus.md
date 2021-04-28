@@ -59,10 +59,8 @@
 > - **Pendiente** Buscar que es vermiculita (mejora la ventilacion del sustrato y absorve nutrientes)
 
 ### Propagar Cactus y suculentas
-Metodo de corte: dejar secar por 8 dias antes de sembrar
+[Reproduccion de cactus 2](https://www.youtube.com/watch?v=BXYiQ6WMHJw&ab_channel=Siempreverde)
+Metodo de corte: Cortar, dejar secar por 8 dias antes de sembrar, sembrar usando sustrato.
 
 ### Notas al transplantar
 - Precionar el sustrato al rededor de la planta para asegurar. 
-
-#### Fuentes relacionadas
-
