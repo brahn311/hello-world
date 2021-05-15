@@ -9,4 +9,7 @@ Ingredientes:
 1 taza de coco rallado
 
 Preparación:
-Colocar una primera capa y refrigerar.
+- Colocar una primera capa y refrigerar.
+- Colocar una 2da capa y volver a refrigerar.
+
+Duración de la crema: Hasta un mes refrigerada.
