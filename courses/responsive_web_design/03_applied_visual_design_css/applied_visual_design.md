@@ -1,5 +1,9 @@
 # Applied Visual Design
+Visual design is a combination of typography, color theory, graphics, animation, page layout, and more to help deliver your unique message.
 
+In this course, you'll learn how to apply these different elements of visual design to your webpages.
+
+### Courses
 - Introduction to the Applied Visual Design Challenges
 - Create Visual Balance Using the text-align Property
 - Adjust the Width of an Element Using the width Property
