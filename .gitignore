@@ -23,4 +23,7 @@ build
 dist
 private
 
+# Accesos directos (windows)
+*.lnk
+
 # Ignorados automaticamente
