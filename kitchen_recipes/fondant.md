@@ -3,13 +3,13 @@ Por: Dulce Fermandez
 
 |Medidas|Ingredientes|
 |-|-|
-|1/4 Taza|Agua|
-|1 Cda|Gelatina sin sabor|
-|1/4 Taza|Glucosa|
-|2 Cda|Glicerina|
-|1/2 Cda|Grasa hidrogenada|
+|1/4 de taza|Agua|
+|1 cda|Gelatina sin sabor|
+|1/4 de taza|Glucosa|
+|2 cdas|Glicerina|
+|1/2 cdita|Grasa hidrogenada|
 |1 + 1/2 libras (800 gr)|Azúcar pulverizada (tamizada)|
-|1/2 Cdita|CMC|
+|1/2 cdita|CMC|
 
 ### Preparacion:
 - Diluir la gelatina en el agua y dejar reposar por 10 minutos
