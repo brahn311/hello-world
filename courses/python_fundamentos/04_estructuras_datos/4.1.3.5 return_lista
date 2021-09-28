@@ -1,0 +1,25 @@
+Efectos y resultados: listas y funciones - continuación
+La segunda pregunta es: ¿Puede una lista ser el resultado de una función?
+
+¡Si, por supuesto! Cualquier entidad reconocible por Python puede ser un resultado de función.
+
+Observa el código en el editor. 
+
+def strangeListFunction(n):
+    strangeList = []
+    
+    for i in range(0, n):
+        strangeList.insert(0, i)
+    
+    return strangeList
+
+print(strangeListFunction(5))
+
+La salida del programa será así:
+
+[4, 3, 2, 1, 0] 
+
+Ahora puedes escribir funciones con y sin resultados.
+
+Vamos a profundizar un poco más en los problemas relacionados con las variables en las funciones. Esto es esencial para crear funciones efectivas y seguras.
+

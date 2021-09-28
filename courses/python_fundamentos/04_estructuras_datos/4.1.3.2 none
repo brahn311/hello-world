@@ -1,0 +1,31 @@
+Unas pocas palabras acerca de None
+Permítenos presentarte un valor muy curioso (para ser honestos, un valor que es ninguno) llamado None.
+
+Sus datos no representan valor razonable alguno; en realidad, no es un valor en lo absoluto; por lo tanto, no debe participar en ninguna expresión.
+
+Por ejemplo, un fragmento de código como el siguiente:
+
+print(None + 2)
+
+Causará un error de tiempo de ejecución, descrito por el siguiente mensaje de diagnóstico:
+
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+
+Nota: None es una palabra reservada.
+
+Solo hay dos tipos de circunstancias en las que None se puede usar de manera segura:
+
+Cuando se le asigna a una variable (o se devuelve como el resultado de una función).
+Cuando se compara con una variable para diagnosticar su estado interno.
+Al igual que aquí:
+
+valor = None
+if valor == None:
+    print("Lo siento, no tienes ningún valor") 
+
+No olvides esto: si una función no devuelve un cierto valor utilizando una cláusula de expresión return, se asume que devuelve implícitamente None.
+
+Vamos a probarlo.
+
+
+

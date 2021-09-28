@@ -1,0 +1,77 @@
+Algunas funcione simples: recursividad
+Existe algo mas que se desea mostrar: es la recursividad.
+
+Este termino puede describir muchos conceptos distintos, pero uno de ellos, hace referencia a la programación computacional.
+
+Aquí, la recursividad es una técnica donde una función se invoca a si misma.
+
+Tanto el factorial como la serie Fibonacci, son las mejores opciones para ilustrar este fenómeno.
+
+La serie de Fibonacci es un claro ejemplo de recursividad.
+
+Fibi = Fibi-1 + Fibi-2
+
+El número ith se refiere al número i-1, y así sucesivamente hasta llegar a los primeros dos.
+
+¿Puede ser empleado en el código? Por supuesto que puede. Puede hacer el código mas corto y claro.
+
+Primera version del codigo:
+
+def fib(n):
+    if n < 1:
+         return None
+    if n < 3:
+        return 1
+
+    elem1 = elem2 = 1
+    sum = 0
+    for i in range(3, n + 1):
+        sum = elem1 + elem2
+        elem1, elem2 = elem2, sum
+    return sum
+
+for n in range(1, 10):
+    print(n, "->", fib(n))
+
+La segunda versión de la función fib() hace uso directo de la recursividad:
+
+def fib(n):
+    if n < 1:
+        return None
+    if n < 3:
+        return 1
+    return fib(n - 1) + fib(n - 2)
+
+El código es mucho mas claro ahora.
+
+¿Pero es realmente seguro?, ¿Implica algún riesgo?
+
+Si, existe algo de riesgo. Si no se considera una condición que detenga las invocaciones recursivas, el programa puede entrar en un bucle infinito. Se debe ser cuidadoso.
+
+El factorial también tiene un lado recursivo. Observa:
+
+n! = 1 × 2 × 3 × ... × n-1 × n
+
+Es obvio que:
+
+1 × 2 × 3 × ... × n-1 = (n-1)!
+
+Entonces, finalmente, el resultado es:
+
+n! = (n-1)! × n
+
+Esto se empleará en nuestra nueva solución.
+
+
+Aquí esta:
+
+def factorialFun(n):
+    if n < 0:
+        return None
+    if n < 2:
+        return 1
+    return n * factorialFun(n - 1)
+
+¿Funciona? Claro que si. Pruébalo por ti mismo.
+
+Nuestro viaje funcional esta por terminar. La siguiente sección abordara dos tipos de datos en Python: tuplas y diccionarios.

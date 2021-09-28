@@ -1,0 +1,52 @@
+Operaciones lógicas vs operaciones de bit: continuación
+Ahora te mostraremos un ejemplo de la diferencia en la operación entre las operaciones lógicas y de bit. Supongamos que se han realizado las siguientes tareas:
+
+i = 15
+j = 22 
+
+Si asumimos que los enteros se almacenan con 32 bits, la imagen a nivel de bits de las dos variables será la siguiente:
+
+i: 00000000000000000000000000001111
+j: 00000000000000000000000000010110 
+
+Se ejecuta la asignación:
+
+ og = i and j 
+
+Estamos tratando con una conjunción lógica aquí. Vamos a trazar el curso de los cálculos. Ambas variables i y j no son ceros, por lo que se considerará que representan a True. Al consultar la tabla de verdad para el operador and, podemos ver que el resultado será True. No se realizan otras operaciones.
+
+log: True 
+
+Ahora la operación a nivel de bits - aquí está:
+
+bit = i & j 
+
+El operador & operará con cada par de bits correspondientes por separado, produciendo los valores de los bits relevantes del resultado. Por lo tanto, el resultado será el siguiente:
+
+i	 000000000000000000000000000  01111  
+j	 000000000000000000000000000  10110  
+bit = i & j 	 000000000000000000000000000  00110  
+Estos bits corresponden al valor entero de seis.
+
+
+
+Veamos ahora los operadores de negación. Primero el lógico:
+
+logneg = not i 
+
+La variable logneg se establecerá en False: no es necesario hacer nada más.
+
+La negación a nivel de bits es así:
+
+bitneg = ~i 
+
+Puede ser un poco sorprendente: el valor de la variable bitneg es -16. Esto puede parecer extraño, pero no lo es en absoluto. Si deseas obtener más información, debes consultar el sistema de números binarios y las reglas que rigen los números de complemento de dos.
+
+i	0000000000000000000000000000  1111  
+bitneg = ~i 	1111111111111111111111111111  0000  
+Cada uno de estos operadores de dos argumentos se puede utilizar en forma abreviada. Estos son los ejemplos de sus notaciones equivalentes:
+
+x = x & y 	x &= y 
+x = x | y 	x |= y
+x = x ^ y 	x ^= y
+

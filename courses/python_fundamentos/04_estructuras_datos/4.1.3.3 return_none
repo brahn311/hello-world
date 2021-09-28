@@ -1,0 +1,22 @@
+Algunas palabras acerca de None: continuación
+Echa un vistazo al código en el editor.
+
+def strangeFunction(n):
+    if(n % 2 == 0):
+        return True
+        
+Es obvio que la función strangeFunction devuelve True cuando su argumento es par.
+
+¿Qué es lo que regresa de otra manera?
+
+Podemos usar el siguiente código para verificarlo:
+
+print(strangeFunction(2))
+print(strangeFunction(1)) 
+
+Esto es lo que vemos en la consola:
+
+True
+None
+
+No te sorprendas la próxima vez que veas None como el resultado de la función, puede ser el síntoma de un error sutil dentro de la función.

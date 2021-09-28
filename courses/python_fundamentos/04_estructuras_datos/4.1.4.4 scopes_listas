@@ -1,0 +1,72 @@
+Como interactúa la función con sus argumentos
+Ahora descubramos como la función interactúa con sus argumentos.
+
+El código en editor nos enseña algo. Como puedes observar, la función cambia el valor de su parámetro. ¿Este cambio afecta el argumento?
+
+def miFuncion(n):
+    print("Yo obtuve", n)
+    n += 1
+    print("Yo ahora tengo", n)
+
+var = 1
+miFuncion(var)
+print(var)
+
+Ejecuta el programa y verifícalo.
+
+La salida del código es:
+
+Yo obtuve 1
+Yo ahora tengo 2
+1
+
+La conclusión es obvia - al cambiar el valor del parámetro este no se propaga fuera de la función (más específicamente, no cuando la variable es un valor escalar, como en el ejemplo).
+
+Esto también significa que una función recibe el valor del argumento, no el argumento en sí. Esto es cierto para los valores escalares.
+
+Vale la pena revisar cómo funciona esto con las listas (¿Recuerdas las peculiaridades de asignar rodajas de listas en lugar de asignar la lista entera?)
+
+El siguiente ejemplo arrojará luz sobre el asunto:
+
+def miFuncion(miLista1):
+    print(miLista1)
+    miLista1 = [0, 1]
+
+miLista2 = [2, 3]
+miFuncion(miLista2)
+print(miLista2)
+
+La salida del código es:
+
+[2, 3]
+[2, 3]
+
+Parece ser que se sigue aplicando la misma regla.
+
+La diferencia se puede observar en el siguiente ejemplo:
+
+def miFuncion(miLista1):
+    print(miLista1)
+    del miLista1[0]
+
+miLista2 = [2, 3]
+miFuncion(miLista2)
+print(miLista2)
+
+No se modifica el valor del parámetro miLista1 (ya se sabe que no afectará el argumento), en lugar de ello se modificará la lista identificada por el.
+
+El resultado puede ser sorprendente. Ejecuta el código y verifícalo:
+
+[2, 3]
+[3]
+
+¿Lo puedes explicar?
+
+Intentémoslo:
+
+Si el argumento es una lista, el cambiar el valor del parámetro correspondiente no afecta la lista (Recuerda: las variables que contienen listas son almacenadas de manera diferente que las escalares).
+Pero si se modifica la lista identificada por el parámetro (Nota: ¡La lista no el parámetro!), la lista reflejará el cambio.
+
+Recordemos que cuando a una nueva variable le asignamos el valor de una lista, no se esta copiando una nueva lista, si no que se esta creando un punto de acceso distinto a la misma lista, y si los valores de la lista se modifican desde una funcion, se cambiaran sus valores en la lista original a pesar de que sean listas de nombres distintos.
+
+

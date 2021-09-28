@@ -1,0 +1,36 @@
+Rodajas: continuación
+Si omites inicio en tu rodaja, se supone que deseas obtener un segmento que comienza en el elemento con índice 0.
+
+En otras palabras, la rodaja sería de esta forma:
+
+miLista[:fin]
+
+Es un equivalente más compacto:
+
+miLista[0:fin]
+
+Observa el fragmento de código a continuación:
+
+miLista = [10, 8, 6, 4, 2]
+nuevaLista = miLista [:3]
+print(nuevaLista)
+
+Es por esto que su salida es: [10, 8, 6].
+
+Del mismo modo, si omites el fin en tu rodaja, se supone que deseas que el segmento termine en el elemento con el índice len(miLista).
+
+En otras palabras, la rodaja sería de esta forma:
+
+miLista[inicio:]
+
+Es un equivalente más compacto:
+
+miLista[inicio:len(miLista)]
+
+Observa el siguiente fragmento de código:
+
+miLista = [10, 8, 6, 4, 2]
+nuevaLista = miLista[3:]
+print(nuevaLista)
+
+Por lo tanto, la salida es: [4, 2].

@@ -1,0 +1,46 @@
+Más sobre el ciclo for y la función range() con tres argumentos
+La función range() también puede aceptar tres argumentos: Echa un vistazo al código del editor.
+
+El tercer argumento es un incremento: es un valor agregado para controlar la variable en cada giro del ciclo (como puedes sospechar, el valor predeterminado del incremento es 1 ).
+
+¿Puedes decirnos cuántas líneas aparecerán en la consola y qué valores contendrán?
+
+Ejecuta el programa para averiguar si tenías razón.
+
+
+Deberías poder ver las siguientes líneas en la ventana de la consola:
+
+El valor de i es actualmente 2
+El valor de i es actualmente 5 
+
+¿Sabes por qué? El primer argumento pasado a la función range() nos dice cual es el número de inicio de la secuencia (por lo tanto, 2 en la salida). El segundo argumento le dice a la función dónde detener la secuencia (la función genera números hasta el número indicado por el segundo argumento, pero no lo incluye). Finalmente, el tercer argumento indica el paso, que en realidad significa la diferencia entre cada número en la secuencia de números generados por la función.
+
+2(número inicial) → 5 (2 incremento por 3 es igual a 5 - el número está dentro del rango de 2 a 8) → 8 (5 incremento por 3 es igual a 8 - el número no está dentro del rango de 2 a 8, porque el parámetro de parada no está incluido en la secuencia de números generados por la función).
+
+Nota: si el conjunto generado por la función range() está vacío, el ciclo no ejecutará su cuerpo en absoluto.
+
+Al igual que aquí, no habrá salida:
+
+for i in range(1, 1):
+    print("El valor de i es actualmente", i) 
+
+Nota: el conjunto generado por range() debe ordenarse en un orden ascendente. No hay forma de forzar el range() para crear un conjunto en una forma diferente. Esto significa que el segundo argumento de range() debe ser mayor que el primero.
+
+Por lo tanto, tampoco habrá salida aquí:
+
+for i in range(2, 1):
+    print ("El valor de i es actualmente", i) 
+
+Echemos un vistazo a un programa corto cuya tarea es escribir algunas de las primeras potencias de dos:
+
+pow = 1
+for exp in range(16):
+    print ("2 a la potencia de", exp, "es", pow)
+    pow * = 2 
+
+La variable exp se utiliza como una variable de control para el ciclo e indica el valor actual del exponente. La propia exponenciación se sustituye multiplicando por dos. Dado que 2 0 es igual a 1, después 2 × 1 es igual a 21, 2 × 21 es igual a 22, y así sucesivamente. ¿Cuál es el máximo exponente para el cual nuestro programa aún imprime el resultado?
+
+Ejecuta el código y verifica si la salida coincide con tus expectativas.
+
+for i in range(2, 8, 3):
+    print("El valor de i es actualmente", i)

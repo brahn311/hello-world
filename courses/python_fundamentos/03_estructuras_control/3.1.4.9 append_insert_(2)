@@ -1,0 +1,29 @@
+Agregando elementos a una lista: continuación
+Puedes iniciar la vida de una lista creándola vacía (esto se hace con un par de corchetes vacíos) y luego agregar nuevos elementos según sea necesario.
+
+Echa un vistazo al fragmento en el editor. Intenta adivinar su salida después de la ejecución del bucle for. Ejecuta el programa para comprobar si tenías razón.
+
+Será una secuencia de números enteros consecutivos del 1 hasta 5.
+
+Hemos modificado un poco el fragmento:
+
+```
+miLista = [] # creando una lista vacía
+
+for i in range(5):
+    miLista.insert(0, i + 1)
+
+print(miLista)
+```
+
+¿Qué pasará ahora? Ejecuta el programa y comprueba si esta vez también tenías razón.
+
+
+Deberías obtener la misma secuencia, pero en orden inverso (este es el mérito de usar el método insert()).
+
+miLista = [] # creando una lista vacía
+
+for i in range (5):
+    miLista.append (i + 1)
+
+print(miLista)

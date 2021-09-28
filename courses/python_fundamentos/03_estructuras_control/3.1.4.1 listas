@@ -1,0 +1,40 @@
+¿Por qué necesitamos listas?
+Puede suceder que tengas que leer, almacenar, procesar y, finalmente, imprimir docenas, quizás cientos, tal vez incluso miles de números. ¿Entonces que? ¿Necesitas crear una variable separada para cada valor? ¿Tendrás que pasar largas horas escribiendo declaraciones como la que se muestra a continuación?
+
+var1 = int(input())
+var2 = int(input())
+var3 = int(input())
+var4 = int(input())
+var5 = int(input())
+var6 = int(input())
+:
+: 
+
+Si no crees que esta sea una tarea complicada, toma un papel y escribe un programa que:
+
+Lea cinco números.
+Los imprima en orden desde el más pequeño hasta el más grande (Este tipo de procesamiento se denomina ordenamiento).
+Debes percatarte que ni siquiera tienes suficiente papel para completar la tarea.
+
+Hasta ahora, has aprendido como declarar variables que pueden almacenar exactamente un valor dado a la vez. Tales variables a veces se denominan escalares por analogía con las matemáticas. Todas las variables que has usado hasta ahora son realmente escalares.
+
+Piensa en lo conveniente que sería declarar una variable que podría almacenar más de un valor . Por ejemplo, cien, o mil o incluso diez mil. Todavía sería una y la misma variable, pero muy amplia y espaciosa. ¿Suena atractivo? Quizás, pero ¿cómo manejarías un contenedor así lleno de valores diferentes? ¿Cómo elegirías solo el que necesitas?
+
+
+¿Y si solo pudieras numerarlos? Y luego di: dame el valor número 2; asigna el valor número 15; aumenta el número del valor 10000.
+
+Te mostraremos como declarar tales variables de múltiples valores . Haremos esto con el ejemplo que acabamos de sugerir. Escribiremos un programa que ordene una secuencia de números. No seremos particularmente ambiciosos: asumiremos que hay exactamente cinco números.
+
+Vamos a crear una variable llamada numeros; se le asigna no solo un número, sino que se llena con una lista que consta de cinco valores (nota: la lista comienza con un corchete abierto y termina con un corchete cerrado ; el espacio entre los corchetes es llenado con cinco números separados por comas).
+
+numeros = [ 10, 5, 7, 2, 1] 
+
+Digamos lo mismo utilizando una terminología adecuada: numeros es una lista que consta de cinco valores, todos ellos números. También podemos decir que esta declaración crea una lista de longitud igual a cinco (ya que contiene cinco elementos).
+
+Los elementos dentro de una lista pueden tener diferentes tipos . Algunos de ellos pueden ser enteros, otros son flotantes y otros pueden ser listas.
+
+Python ha adoptado una convención que indica que los elementos de una lista están siempre numerados desde cero. Esto significa que el elemento almacenado al principio de la lista tendrá el número cero. Como hay cinco elementos en nuestra lista, al último de ellos se le asigna el número cuatro. No olvides esto.
+
+Pronto te acostumbrarás y se convertirá en algo natural.
+
+Antes de continuar con nuestra discusión, debemos indicar lo siguiente: nuestra lista es una colección de elementos, pero cada elemento es un escalar.

@@ -1,0 +1,38 @@
+El ordenamiento burbuja - versión interactiva
+En el editor, puedes ver un programa completo, enriquecido por una conversación con el usuario, y que permite ingresar e imprimir elementos de la lista: El ordenamiento burbuja: versión interactiva final.
+
+miLista = []
+swapped = True
+num = int (input("¿Cuántos elementos deseas ordenar?:"))
+
+for i in range(num):
+    val = float(input("Introduce un elemento de la lista:"))
+    miLista.append(val)
+
+while swapped:
+    swapped = False
+    for i in range(len(miLista) - 1):
+        if miLista[i] > miLista[i + 1]:
+            swapped = True
+            miLista[i], miLista[i + 1] = miLista[i + 1], miLista[i]
+
+print("\nOrdenado:")
+print(miLista)
+
+Python, sin embargo, tiene sus propios mecanismos de clasificación. Nadie necesita escribir sus propias clases, ya que hay un número suficiente de herramientas listas para usar.
+
+Te explicamos este sistema de clasificación porque es importante aprender como procesar los contenidos de una lista y mostrarte como puede funcionar la clasificación real.
+
+Si quieres que Python ordene tu lista, puedes hacerlo de la siguiente manera:
+
+miLista = [8, 10, 6, 2, 4]
+miLista.sort() 
+print(miLista) 
+
+Es tan simple como eso.
+
+La salida del fragmento es la siguiente:
+
+[2, 4, 6, 8, 10] 
+
+Como puedes ver, todas las listas tienen un método denominado sort(), que las ordena lo más rápido posible. Ya has aprendido acerca de algunos de los métodos de lista anteriormente, y pronto aprenderás más sobre otros.

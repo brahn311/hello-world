@@ -1,0 +1,62 @@
+Listas - algunos programas simples
+Ahora queremos mostrarte algunos programas simples que utilizan listas.
+
+El primero de ellos intenta encontrar el mayor valor en la lista. Mira el código.
+```
+miLista = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+mayor = miLista[0]
+
+for i in range(1, len(miLista)):
+   if miLista [i]> mayor:
+        mayor = miLista[i]
+
+print(mayor)
+```
+
+El concepto es bastante simple: asumimos temporalmente que el primer elemento es el más grande y comparamos la hipótesis con todos los elementos restantes de la lista.
+
+El código da como resultado el17(como se espera).
+
+El código puede ser reescrito para hacer uso de la forma recién introducida del ciclo for:
+
+miLista = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+mayor = miLista [0]
+
+for i in miLista:
+    if i > mayor:
+        mayor = i
+
+print(mayor)
+
+El programa anterior realiza una comparación innecesaria, cuando el primer elemento se compara consigo mismo, pero esto no es un problema en absoluto.
+
+El código da como resultado el 17 también (nada inusual).
+
+Si necesitas ahorrar energía de la computadora, puedes usar una rodaja:
+
+miLista = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+mayor = miLista [0]
+
+for i in miLista [1:]:
+   if i > mayor:
+        mayor = i
+
+print(mayor)
+
+La pregunta es: ¿Cuál de estas dos acciones consume más recursos informáticos: solo una comparación o partir casi todos los elementos de una lista?
+
+from time import time
+
+start_time = time()
+
+miLista = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+mayor = miLista[0]
+
+for i in miLista :
+   if i > mayor:
+        mayor = i
+
+elapsed_time = time() - start_time
+
+print(mayor)
+print("Elapsed time: %.10f seconds." % elapsed_time)

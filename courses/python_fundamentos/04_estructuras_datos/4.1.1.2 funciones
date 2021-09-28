@@ -1,0 +1,32 @@
+¿Por qué necesitamos funciones?
+Hasta ahorita has implementado varias veces el uso de funciones, pero solo se han visto algunas de sus ventajas. Solo se han invocado funciones para utilizarlas como herramientas, con el fin de hacer la vida mas fácil, y para simplificar tareas tediosas y repetitivas.
+
+Cuando se desea mostrar o imprimir algo en consola se utiliza print(). Cuando se desea leer el valor de una variable se emplea input(), combinados posiblemente con int() o float().
+
+También se ha hecho uso de algunos métodos, las cuales también son funciones, pero declarados de una manera muy especifica.
+
+Ahora aprenderás a escribir tus propias funciones, y como utilizarlas. Escribiremos varias de ellas juntos, desde muy sencillas hasta algo complejas. Se requerirá de tu concentración y atención.
+
+
+Muy a menudo ocurre que un cierto fragmento de código se repite muchas veces en un programa. Se repite de manera literal o, con algunas modificaciones menores, empleando algunas otras variables dentro del programa. También ocurre que un programador ha comenzado a copiar y pegar ciertas partes del código en más de una ocasión en el mismo programa.
+
+Puede ser muy frustrante percatarse de repente que existe un error en el código copiado. El programador tendrá que escarbar bastante para encontrar todos los lugares en el código donde hay que corregir el error. Además, existe un gran riesgo de que las correcciones produzcan errores adicionales.
+
+Definamos la primer condición por la cual es una buena idea comenzar a escribir funciones propias: si un fragmento de código comienza a aparecer en más de una ocasión, considera la posibilidad de aislarlo en la forma de una función invocando la función desde el lugar en el que originalmente se encontraba.
+
+
+Puede suceder que el algoritmo que se desea implementar sea tan complejo que el código comience a crecer de manera incontrolada y, de repente, ya no se puede navegar por él tan fácilmente.
+
+Se puede intentar solucionar este problema comentando el código, pero pronto te darás cuenta que esto empeorará la situación - demasiados comentarios hacen que el código sea más difícil de leer y entender. Algunos dicen que una función bien escrita debe ser comprensible con tan solo una mirada.
+
+Un buen desarrollador divide el código (o mejor dicho: el problema) en piezas aisladas, y codifica cada una de ellas en la forma de una función.
+
+Esto simplifica considerablemente el trabajo del programa, debido a que cada pieza se codifica por separado y consecuentemente se prueba por separado. A este proceso se le llama comúnmente descomposición.
+
+El concepto de descomposición
+
+
+Existe una segunda condición: si un fragmento de código se hace tan extenso que leerlo o entenderlo se hace complicado, considera dividirlo pequeños problemas por separado e implementa cada uno de ellos como una función independiente.
+
+Esta descomposición continua hasta que se obtiene un conjunto de funciones cortas, fáciles de comprender y probar.
+

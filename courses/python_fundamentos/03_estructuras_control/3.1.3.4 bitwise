@@ -1,0 +1,69 @@
+¿Cómo tratamos los bits individuales?
+Ahora te mostraremos para que puedes usar los operadores de bitwise. Imagina que eres un desarrollador obligado a escribir una pieza importante de un sistema operativo. Se te ha dicho que puedes usar una variable asignada de la siguiente forma:
+
+flagRegister = 0x1234
+
+La variable almacena la información sobre varios aspectos de la operación del sistema. Cada bit de la variable almacena un valor de si/no. También se te ha dicho que solo uno de estos bits es tuyo, el tercero (recuerda que los bits se numeran desde cero y el número de bits cero es el más bajo, mientras que el más alto es el número 31). Los bits restantes no pueden cambiar, porque están destinados a almacenar otros datos. Aquí está tu bit marcado con la letra x:
+
+flagRegister = 000000000000000000000000000000x000
+
+Es posible que tengas que hacer frente a las siguientes tareas:
+
+1. Comprobar el estado de tu bit: deseas averiguar el valor de su bit; comparar la variable completa con cero no hará nada, porque los bits restantes pueden tener valores completamente impredecibles, pero puedes usar la siguiente propiedad de conjunción:
+
+x & 1 = x
+x & 0 = 0 
+
+Si aplicas la operación & a la variable flagRegister junto con la siguiente imagen de bits:
+
+00000000000000000000000000001000 
+
+(observa el 1 en la posición de tu bit) como resultado, obtendrás una de las siguientes cadenas de bits:
+
+00000000000000000000000000001000 si tu bit se estableció en 1
+00000000000000000000000000000000 si tu bit se reseteo a 0
+Dicha secuencia de ceros y unos, cuya tarea es tomar el valor o cambiar los bits seleccionados, se denomina máscara de bits.
+
+Construyamos una máscara de bits para detectar el estado de tus bits. Debería apuntar a el tercer bit. Ese bit tiene el peso de 23=8. Se podría crear una máscara adecuada mediante la siguiente declaración:
+
+theMask = 8
+
+
+También puedes hacer una secuencia de instrucciones dependiendo del estado de tu bit i, aquí está:
+
+if flagRegister & theMask:
+    # mi bit está listo
+else:
+    # mi bit se restablece 
+
+2. Reinicia tu bit: asigna un cero al bit, mientras que todos los otros bits deben permanecer sin cambios; usemos la misma propiedad de la conjunción que antes, pero usemos una máscara ligeramente diferente, exactamente como se muestra a continuación:
+
+11111111111111111111111111110111
+
+Tenga en cuenta que la máscara se creó como resultado de la negación de todos los bits de la variable theMask. Restablecer el bit es simple, y se ve así (elige el que más te guste):
+
+flagRegister = flagRegister & ~theMask
+
+flagregister &= ~theMask 
+
+3. Establece tu bit : asigna un 1 a tu bit, mientras que todos los bits restantes deben permanecer sin cambios; usa la siguiente propiedad de disyunción:
+
+x | 1 = 1
+x | 0 = x 
+
+Ya estás listo para configurar su bit con una de las siguientes instrucciones:
+
+flagRegister = flagRegister | theMask
+
+flagRegister |= theMask 
+
+4. Niega tu bit: reemplaza un 1 con un 0 y un 0 con un 1. Puedes utilizar una propiedad interesante del operador ~x:
+
+x ^ 1 = ~x
+x ^ 0 = x 
+
+Niega tu bit con las siguientes instrucciones:
+
+flagRegister = flagRegister ^ theMask
+
+flagRegister ^= theMask 

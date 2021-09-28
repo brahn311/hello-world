@@ -1,0 +1,31 @@
+Paso de argumentos con palabras clave
+Python ofrece otra manera de pasar argumentos, donde el significado del argumento esta definido por su nombre, no su posición, a esto se le denomina paso de argumentos con palabras clave.
+
+Observa el siguiente código:
+
+def presentar (primerNombre, segundoNombre):
+    print("Hola, mi nombre es", primerNombre, segundoNombre)
+
+presentar(primerNombre = "James", segundoNombre = "Bond")
+presentar(segundoNombre = "Skywalker", primerNombre = "Luke")
+
+El concepto es claro: los valores pasados a los parámetros son precedidos por el nombre del parámetro al que se le va a pasar el valor, seguido por el signo de =.
+
+La posición no es relevante aquí, cada argumento conoce su destino con base en el nombre utilizado.
+
+Debes de poder predecir la salida. Ejecuta el código y verifica tu respuesta.
+
+Por supuesto que no se debe de utilizar el nombre de un parámetro que no existe.
+
+El siguiente código provocará un error de ejecución:
+
+def presentar (primerNombre, segundoNombre):
+    print("Hola, mi nombre es ", primerNombre, segundoNombre)
+
+introduction(apellido="Skywalker", primerNombre="Luke")
+
+Esto es lo que Python arrojará:
+
+TypeError: presentar() got an unexpected keyword argument 'apellido'
+
+Inténtalo tu mismo.

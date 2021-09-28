@@ -1,0 +1,220 @@
+Operadores Abreviados
+Es tiempo de explicar el siguiente conjunto de operadores que harán la vida del programador/desarrollador mas fácil.
+
+Muy seguido, se desea utilizar la misma variable al lado derecho y al lado izquierdo del operador =.
+
+Por ejemplo, si se necesita calcular una serie de valores sucesivos de la potencia de 2, se puede usar el siguiente código:
+
+x = x * 2
+
+También, puedes utilizar una expresión como la siguiente si no puedes dormir y estas tratando de resolverlo con alguno de los métodos tradicionales:
+
+oveja = oveja + 1
+
+Python ofrece una manera mas corta de escribir operaciones como estas, lo cual se puede codificar de la siguiente manera:
+
+x *= 2
+oveja+= 1
+
+A continuación se intenta presentar una descripción general para este tipo de operaciones.
+
+Si op es un operador de dos argumentos (esta es una condición muy imporante) y el operador es utilizado en el siguiente contexto:
+
+variable = variable op expresión
+
+Puede ser simplificado de la siguiente manera:
+
+variable op= expresión
+
+Observa los siguientes ejemplos. Asegúrate de entenderlos todos.
+
+i = i + 2 * j ⇒ i += 2 * j
+
+var = var / 2 ⇒ var /= 2
+
+rem = rem % 10 ⇒ rem %= 10
+
+j = j - (i + var + rem) ⇒ j -= (i + var + rem)
+
+x = x ** 2 ⇒ x **= 2
+
+LABORATORIO
+
+Tiempo estimado
+10 minutos
+
+Nivel de dificultad
+Fácil
+
+Objetivos
+Familiarizarse con el concepto de variables y trabajar con ellas.
+Realizar operaciones básicas y conversiones.
+Experimentar con el código de Python.
+Escenario
+Millas y kilómetros son unidades de longitud o distancia.
+
+Teniendo en mente que 1 equivale aproximadamente a 1.61 kilómetros, complemente el programa en el editor para que convierta de:
+
+Millas a kilómetros.
+Kilómetros a millas.
+No se debe cambiar el código existente. Escribe tu código en los lugares indicados con ###. Prueba tu programa con los datos que han sido provistos en el código fuente.
+
+Pon mucha atención a lo que esta ocurriendo dentro de la función print(). Analiza como es que se proveen múltiples argumentos para la función, y como es que se muestra el resultado.
+
+Nota que algunos de los argumentos dentro de la función print() son cadenas (por ejemplo "millas son", y otros son variables (por ejemplo millas).
+
+CONSEJO
+
+Hay una cosa interesante mas que esta ocurriendo. ¿Puedes ver otra función dentro de la función print() ? Es la función round(). Su trabajo es redondear la salida del resultado al numero de decimales especificados en el paréntesis, y regresar un valor flotante (dentro de la función round() se puede encontrar el nombre de la variable, el nombre, una coma, y el numero de decimales que se desean mostrar). Se hablará mas de esta función muy pronto, no te preocupes si no todo queda muy claro. Solo se quiere impulsar tu curiosidad.
+
+Después de completar el laboratorio , abre Sandbox (el arenero), y experimenta más. Intenta escribir diferentes convertidores, por ejemplo, un convertidor de USD a EUR, un convertidor de temperatura, etc. â ¡deja que tu imaginación vuele! Intenta mostrar los resultados combinando cadenas y variables. Intenta utilizar y experimentar con la función round() para redondear tus resultados a uno, dos o tres decimales. Revisa que es lo que sucede si no se provee un dígito al redondear. Recuerda probar tus programas.
+
+Experimenta, saca tus propias conclusiones, y aprende. Se curioso.
+
+Resultado Esperado
+
+7.38 millas son 11.88 kilómetros
+12.25 kilómetros son 7.61 millas
+
+Codigo:
+kilometros = 12.25
+millas = 7.38
+
+millas_a_kilometros = millas *1.61
+kilometros_a_millas = kilometros / 1.61
+
+print(millas, " millas son ", round(millas_a_kilometros, 2), " kilómetros ")
+print(kilometros, " kilómetros son ", round(kilometros_a_millas, 2), " millas ")
+
+
+LABORATORIO
+
+Tiempo Estimado
+10-15 minutos
+
+Nivel de Dificultad
+Fácil
+
+Objetivos
+Familiarizarse con los conceptos de números, operadores y operaciones aritméticas en Python.
+Realizar cálculos básicos.
+Escenario
+Observa el código en el editor: lee un valor flotante, lo coloca en una variable llamada x, e imprime el valor de la variable llamada y. Tu tarea es completar el código para evaluar la siguiente expresión:
+
+3x3 - 2x2 + 3x - 1
+
+El resultado debe ser asignado a y.
+
+Recuerda que la notación algebraica clásica muy seguido omite el operador de multiplicación, aquí se debe de incluir de manera explicita. Nota como se cambia el tipo de dato para asegurarnos de que x es del tipo flotante.
+
+Mantén tu código limpio y legible, y pruébalo utilizando los datos que han sido proporcionados. No te desanimes por no lograrlo en el primer intento. Se persistente y curioso.
+
+
+Prueba de Datos
+Datos de Muestra
+
+x = 0
+x = 1
+x = -1
+
+Salida Esperada
+
+y = -1.0
+y = 3.0
+y = -9.0
+
+Codigo:
+# codifica aquí tus datos de prueba.
+x=-1
+x = float(x)
+# escribe tu código aquí.
+y=(3*x**3)-(2*x**2)+(3*x-1)
+print("y =", y)
+
+RESUMEN
+Puntos Clave
+
+1. Una variable es una ubicación nombrada reservada para almacenar valores en la memoria. Una variable es creada o inicializada automáticamente cuando se le asigna un valor por primera vez.
+
+2. Cada variable debe de tener un nombre único - un identificador. Un nombre valido debe ser aquel que no contiene espacios, debe comenzar con un guion bajo (_), o una letra, y no puede ser una palabra reservada de Python. El primer carácter puede estar seguido de guiones bajos, letras, y dígitos. Las variables en Python son sensibles a mayúsculas y minúsculas.
+
+3. Python es un lenguaje de tipo dinámico, lo que significa que no se necesita declarar variables en él. Para asignar valores a las variables, se utiliza simplemente el operador de asignación, es decir el signo de igual (=) por ejemplo, var = 1.
+
+4. También es posible utilizar operadores de asignación compuesta (operadores abreviados) para modificar los valores asignados a las variables, por ejemplo, var += 1, or var /= 5 * 2.
+
+5. Se les puede asignar valores nuevos a variables ya existentes utilizando el operador de asignación o un operador abreviado:
+
+var = 2
+print(var)
+
+var = 3
+print(var)
+
+var += 1
+print(var)
+
+6. Se puede combinar texto con variables empleado el operador +, y utilizar la función print() para mostrar o imprimir los resultados, por ejemplo:
+
+var = "007"
+print("Agente " + var)
+
+
+
+
+Ejercicio 1
+
+¿Cuál es el resultado del siguiente fragmento de código?
+
+var = 2
+var = 3
+print(var)
+
+Revisar
+Ejercicio 2
+
+¿Cuáles de los siguientes nombres de variables son ilegales en Python?
+
+my_var
+m
+101
+averylongvariablename
+m101
+m 101
+Del
+del
+
+Revisar
+my_var
+m
+101 # incorrecto (comienza con un digito)
+averylongvariablename
+m101
+m 101 # incorrecto (contiene un espacio)
+Del
+del # incorrecto (es una palabra clave)
+
+Ejercicio 3
+
+¿Cuál es el resultado del siguiente fragmento de código?
+
+a = '1'
+b = "1"
+print(a + b)
+
+Revisar
+11
+
+Ejercicio 4
+
+¿Cuál es el resultado del siguiente fragmento de código?
+
+a = 6
+b = 3
+a /= 2 * b
+print(a)
+
+Revisar
+1.0
+
+2 * b = 6
+a = 6 → 6 / 6 = 1.0

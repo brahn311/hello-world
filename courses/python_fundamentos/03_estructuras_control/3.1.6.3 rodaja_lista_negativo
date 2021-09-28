@@ -1,0 +1,26 @@
+Rodajas - índices negativos
+Observa el fragmento de código a continuación:
+
+miLista[inicio:fin]
+
+Para repetir:
+
+inicio es el índice del primer elemento incluido en la rodaja.
+fin es el índice del primer elemento no incluido en la rodaja.
+
+Así es como los índices negativos funcionan con la rodaja:
+
+miLista = [10, 8, 6, 4, 2]
+nuevaLista = miLista [1:-1]
+print(nuevaLista)
+
+El resultado del fragmento es: [8, 6, 4].
+
+
+Si elinicio especifica un elemento que se encuentra más allá del descrito por fin (desde el punto de vista inicial de la lista), la rodaja estará vacía:
+
+miLista = [10, 8, 6, 4, 2]
+nuevaLista = miLista [-1:1]
+print(nuevaLista)
+
+La salida del fragmento es: [].

@@ -1,0 +1,34 @@
+El while y la opción else
+Ambos ciclos, while y for, tienen una característica interesante (y rara vez se usa).
+
+Te mostraremos cómo funciona: intenta juzgar por ti mismo si es utilizable.
+
+En otras palabras, trata de convencerte si la función es valiosa y útil, o solo es azúcar sintáctica.
+
+Echa un vistazo al fragmento en el editor. Hay algo extraño al final: la palabra clave else.
+
+i = 1
+while i < 5:
+    print (i)
+    i += 1
+else:
+    print("else:", i)
+
+Como pudiste haber sospechado, los ciclos también pueden tener la rama else, como los if.
+
+La rama else del ciclo siempre se ejecuta una vez, independientemente de si el ciclo ha entrado o no en su cuerpo .
+
+¿Puedes adivinar la salida? Ejecuta el programa para comprobar si tenías razón.
+
+Modifica el fragmento un poco para que el ciclo no tenga oportunidad de ejecutar su cuerpo ni una sola vez:
+
+i = 5
+while i < 5:
+    print(i)
+    i += 1
+else:
+    print("else:", i)
+
+El estado de while es Falso al principio, ¿puedes verlo?
+
+Ejecuta y prueba el programa, y verifica si se ha ejecutado o no la rama else.

@@ -1,0 +1,28 @@
+Funciones Simples: Calcular el IMC
+Definamos una función que calcula el Índice de Masa Corporal (IMC).
+
+BMI equals weight in kilograms divided by height in meters squared
+
+Como puedes observar, la formula ocupa dos valores:
+
+peso (originalmente en kilogramos)
+altura (originalmente en metros)
+La nueva función tendrá dos parámetros. Su nombre será imc, pero si prefieres utilizar otro nombre, adelante.
+
+Codifiquemos la función.
+
+La función esta completa aquí abajo (y en la ventana de editor):
+
+def imc(peso, altura):
+    return peso / altura ** 2
+
+print(imc(52.5, 1.65))
+
+El resultado del ejemplo anterior es el siguiente:
+
+19.283746556473833
+
+La función hace lo que deseamos, pero es un poco sencilla - asume que los valores de ambos parámetros son significativos. Se debe comprobar que son confiables.
+
+Vamos a comprobar ambos y regresar None si cualquiera de los dos es incorrecto.
+

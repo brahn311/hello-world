@@ -1,0 +1,45 @@
+Agregar elementos a una lista: append() e insert()
+Un nuevo elemento puede ser añadido al final de la lista existente:
+
+lista.append(valor)
+
+Dicha operación se realiza mediante un método llamado append(). Toma el valor de su argumento y lo coloca al final de la lista que posee el método.
+
+La longitud de la lista aumenta en uno.
+
+El método insert() es un poco más inteligente: puede agregar un nuevo elemento en cualquier lugar de la lista, no solo al final.
+
+lista.insert(ubicación,valor)  
+
+Toma dos argumentos:
+
+El primero muestra la ubicación requerida del elemento a insertar. Nota: todos los elementos existentes que ocupan ubicaciones a la derecha del nuevo elemento (incluido el que está en la posición indicada) se desplazan a la derecha, para hacer espacio para el nuevo elemento.
+El segundo es el elemento a insertar.
+
+Observa el código en el editor. Ve como usamos los métodos append() e insert(). Presta atención a lo que sucede después de usar insert(): el primer elemento anterior ahora es el segundo, el segundo el tercero, y así sucesivamente.
+
+numeros = [111, 7, 2, 1]
+print(len(numeros))
+print(numeros)
+
+###
+
+numeros.append(4)
+
+print(len(numeros))
+print(numeros)
+
+###
+
+numeros.insert(0,222)
+print(len(numeros))
+print(numeros)
+
+#
+
+Agrega el siguiente fragmento después de la última línea de código en el editor:
+
+numeros.insert(1,333)
+
+Imprime el contenido de la lista final en la pantalla y ve que sucede. El fragmento de código sobre el fragmento de código inserta 333 en la lista, por lo que es el segundo elemento. El segundo elemento anterior se convierte en el tercero, el tercero en el cuarto, y así sucesivamente.
+

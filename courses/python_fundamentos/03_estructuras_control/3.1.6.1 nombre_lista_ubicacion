@@ -1,0 +1,32 @@
+La vida al interior de las listas
+Ahora queremos mostrarte una característica importante y muy sorprendente de las listas, que las distingue de las variables ordinarias.
+
+Queremos que lo memorices, ya que puede afectar tus programas futuros y causar graves problemas si se olvida o se pasa por alto.
+
+Echa un vistazo al fragmento en el editor.
+
+lista1 = [1]
+lista2 = lista1
+lista1[0] = 2
+print(lista2)
+
+El programa:
+
+Crea una lista de un elemento llamada lista1.
+La asigna a una nueva lista llamada lista2.
+Cambia el único elemento de lista1.
+Imprime la lista2.
+La parte sorprendente es el hecho de que el programa mostrará como resultado: [2], no [1], que parece ser la solución obvia.
+
+
+Las listas (y muchas otras entidades complejas de Python) se almacenan de diferentes maneras que las variables ordinarias (escalares).
+
+Se podría decir que:
+
+El nombre de una variable ordinaria es el nombre de su contenido.
+El nombre de una lista es el nombre de una ubicación de memoria donde se almacena la lista.
+Lee estas dos líneas una vez más, la diferencia es esencial para comprender de que vamos a hablar a continuación.
+
+La asignación: lista2 = lista1copia el nombre de la matriz, no su contenido. En efecto, los dos nombres (lista1 y lista2) identifican la misma ubicación en la memoria de la computadora. Modificar uno de ellos afecta al otro, y viceversa.
+
+¿Cómo te las arreglas con eso?

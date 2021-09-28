@@ -1,0 +1,75 @@
+El funcionamiento de las funciones
+
+Cuando se invoca una función, Python recuerda el lugar donde esto ocurre y salta hacia dentro de la función invocada.
+El cuerpo de la función es entonces ejecutado.
+Al llegar al final de la función, Python regresa al lugar inmediato después de donde ocurrió la invocación.
+
+Existen dos consideraciones muy importantes, la primera de ella es:
+
+No se debe invocar una función antes de que se haya definido.
+
+Recuerda: Python lee el código de arriba hacia abajo. No va a adelantarse en el código para determinar si la función invocada esta definida mas adelante, el lugar correcto para definirla es antes de ser invocada.
+
+Se ha insertado un error en el código anterior - ¿Puedes notar la diferencia?
+
+print("Se comienza aquí.")
+mensaje()
+print("Se termina aquí.")
+
+def mensaje():
+    print("Ingresa un valor: ")
+
+Se ha movido la función al final del código. ¿Podrá Python encontrarla cuando la ejecución llegue a la invocación?
+
+No, no podrá. El mensaje de error dirá:
+
+NameError: name 'mensaje' is not defined
+
+No intentes forzar a Python a encontrar funciones que no están definidas en el lugar correcto.
+
+
+
+La segunda consideración es mas sencilla:
+
+Una función y una variable no pueden compartir el mismo nombre.
+
+El siguiente fragmento de código es erróneo:
+
+def mensaje():
+    print("Ingresa un valor: ")
+
+mensaje = 1
+
+El asignar un valor al nombre "mensaje" causa que Python olvide su rol anterior. La función con el nombre de mensaje ya no estará disponible.
+
+Afortunadamente, es posible combinar o mezclar el código con las funciones - no es forzoso colocar todas las funciones al inicio del archivo fuente.
+
+Observa el siguiente código:
+
+print("Se comienza aquí.")
+
+def mensaje():
+    print("Ingresa un valor: ")
+
+mensaje()
+
+print("Se termina aquí.")
+
+Puede verse extraño, pero es completamente correcto, y funciona como se necesita.
+
+
+Regresemos al ejemplo inicial para implementar la función de manera correcta:
+
+def mensaje():
+    print("Ingresa un valor: ")
+
+mensaje()
+a = int(input())
+mensaje()
+b = int(input())
+mensaje()
+c = int(input())
+
+El modificar el mensaje de entrada es ahora sencillo: se puede hacer con solo modificar el código una única vez - dentro del cuerpo de la función.
+
+Abre Sandbox, e inténtalo tu mismo.

@@ -1,0 +1,37 @@
+Efectos y resultados: listas y funciones
+Hay dos preguntas adicionales que deben responderse aquí.
+
+El primero es: ¿Se puede enviar una lista a una función como un argumento?
+
+¡Por supuesto que se puede! Cualquier entidad reconocible por Python puede desempeñar el papel de un argumento de función, aunque debes asegurarte de que la función sea capaz de hacer uso de él.
+
+Entonces, si pasas una lista a una función, la función tiene que manejarla como una lista.
+
+Una función como la siguiente:
+
+def sumaDeLista(lst):
+    sum = 0
+    
+    for elem in lst:
+        sum += elem
+    
+    return sum
+
+y se invoca así:
+
+print(sumaDeLista([5, 4, 3])) 
+
+Regresará 12 como resultado, pero habrá problemas si la invocas de esta manera riesgosa:
+
+print(sumaDeLista(5)) 
+
+La respuesta de Python será la siguiente:
+
+TypeError: 'int' object is not iterable 
+
+Esto se debe al hecho de que el bucle for no puede iterar un solo valor entero.
+
+En cambio usando esta linea no habria error:
+print(sumaDeLista([5]))
+
+Los corchetes indican que ya no es un numero entero, sino una lista de un solo elemento. 

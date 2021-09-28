@@ -1,0 +1,39 @@
+¿Cómo utilizar un tupla?
+Si deseas leer los elementos de una tupla, lo puedes hacer de la misma manera que se hace con las listas.
+
+Observa el código en el editor.
+
+miTupla = (1, 10, 100, 1000)
+
+print(miTupla[0])
+print(miTupla[-1])
+print(miTupla[1:])
+print(miTupla[:-2])
+
+for elem in miTupla:
+    print(elem)
+
+El programa debe de generar la siguiente salida, ejecútalo y comprueba:
+
+1
+1000
+(10, 100, 1000)
+(1, 10)
+1
+10
+100
+1000
+
+Las similitudes pueden ser engañosas - no intentes modificar en contenido de la tupla ¡No es una lista!
+
+Todas estas instrucciones (con excepción de primera) causarán un error de ejecución :
+
+miTupla = (1, 10, 100, 1000)
+
+miTupla.append(10000)
+del miTupla[0]
+miTupla[1] = -10
+
+Este es el mensaje que Python arrojará en la ventana de consola:
+
+AttributeError: 'tuple' object has no attribute 'append'

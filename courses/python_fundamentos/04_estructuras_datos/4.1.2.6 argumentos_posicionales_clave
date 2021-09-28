@@ -1,0 +1,60 @@
+El combinar argumentos posicionales y de palabras clave
+Es posible combinar ambos tipos si se desea, solo hay una regla inquebrantable: se deben colocar primero los argumentos posicionales y después los de palabras clave.
+
+Piénsalo por un momento y entenderás el porque.
+
+Para mostrarte como funciona, se utilizara la siguiente función de tres parámetros:
+
+def suma(a, b, c):
+    print(a, "+", b, "+", c, "=", a + b + c)
+
+Su propósito es el de evaluar y presentar la suma de todos sus argumentos.
+
+La función, al ser invocada de la siguiente manera:
+
+suma(1, 2, 3)
+
+Dará como salida:
+
+1 + 2 + 3 = 6
+
+Hasta ahorita es un ejemplo puro de un argumento posicional.
+
+También, se puede reemplazar la invocación actual por una con palabras clave, como la siguiente:
+
+suma(c = 1, a = 2, b = 3)
+
+El programa dará como salida lo siguiente:
+
+2 + 3 + 1 = 6
+
+Ten presente el orden de los valores.
+
+Ahora intentemos mezclar ambas.
+
+Observa la siguiente invocación de la función:
+
+suma(3, c = 1, b = 2)
+
+Vamos a analizarla:
+
+El argumento (3) para el parametro a es pasado utilizando la manera posicional.
+Los argumentos para c y b son especificados con palabras clave.
+Esto es lo que se verá en la consola:
+
+3 + 2 + 1 = 6
+Se cuidadoso, ten cuidado de no cometer errores. Si se intenta pasar mas de un valor a un argumento, ocurrirá un error y se mostrará lo siguiente:
+
+Observa la siguiente invocación, se le esta asignando dos veces un valor al parámetro a:
+
+suma(3, a = 1, b = 2)
+
+La respuesta de Python es:
+
+TypeError: suma() got multiple values for argument 'a'
+
+Observa el siguiente código. Es un código completamente correcto y funcional, pero no tiene mucho sentido:
+
+suma(4, 3, c = 2)
+
+Todo es correcto, pero el dejar solo un argumento con palabras clave es algo extraño - ¿Qué es lo que opinas?

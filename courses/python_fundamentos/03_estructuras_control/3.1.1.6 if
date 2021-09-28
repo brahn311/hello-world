@@ -1,0 +1,40 @@
+Condiciones y ejecución condicional
+
+Ya sabes como hacer preguntas a Python, pero aún no sabes como hacer un uso razonable de las respuestas. Se debe tener un mecanismo que le permita hacer algo si se cumple una condición, y no hacerlo si no se cumple.
+
+Es como en la vida real: haces ciertas cosas o no cuando se cumple una condición específica, por ejemplo, sales a caminar si el clima es bueno, o te quedas en casa si está húmedo y frío.
+
+Para tomar tales decisiones, Python ofrece una instrucción especial. Debido a su naturaleza y su aplicación, se denomina instrucción condicional (o declaración condicional).
+
+Existen varias variantes de la misma. Comenzaremos con la más simple, aumentando la dificultad lentamente.
+*****
+La primera forma de una declaración condicional, que puede ver a continuación, está escrita de maner0000
+Esta declaración condicional consta de los siguientes elementos, estrictamente necesarios en este orden:
+
+La palabra clave if.
+Uno o más espacios en blanco.
+Una expresión (una pregunta o una respuesta) cuyo valor se interpretar únicamente en términos de True (cuando su valor no sea cero) y False (cuando sea igual a cero).
+Unos dos puntos seguido de una nueva línea.
+Una instrucción con sangría o un conjunto de instrucciones (se requiere absolutamente al menos una instrucción); la sangría se puede lograr de dos maneras: insertando un número particular de espacios (la recomendación es usar cuatro espacios de sangría), o usando el tabulador; nota: si hay mas de una instrucción en la parte con sangría, la sangría debe ser la misma en todas las líneas; aunque puede parecer lo mismo si se mezclan tabuladores con espacios, es importante que todas las sangrías sean exactamente iguales Python 3 no permite mezclar espacios y tabuladores para la sangría.
+
+
+¿Cómo funciona esta declaración?
+
+Si la expresión cierto_o_no representa la verdad (es decir, su valor no es igual a cero),la(s) declaración(es) con sangría se ejecutará.
+Si la expresión cierto_o_no no representa la verdad (es decir, su valor es igual a cero), las declaraciones con sangría se omitirá , y la siguiente instrucción ejecutada será la siguiente al nivel de la sangría original.
+
+En la vida real, a menudo expresamos un deseo:
+
+if el clima es bueno, saldremos a caminar
+
+después, almorzaremos
+
+
+Como puedes ver, almorzar no es una actividad condicional y no depende del clima.
+
+Sabiendo que condiciones influyen en nuestro comportamiento y asumiendo que tenemos las funciones sin parámetros irACaminar() y almorzar(), podemos escribir el siguiente fragmento de código:
+
+if ClimaEsBueno:
+    irAcaminar()
+almorzar()
+nzedddddddddouyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy

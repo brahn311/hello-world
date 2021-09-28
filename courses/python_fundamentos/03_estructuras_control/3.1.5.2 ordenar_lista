@@ -1,0 +1,26 @@
+Ordenando una lista
+¿Cuántos pases necesitamos para ordenar la lista completa?
+
+Resolvamos este problema de la siguiente manera: introducimos otra variable, su tarea es observar si se ha realizado algún intercambio durante el pase o no. Si no hay intercambio, entonces la lista ya está ordenada, y no hay que hacer nada más. Creamos una variable llamada swapped, y le asignamos un valor de False para indicar que no hay intercambios. De lo contrario, se le asignará True.
+
+miLista = [8, 10, 6, 2, 4] # lista para ordenar
+
+for i in range(len(miLista) - 1): # necesitamos (5 - 1) comparaciones
+    if miLista[i] > miLista[i + 1]: # compara elementos adyacentes
+        miLista[i], miLista [i + 1] = miLista[i + 1], miLista[i] # si terminamos aquí significa que tenemos que intercambiar los elementos.
+
+Deberías poder leer y comprender este programa sin ningún problema:
+
+miLista = [8, 10, 6, 2, 4] # lista para ordenar
+swapped = True # lo necesitamos verdadero (True) para ingresar al bucle while
+
+while swapped:
+    swapped = False # no hay swaps hasta ahora
+    for i in range(len(miLista) - 1):
+        if miLista[i] > miLista[i + 1]:
+            swapped= True # ocurrió el intercambio!
+            miLista[i], miLista[i + 1] = miLista[i + 1], miLista[i]
+
+print(miLista)
+
+Ejecuta el programa y pruébalo.

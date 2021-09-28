@@ -1,0 +1,46 @@
+¿Cómo utilizar un diccionario?
+
+dict = {"gato" : "chat", "perro" : "chien", "caballo" : "cheval"}
+numerosTelefono = {'jefe' : 5551234567, 'Suzy' : 22657854310}
+diccionarioVacio = {}
+
+Si deseas obtener cualquiera de los valores, debes de proporcionar una clave válida:
+
+print(dict['gato'])
+print(numerosTelefono['Suzy'])
+
+El obtener el valor de un diccionario es semejante a la indexación, gracias a los corchetes alrededor del valor de la clave.
+
+Nota:
+
+Si una clave es una cadena, se tiene que especificar como una cadena.
+Las claves son sensibles a las mayúsculas y minúsculas: 'Suzy' sería diferente a 'suzy'.
+El fragmento de código da las siguientes salidas:
+
+chat
+5557654321
+
+Ahora algo muy importante: No se puede utilizar una clave que no exista. Hacer algo como lo siguiente:
+
+print(numerosTelefono['presidente'])
+
+Provocará un error de ejecución. Inténtalo.
+
+Afortunadamente, existe una manera simple de evitar dicha situación. El operador in, junto con su acompañante, not in, pueden salvarnos de esta situación.
+
+El siguiente código busca de manera segura palabras en francés:
+
+dict = {"gato" : "chat", "perro" : "chien", "caballo" : "cheval"}
+words = ['gato', 'leon', 'caballo']
+
+for word in words:
+    if word in dict:
+        print(word, "->", dict[word])
+    else:
+        print(word, "no está en el diccionario")
+
+La salida del código es la siguiente:
+
+gato -> chat
+leon no está en el diccionario
+caballo -> cheval

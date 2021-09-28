@@ -1,0 +1,43 @@
+Igualdad: El operador igual a (==)
+El operador == (igual a) compara los valores de dos operandos. Si son iguales, el resultado de la comparación es True. Si no son iguales, el resultado de la comparación es False.
+
+Observa la comparación de igualdad a continuación: ¿Cuál es el resultado de esta operación?
+
+var == 0
+
+Ten en cuenta que no podemos encontrar la respuesta si no sabemos qué valor está almacenado actualmente en la variable (var).
+
+Si la variable se ha cambiado muchas veces durante la ejecución del programa, o si se ingresa su valor inicial desde la consola, Python solo puede responder a esta pregunta en el tiempo de ejecución del programa.
+
+Ahora imagina a un programador que sufre de insomnio, y tiene que contar las ovejas negras y blancas por separado siempre y cuando haya exactamente el doble de ovejas negras que de las blancas.
+
+La pregunta será la siguiente:
+
+ovejasNegras == 2 * ovejasBlancas
+
+Debido a la baja prioridad de el operador == ,la pregunta será tratada como la siguiente:
+
+ovejasNegras == (2 * ovejaBlancas)
+
+Entonces, vamos a practicar la comprensión del operador == - ¿Puedes adivinar la salida del código a continuación?
+
+var = 0 # asignando 0 a var
+print(var == 0)
+
+var = 1 # asignando 1 a var
+print(var == 0)
+
+Ejecuta el código y comprueba si tenías razón.
+
+Desigualdad: el operador no es igual a (!=)
+El operador != (no es igual a) también compara los valores de dos operandos. Aquí está la diferencia: si son iguales, el resultado de la comparación es False. Si no son iguales, el resultado de la comparación es True.
+
+Ahora echa un vistazo a la comparación de desigualdad a continuación: ¿Puedes adivinar el resultado de esta operación?
+
+var = 0 # asignando 0 a var
+print(var != 0)
+
+var = 1 # asignando 1 a var
+print(var != 0)
+
+Ejecuta el código y comprueba si tenías razón.

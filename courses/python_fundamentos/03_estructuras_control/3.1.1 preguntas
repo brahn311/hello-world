@@ -1,0 +1,48 @@
+Preguntas y respuestas
+
+Un programador escribe un programa y el programa hace preguntas.
+
+Una computadora ejecuta el programa y proporciona las respuestas. El programa debe ser capaz de reaccionar de acuerdo con las respuestas recibidas.
+
+Afortunadamente, las computadoras solo conocen dos tipos de respuestas:
+
+Si, es cierto.
+No, esto es falso.
+Nunca obtendrás una respuesta como Déjame pensar ..., no lo sé, o probablemente sí, pero no lo sé con seguridad.
+
+Para hacer preguntas, Python utiliza un conjunto de operadores muy especiales. Revisemos uno tras otro, ilustrando sus efectos en algunos ejemplos simples.
+
+
+Comparación: operador de igualdad
+
+Pregunta: ¿Son dos valores iguales?
+
+Para hacer esta pregunta, se utiliza el == Operador (igual igual).
+
+No olvides esta importante distinción:
+
+= es un operador de asignación, por ejemplo, a = b assigna a la varable a el valor de b.
+== es una pregunta ¿Son estos valores iguales?; a == b compara a y b.
+Es un operador binario con enlazado a la izquierda. Necesita dos argumentos y verifica si son iguales.
+
+Ejercicios
+
+Ahora vamos a hacer algunas preguntas. Intenta adivinar las respuestas.
+
+Pregunta #1: ¿Cuál es el resultado de la siguiente comparación?
+
+2 == 2    Revisar
+
+True (verdadero) - por supuesto, 2 es igual a 2. Python responderá True (Recuerda este par de literales predefinidos, True y False - También son palabras clave de Python).
+
+Pregunta # 2: ¿Cuál es el resultado de la siguiente comparación?
+
+2 == 2.    Revisar
+
+Esta pregunta no es tan fácil como la primera. Por suerte, Python es capaz de convertir el valor entero en su equivalente real, y en consecuencia, la respuesta es True
+
+Pregunta # 3: ¿Cuál es el resultado de la siguiente comparación?
+
+1 == 2    Revisar
+
+Esto debería ser fácil. La respuesta será (o mejor dicho, siempre es) False.

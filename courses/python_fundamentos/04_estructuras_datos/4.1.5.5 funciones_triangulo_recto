@@ -1,0 +1,34 @@
+Algunas funciones simples: evaluando el campo de un triángulo
+También es posible evaluar el campo de un triángulo. La Formula de Heron será útil aquí:
+
+s = (a + b + c) / 2
+A = the square root of s(s - a)(s - b)(s - c)
+Vamos a emplear el operador de exponenciación para calcular la raíz cuadrada - puede ser extraño, pero funciona.
+
+La raíz cuadrada de x = x a la potencia de 1/2
+
+Este es el código resultante:
+
+def esUnTriangulo(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+def heron(a, b, c):
+    p = (a + b + c) / 2
+    return (p * (p - a) * (p - b) * (p - c)) ** 0.5
+
+def campoTriangulo(a, b, c):
+    if not esUnTriangulo(a, b, c):
+        return None
+    return heron(a, b, c)
+
+print(campoTriangulo(1., 1., 2. ** .5))
+
+Lo probaremos con un triángulo rectángulo la mitad de un cuadrado y con un lado igual a 1. Esto significa que su campo debe ser igual a 0.5.
+
+Es extraño pero el código produce la siguiente salida:
+
+0.49999999999999983
+
+Es muy cercano a 0.5, pero no es exactamente 0.5,¿Que significa?, ¿Es un error?
+
+No, no lo es. Son solo los cálculos de valores punto flotantes. Pronto se discutirá el tema.

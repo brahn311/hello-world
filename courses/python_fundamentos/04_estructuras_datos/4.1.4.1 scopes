@@ -1,0 +1,23 @@
+Las funciones y sus alcances (scopes)
+Comencemos con una definición:
+
+El alcance de un nombre (por ejemplo, el nombre de una variable) es la parte del código donde el nombre es reconocido correctamente.
+
+Por ejemplo, el alcance del parámetro de una función es la función en si misma. El parámetro es inaccesible fuera de la función.
+
+
+Vamos a revisarlo. Observa el código en el editor. ¿Que ocurrirá cuando se ejecute?
+
+def scopeTest():
+    x = 123
+
+scopeTest()
+print(x)
+
+El programa no correrá. El mensaje de error dirá:
+
+NameError: name 'x' is not defined
+
+Esto era de esperarse.
+
+Vamos a conducir algunos experimentos para mostrar como es que Python define los alcances y como los puedes utilizar para tu beneficio.

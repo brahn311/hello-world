@@ -1,0 +1,68 @@
+Expresiones lógicas
+Creemos una variable llamada var y asignémosle 1. Las siguientes condiciones son equivalentes a pares:
+
+print(var > 0)
+print(not (var <= 0))
+
+print(var != 0)
+print(not (var == 0))
+
+Puedes estar familiarizado con las leyes de De Morgan. Dicen que:
+
+La negación de una conjunción es la separación de las negaciones.
+
+La negación de una disyunción es la conjunción de las negaciones.
+
+
+Escribamos lo mismo usando Python:
+
+not (p and q) == (not p) or (not q) 
+not (p or q) == (not p) and (not q)
+
+Observa como se han utilizado los paréntesis para codificar las expresiones: las colocamos allí para mejorar la legibilidad.
+
+Deberíamos agregar que ninguno de estos operadores de dos argumentos se puede usar en la forma abreviada conocida como op=. Vale la pena recordar esta excepción.
+
+Valores lógicos vs. bits individuales
+Los operadores lógicos toman sus argumentos como un todo, independientemente de cuántos bits contengan. Los operadores solo conocen el valor: cero (cuando todos los bits se restablecen) significa False; no cero (cuando se establece al menos un bit) significa True.
+
+El resultado de sus operaciones es uno de estos valores: False o True. Esto significa que este fragmento de código asignará el valor True a la variable j si i no es cero; de lo contrario, será False.
+
+i = 1
+j = not not i
+
+Operadores bitwise
+Sin embargo, hay cuatro operadores que le permiten manipular bits de datos individuales. Se denominan operadores bitwise.
+
+Cubren todas las operaciones que mencionamos anteriormente en el contexto lógico, y un operador adicional. Este es el operador xor (como en o exclusivo ), y se denota como ^ (signo de intercalación).
+
+Aquí están todos ellos:
+
+ &  (ampersand) - conjunción a nivel de bits.
+ |  (barra vertical) - disyunción a nivel de bits.
+ ~  (tilde) - negación a nivel de bits.
+ ^  (signo de intercalación) - exclusivo a nivel de bits o (xor).
+
+Operaciones bitwise (&, |, y ^)
+Arg A|Arg B|Arg B & Arg B|Arg A I Arg B|Arg A ^ Arg B 
+0	0	0	0	0
+0	1	0	1	1
+1	0	0	1	1
+1	1	1	1	0
+
+Operaciones bitwise (~)
+Arg	~Arg
+0	1
+1	0
+
+Hagámoslo más fácil:
+
+ &  requieres exactamente dos  1  s para proporcionar  1  como resultado.
+ |  requiere al menos un  1  para proporcionar  1  como resultado.
+ ^  requiere exactamente un  1  para proporcionar  1  como resultado.
+
+Agreguemos un comentario importante: los argumentos de estos operadores deben ser enteros. No debemos usar flotantes aquí.
+
+La diferencia en el funcionamiento de los operadores lógicos y de bits es importante: los operadores lógicos no penetran en el nivel de bits de su argumento. Solo les interesa el valor entero final.
+
+Los operadores bitwise son más estrictos: tratan con cada bit por separado. Si asumimos que la variable entera ocupa 64 bits (lo que es común en los sistemas informáticos modernos), puede imaginar la operación a nivel de bits como una evaluación de 64 veces del operador lógico para cada par de bits de los argumentos. Su analogía es obviamente imperfecta, ya que en el mundo real todas estas 64 operaciones se realizan al mismo tiempo (simultáneamente).

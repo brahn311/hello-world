@@ -1,0 +1,50 @@
+Lógica de computadora
+¿Te has dado cuenta de que las condiciones que hemos usado hasta ahora han sido muy simples, por no decir, bastante primitivas? Las condiciones que utilizamos en la vida real son mucho más complejas. Veamos esta oración:
+
+Si tenemos tiempo libre, y el clima es bueno, saldremos a caminar.
+
+
+Hemos utilizado la conjunción and (y), lo que significa que salir a caminar depende del cumplimiento simultáneo de estas dos condiciones. En el lenguaje de la lógica, tal conexión de condiciones se denomina conjunción. Y ahora otro ejemplo:
+
+Si estás en el centro comercial o estoy en el centro comercial, uno de nosotros le comprará un regalo a mamá.
+
+
+La aparición de la palabra or (o) significa que la compra depende de al menos una de estas condiciones. En lógica, este compuesto se llama una disyunción.
+
+Está claro que Python debe tener operadores para construir conjunciones y disyunciones. Sin ellos, el poder expresivo del lenguaje se debilitaría sustancialmente. Se llaman operadores lógicos.
+
+and
+Un operador de conjunción lógica en Python es la palabra y. Es un operador binario con una prioridad inferior a la expresada por los operadores de comparación. Nos permite codificar condiciones complejas sin el uso de paréntesis como este:
+
+contador > 0 and valor == 100 
+
+El resultado proporcionado por el operador and se puede determinar sobre la base de la tabla de verdad.
+
+Si consideramos la conjunción de A and B, el conjunto de valores posibles de argumentos y los valores correspondientes de conjunción se ve de la siguiente manera:
+
+
+Argumento A 	Argumento B 	A y B 
+False	False	False
+False	True	False
+True	False	False
+True	True	True
+
+or
+Un operador de disyunción es la palabra or. Es un operador binario con una prioridad más baja que and (al igual que + en comparación con *). Su tabla de verdad es la siguiente:
+
+
+Argumento A 	Argumento B 	A or B 
+False	False	False
+False	True	True
+True	False	True
+True	True	True
+
+not
+Además, hay otro operador que se puede aplicar para condiciones de construcción. Es un operador unario que realiza una negación lógica. Su funcionamiento es simple: convierte la verdad en falso y lo falso en verdad.
+
+Este operador se escribe como la palabra not, y su prioridad es muy alta: igual que el unario + y -. Su tabla de verdad es simple:
+
+
+Argumento	not Argumento 
+False	True
+True	False

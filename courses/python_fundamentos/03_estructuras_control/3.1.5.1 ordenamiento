@@ -1,0 +1,102 @@
+Ordenamiento Burbuja
+Ahora que puedes hacer malabarismos con los elementos de las listas, es hora de aprender como ordenarlos. Se han inventado muchos algoritmos de clasificación, que difieren mucho en velocidad, así como en complejidad. Vamos a mostrar un algoritmo muy simple, fácil de entender, pero desafortunadamente, tampoco es muy eficiente. Se usa muy raramente, y ciertamente no para listas extensas.
+
+Digamos que una lista se puede ordenar de dos maneras:
+
+Ascendente (o más precisamente, no descendente): si en cada par de elementos adyacentes, el primer elemento no es mayor que el segundo.
+Descendente (o más precisamente, no ascendente): si en cada par de elementos adyacentes, el primer elemento no es menor que el segundo.
+En las siguientes secciones, ordenaremos la lista en orden ascendente, de modo que los números se ordenen de menor a mayor.
+
+Aquí está la lista:
+
+8
+10
+6
+2
+4
+Intentaremos utilizar el siguiente enfoque: tomaremos el primer y el segundo elemento y los compararemos; si determinamos que están en el orden incorrecto (es decir, el primero es mayor que el segundo), los intercambiaremos; Si su orden es válido, no haremos nada. Un vistazo a nuestra lista confirma lo último: los elementos 01 y 02 están en el orden correcto, así como 8<10.
+
+Ahora observa el segundo y el tercer elemento. Están en las posiciones equivocadas. Tenemos que intercambiarlos:
+
+8
+6
+10
+2
+4
+
+Vamos más allá y observemos los elementos tercero y cuarto. Una vez más, esto no es lo que se supone que es. Tenemos que intercambiarlos:
+
+8
+6
+2
+10
+4
+
+Ahora comprobemos los elementos cuarto y quinto. Si, ellos también están en las posiciones equivocadas. Ocurre otro intercambio:
+
+8
+6
+2
+4
+10
+
+El primer paso a través de la lista ya está terminado. Todavía estamos lejos de terminar nuestro trabajo, pero algo curioso ha sucedido mientras tanto. El elemento más grande, 10, ya ha llegado al final de la lista. Ten en cuenta que este es el lugar deseado para el. Todos los elementos restantes forman un lío pintoresco, pero este ya está en su lugar.
+
+
+
+Ahora, por un momento, intenta imaginar la lista de una manera ligeramente diferente, es decir, de esta manera:
+
+10
+4
+2
+6
+8
+
+Observa - El 10 está en la parte superior. Podríamos decir que flotó desde el fondo hasta la superficie, al igual que las burbujas en una copa de champán. El método de clasificación deriva su nombre de la misma observación: se denomina ordenamiento de burbuja.
+
+Ahora comenzamos con el segundo paso a través de la lista. Miramos el primer y el segundo elemento, es necesario un intercambio:
+
+6
+8
+2
+4
+10
+
+Tiempo para el segundo y tercer elemento: también tenemos que intercambiarlos:
+
+6
+2
+8
+4
+10
+
+Ahora el tercer y cuarto elementos, y la segunda pasada, se completa, ya que 8 ya está en su lugar:
+
+6
+2
+4
+8
+10
+
+Comenzamos el siguiente pase inmediatamente. Observe atentamente el primer y el segundo elemento: se necesita otro cambio:
+
+2
+6
+4
+8
+10
+
+Ahora 6 necesita ir a su lugar. Cambiamos el segundo y el tercer elemento:
+
+2
+4
+6
+8
+10
+
+La lista ya está ordenada. No tenemos nada más que hacer. Esto es exactamente lo que queremos.
+
+Como puedes ver, la esencia de este algoritmo es simple: comparamos los elementos adyacentes y, al intercambiar algunos de ellos, logramos nuestro objetivo.
+
+Codifiquemos en Python todas las acciones realizadas durante un solo paso a través de la lista, y luego consideraremos cuántos pases necesitamos para realizarlo. No hemos explicado esto hasta ahora, pero lo haremos pronto.
+

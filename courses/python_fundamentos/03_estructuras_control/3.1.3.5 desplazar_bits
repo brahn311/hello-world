@@ -1,0 +1,59 @@
+Desplazamiento izquierdo binario y desplazamiento derecho binario
+Python ofrece otra operación relacionada con los bits individuales: shifting. Esto se aplica solo a los valores de número entero, y no debe usar flotantes como argumentos para ello.
+
+Ya aplicas esta operación muy a menudo y muy inconscientemente. ¿Cómo multiplicas cualquier número por diez? Echa un vistazo:
+
+12345 × 10 = 123450 
+
+Como puede ver, multiplicar por diez es de hecho un desplazamiento de todos los dígitos a la izquierda y llenar el vacío resultante con cero.
+
+¿División entre diez? Echa un vistazo:
+
+12340 ÷ 10 = 1234 
+
+Dividir entre diez no es más que desplazar los dígitos a la derecha.
+
+La computadora realiza el mismo tipo de operación, pero con una diferencia: como dos es la base para los números binarios (no 10), desplazar un valor un bit a la izquierda corresponde a multiplicarlo por dos ; respectivamente, desplazar un bit a la derecha es como dividir entre dos (observe que se pierde el bit más a la derecha).
+
+Los operadores de cambio en Python son un par de dígrafos: < < y > >, sugiriendo claramente en qué dirección actuará el cambio.
+
+valor << bits
+valor >> bits 
+
+El argumento izquierdo de estos operadores es un valor entero cuyos bits se desplazan. El argumento correcto determina el tamaño del turno.
+
+Esto demuestra que esta operación ciertamente no es conmutativa.
+
+La prioridad de estos operadores es muy alta. Los verás en la tabla de prioridades actualizada, que te mostraremos al final de esta sección.
+
+Echa un vistazo a los cambios en la ventana del editor.
+
+var = 17
+varRight = var >> 1
+varLeft = var << 2
+print(var, varLeft, varRight)
+
+La invocación final de print() produce el siguiente resultado:
+
+17 68 8 
+
+Nota:
+
+17 // 2 → 8 (desplazarse hacia la derecha en un bit equivale a la división de enteros en dos)
+17 * 4 → 68 (desplazarse hacia la izquierda dos bits es lo mismo que multiplicar números enteros por cuatro).
+
+Y aquí está la tabla de prioridades actualizada , que contiene todos los operadores presentados hasta ahora:
+
+Prioridad	Operador	
+1	! ~ (tipo) ++ -- + - 	unario
+2	**	
+3	 * / % 	
+4	 + - 	binario
+5	 << >> 	
+6	 <<=>> = 	
+7	 == != 	
+8	&	
+9	|	
+10	&&	
+11	||	
+12	= += -= *= /= %= &= ^= |= >>= <<=

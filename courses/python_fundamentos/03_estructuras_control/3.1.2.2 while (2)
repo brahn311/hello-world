@@ -1,0 +1,70 @@
+El ciclo(bucle) while: más ejemplos
+
+Veamos otro ejemplo utilizando el ciclo while. Sigue los comentarios para descubrir la idea y la solución.
+
+# programa que lee una secuencia de números
+# y cuenta cuántos números son pares y cuántos son impares
+# programa termina cuando se ingresa cero
+
+numerosImpares = 0
+numerosPares = 0
+
+# lee el primer número
+numero = int (input ("Introduce un número o escriba 0 para detener:"))
+
+# 0 termina la ejecución
+while numero != 0:
+    # verificar si el número es impar
+    if numero % 2 == 1:
+        # aumentar el contador de números impares
+        numerosImpares += 1
+    else:
+        # aumentar el contador de números pares
+        numerosPares += 1
+    # lee el siguiente número
+    numero = int (input ("Introduce un número o escriba 0 para detener:"))
+
+# imprimir resultados
+print("Números impares: ", numerosImpares)
+print("Números pares: ", numerosPares)
+
+
+Ciertas expresiones se pueden simplificar sin cambiar el comportamiento del programa.
+
+Intenta recordar cómo Python interpreta la verdad de una condición y ten en cuenta que estas dos formas son equivalentes:
+
+while numero != 0: y while numero:
+
+La condición que verifica si un número es impar también puede codificarse en estas formas equivalentes:
+
+if numero % 2 == 1: e if numero % 2:
+
+
+Usando una variable contador para salir de un ciclo
+Observa el fragmento de código a continuación:
+
+contador = 5
+while contador != 0:
+    print("Dentro del ciclo: ", contador)
+    contador -= 1
+print("Fuera del ciclo", contador)
+
+
+Este código está destinado a imprimir la cadena "Dentro del ciclo" y el valor almacenado en la variable contador durante un ciclo dado exactamente cinco veces. Una vez que la condición se haya cumplido (la variable contador ha alcanzado 0), se sale del ciclo y aparece el mensaje "Fuera del ciclo". así como el valor almacenado en contador se imprime.
+
+Pero hay una cosa que se puede escribir de forma más compacta: la condición del ciclo while.
+
+¿Puedes ver la diferencia?
+
+contador=5
+while contador:
+    print("Dentro del ciclo.", contador)
+    contador - = 1
+print("Fuera del ciclo", contador)
+
+
+¿Es más compacto que antes? Un poco. ¿Es más legible? Eso es discutible.
+
+RECUERDA
+
+No te sientas obligado a codificar tus programas de una manera que siempre sea la más corta y la más compacta. La legibilidad puede ser un factor más importante. Manten tu código listo para un nuevo programador.

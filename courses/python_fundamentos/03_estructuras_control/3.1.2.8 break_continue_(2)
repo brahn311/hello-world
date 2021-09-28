@@ -1,0 +1,47 @@
+Las declaraciones break y continue: más ejemplos
+Regresemos a nuestro programa que reconoce el más grande entre los números ingresados. Lo convertiremos dos veces, usando las instrucciones de break y continue.
+
+Analiza el código y determina como usarías alguno de ellos.
+
+La variante break va aquí:
+
+numeroMayor = -99999999
+contador = 0
+
+while True:
+    numero = int (input ("Ingresa un número o escribe -1 para finalizar el programa:"))
+    if numero == -1:
+        break
+    contador = 1
+    if numero > numeroMayor:
+        numeroMayor = numero
+
+if contador != 0:
+    print("El número más grande es", numeroMayor)
+else:
+    print("No ha ingresado ningún número") 
+
+Ejecútalo, pruébalo y experimenta con él.
+
+Y ahora la variante continue:
+
+numeroMayor = -99999999
+contador = 0
+
+numero = int (input("Ingresa un número o escribe -1 para finalizar el programa:"))
+
+while numero != -1:
+    if numero == -1:
+        continue
+    contador = 1
+
+    if numero > numeroMayor:
+        numeroMayor = numero
+    numero = int (input ("Ingresa un número o escribe -1 para finalizar el programa:"))
+
+if contador:
+    print("El número más grande es", numeroMayor)
+else:
+    print("No ha ingresado ningún número") 
+
+Otra vez: ejecútalo, pruébalo y experimenta con él.

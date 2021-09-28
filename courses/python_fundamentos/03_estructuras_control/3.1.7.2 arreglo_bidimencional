@@ -1,0 +1,28 @@
+Listas dentro de listas: arreglos bidimensionales
+Supongamos también que un símbolo predefinido denominado EMPTY designa un campo vacío en el tablero de ajedrez.
+
+Entonces, si queremos crear una lista de listas que representan todo el tablero de ajedrez, se puede hacer de la siguiente manera:
+
+tablero  = []
+
+for i in range(8):
+    fila = [EMPTY for i in range(8)]
+    tablero.append(fila)
+
+Nota:
+
+La parte interior del bucle crea una fila que consta de ocho elementos(cada uno de ellos es igual a EMPTY) y lo agrega a la lista del tablero.
+La parte exterior se repite ocho veces.
+En total, la lista tablero consta de 64 elementos (todos iguales a EMPTY).
+Este modelo imita perfectamente el tablero de ajedrez real, que en realidad es una lista de elementos de ocho elementos, todos ellos en filas individuales. Resumamos nuestras observaciones:
+
+Los elementos de las filas son campos, ocho de ellos por fila.
+Los elementos del tablero de ajedrez son filas, ocho de ellos por tablero de ajedrez.
+La variable tablero ahora es un arreglo bidimensional. También se le llama, por analogía a los términos algebraicos, una matriz.
+
+
+Como las listas de comprensión puede ser anidadas, podemos acortar la creación del tablero de la siguiente manera:
+
+tablero = [[EMPTY for i in range(8)] for j in range(8)]
+
+La parte interna crea una fila, y la parte externa crea una lista de filas.

@@ -1,0 +1,213 @@
+¿Qué son las Variables?
+Es justo que Python nos permita codificar literales, las cuales contengan valores numéricos y cadenas.
+
+Ya hemos visto que se pueden hacer operaciones aritméticas con estos números: sumar, restar, etc. Esto se hará una infinidad de veces en un programa.
+
+Pero es normal preguntar como es que se pueden almacenar los resultados de estas operaciones, para poder emplearlos en otras operaciones, y así sucesivamente.
+
+¿Cómo almacenar los resultados intermedios, y después utilizarlos de nuevo para producir resultados subsecuentes?
+
+Python ayudará con ello. Python ofrece "cajas" (contenedores) especiales para este propósito, estas cajas son llamadas variables - el nombre mismo sugiere que el contenido de estos contenedores puede variar en casi cualquier forma.
+
+¿Cuáles son los componentes o elementos de una variable en Python?
+
+Un nombre.
+Un valor (el contenido del contenedor).
+Comencemos con lo relacionado al nombre de la variable.
+
+Las variables no aparecen en un programa automáticamente. Como desarrollador, tu debes decidir cuantas variables deseas utilizar en tu programa.
+
+También las debes de nombrar.
+
+
+Si se desea nombrar una variable, se deben seguir las siguientes reglas:
+
+El nombre de la variable debe de estar compuesto por MAYUSCULAS, minúsculas, dígitos, y el carácter _ (guion bajo).
+El nombre de la variable debe comenzar con una letra.
+El carácter guion bajo es considerado una letra.
+Las mayúsculas y minúsculas se tratan de forma distinta (un poco diferente que en el mundo real - Alicia y ALICIA son el mismo nombre, pero en Python son dos nombres de variable distintos, subsecuentemente, son dos variables diferentes).
+El nombre de las variables no pueden ser igual a alguna de las palabras reservadas de Python (se explicará más de esto pronto).
+
+Nombres correctos e incorrectos de variables
+Nota que la misma restricción aplica a los nombres de funciones.
+
+Python no impone restricciones en la longitud de los nombres de las variables, pero eso no significa que un nombre de variable largo sea mejor que uno corto.
+
+Aquí se muestran algunos nombres de variable que son correctos, pero que no siempre son convenientes:
+
+MiVariable, i, t34, Tasa_Cambio, contador, DiasParaNavidad, ElNombreEsTanLargoQueSeCometeranErroresConEl, _.
+
+
+Además, Python permite utilizar no solo las letras latinas, sino caracteres específicos de otros idiomas que utilizan otros alfabetos.
+
+Estos nombres de variables también son correctos:
+
+Adiós_Señora, sûr_la_mer, Einbahnstraße, переменная.
+
+
+Ahora veamos algunos nombres incorrectos:
+
+10t (no comienza con una letra), Tasa Cambio (contiene un espacio).
+
+
+Palabras Clave
+Observa las palabras que juegan un papel muy importante en cada programa de Python.
+
+['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+Son llamadas palabras clave o (mejor dicho) palabras reservadas. Son reservadas porque no se deben utilizar como nombres: ni para variables, ni para funciones, ni para cualquier otra cosa que se desee crear.
+
+El significado de la palabra reservada está predefinido, y no debe cambiar.
+
+Afortunadamente, debido al hecho de que Python es sensible a mayúsculas y minúsculas, cualquiera de estas palabras se pueden modificar cambiando una o varias letras de mayúsculas a minúsculas o viceversa, creando una nueva palabra, la cual no esta reservada.
+
+Por ejemplo - no se puede nombrar a la variable así:
+
+import
+
+No se puede tener una variable con ese nombre, esta prohibido, pero se puede hacer lo siguiente:
+
+Import
+
+Estas palabras podrían parecer un misterio ahorita, pero pronto se aprenderá acerca de su significado.
+
+Creando variables
+¿Qué se puede poner dentro de una variable?
+
+Cualquier cosa.
+
+Se puede utilizar una variable para almacenar cualquier tipo de los valores que ya se han mencionado, y muchos mas de los cuales aun no se han explicado.
+
+El valor de la variable en lo que se ha puesto dentro de ella. Puede variar tanto como se necesite o requiera. El valor puede ser entero, después flotante, y eventualmente ser una cadena.
+
+Hablemos de dos cosas importantes - como son creadas las variables, y como poner valores dentro de ellas (o mejor dicho, como dar o pasarles valores).
+
+RECUERDA
+
+Una variable se crea cuando se le asigna un valor. A diferencia de otros lenguajes de programación, no es necesario declararla.
+
+Si se le asigna cualquier valor a una variable no existente, la variable será automáticamente creada. No se necesita hacer algo más.
+
+La creación (o su sintaxis) es muy simple: solo utiliza el nombre de la variable deseada, después el signo de igual (=) y el valor que se desea colocar dentro de la variable.
+
+
+
+El concepto de 'se puede poner lo que sea dentro de la variable'
+
+Observa el siguiente fragmento de código:
+
+var = 1
+print(var)
+
+Consiste de dos simples instrucciones:
+
+La primera crea una variable llamada var, y le asigna un literal con un valor entero de 1.
+La segunda imprime el valor de la variable recientemente creada en la consola.
+
+Nota: print() tiene una función más â puede manejar variables también. ¿Puedes predecir cual será la salida (resultado) del código?
+
+Revisar
+1
+
+Utilizando variables
+Se tiene permitido utilizar cuantas declaraciones de variables sean necesarias para lograr el objetivo del programa, por ejemplo:
+
+var = 1
+balance_cuenta = 1000.0
+nombreCliente = 'John Doe'
+print(var, balance_cuenta, nombreCliente)
+print(var)
+
+Sin embargo, no se permite utilizar una variable que no exista, (en otras palabras, una variable a la cual no se le a dado un valor).
+
+Este ejemplo ocasionara un error:
+
+var = 1
+print(Var)
+
+Se ha tratado de utilizar la variable llamada Var, la cual no tiene ningún valor (nota: var y Var son entidades diferentes, y no tienen nada en común dentro de Python).
+
+
+RECUERDA
+
+Se puede utilizar print() para combinar texto con variables utilizando el operador + para mostrar cadenas con variables, por ejemplo:
+
+var = "3.7.1"
+print("Versión de Python: " + var)
+
+¿Puedes predecir la salida del fragmento de código?
+
+Revisar
+Versión de Python: 3.7.1
+
+Asignar un valor nuevo a una variable ya existente
+¿Cómo se le asigna un valor nuevo a una variable que ya ha sido creada? De la misma manera. Solo se necesita el signo de igual.
+
+El signo de igual es de hecho un operador de asignación. Aunque esto suene un poco extraño, el operador tiene una sintaxis simple y una interpretación clara y precisa.
+
+Asigna el valor del argumento de la derecha al de la izquierda, aún cuando el argumento de la derecha sea una expresión arbitraria compleja que involucre literales, operadores y variables definidas anteriormente.
+
+Observa el siguiente código:
+
+var = 1
+print(var)
+var = var + 1
+print(var)
+
+El código envía dos líneas a la consola:
+
+1
+2
+
+La primer línea del código crea una nueva variable llamada var y le asigna el valor de 1.
+
+
+
+La declaración se lee de la siguiente manera: asigna el valor de 1 a una variable llamada var.
+
+De manera mas corta: asigna 1 a var.
+
+Algunos prefieren leer el código así: var se convierte en 1.
+
+La tercera línea le asigna a la misma variable un nuevo valor tomado de la variable misma, sumándole 1. Al ver algo así, un matemático probablemente protestaría, ningún valor puede ser igualado a si mismo mas uno. Esto es una contradicción. Pero Python trata el signo = no como igual a, sino como asigna un valor.
+
+Entonces, ¿Cómo se lee esto en un programa?
+
+Toma el valor actual de la variable var, sumale 1 y guárdalo en la variable var.
+
+En efecto, el valor de la variable var ha sido incrementado por uno, lo cual no está relacionado con comparar la variable con otro valor.
+
+
+¿Puedes predecir cuál será el resultado del siguiente fragmento de código?
+
+var = 100
+var = 200 + 300
+print(var)
+
+Revisar
+500 - ¿Porque? Bueno, primero, la variable var es creada y se le asigna el valor de 100. Después, a la misma variable se le asigna un nuevo valor: el resultado de sumarle 200 a 300, lo cual es 500.
+
+LABORATORIO
+
+Tiempo Estimado
+10 minutos
+
+Nivel de dificultad
+Fácil
+
+Objetivos
+Familiarizarse con el concepto de almacenar y trabajar con diferentes tipos de datos en Python.
+Experimentar con el código en Python.
+Escenario
+A continuación una historia:
+
+Érase una vez en la Tierra de las Manzanas, Juan tenía tres manzanas, María tenía cinco manzanas, y Adán tenía seis manzanas. Todos eran muy felices y vivieron por muchísimo tiempo. Fin de la Historia.
+
+Tu tarea es:
+
+Crear las variables: juan, maria, y adan.
+Asignar valores a las variables. El valor debe de ser igual al numero de manzanas que cada quien tenía.
+Una vez almacenados los números en las variables, imprimir las variables en una línea, y separar cada una de ellas con una coma.
+Después se debe crear una nueva variable llamada totalManzanas y se debe igualar a la suma de las tres variables anteriores.
+Imprime el valor almacenado en totalManzanas en la consola.
+Experimenta con tu código: crea nuevas variables, asigna diferentes valores a ellas, y realiza varias operaciones aritméticas con ellas (por ejemplo, +, -, *, /, //, etc.). Intenta poner una cadena con un entero juntos en la misma línea, por ejemplo, "Numero Total de Manzanas:" y totalManzanas.

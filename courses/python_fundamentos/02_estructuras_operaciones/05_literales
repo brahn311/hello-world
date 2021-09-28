@@ -1,0 +1,47 @@
+Literales - los datos en si mismos
+Un literal se refiere a datos cuyos valores están determinados por el literal mismo.
+
+Debido a que es un concepto un poco difícil de entender, un buen ejemplo puede ser muy útil.
+
+Observa los siguientes dígitos:
+
+123
+
+¿Puedes adivinar qué valor representa? claro que puedes - es ciento veintitrés.
+
+Que tal este:
+
+c
+
+¿Representa algún valor? Tal vez. Puede ser el símbolo de la velocidad de la luz, por ejemplo. También puede representar la constante de integración. Incluso la longitud de una hipotenusa en el Teorema de Pitágoras. Existen muchas posibilidades.
+
+
+No se puede elegir el valor correcto sin algo de conocimiento adicional.
+
+Y esta es la pista: 123 es un literal, y c no lo es.
+
+Se utilizan literales para codificar datos y ponerlos dentro del código. Ahora mostraremos algunas convenciones que se deben seguir al utilizar Python.
+
+Comencemos con un sencillo experimento, observa el fragmento de código en el editor.
+```
+print("2")
+print(2)
+```
+
+La primera línea luce familiar. La segunda parece ser errónea debido a la falta visible de comillas.
+
+Intenta ejecutarlo.
+
+Si todo salió bien, ahora deberías de ver dos líneas idénticas.
+
+¿Qué paso? ¿Qué significa?
+
+A través de este ejemplo, encuentras dos tipos diferentes de literales:
+
+Una cadena, la cual ya conoces.
+Y un número entero, algo completamente nuevo.
+La función print() los muestra exactamente de la misma manera. Sin embargo, internamente, la memoria de la computadora los almacena de dos maneras completamente diferentes. La cadena existe como eso, solo una cadena, una serie de letras.
+
+El número es convertido a una representación maquina (una serie de bits). La función print() es capaz de mostrar ambos en una forma legible para humanos.
+
+Vamos a tomar algo de tiempo para discutir literales numéricas y su vida interna.

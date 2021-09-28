@@ -1,0 +1,43 @@
+Algunas funciones simples: triángulos y el teorema de Pitágoras
+Observa el código en el editor. Le pide al usuario tres valores. Después hace uso de la función esUnTriangulo. El código esta listo para correrse.
+
+def esUnTriangulo(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+a = float(input("Ingresa la longitud del primer lado: "))
+b = float(input("Ingresa la longitud del segundo lado: "))
+c = float(input("Ingresa la longitud del tercer lado: "))
+
+if esUnTriangulo(a, b, c):
+    print("Felicidades, puede ser un triángulo.")
+else:
+    print("Lo siento, no puede ser un triángulo.")
+
+
+En el segundo paso, intentaremos verificar si un triángulo es un triángulo rectángulo.
+
+Para ello haremos uso del Teorema de Pitágoras:
+
+c2 = a2 + b2
+
+¿Cómo saber cual de los tres lados es la hipotenusa?
+
+La hipotenusa es el lado mas largo.
+
+Aquí esta el código:
+
+def esUnTriangulo(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+def esUnTrianguloRectangulo(a, b, c):
+    if not esUnTriangulo  (a, b, c):
+        return False
+    if c > a and c > b:
+        return c ** 2 == a ** 2 + b ** 2
+    if a > b and a > c:
+        return a ** 2 == b ** 2 + c ** 2
+
+print(esUnTrianguloRectangulo(5, 3, 4))
+print(esUnTrianguloRectangulo(1, 3, 4))
+
+Observa como se establece la relación entre la hipotenusa y los dos catetos. Se eligió el lado mas largo y se aplico el Teorema de Pitágoras para verificar que todo estuviese en orden. Esto requiere tres revisiones en total.

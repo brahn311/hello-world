@@ -1,0 +1,80 @@
+La declaración if-else: más de ejecución condicional
+Al utilizar esta forma de declaración condicional, podemos describir nuestros planes de la siguiente manera:
+
+if climaEsBueno:
+    irACaminar()
+else:
+    irAlCine()
+almorzar() 
+
+Si el clima es bueno, saldremos a caminar. De lo contrario, iremos al cine. No importa si el clima es bueno o malo, almorzaremos después (después de la caminata o después de ir al cine).
+
+Todo lo que hemos dicho sobre la sangría funciona de la misma manera dentro de la rama else :
+
+if climaEsBueno:
+    irACaminar()
+    Diviertirse()
+else:
+    irAlCine()
+    disfrutaLaPelicula()
+almorzar() 
+
+Declaraciones if-else anidadas
+Ahora, analicemos dos casos especiales de la declaración condicional.
+
+Primero, considera el caso donde la instrucción colocada después del if  es otro if.
+
+Lee lo que hemos planeado para este domingo. Si hay buen clima, saldremos a caminar. Si encontramos un buen restaurante, almorzaremos allí. De lo contrario, vamos a comer un sandwich. Si hay mal clima, iremos al cine. Si no hay boletos, iremos de compras al centro comercial más cercano.
+
+Escribamos lo mismo en Python. Considera cuidadosamente el código aquí:
+
+if climaEsBueno:
+    if encontramosBuenRestaurante:
+        almorzar()
+    else:
+        comerSandwich() 
+else:
+    if hayBoletosDisponibles:
+        irAlCine()
+    else:
+        irDeCompras()  
+
+
+Aquí hay dos puntos importantes:
+
+Este uso de la declaraciónif se conoce como anidamiento; recuerda que cada else se refiere al if que se encuentra en el mismo nivel de sangría; se necesita saber esto para determinar cómo se relacionan los ifs y los elses.
+Considera como la sangría mejora la legibilidad y hace que el código sea más fácil de entender y rastrear.
+La declaración elif
+El segundo caso especial presenta otra nueva palabra clave de Python: elif. Como probablemente sospechas, es una forma más corta de else-if.
+
+elif se usa para verificar más de una condición, y para detener cuando se encuentra la primera declaración verdadera.
+
+Nuestro siguiente ejemplo se parece a la anidación, pero las similitudes son muy leves. Nuevamente, cambiaremos nuestros planes y los expresaremos de la siguiente manera: si hay buen clima, saldremos a caminar, de lo contrario, si obtenemos entradas, iremos al cine, de lo contrario, si hay mesas libres en el restaurante, vamos a almorzar; si todo falla, regresaremos a casa y jugaremos ajedrez.
+
+¿Has notado cuantas veces hemos usado la palabra de lo contrario? Esta es la etapa en la que la palabra clave elif desempeña su función.
+
+Escribamos el mismo escenario usando Python:
+
+if climaBueno:
+    iraCaminar()
+elif hayBoletosDisponibles:
+    IralCine()
+elif mesasLibres:
+    almorzar()
+else:
+    jugarAjedrezEnCasa() 
+
+La forma de ensamblar las siguientes declaraciones if-elif-else a veces se denomina cascada.
+
+Observa de nuevo como la sangría mejora la legibilidad del código.
+
+Se debe prestar atención adicional a este caso:
+
+No debes usar else sin un if precedente.
+Else siempre es la última rama de la cascada , independientemente de si has usado elif o no.
+Else es una parte opcional de la cascada, y puede omitirse.
+Si hay una rama else en la cascada, solo se ejecuta una de todas las ramas.
+Si no hay una rama else, es posible que no se ejecute ninguna de las opciones disponibles.
+
+Esto puede sonar un poco desconcertante, pero ojalá que algunos ejemplos simples ayuden a comprenderlo mejor.
+

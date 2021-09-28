@@ -1,0 +1,23 @@
+Accediendo al contenido de la lista
+Se puede acceder a cada uno de los elementos de la lista por separado. Por ejemplo, se puede imprimir:
+
+print(numeros[0]) # accediendo al primer elemento de la lista. 
+
+Suponiendo que todas las operaciones anteriores se hayan completado con éxito, el fragmento enviará 111 a la consola.
+
+Como puedes ver en el editor, la lista también puede imprimirse como un todo, como aquí:
+
+print(numeros) # imprimiendo la lista completa.
+
+Como probablemente hayas notado antes, Python decora la salida de una manera que sugiere que todos los valores presentados forman una lista. La salida del fragmento de ejemplo anterior se ve así:
+
+[111, 1, 7, 2, 1]
+
+La función len()
+La longitud de una lista puede variar durante la ejecución. Se pueden agregar nuevos elementos a la lista, mientras que otros pueden eliminarse de ella. Esto significa que la lista es una entidad muy dinámica.
+
+Si deseas verificar la longitud actual de la lista, puedes usar una función llamada len() (su nombre proviene de length - longitud).
+
+La función toma el nombre de la lista como un argumento y devuelve el número de elementos almacenados actualmente dentro de la lista (en otras palabras, la longitud de la lista).
+
+Observa la última línea de código en el editor, ejecuta el programa y verifica que valor imprimirá en la consola. ¿Puedes adivinar?

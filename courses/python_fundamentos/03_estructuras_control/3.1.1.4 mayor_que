@@ -1,0 +1,59 @@
+Operadores de Comparación: Mayor que
+
+También se puede hacer una pregunta de comparación usando el operador > (mayor que).
+
+Si deseas saber si hay más ovejas negras que blancas, puedes escribirlo de la siguiente manera:
+
+ovejasNegras > ovejasBlancas # mayor que.
+
+True lo confirma; False lo niega.
+
+
+Operadores de Comparación: Mayor o igual que
+
+El operador mayor que tiene otra variante especial, una variante no estricta, pero se denota de manera diferente que la notación aritmética clásica: >= (mayor o igual que).
+
+Hay dos signos subsecuentes, no uno.
+
+Ambos operadores (estrictos y no estrictos), así como los otros dos que se analizan en la siguiente sección, son operadores binarios con enlace en el lado izquierdo, y su prioridad es mayor que la mostrada por == y !=.
+
+Si queremos saber si tenemos que usar un gorro o no, nos hacemos la siguiente pregunta:
+
+centigradosAfuera ≥ 0.0 # mayor o igual a. 
+
+Operadores de Comparación: Menor o igual que
+
+Como probablemente ya hayas adivinado, los operadores utilizados en este caso son: El operador < (menor que) y su hermano no estricto: <= (menor o igual que).
+
+Mira este ejemplo simple:
+
+velocidadMph < 85 # menor que.
+velocidadMph ≤ 85 # menor o igual que.
+
+Vamos a comprobar si existe un riesgo de ser multados (la primera pregunta es estricta, la segunda no).
+
+
+Aprovechando las respuestas
+
+¿Qué puedes hacer con la respuesta (es decir, el resultado de una operación de comparación) que se obtiene de la computadora?
+
+Hay al menos dos posibilidades: primero, puedes memorizarlo (almacenarlo en una variable) y utilizarlo más tarde. ¿Cómo haces eso? Bueno, utilizarías una variable arbitraria como esta:
+
+respuesta = numerodeLeones >= numerodeLeonas
+
+El contenido de la variable te dirá la respuesta a la pregunta.
+
+
+La segunda posibilidad es más conveniente y mucho más común: puedes utilizar la respuesta que obtengas para tomar una decisión sobre el futuro del programa.
+
+Necesitas una instrucción especial para este propósito, y la discutiremos muy pronto.
+
+Ahora necesitamos actualizar nuestra tabla de prioridades , y poner todos los nuevos operadores en ella. Ahora se ve como a continuación:
+
+Prioridad	Operador	
+1	+, -	unario
+2	**	
+3	*, /, %	
+4	+, -	binario
+5	<, <=, >, >=	
+6	==, !=

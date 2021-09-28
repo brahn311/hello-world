@@ -1,0 +1,29 @@
+Funciones con parámetros: continuación
+Una función puede tener tantos parámetros como se desee, pero entre más parámetros, es más difícil memorizar su rol y propósito.
+
+Modifiquemos la función / ahora tiene dos parámetros:
+
+def mensaje(que, numero):
+    print("Ingresa", que, "número", numero)
+
+Esto significa que para invocar la función, se necesitan dos argumentos.
+
+El primer valor va a contener el nombre del valor deseado.
+
+Aquí esta:
+
+def mensaje(que, numero):
+    print("Ingresa", que, "número", numero)
+
+mensaje("teléfono", 11)
+mensaje("precio", 5)
+mensaje("número", "número")
+
+Estas es la salida del código anterior:
+
+Ingresa teléfono número 11
+Ingresa precio número 5
+Ingresa número número número 
+
+Ejecuta el código, modifícalo, agrega mas parámetros y ve como esto afecta la salida.
+

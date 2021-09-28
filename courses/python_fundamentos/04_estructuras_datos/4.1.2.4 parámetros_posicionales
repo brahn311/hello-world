@@ -1,0 +1,39 @@
+Paso de parámetros posicionales
+La técnica que asigna cada argumento al parámetro correspondiente, es llamada paso de parámetros posicionales, los argumentos pasados de esta manera son llamados argumentos posicionales.
+
+Ya se ha utilizado, pero Python ofrece mucho más. Se abordará este tema a continuación.
+
+def miFuncion(a, b, c):
+    print(a, b, c)
+
+miFuncion(1, 2, 3)
+
+Nota: el paso de parámetros posicionales es usado de manera intuitiva por las personas en muchas situaciones. Por ejemplo, es generalmente aceptado que cuando nos presentamos mencionamos primero nuestro nombre(s) y después nuestro apellido, por ejemplo, "Me llamo Juan Pérez."
+
+Sin embargo, En Hungría se hace al revés.
+
+Implementemos esa costumbre en Python. La siguiente función es utilizada para presentar a alguien:
+
+def presentar(primerNombre, segundoNombre):
+    print("Hola, mi nombre es", primerNombre, segundoNombre)
+
+presentar("Luke", "Skywalker")
+presentar("Jesse", "Quick")
+presentar("Clark", "Kent")
+
+¿Puedes predecir la salida? Ejecuta el código y verifícalo por ti mismo.
+
+
+Ahora imaginemos que la función esta siendo utilizada en Hungría. En este caso, el código sería de la siguiente manera:
+
+def presentar(primerNombre, segundoNombre):
+    print("Hola, mi nombre es", primerNombre, segundoNombre)
+
+presentar("Skywalker" ,"Luke" )
+presentar("Quick", "Jesse")
+presentar("Kent", "Clark")
+La salida será diferente. ¿La puedes predecir?
+
+Ejecuta el código para comprobar tu respuesta. ¿Es lo que esperabas?
+
+¿Puedes construir más funciones de este tipo ?

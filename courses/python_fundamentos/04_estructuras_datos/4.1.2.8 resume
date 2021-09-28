@@ -1,0 +1,127 @@
+Puntos Clave
+
+1. Se puede pasar información a las funciones utilizando parámetros. Las funciones pueden tener tantos parámetros como sean necesarios.
+
+Un ejemplo de una función con un parámetro:
+
+def hola(nombre):
+    print("Hola,", nombre)
+
+hola("Greg")
+
+Un ejemplo de una función de dos parámetros:
+
+def holaTodos(nombre1, nombre2):
+    print("Hola,", nombre2)
+    print("Hola,", nombre1)
+
+holaTodos("Sebastián", "Felipe")
+
+Un ejemplo de una función de tres parámetros:
+
+def direccion(calle, ciudad, codigoPostal):
+    print("Tu dirección es:", calle, ciudad, codigoPostal)
+
+c = input("Calle: ")
+cp = input("Código Postal: ")
+cd = input("Ciudad: ")
+
+address(c, cd, cp)
+
+2. Puedes pasar argumentos a una función utilizando las siguientes técnicas:
+
+Paso de argumentos posicionales en la cual el orden de los parámetros es relevante (Ejemplo 1).
+Paso de argumentos con palabras clave en la cual el orden de los argumentos es irrelevante (Ejemplo 2).
+Una mezcla de argumentos posicionales y con palabras clave (Ejemplo 3).
+Ejemplo 1
+def resta(a, b):
+    print(a - b)
+
+resta(5, 2)    # salida: 3
+resta(2, 5)    # salida: -3
+
+
+Ejemplo 2
+def resta(a, b):
+    print(a - b)
+
+resta(a=5, b=2)    # salida: 3
+resta(b=2, a=5)    # salida: 3
+
+Ex. 3
+def resta(a, b):
+    print(a - b)
+
+resta(5, b=2)    # salida: 3
+resta(5, 2)    # salida: 3
+
+Es importante recordar que primero se especifican los argumentos posicionales y después los de palabras clave. Es por esa razón que si se intenta ejecutar el siguiente código:
+
+def resta(a, b):
+    print(a - b)
+
+resta(5, b=2)    # salida: 3
+resta(a=5, 2)    # Syntax Error
+
+Python no lo ejecutará y marcará un error de sintaxis SyntaxError.
+
+
+
+
+3. Se puede utilizar la técnica de argumentos con palabras clave para asignar valores predefinidos a los argumentos:
+
+def nombre(nombre, apellido="Pérez"):
+    print(nombre, apellido)
+
+nombre("Andy")    # salida: Andy Pérez
+nombre("Bety", "Rodríguez")    # salida: Bety Johnson (el argumento de palabra clave es reemplazado por " Rodríguez ")
+
+
+
+Ejercicio 1
+
+¿Cuál es la salida del siguiente código?
+
+def intro(a="James Bond", b="Bond"):
+    print("Mi nombre es", b + ".", a + ".")
+
+intro()
+
+Revisar
+Mi nombre es Bond. James Bond.
+
+Ejercicio 2
+
+¿Cuál es la salida del siguiente código?
+
+def intro(a="James Bond", b="Bond"):
+    print("Mi nombre es", b + ".", a + ".")
+
+intro(b="Sergio López")
+
+Revisar
+Mi nombre es Sergio López. James Bond.
+
+Ejercicio 3
+
+¿Cuál es la salida del siguiente fragmento de código?
+
+def intro(a, b="Bond"):
+    print("Mi nombre es", b + ".", a + ".")
+
+intro("Susan")
+
+Revisar
+Mi nombre es Bond. Susan.
+
+Ejercicio 4
+
+¿Cuál es la salida del siguiente código?
+
+def suma(a, b=2, c):
+    print(a + b + c)
+
+suma(a=1, c=3)
+
+Revisar
+SyntaxError - a non-default argument (c) follows a default argument (b=2)

@@ -1,0 +1,43 @@
+Haciendo uso de las listas
+El bucle for tiene una variante muy especial que puede procesar las listas de manera muy efectiva. Echemos un vistazo a eso.
+
+```
+miLista = [10, 1, 8, 3, 5]
+suma = 0
+
+for i in range(len(miLista)):
+    suma += miLista[i]
+
+print(suma)
+```
+
+Supongamos que desea calcular la suma de todos los valores almacenados en la lista miLista.
+
+Necesitas una variable cuya suma se almacenará y se le asignará inicialmente un valor de 0 - su nombre es suma. Luego agrega todos los elementos de la lista usando el bucle for. Echa un vistazo al fragmento en el editor.
+
+Comentemos este ejemplo:
+
+A la lista se le asigna una secuencia de cinco valores enteros.
+La variable i toma los valores 0, 1,2,3, y 4, y luego indexa la lista, seleccionando los elementos siguientes: el primero, segundo, tercero, cuarto y quinto.
+Cada uno de estos elementos se agrega junto con el operador += a la variable suma, dando el resultado final al final del bucle.
+Observa la forma en que se ha empleado la función len(), hace que el código sea independiente de cualquier posible cambio en el contenido de la lista.
+
+La segunda cara del ciclo for
+Pero el bucle for puede hacer mucho más. Puede ocultar todas las acciones conectadas a la indexación de la lista y entregar todos los elementos de la lista de manera práctica.
+
+Este fragmento modificado muestra como funciona:
+
+miLista = [10, 1, 8, 3, 5]
+suma = 0
+
+for i in miLista:
+    suma += i
+
+print(suma) 
+
+¿Qué sucede aquí?
+
+La instrucción for especifica la variable utilizada para navegar por la lista (i) seguida de la palabra clave  in  y el nombre de la lista siendo procesado (miLista).
+A la variable i se le asignan los valores de todos los elementos de la lista subsiguiente, y el proceso ocurre tantas veces como hay elementos en la lista.
+Esto significa que usa la variable i como una copia de los valores de los elementos, y no necesita emplear índices.
+La función len() tampoco es necesaria aquí.

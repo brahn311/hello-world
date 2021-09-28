@@ -1,0 +1,48 @@
+Las funciones y sus alcances (scopes): continuación
+Comencemos revisando si una variable creada fuera de una función es visible dentro de una función. En otras palabras, ¿El nombre de la variable se propaga dentro del cuerpo de la función?
+
+Observa el código en el editor. Ahí esta nuestro conejillo de indias.
+
+def miFuncion():
+    print("¿Conozco a la variable?", var)
+
+var = 1
+miFuncion()
+print(var)
+
+El resultado de la prueba es positivo, el código da como salida:
+
+¿Conozco a la variable? 1
+1
+
+La respuesta es: una variable que existe fuera de una función tiene alcance dentro del cuerpo de la función.
+
+Esta regla tiene una excepción muy importante. Intentemos encontrarla.
+
+Hagamos un pequeño cambio al código:
+
+def miFuncion():
+    var = 2
+    print("¿Conozco a la variable?", var)
+
+var = 1
+miFuncion()
+print(var)
+
+El resultado ha cambiado tambiénm el código arroja una salida con una ligera diferencia:
+
+¿Conozco a la variable? 2
+1
+
+¿Qué es lo que ocurrió?
+
+La variable var creada dentro de la función no es la misma que la que se definió fuera de ella, parece ser que hay dos variables diferentes con el mismo nombre.
+La variable de la función es una sombra de la variable fuera de la función.
+La regla anterior se puede definir de una manera mas precisa y adecuada:
+
+Una variable que existe fuera de una función tiene un alcance dentro del cuerpo de la función, excluyendo a aquellas que tienen el mismo nombre.
+
+También significa que el alcance de una variable existente fuera de una función solo se puede implementar dentro de una función cuando su valor es leído. El asignar un valor hace que la función cree su propia variable.
+
+Asegúrate bien de entender esto correctamente y de realizar tus propios experimentos.
+

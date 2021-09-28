@@ -1,0 +1,40 @@
+Rodajas: continuación
+Como hemos dicho antes, el omitir inicio y fin hace una copia de toda la lista:
+
+miLista = [10, 8, 6, 4, 2]
+nuevLista = miLista  [:] 
+print(nuevLista)
+
+El resultado del fragmento es: [10, 8, 6, 4, 2].
+
+La instrucción del descrita anteriormente puede eliminar más de un elemento de la lista a la vez, también puede eliminar rodajas:
+
+miLista = [10, 8, 6, 4, 2]
+del miLista[1:3] 
+print(miLista)
+
+Nota: En este caso, la rodaja ¡no produce ninguna lista nueva!
+
+La salida del fragmento es:[10, 4, 2].
+
+
+También es posible eliminar todos los elementos a la vez:
+
+miLista = [10, 8, 6, 4, 2]
+del miLista[:] 
+print(miLista)
+
+La lista se queda vacía y la salida es: [].
+
+
+Al eliminar la rodaja del código, su significado cambia dramáticamente.
+
+Echa un vistazo:
+
+miLista = [10, 8, 6, 4, 2]
+del miLista 
+print(miLista)
+
+La instrucción del eliminará la lista, no su contenido.
+
+La función print() de la última línea del código provocará un error de ejecución.

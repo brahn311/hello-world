@@ -1,0 +1,38 @@
+
+Las funciones y sus alcances (scopes): la palabra reservada global
+Al llegar a este punto, debemos hacernos la siguiente pregunta: ¿Una función es capaz de modificar una variable que fue definida fuera de ella? Esto sería muy incomodo.
+
+Afortunadamente, la respuesta es no.
+
+Existe un método especial en Python el cual puede extender el alcance de una variable incluyendo el cuerpo de las funciones para poder no solo leer los valores de las variables sino también modificarlos.
+
+Este efecto es causado por la palabra reservada llamada global:
+
+global name
+global name1, name2, ...
+
+El utilizar la palabra reservada dentro de una función con el nombre o nombres de las variables separados por comas, obliga a Python a abstenerse de crear una nueva variable dentro de la función; se empleará la que se puede acceder desde el exterior.
+
+En otras palabras, este nombre se convierte en global (tiene un alcance global, y no importa si se esta leyendo o asignando un valor).
+
+Observa el código en el editor.
+
+def miFuncion():
+    global var
+    var = 2
+    print("¿Conozco a aquella variable?", var)
+
+var = 1
+miFuncion()
+print(var)
+
+
+Se ha agregado la palabra global a la función.
+
+El código ahora da como salida:
+
+¿Conozco a aquella variable? 2
+2
+
+Esto debe de ser suficiente evidencia para mostrar lo que la palabra reservada global puede hacer.
+

@@ -1,0 +1,23 @@
+Los operadores in y not
+Python ofrece dos operadores muy poderosos, capaces de revisar la lista para verificar si un valor específico está almacenado dentro de la lista o no.
+
+Estos operadores son:
+
+elem in miLista
+elem not in miLista 
+
+El primero de ellos (in) verifica si un elemento dado(su argumento izquierdo) está actualmente almacenado en algún lugar dentro de la lista(el argumento derecho) - el operador devuelve True en este caso.
+
+El segundo (not in) comprueba si un elemento dado (su argumento izquierdo) está ausente en una lista - el operador devuelve True en este caso.
+
+miLista = [0, 3, 12, 8, 2]
+
+print(5 in miLista)
+print(5 not in miLista)
+print(12 in miLista)
+
+Observa el código en el editor. El fragmento muestra ambos operadores en acción. ¿Puedes adivinar su salida? Ejecuta el programa para comprobar si tenías razón.
+
+False
+True
+True

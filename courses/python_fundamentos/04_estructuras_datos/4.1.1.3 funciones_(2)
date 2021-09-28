@@ -1,0 +1,20 @@
+Descomposición
+Es muy común que un programa sea tan largo y complejo que no puede ser asignado a un solo desarrollador, y en su lugar un equipo de desarrolladores trabajarán en el. El problema, debe ser dividido entre varios desarrolladores de una manera en que se pueda asegurar su eficiencia y cooperación.
+
+El concepto de trabajar juntos
+
+Es inconcebible que más de un programador deba escribir el mismo código al mismo tiempo, por lo tanto, el trabajo debe de ser dividido entre todos los miembros del equipo.
+
+Este tipo de descomposición tiene diferentes propósitos, no solo se trata de compartir el trabajo, sino también de compartir la responsabilidad entre varios desarrolladores.
+
+Cada uno debe escribir un conjunto bien definido y claro de funciones, las cuales al ser combinadas dentro de un módulo (esto se clarificara un poco mas adelante) nos dará como resultado el producto final.
+
+Esto nos lleva directamente a la tercera condición: si se va a dividir el trabajo entre varios programadores, se debe descomponer el problema para permitir que el producto sea implementado como un conjunto de funciones escritas por separado empacadas juntas en diferentes módulos.
+
+¿De dónde provienen las funciones?
+En general, las funciones provienen de al menos tres lugares:
+
+- De Python mismo: varias funciones (como print()) son una parte integral de Python, y siempre están disponibles sin algún esfuerzo adicional del programador; se les llama a estas funciones funciones integradas.
+- De los módulos preinstalados de Python: muchas de las funciones, las cuales comúnmente son menos utilizadas que las integradas, están disponibles en módulos instalados juntamente con Python; para poder utilizar estas funciones el programador debe realizar algunos pasos adicionales (se explicará acerca de esto en un momento).
+- Directamente del código: tu puedes escribir tus propias funciones, colocarlas dentro del código, y usarlas libremente.
+- Existe una posibilidad más, pero se relaciona con clases, se omitirá por ahora.

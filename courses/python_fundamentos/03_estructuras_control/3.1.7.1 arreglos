@@ -1,0 +1,54 @@
+Listas dentro de listas
+Las listas pueden constar de escalares (es decir, números) y elementos de una estructura mucho más compleja (ya has visto ejemplos como cadenas, booleanos o incluso otras listas en las lecciones del Resumen de la Sección anterior). Veamos más de cerca el caso en el que los elementos de una lista son solo listas.
+
+A menudo encontramos estos arreglos en nuestras vidas. Probablemente el mejor ejemplo de esto sea un tablero de ajedrez.
+
+Un tablero de ajedrez está compuesto de filas y columnas. Hay ocho filas y ocho columnas. Cada columna está marcada con las letras de la A a la H. Cada línea está marcada con un número del uno al ocho.
+
+La ubicación de cada campo se identifica por pares de letras y dígitos. Por lo tanto, sabemos que la esquina inferior derecha del tablero (la que tiene la torre blanca) es A1, mientras que la esquina opuesta es H8.
+
+
+Supongamos que podemos usar los números seleccionados para representar cualquier pieza de ajedrez. También podemos asumir que cada fila en el tablero de ajedrez es una lista.
+
+Observa el siguiente código:
+
+fila = []
+
+for i in range(8):
+    row.append(PEON_BLANCO)
+
+Crea una lista que contiene ocho elementos que representan la segunda fila del tablero de ajedrez: la que está llena de peones (supon que PEON_BLANCO es un símbolo predefinido que representa un peón blanco).
+
+El mismo efecto se puede lograr mediante una comprensión de lista, la sintaxis especial utilizada por Python para completar o llenar listas masivas.
+
+Una comprensión de lista es en realidad una lista, pero se creó sobre la marcha durante la ejecución del programa, y no se describe de forma estática.
+
+Echa un vistazo al fragmento:
+
+fila = [PEON_BLANCO for i in range(8)]
+
+La parte del código colocada dentro de los paréntesis especifica:
+
+Los datos que se utilizarán para completar la lista (PEON_BLANCO)
+La cláusula que especifica cuántas veces se producen los datos dentro de la lista (for i in range(8))
+Permítenos mostrarte otros ejemplos de comprensión de lista:
+
+Ejemplo # 1:
+
+cuadrados = [x ** 2 for x in range(10)]
+
+El fragmento de código genera una lista de diez elementos y rellena con cuadrados de diez números enteros que comienzan desde cero (0, 1, 4, 9, 16, 25, 36, 49, 64, 81)
+
+Ejemplo # 2:
+
+dos = [2 ** i for i in range(8)]
+
+El fragmento crea un arreglo de ocho elementos que contiene las primeras ocho potencias del numero dos (1, 2, 4, 8, 16, 32, 64, 128)
+
+Ejemplo # 3:
+
+probabilidades = [x for x in cuadrados if x % 2 != 0] 
+
+El fragmento hace una lista con solo los elementos impares de la lista cuadrados.
+
+

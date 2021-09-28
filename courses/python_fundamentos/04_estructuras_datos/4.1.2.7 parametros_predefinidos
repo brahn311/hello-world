@@ -1,0 +1,59 @@
+Funciones con parámetros: mas detalles
+En ocasiones ocurre que algunos valores de ciertos argumentos son mas utilizados que otros. Dichos argumentos tienen valores predefinidos los cuales pueden ser considerados cuando los argumentos correspondientes han sido omitidos.
+
+Uno de los apellidos más comunes en Latinoamérica es González. Tomémoslo para el ejemplo.
+
+El valor por default para el parámetro se asigna de la siguiente manera:
+
+def presentar(primerNombre, segundoNombre="González"):
+    print("Hola, mi nombre es", primerNombre, segundoNombre)
+
+Solo se tiene que colocar el nombre del parámetro seguido del signo de = y el valor por default.
+
+Invoquemos la función de manera normal:
+
+presentar("Jorge", "Pérez")
+
+¿Puedes predecir la salida del programa? Ejecútalo y revisa si era lo esperado.
+
+¿Y? No parece haber cambiado algo, pero cuando se invoca la función de una manera inusual, como esta:
+
+presentar("Enrique")
+
+o así:
+
+presentar (primerNombre="Guillermo")
+
+no habrá errores, ambas invocaciones funcionarán, la consola mostrará los siguientes resultados:
+
+Hola, mi nombre es Enrique González
+Hola, mi nombre es Guillermo González 
+
+Pruébalo.
+
+Puedes hacerlo con mas parámetros, si te resulta útil. Ambos parámetros tendrán sus valores por default, observa el siguiente código:
+
+def presentar(primerNombre="Juan", segundoNombre="González"):
+    print("Hola, mi nombre es ", primerNombre, segundoNombre)
+
+Esto hace que la siguiente invocación sea completamente valida:
+
+presentar ()
+
+Y esta es la salida esperada:
+
+ Hola, mi nombre es Juan González
+
+Si solo se especifica un argumento de palabra clave, el restante tomará el valor por default:
+
+presentar(segundoNombre="Rodríguez")
+
+La salida es:
+
+Hola, mi nombre es Juan Rodríguez 
+
+Pruébalo.
+
+
+Felicidades, has aprendido las maneras básicas de comunicación con funciones.
+

@@ -1,0 +1,46 @@
+¿Cómo utilizar una tupla? continuación
+¿Qué más pueden hacer las tuplas?
+
+La función len() acepta tuplas, y regresa el numero de elementos contenidos dentro.
+El operador + puede unir tuplas (ya se ha mostrado esto antes).
+El operador * puede multiplicar las tuplas, así como las listas.
+Los operadores in y not in funcionan de la misma manera que en las listas.
+
+El fragmento de código en el editor presenta todo esto.
+
+miTupla = (1, 10, 100)
+
+t1 = miTupla + (1000, 10000)
+t2 = miTupla * 3
+
+print(len(t2))
+print(t1)
+print(t2)
+print(10 in miTupla)
+print(-10 not in miTupla)
+
+La salida es la siguiente:
+
+9
+(1, 10, 100, 1000, 10000)
+(1, 10, 100, 1, 10, 100, 1, 10, 100)
+True
+True
+
+Una de las propiedades de las tuplas mas útiles es que pueden aparecer en el lado izquierdo del operador de asignación. Este fenómeno ya se vio con anterioridad, cuando fue necesario encontrar una manera de intercambiar los valores entre dos variables.
+
+Observa el siguiente fragmento de código:
+
+var = 123
+
+t1 = (1, )
+t2 = (2, )
+t3 = (3, var)
+
+t1, t2, t3 = t2, t3, t1
+
+print(t1, t2, t3)
+
+Muestra tres tuplas interactuando en efecto, los valores almacenados en ellas "circulan" entre ellas. t1 se convierte en t2, t2 se convierte en t3, y t3 se convierte en t1.
+
+Nota: el ejemplo presenta un importante hecho mas: los elementos de una tupla pueden ser variables, no solo literales. Además, pueden ser expresiones si se encuentran en el lado derecho del operador de asignacion.

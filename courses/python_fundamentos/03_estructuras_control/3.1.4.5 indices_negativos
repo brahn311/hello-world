@@ -1,0 +1,20 @@
+Los índices negativos son válidos
+Puede parecer extraño, pero los índices negativos son válidos y pueden ser muy útiles.
+
+Un elemento con un índice igual a -1 es el último en la lista.
+
+print(numeros[-1])
+
+El código del ejemplo mostrará 1. Ejecuta el programa y comprueba.
+
+numeros = [111, 7, 2, 1]
+print(numeros[-1])
+print(numeros[-2])
+
+Del mismo modo, el elemento con un índice igual a -2 es el anterior al último en la lista.
+
+print(numeros[-2])
+
+El fragmento de ejemplo mostrará 2.
+
+El último elemento accesible en nuestra lista es numeros[-4] (el primero). ¡No intentes ir más lejos!

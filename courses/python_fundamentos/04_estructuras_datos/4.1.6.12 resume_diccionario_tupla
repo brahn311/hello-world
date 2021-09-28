@@ -1,0 +1,133 @@
+Puntos Claves: Tuplas y diccionarios
+
+Ejercicio 1
+
+¿Que ocurrirá cuando se intente ejecutar el siguiente código?
+
+miTup = (1, 2, 3)
+print(miTup[2])
+
+Revisar
+El programa imprimirá 3 en pantalla.
+
+
+Ejercicio 2
+
+¿Cuál es la salida del siguiente fragmento de código?
+
+tup = 1, 2, 3
+a, b, c = tup
+
+print(a * b * c)
+
+Revisar
+El programa imprimirá 6 en pantalla. Los elementos de la tupla tup han sido "desempaquetados" en las variables a, b, y c.
+
+
+Ejercicio 3
+
+Completa el código para emplear correctamente el método count() para encontrar la cantidad de 2 duplicados en la tupla siguiente.
+
+tup = 1, 2, 3, 2, 4, 5, 6, 2, 7, 2, 8, 9
+duplicados = # tu código
+
+print(duplicados)    # salida: 4
+
+Revisar
+tup = 1, 2, 3, 2, 4, 5, 6, 2, 7, 2, 8, 9
+duplicates = tup.count(2)
+
+print(duplicado)    # salida: 4
+
+Ejercicio 4
+
+Escribe un programa que "una" los dos diccionarios (d1 y d2) para crear uno nuevo (d3).
+
+d1 = {'Adam Smith':'A', 'Judy Paxton':'B+'}
+d2 = {'Mary Louis':'A', 'Patrick White':'C'}
+d3 = {}
+
+for elemento in (d1, d2):
+    # tu código
+
+print(d3)
+
+Revisar
+Solución Muestra:
+d1 = {'Adam Smith':'A', 'Judy Paxton':'B+'}
+d2 = {'Mary Louis':'A', 'Patrick White':'C'}
+d3 = {}
+
+for elemento in (d1, d2):
+    d3.update(elemento)
+
+print(d3)
+
+
+
+Ejercicio 5
+
+Escribe un programa que convierta la lista l en una tupla.
+
+l = ["carro", "Ford", "flor", "Tulipán"]
+
+t = # tu código
+print(t)
+
+Revisar
+Solución muestra:
+l = ["carro", "Ford", "flor", "Tulipán"]
+
+t = tuple(l)
+print(t)
+
+Ejercicio 6
+
+Escribe un programa que convierta la tupla colores en un diccionario.
+
+colores = (("verde", "#008000"), ("azul", "#0000FF"))
+
+# tu código
+
+print(colDict)
+
+Revisar
+Solución Muestra:
+colores = (("verde", "#008000"), ("azul", "#0000FF"))
+
+colDict = dict(colores)
+print(colDict)
+
+Ejercicio 7
+
+¿Que ocurrirá cuando se ejecute el siguiente código?
+
+miDict = {"A":1, "B":2}
+copyMiDict = myDict.copy()
+miDict.clear()
+
+print(copyMiDict)
+
+Revisar
+El programa mostrará {'A': 1, 'B': 2} en pantalla
+
+
+Ejercicio 8
+
+¿Cuál es la salida del siguiente programa?
+
+colores = {
+    "blanco" : (255, 255, 255),
+    "gris"   : (128, 128, 128),
+    "rojo"   : (255, 0, 0),
+    "verde"  : (0, 128, 0)
+    }
+
+for col, rgb in colores.items():
+    print(col, ":", rgb)
+
+Revisar
+blanco : (255, 255, 255)
+gris   : (128, 128, 128)
+rojo   : (255, 0, 0)
+verde  : (0, 128, 0)

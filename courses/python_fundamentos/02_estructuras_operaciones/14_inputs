@@ -1,0 +1,138 @@
+La función input()
+Esta nueva función obtiene datos de la consola. La importancia de esta nueva función es que regresa un valor muy utilizable.
+
+La función input() es capaz de leer datos que fueron introducidos por el usuario y pasar esos datos al programa en ejecución.
+
+El programa entonces puede manipular los datos, haciendo que el código sea verdaderamente interactivo.
+
+Todos los programas leen y procesan datos. Un programa que no obtiene datos de entrada del usuario es un programa sordo.
+
+Observa el ejemplo:
+
+print("Dime algo...")
+algo = input()
+print("Mmm...", algo, "...¿en serio?")
+
+Se muestra un ejemplo muy sencillo de como utilizar la función input().
+
+Nota:
+
+El programa solicita al usuario que inserte algún dato desde la consola (seguramente utilizando el teclado, aunque también es posible introducir datos utilizando la voz o alguna imagen).
+La función input() es invocada sin argumentos (es la manera mas sencilla de utilizar la función); la función pondrá la consola en modo de entrada; aparecerá un cursor que parpadea, y podrás introducir datos con el teclado, al terminar presiona la tecla Enter; todos los datos introducidos serán enviados al programa a través del resultado de la función.
+Nota: el resultado debe ser asignado a una variable; esto es crucial, si no se hace los datos introducidos se perderán.
+Después se utiliza la función print() para mostrar los datos que se obtuvieron, con algunas observaciones adicionales.
+Intenta ejecutar el código y permite que la función te muestre lo que puede hacer.
+
+
+ Sandbox
+La función input() con un argumento
+La función input() puede hacer algo más: puede mostrar un mensaje al usuario sin la ayuda de la función print().
+
+Se ha modificado el ejemplo un poco, observa el código:
+
+algo = input("Dime algo...")
+print("Mmm...", algo, "...¿En serio?")
+
+Nota:
+
+La función input() al ser invocada con un argumento, contiene una cadena con un mensaje.
+El mensaje será mostrado en consola antes de que el usuario tenga oportunidad de escribir algo.
+Después de esto input() hará su trabajo.
+Esta variante de la invocación de la función input() simplifica el código y lo hace más claro.
+
+El resultado de la función input()
+Se ha dicho antes, pero hay que decirlo sin ambigüedades una vez más: el resultado de la función input() es una cadena.
+
+Una cadena que contiene todos los caracteres que el usuario introduce desde el teclado. No es un entero ni un flotante.
+
+Esto significa que no se debe utilizar como un argumento para operaciones matemáticas, por ejemplo, no se pueden utilizar estos datos para elevarlos al cuadrado, para dividirlos entre algo o por algo.
+
+cualquierNumero = input("Inserta un número: ")
+algo = cualquierNumero ** 2.0
+print(cualquierNumero, "al cuadrado es", algo)
+
+La función input() - operaciones prohibidas
+Observa el código en el editor. Ejecútalo, inserta cualquier número, y oprime Enter.
+
+¿Qué es lo que ocurre?
+
+Python debió haberte dado la siguiente salida:
+
+Traceback (most recent call last):
+File ".main.py", line 4, in <module>
+resultado = algo ** 2.0
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'float'
+
+La última línea lo explica todo, se intentó aplicar el operador ** a 'str' (una cadena) acompañado por un 'float' (valor flotante).
+
+Esto está prohibido.
+
+Esto debe de ser obvio â ¿Puedes predecir el valor de "ser o no ser" elevado a la 2 potencia?
+
+No podemos. Python tampoco puede.
+
+¿Habremos llegado a un punto muerto? ¿Existirá alguna solución? Claro que la hay.
+
+# Probando mensajes de error
+algo = input("Inserta un número: ")
+
+algo = float(algo) #solucion / puede usarse en la instruccion del input
+
+resultado = algo ** 2.0
+print(algo, "al cuadrado es ", resultado)
+
+Conversión de datos o casting
+Python ofrece dos simples funciones para especificar un tipo de dato y resolver este problema, aquí están: int() y float().
+
+Sus nombres indican cual es su función:
+
+La función int() toma un argumento (por ejemplo, una cadena: int(string)) e intenta convertirlo a un valor entero; si llegase a fallar, el programa entero fallará también (existe una manera de solucionar esto, se explicará mas adelante).
+La función float() toma un argumento (por ejemplo, una cadena: float(string)) e intenta convertirlo a flotante (el resto es lo mismo).
+
+Esto es muy simple y muy efectivo. Sin embargo, estas funciones se pueden invocar directamente pasando el resultado de la función input() directamente. No hay necesidad de emplear variables como almacenamiento intermedio.
+
+Se ha implementado esta idea en el editor, observa el código.
+
+¿Puedes imaginar como la cadena introducida por el usuario fluye desde la función input() hacía la función print()?
+
+Intenta ejecutar el código modificado. No olvides introducir un número valido.
+
+algo = float(input("Inserta un número: "))
+resultado = algo ** 2.0
+print(algo, "al cuadrado es", resultado)
+
+Prueba con diferentes valores, pequeños, grandes, negativos y positivos. El cero también es un buen valor a introducir.
+
+Más acerca de la función input() y tipos de conversión
+El tener un equipo compuesto por input()-int()-float() abre muchas nuevas posibilidades.
+
+Eventualmente serás capaz de escribir programas completos, los cuales acepten datos en forma de números, los cuales serán procesados y se mostrarán los resultados.
+
+Por supuesto, estos programas serán muy primitivos y no muy utilizables, debido a que no pueden tomar decisiones, y consecuentemente no son capaces de reaccionar acorde a cada situación.
+
+Sin embargo, esto no es un problema; se explicará como solucionarlo pronto.
+
+El siguiente ejemplo hace referencia al programa anterior que calcula la longitud de la hipotenusa. Vamos a reescribirlo, para que pueda leer las longitudes de los catetos desde la consola.
+
+Revisa la ventana del editor, así es como se ve ahora.
+
+Este programa le preguntó al usuario los dos catetos, calcula la hipotenusa e imprime el resultado.
+
+Ejecútalo de nuevo e intenta introducir valores negativos.
+
+El programa desafortunadamente, no reacciona correctamente a este error.
+
+Vamos a ignorar esto por ahora. Regresaremos a ello pronto.
+
+Debido a que la función print() acepta una expresión como argumento, se puede quitar la variable del código.
+
+Como se muestra en el siguiente código:
+
+cateto_a = float(input("Inserta la longitud del primer cateto: "))
+cateto_b = float(input("Inserta la longitud del segundo cateto "))
+print("La longitud de la hipotenusa es: ", (cateto_a**2 + cateto_b**2) ** .5)
+
+cateto_a = float(input("Inserta la longitud del primer cateto: "))
+cateto_b = float(input("Inserta la longitud del segundo cateto "))
+hipo = (cateto_a**2 + cateto_b**2) ** .5
+print("La longitud de la hipotenusa es: ", hipo)

@@ -1,0 +1,50 @@
+Funciones con parámetros: continuación
+Intenta ejecutar el código en el editor.
+
+def mensaje(numero):
+    print("Ingresa un número:", numero)
+
+mensaje()
+
+Esto es lo que aparecerá en consola:
+
+TypeError: mensaje() missing 1 required positional argument: 'numero'
+Esto significa que se esta invocando la función pero esta faltando el argumento.
+
+
+Aquí esta ya de manera correcta:
+
+def mensaje(numero):
+    print("Ingresa un número:", numero)
+
+mensaje(1) 
+
+De esta manera ya esta correcto. El código producirá la siguiente salida:
+
+Ingresa un número: 1
+
+¿Puedes ver como funciona? El valor del argumento utilizado durante la invocación (1) ha sido pasado a la función, dándole un valor inicial al parámetro con el nombre de numero.
+
+Existe una circunstancia importante que se debe mencionar.
+
+Es posible tener una variable con el mismo nombre del parámetro de la función.
+
+El siguiente código muestra un ejemplo de esto:
+
+def mensaje(numero):
+    print("Ingresa un número:", numero)
+
+numero = 1234
+mensaje(1)
+print(numero)
+
+Una situación como la anterior, activa un mecanismo denominado sombreado:
+
+El parámetro x sombrea cualquier variable con el mismo nombre, pero...
+... solo dentro de la función que define el parámetro.
+El parámetro llamado numero es una entidad completamente diferente de la variable llamada numero.
+
+Esto significa que el código anterior producirá la siguiente salida:
+
+Ingresa un número: 1
+1234
