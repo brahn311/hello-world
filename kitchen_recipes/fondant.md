@@ -1,23 +1,27 @@
 # Fondant (Profesional)
-Por: Dulce Fermandez
+Dulce Fermandez
 
-|Medidas|Ingredientes|
-|-|-|
-|1/4 de taza|Agua|
+|Cantidades|Ingredientes|
+|:-:|:-|
+|1/4 taza|Agua|
 |1 cda|Gelatina sin sabor|
-|1/4 de taza|Glucosa|
+|1/4 taza|Glucosa|
 |2 cdas|Glicerina|
 |1/2 cdita|Grasa hidrogenada|
-|1 + 1/2 libras (800 gr)|Azúcar pulverizada (tamizada)|
+|1 + 1/2 libras (800 gr)|Azúcar pulverizada tamizada|
 |1/2 cdita|CMC|
 
-### Preparacion:
+### Preparacion (original en batidora)
 - Diluir la gelatina en el agua y dejar reposar por 10 minutos
 - Colocar en el microondas por 10 segundos
 - Agregar la glucosa, la glicerina y la grasa y volverlo a poner en el micro por 10 segundos
 - Poner la mitad del azúcar en el tazón de la batidora y agregar poco a poco el líquido, batiendo lentamente con el gancho y agregar el resto del azúcar gradualmente, si se necesita más azúcar se puede agregar más.
 - Cuando la masa este homogénea y no se pegue al tazón y a las manos, ponerla en la mesa y amasar hasta que quede suave y manejable
 - Untarle un poco de manteca vegetal alrededor y guardarla en una bolsa plástica bien sellada.
+
+### Preparacion (a mano)
+- El azucar se tamiza y se le añade el CMC.
+- Se coloca la azucar en el meson y se hace un hueco en el centro para vertir la mezcla liquida ya calentada.
 
 #### Tips de Dulce:
 - Los liquidos mezclarlos con cuchara de madera o plastica.

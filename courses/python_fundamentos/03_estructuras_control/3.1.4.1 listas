@@ -7,8 +7,6 @@ var3 = int(input())
 var4 = int(input())
 var5 = int(input())
 var6 = int(input())
-:
-: 
 
 Si no crees que esta sea una tarea complicada, toma un papel y escribe un programa que:
 
@@ -27,7 +25,7 @@ Te mostraremos como declarar tales variables de múltiples valores . Haremos est
 
 Vamos a crear una variable llamada numeros; se le asigna no solo un número, sino que se llena con una lista que consta de cinco valores (nota: la lista comienza con un corchete abierto y termina con un corchete cerrado ; el espacio entre los corchetes es llenado con cinco números separados por comas).
 
-numeros = [ 10, 5, 7, 2, 1] 
+numeros = [ 10, 5, 7, 2, 1]
 
 Digamos lo mismo utilizando una terminología adecuada: numeros es una lista que consta de cinco valores, todos ellos números. También podemos decir que esta declaración crea una lista de longitud igual a cinco (ya que contiene cinco elementos).
 

@@ -1,28 +1,33 @@
-Buttercream de parchita
+# Buttercream de parchita
+Un pedacito de cielo
 
-Ingredientes:
-Para 700 grs de crema
-175 grs de manteca vegetal
-175 grs de margarina o mantequilla sin sal
-500 grs de azúcar pulverizada (previamente cernida)
-De 5 a 7 cdas de pulpa de parchita pasteurizada
+Receta para 700 grs de crema
 
-Preparación:
-Poner a batir la margarina y la manteca (no mucho tiempo para evitar aguar la mantequilla)
-Agregar el queso crema, el azúcar pulverizado hasta integrar todo.
-Agregar la parchita, la cantidad de cucharadas depende del gusto del sabor deseado.
-Se le puede agregar colorante amarillo (opcional).
+|Cantidades|Ingredientes|
+|:-:|:-|
+|175 grs|Manteca vegetal|
+|175 grs|Margarina o mantequilla sin sal|
+|500 grs|Azúcar pulverizada (previamente cernida)|
+|De 5 a 7 cdas|Pulpa de parchita pasteurizada|
 
-Nota: esta sirve para colocar de muro a la red-velvet.
+### Preparación
+- Poner a batir la margarina y la manteca (no mucho tiempo para evitar aguar la mantequilla)
+- Agregar el queso crema, el azúcar pulverizado hasta integrar todo.
+- Agregar la parchita pasteurizada, la cantidad de cucharadas depende del gusto del sabor deseado.
+- Se le puede agregar colorante amarillo (opcional).
 
-Extras de las cremas:
+### Uso
+- Esta crema sirve para colocar de muro a la red-velvet.
 
-1 Taza de pulpa de parchita
-1/2 Taza de azúcar (o al gusto)
+#### Extras de las cremas:
+
+**Sirope de Parchita:**  
+- 1 Taza de pulpa de parchita
+- 1/2 Taza de azúcar (o al gusto)  
 Colocar a fuego lento hasta obtener consistencia de mermelada
 
-Para glasear:
+**Para glasear:**  
 Licuar la pulpa y ponerla a cocinar.
 
-Para pasteurizar:
+**Para pasteurizar:**  
 Colocar la pulpa sola en la olla a fuego lento y dejar reducir (Para la buttercream de parchita.

@@ -1,0 +1,20 @@
+#Tipos de Datos complejos
+
+```
+x = 2j + 3
+```
+Poseen una parte real y una parte imaginaria `j`
+Utilizando la funcion `type()` aparece de: `<class complex>`
+
+### Metodos
+- Consultar parte real:  
+Se usa `literal.real` genera un float que debe almacenarce en un nuevo literal
+```
+real = x.real
+```
+
+- Consultar parte imaginaria:  
+Se usa `literal.imag`, genera un float que debe almacenarce en un nuevo literal
+```
+imag = x.imag
+```

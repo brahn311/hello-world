@@ -1,3 +1,18 @@
+
+#### Preterito (perfecto simple, pasado simple)
+Es un tiempo absoluto de aspecto perfectivo, pues la acción enunciada se considera terminada o de modo global.
+- Ayer _conté_ a mi madre lo que vi cuando _visité_ Madrid.
+- _Cené_ con mis padres ayer por la noche.
+
+#### Participio
+En el idioma castellano participio siempre es pasado.  
+Se usa como una forma verbal que se refiere a una acción que ya ha ocurrido y que por lo tanto pertenece al pasado, aunque se refiere a un pasado reciente y que todavía está relacionado con el presente
+
+- Hemos _logrado_ la victoria esta mañana
+- El año ha _terminado_ con buenos resultados
+
+### Tabla
+
 |Infinitivo|Pretérito|Participio Pasado|Traducción|
 |-|-|-|-|
 |abide|abided/abode|abided/abode|aguantar|
