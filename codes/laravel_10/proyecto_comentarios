@@ -1,0 +1,245 @@
+Laravel 10
+Proyecto comentarios
+
+tablas
+	- Usuarios
+	- Comentarios
+	- Respuestas
+
+Proyecto gestion comentarios
+	- un usuario puede hacer comentarios
+	- un usuario puede responder los comentarios
+	- un comentario tiene muchas respuestas
+
+Vscode
+	- terminal: permite ejecutar comandos
+	
+Verificar versiones
+	- % laravel --version
+	- % php --version
+	- % node --version (sistema de inicio de session)
+Crear pryecto nuevo
+	- % laravel new comentarios
+	> esta instruccion tambien actualiza la version de laravel
+	
+Crear base de datos
+
+Vscode > Abrir proyecto web
+
+Navegador > url: comentarios.test
+
+Abrir la carpeta del proyecto > sitios/comentarios 
+	- modificar el archivo .env conecciones bd
+	- modificar el nombre del serividor de DB
+		DB_HOST=LOCALHOST
+		DB_DATABASE=comments
+	- modificar el usuario y contraseña
+		DB_USERNAME=brahn311
+		DB_PASSWORD=root
+> conecciones a base de datos
+	
+Crear los modelos
+	- % php artisan make:model Comment -mf
+	- % php artisan make:model Reply -mf
+> se crean 3 archivos nuevos con cada instruccion: Model, Factory, Migration
+> -mf creara la migracion (m: pagina de diseño de la tabla) y factory (f: molde para crear datos falsos para prueba) 
+
+Editar la migracion database>migrations>comments
+	> Ir a la tabla usuario y verificar el nombre de los atributos
+	- Creando las entidades de la tabla comentarios
+		Ubicados en el public function up():void
+		$table->id();
+		...
+		$table->unsignedBigInteger('user_id');
+		$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+		
+		$table->text('body');
+		...
+		$table->timestamps();
+	- Creando las entidades de la tabla replies
+		Ubicados en el public function up():void
+		$table->id();
+		...
+		$table->unsignedBigInteger('comment_id');
+		$table->foreign('comment_id')->references('id')->on('comments')->onDelete('cascade');
+		
+		$table->unsignedBigInteger('user_id');
+		$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+		
+		$table->text('body');
+		...
+		$table->timestamps();
+
+Editar la factory usando faker
+	Es la configuracion inicial de datos falsos
+	Buscar los documentos dentro de la carpeta factory CommentFactory y ReplyFactory, agrega
+	return [
+	...
+		'body' => $this->faker->text()
+	...
+	]
+
+Configurar los seeders logicamente DatabaseSeeders.php
+	Dentro del: 
+	public function run(): void
+	{
+	...
+		$users = \App\Models\User::factory(10)
+			->hasComments(3)
+			->create();
+		
+		$comments = \App\Models\Comment::get();
+		
+		foreach ($comments as $comment) {
+			\App\Models\Reply::factory(rand(1, 3))->create([
+				'comment_id' => $comment_id, 
+				'user_id' => rand(1, 10) 
+			])
+		};
+	...
+	}
+	
+Trabajar las relaciones en Models User.php al final
+	- crea una funcion publica llamada comments()
+	public function comments()
+	{
+		return $this->hasMany(Comment::class);
+	}
+	
+	public function replies()
+	{
+		return $this->hasMany(Reply::class);
+	}
+	
+Repetir con comentarios en Comment.php
+	public function user()
+	{
+		return $this->belongsTo(User::class);
+	}
+	
+	public function replies()
+	{
+		return $this->hasMany(Reply::class);
+	}
+
+Repetir con respuestas Reply.php
+	public function comments()
+	{
+		return $this->belongsTo(Comment::class);
+	}
+	
+	public function user()
+	{
+		return $this->belongsTo(User::class);
+	}
+
+Terminal: Refrescar y aplicar migracion
+	- % php srtisan migrate:refresh --seed
+
+Comprobar registros en la base de datos
+
+Migracion : estructura inicial de la tabla
+Factory : molde que se utilizara para crear datos falsos
+Seeds : utiliza a los factory para crear datos falsos
+
+Instalar el inicio de sesion
+	% composer require laravel/breeze --dev
+	% php artisan breeze:install
+	
+		Instalar con blade
+		Instalar aparecia dark? no
+		Instalar Pest tests instead of phpunit (para pruebas) no
+		
+Ya puedes ir al proyecto y crear tu usuario y loguearte!
+
+Elemina el welcome.blade.php
+
+Configurar rutas: routes > web.php
+	- Puedes borrar el comentario inicial
+	- Redireccionar
+Modificar la instruccion Route::get('/', function () {...}); con:
+	Route::redirect('/', 'dashboard');
+		
+Añadir dentro de get dashboard function
+	$comments =\App\Models\Comment::orderBy('id', 'DESC')->paginate();
+Modificar el return
+	return view('dashboard', ['comments' => $comments]);
+		
+Configurar las vistas
+Ir a Resources > views > dashboard.blade.php
+Puedes borrar el div del titulo de la pagina para tener mayor espacio
+	Desde la linea 2 hasta la linea 6 eliminando la pestaña <x-slot name='header'> y su contenido
+
+Añadir un poco de estilo CSS
+	- Se modifico la linea 3 cambiando dentro de class el atriburo "max-w-7xl" por "w-3/4 " (al inicio)
+		<div class="w-3/4 mx-auto sm:px-6 lg:px-8">
+		Las clases son de **Tailwind CSS**
+Dentro de div linea 6 añadir
+´´´
+@foreach($comments as $comment)
+<div>
+	<h3>
+		<strong>{{ $comment->user->name }}</strong>
+		<small>{{ $comment->created_at->diffForHumans }}</small>
+	</h3>
+	<p>
+		{{ $comment->body }}
+	</p>
+</div>
+@endforeach
+
+@foreach($replies as $reply)
+	<p class="ml-4 mb-4">
+		-
+		{{ $reply->body }}
+		<strong>{{ $reply->user->name }}</strong>
+		<small>{{ $reply->created_at->diffForHumans }}</small>
+	<p>
+@endforeach
+´´´
+
+Añadir la paginacion al final del nuevo codigo
+
+´´´
+{{ $comments->links() }}
+´´´
+
+Añadiendo los formularios: controllers
+	- % php artisan make:controller CommentController
+
+En el controlador creado Http > Controllers > CommentController.php
+	- Añadimos la siguiente funcion
+´´´
+public function store(Request $request)
+{
+	$request->validate(['body' => 'required']);
+	
+	auth()->user()->comments()->create(['body' => $reqeust->body]);
+	
+	return back();
+}
+´´´
+
+Como creamos una nueva funcion, debemos crear una nueva propiedad en app > Models > Comments.php
+´´´
+protected fillable = ['body'];
+´´´
+
+Modificamos web.php añadiendo la nueva ruta
+´´´
+use App\Http\Controllers\CommentController;
+´´´
+
+´´´
+Route::post('comments', [CommentController::class, 'store'])
+	->name('comments.store')
+	->middleware('auth');
+´´´
+
+Configurar la vista
+
+Pausa > ver video 34:11
+
+
+
+

@@ -1,0 +1,14 @@
+La sustitucion de atom es VScode
+Instalar git
+    configurar el --global name y --global email
+Descargar el repositorio con 
+    $ git clone https:repositorio.url
+Pesaña de fuentes en VScode
+    Se entra en el repositorio
+    Se hace la modificiacion
+    Se registra el commit
+        (se necesita ya tener configurado el name y email)
+    En la barra de estado inferior se presiona el botton para subir cambios
+    En una nueva ventana te pide el usuario de github
+    se da permiso para la conecion y se suben los cambios
+
