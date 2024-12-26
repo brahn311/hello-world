@@ -4,7 +4,7 @@ Por: Miyiraide Emperatriz
 ### Ingredientes:
 - 1 Lata de leche condensada
 - 1 Lata de leche completa liquida
-- 6 yemas de huevo
+- 6 yemas de huevo.
 - 1/2 cucharada de maizena.
 - Pizca de canela molida (opcional)
 - Pizca ralladura de nuez moscada
@@ -46,6 +46,18 @@ Por: Miyiraide Emperatriz
   - Quedo Muy espeso.
 - **3ra. preparación (30/12/20)**
   - se realizo con todos los ingredientes, excepto la rayadura de limon.
-
+- **4ta. preparacion (23/12/24)**
+  Receta de instagram Fuente ()
+  - 2 Lata de leche condensada
+  - 2 Lata de leche completa liquida _(verificar)_
+  - 1 1/2 ml de Ron _(Modificado a 2 tazas)_
+  - 6 yemas de huevo.
+  - 5 cucharada de maizena.
+  - Rama de canela (opcional)
+  - Pizca ralladura de nuez moscada
+  - Concha de naranja (Ralladura de piel de Limón)
+  - 2 cucharadas de vainilla _(verificar)_
+   
+- 
 ### Otras preparaciones:
 https://www.bizcochosysancochos.com/2016/11/como-hacer-ponche-crema-venezolano.html
