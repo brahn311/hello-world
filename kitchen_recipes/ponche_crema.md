@@ -1,16 +1,17 @@
 # Ponche Crema
 Por: Miyiraide Emperatriz
 
-### Ingredientes:
-- 1 Lata de leche condensada
-- 1 Lata de leche completa liquida
-- 6 yemas de huevo.
-- 1/2 cucharada de maizena.
-- Pizca de canela molida (opcional)
-- Pizca ralladura de nuez moscada
-- Ralladura de piel de Limón
-- 2 cucharadas de vainilla
-- 160 ml de Ron
+|Cantidades|Ingredientes|
+|:-:|:-|
+|1 Lata|Leche condensada|
+|1 Lata|Leche completa liquida|
+|6 yemas|Huevo|
+|1/2 cucharada|Maizena|
+|Pizca|Canela molida (opcional)|
+|Pizca|Ralladura de nuez moscada|
+|Ralladura|Piel de Limón|
+|2 cucharadas|Vainilla negra|
+|160 ml|Ron Añejo|
 
 #### Esterilizar envases de vidrio:
 1. Colocar a hervir agua.
@@ -47,7 +48,7 @@ Por: Miyiraide Emperatriz
 - **3ra. preparación (30/12/20)**
   - se realizo con todos los ingredientes, excepto la rayadura de limon.
 - **4ta. preparacion (23/12/24)**
-  Receta de instagram Fuente ()
+  - Receta de instagram Fuente ()
   - 2 Lata de leche condensada
   - 2 Lata de leche completa liquida _(verificar)_
   - 1 1/2 ml de Ron _(Modificado a 2 tazas)_
@@ -57,7 +58,7 @@ Por: Miyiraide Emperatriz
   - Pizca ralladura de nuez moscada
   - Concha de naranja (Ralladura de piel de Limón)
   - 2 cucharadas de vainilla _(verificar)_
-   
-- 
+  - Se uso Ron añejo Bacardi, rindio 2 Botellas 750 y un baso 
+
 ### Otras preparaciones:
 https://www.bizcochosysancochos.com/2016/11/como-hacer-ponche-crema-venezolano.html
